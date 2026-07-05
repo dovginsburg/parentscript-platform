@@ -367,7 +367,9 @@ export function crisisResponsePayload(locale = DEFAULT_LOCALE) {
       'Tell someone you trust: a friend, family member, or your therapist.',
     ],
     safety_note: loc.scope,
-    crisis_response: true, // Flag so the client knows to render a full-screen crisis modal
+    safetyNote: loc.scope, // camelCase mirror for client/SPA consumers (tests + UI surface tests)
+    crisis_response: true, // Canonical API flag (CoachingResponse type)
+    _crisis: true, // UI-only marker — kept for legacy client + surface-tests compatibility
   }
 }
 
