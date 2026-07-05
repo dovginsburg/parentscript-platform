@@ -3,24 +3,27 @@
  * Generate simple solid-color PNG icons.
  * Creates valid PNG files without external dependencies.
  */
-import { writeFileSync } from "fs";
-import { join, dirname } from "path";
-import { fileURLToPath } from "url";
-import { deflateSync } from "zlib";
+import { writeFileSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { deflateSync } from 'zlib';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ICONS_DIR = join(__dirname, "..", "icons");
+const ICONS_DIR = join(__dirname, '..', 'icons');
 
 function createPNG(width, height, getPixel) {
   // PNG signature
   const signature = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]);
 
   // IHDR chunk
-  const ihdr = makeChunk("IHDR", Buffer.concat([
-    uint32BE(width),
-    uint32BE(height),
-    Buffer.from([8, 6, 0, 0, 0]), // 8-bit RGBA, deflate, no filter, no interlace
-  ]));
+  const ihdr = makeChunk(
+    'IHDR',
+    Buffer.concat([
+      uint32BE(width),
+      uint32BE(height),
+      Buffer.from([8, 6, 0, 0, 0]), // 8-bit RGBA, deflate, no filter, no interlace
+    ])
+  );
 
   // Pixel data
   const pixels = [];
@@ -32,15 +35,15 @@ function createPNG(width, height, getPixel) {
     }
   }
 
-  const idat = makeChunk("IDAT", deflateSync(Buffer.from(pixels)));
-  const iend = makeChunk("IEND", Buffer.alloc(0));
+  const idat = makeChunk('IDAT', deflateSync(Buffer.from(pixels)));
+  const iend = makeChunk('IEND', Buffer.alloc(0));
 
   return Buffer.concat([signature, ihdr, idat, iend]);
 }
 
 function makeChunk(type, data) {
   const length = uint32BE(data.length);
-  const typeAndData = Buffer.concat([Buffer.from(type, "ascii"), data]);
+  const typeAndData = Buffer.concat([Buffer.from(type, 'ascii'), data]);
   const crc = uint32BE(crc32(typeAndData));
   return Buffer.concat([length, typeAndData, crc]);
 }
@@ -87,7 +90,7 @@ function generateIcon(size) {
 
 // Generate icons
 const sizes = [16, 48, 128];
-console.log("Generating PNG icons...");
+console.log('Generating PNG icons...');
 
 for (const size of sizes) {
   const png = generateIcon(size);
@@ -96,4 +99,4 @@ for (const size of sizes) {
   console.log(`✓ Created ${path} (${png.length} bytes)`);
 }
 
-console.log("\n✓ All PNG icons generated");
+console.log('\n✓ All PNG icons generated');

@@ -24,35 +24,35 @@
 // ── Request shape the frontend POSTs to /api/coach ─────────────
 export interface CoachContext {
   /** Child age in years (rounded). Optional — omit if unknown. */
-  childAge?: number
+  childAge?: number;
   /** Slugs of skills the parent has unlocked. Calibrates the model
    *  to use only tools the parent has actually been taught. */
-  skillsUnlocked?: string[]
+  skillsUnlocked?: string[];
   /** Sibling age in years (rounded). Only used for `surface: 'sibling'`. */
-  siblingAge?: number
+  siblingAge?: number;
   /** User's own age in years (rounded). Only used for `surface: 'sibling'`. */
-  userAge?: number
+  userAge?: number;
 }
 
 /** Which surface is asking. Default 'parent'. See docs/PLATFORM_BLUEPRINT.md. */
-export type CoachSurface = 'parent' | 'sibling'
+export type CoachSurface = 'parent' | 'sibling';
 
 export interface CoachRequest {
-  situation: string
-  context?: CoachContext
-  surface?: CoachSurface
+  situation: string;
+  context?: CoachContext;
+  surface?: CoachSurface;
   /** Locale code for the crisis response (default 'en-US').
    *  Per Mira's protocol, unreviewed locales return 400 from /api/coach. */
-  locale?: string
+  locale?: string;
 }
 
 // ── Response shape /api/coach returns ──────────────────────────
 // 3 steps max — see PHASE2_AI_FEATURES.md §Feature 1.
 export interface CoachResponse {
-  steps: string[]
-  safetyNote: string
-  disclaimer: string
-  empathy?: string
+  steps: string[];
+  safetyNote: string;
+  disclaimer: string;
+  empathy?: string;
 }
 
 // ── Streaming event types ───────────────────────────────────────
@@ -62,7 +62,7 @@ export type CoachStreamEvent =
   | { type: 'safety'; text: string }
   | { type: 'disclaimer'; text: string }
   | { type: 'done' }
-  | { type: 'error'; message: string }
+  | { type: 'error'; message: string };
 
 // ── Errors ─────────────────────────────────────────────────────
 // Mirrors what /api/coach returns from express — kept here so
@@ -70,14 +70,14 @@ export type CoachStreamEvent =
 export type CoachErrorCode =
   | 'missing_situation'
   | 'situation_too_long'
-  | 'not_configured'        // server has no AI key
-  | 'upstream_failure'      // LLM provider error
-  | 'network_error'         // fetch threw
-  | 'unknown'
+  | 'not_configured' // server has no AI key
+  | 'upstream_failure' // LLM provider error
+  | 'network_error' // fetch threw
+  | 'unknown';
 
 export interface CoachError {
-  error: string
-  code: CoachErrorCode
+  error: string;
+  code: CoachErrorCode;
 }
 
 // ── Safe UI labels ─────────────────────────────────────────────
@@ -85,16 +85,16 @@ export interface CoachError {
 // surfaces it. We still export a fallback so the UI never blanks
 // out before the network round-trip resolves.
 export const FALLBACK_DISCLAIMER =
-  'This is AI-generated guidance, not medical or therapeutic advice. Your therapist knows your child best. If you are in crisis, call or text 988. If anyone is in immediate danger, call 911.'
+  'This is AI-generated guidance, not medical or therapeutic advice. Your therapist knows your child best. If you are in crisis, call or text 988. If anyone is in immediate danger, call 911.';
 
 export const FALLBACK_SAFETY_NOTE =
-  'If your child is in immediate danger of hurting themselves or others, call 911. For crisis support, call or text 988.'
+  'If your child is in immediate danger of hurting themselves or others, call 911. For crisis support, call or text 988.';
 
 // ── "AI-generated" badge label ─────────────────────────────────
 // Used in the UI so parents and therapists never forget they are
 // reading machine output (PHASE2_AI_FEATURES.md Core Principle:
 // "Be transparent").
-export const AI_GENERATED_LABEL = 'AI-generated'
+export const AI_GENERATED_LABEL = 'AI-generated';
 
 // ── Streaming client helper ────────────────────────────────────
 // Calls /api/coach with Accept: text/event-stream and delivers
@@ -108,63 +108,63 @@ export async function streamCoachResponse(
   onEvent: (event: CoachStreamEvent) => void,
   signal?: AbortSignal,
   surface: CoachSurface = 'parent',
-  locale: string = 'en-US',
+  locale: string = 'en-US'
 ): Promise<void> {
-  const trimmed = (situation ?? '').trim()
+  const trimmed = (situation ?? '').trim();
   if (!trimmed) {
-    onEvent({ type: 'error', message: 'Please describe what is happening.' })
-    return
+    onEvent({ type: 'error', message: 'Please describe what is happening.' });
+    return;
   }
 
-  let res: Response
+  let res: Response;
   try {
     res = await fetch('/api/coach', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'accept': 'text/event-stream',
+        accept: 'text/event-stream',
       },
       body: JSON.stringify({ situation: trimmed, context, surface, locale }),
       signal,
-    })
+    });
   } catch (err: unknown) {
-    if ((err as Error)?.name === 'AbortError') return
-    onEvent({ type: 'error', message: 'Network error — check your connection and try again.' })
-    return
+    if ((err as Error)?.name === 'AbortError') return;
+    onEvent({ type: 'error', message: 'Network error — check your connection and try again.' });
+    return;
   }
 
   if (!res.ok) {
-    onEvent({ type: 'error', message: 'Coach request failed. Please try again.' })
-    return
+    onEvent({ type: 'error', message: 'Coach request failed. Please try again.' });
+    return;
   }
 
-  const reader = res.body!.getReader()
-  const decoder = new TextDecoder()
-  let buffer = ''
+  const reader = res.body!.getReader();
+  const decoder = new TextDecoder();
+  let buffer = '';
 
   try {
     while (true) {
-      const { done, value } = await reader.read()
-      if (done) break
+      const { done, value } = await reader.read();
+      if (done) break;
 
-      buffer += decoder.decode(value, { stream: true })
-      const lines = buffer.split('\n')
-      buffer = lines.pop() ?? ''
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop() ?? '';
 
       for (const line of lines) {
-        if (!line.startsWith('data: ')) continue
-        let evt: CoachStreamEvent
+        if (!line.startsWith('data: ')) continue;
+        let evt: CoachStreamEvent;
         try {
-          evt = JSON.parse(line.slice(6)) as CoachStreamEvent
+          evt = JSON.parse(line.slice(6)) as CoachStreamEvent;
         } catch {
-          continue
+          continue;
         }
-        onEvent(evt)
+        onEvent(evt);
       }
     }
   } catch (err: unknown) {
-    if ((err as Error)?.name === 'AbortError') return
-    onEvent({ type: 'error', message: 'Connection lost. Please try again.' })
+    if ((err as Error)?.name === 'AbortError') return;
+    onEvent({ type: 'error', message: 'Connection lost. Please try again.' });
   }
 }
 
@@ -178,49 +178,66 @@ export async function fetchCoachResponse(
   situation: string,
   context?: CoachContext,
   surface: CoachSurface = 'parent',
-  locale: string = 'en-US',
+  locale: string = 'en-US'
 ): Promise<CoachResponse> {
-  const trimmed = (situation ?? '').trim()
-  if (!trimmed) throw { code: 'missing_situation', error: 'Please describe what is happening.' } satisfies CoachError
-  if (trimmed.length > 2000) throw { code: 'situation_too_long', error: 'Please shorten to under 2000 characters.' } satisfies CoachError
+  const trimmed = (situation ?? '').trim();
+  if (!trimmed)
+    throw {
+      code: 'missing_situation',
+      error: 'Please describe what is happening.',
+    } satisfies CoachError;
+  if (trimmed.length > 2000)
+    throw {
+      code: 'situation_too_long',
+      error: 'Please shorten to under 2000 characters.',
+    } satisfies CoachError;
 
-  let res: Response
+  let res: Response;
   try {
     res = await fetch('/api/coach', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ situation: trimmed, context, surface, locale } satisfies CoachRequest),
-    })
+    });
   } catch {
-    throw { code: 'network_error', error: 'Network error — check your connection and try again.' } satisfies CoachError
+    throw {
+      code: 'network_error',
+      error: 'Network error — check your connection and try again.',
+    } satisfies CoachError;
   }
 
-  let body: unknown
+  let body: unknown;
   try {
-    body = await res.json()
+    body = await res.json();
   } catch {
-    throw { code: 'unknown', error: 'Unexpected response from the coach service.' } satisfies CoachError
+    throw {
+      code: 'unknown',
+      error: 'Unexpected response from the coach service.',
+    } satisfies CoachError;
   }
 
   if (!res.ok) {
     const msg =
       body && typeof body === 'object' && 'error' in body && typeof (body as any).error === 'string'
         ? (body as any).error
-        : 'Coach request failed.'
-    let code: CoachErrorCode = 'unknown'
-    if (res.status === 503) code = 'not_configured'
-    else if (res.status === 502) code = 'upstream_failure'
-    throw { code, error: msg } satisfies CoachError
+        : 'Coach request failed.';
+    let code: CoachErrorCode = 'unknown';
+    if (res.status === 503) code = 'not_configured';
+    else if (res.status === 502) code = 'upstream_failure';
+    throw { code, error: msg } satisfies CoachError;
   }
 
-  const obj = body as Partial<CoachResponse> | null
-  const steps = Array.isArray(obj?.steps) ? obj!.steps.slice(0, 3).map(String) : []
+  const obj = body as Partial<CoachResponse> | null;
+  const steps = Array.isArray(obj?.steps) ? obj!.steps.slice(0, 3).map(String) : [];
   if (steps.length === 0) {
-    throw { code: 'upstream_failure', error: 'Coach returned no steps. Try again.' } satisfies CoachError
+    throw {
+      code: 'upstream_failure',
+      error: 'Coach returned no steps. Try again.',
+    } satisfies CoachError;
   }
   return {
     steps,
     safetyNote: typeof obj?.safetyNote === 'string' ? obj.safetyNote : FALLBACK_SAFETY_NOTE,
     disclaimer: typeof obj?.disclaimer === 'string' ? obj.disclaimer : FALLBACK_DISCLAIMER,
-  }
+  };
 }

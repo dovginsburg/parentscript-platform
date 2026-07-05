@@ -12,8 +12,8 @@
  * keyed by locale so the popup opens fast offline.
  */
 
-const MENU_ID = "parentscript-search-selection";
-const POPUP_PATH = "popup.html";
+const MENU_ID = 'parentscript-search-selection';
+const POPUP_PATH = 'popup.html';
 
 interface PendingSelection {
   query: string;
@@ -34,7 +34,7 @@ function createContextMenu(): void {
     chrome.contextMenus.create({
       id: MENU_ID,
       title: "Search ParentScript for '%s'",
-      contexts: ["selection"],
+      contexts: ['selection'],
     });
   });
 }
@@ -60,7 +60,7 @@ chrome.runtime.onStartup.addListener(() => {
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId !== MENU_ID) return;
-  const selection = info.selectionText?.trim() ?? "";
+  const selection = info.selectionText?.trim() ?? '';
   if (!selection) return;
   if (tab?.id !== undefined) {
     storeSelectionForTab(tab.id, selection);
@@ -76,8 +76,8 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   }
 });
 
-chrome.commands?.onCommand.addListener((command) => {
-  if (command === "_execute_action") {
+chrome.commands?.onCommand.addListener(command => {
+  if (command === '_execute_action') {
     try {
       void chrome.action.openPopup();
     } catch {
@@ -88,8 +88,8 @@ chrome.commands?.onCommand.addListener((command) => {
 
 /* Popup asks: "did anyone hand me a prefill for this tab?" */
 chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
-  if (!msg || typeof msg !== "object") return;
-  if (msg.type === "get-prefill" && typeof msg.tabId === "number") {
+  if (!msg || typeof msg !== 'object') return;
+  if (msg.type === 'get-prefill' && typeof msg.tabId === 'number') {
     const entry = pending.get(msg.tabId);
     if (entry) {
       pending.delete(msg.tabId);
@@ -99,9 +99,9 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
     sendResponse({ ok: false });
     return true;
   }
-  if (msg.type === "open-skill" && typeof msg.url === "string") {
+  if (msg.type === 'open-skill' && typeof msg.url === 'string') {
     if (!isParentscriptUrl(msg.url)) {
-      sendResponse({ ok: false, error: "URL not allowed" });
+      sendResponse({ ok: false, error: 'URL not allowed' });
       return true;
     }
     chrome.tabs.create({ url: msg.url }, () => sendResponse({ ok: true }));
@@ -111,6 +111,6 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
 });
 
 // Keep the worker alive long enough to receive a single message round-trip.
-self.addEventListener("uninstall", () => {
+self.addEventListener('uninstall', () => {
   pending.clear();
 });

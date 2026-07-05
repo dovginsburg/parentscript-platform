@@ -1,15 +1,15 @@
-import { useRef, useCallback } from 'react'
-import type React from 'react'
+import { useRef, useCallback } from 'react';
+import type React from 'react';
 
 interface LongPressHandlers {
-  onTouchStart: (e: React.TouchEvent) => void
-  onTouchEnd: () => void
-  onTouchMove: () => void
-  onMouseDown: () => void
-  onMouseUp: () => void
-  onMouseLeave: () => void
+  onTouchStart: (e: React.TouchEvent) => void;
+  onTouchEnd: () => void;
+  onTouchMove: () => void;
+  onMouseDown: () => void;
+  onMouseUp: () => void;
+  onMouseLeave: () => void;
   // Suppresses the click that fires after a completed long-press
-  onClick: (e: React.MouseEvent) => void
+  onClick: (e: React.MouseEvent) => void;
 }
 
 /**
@@ -18,28 +18,28 @@ interface LongPressHandlers {
  * Also suppresses the trailing click that would fire on touch release.
  */
 export function useLongPress(onLongPress: () => void, delay = 500): LongPressHandlers {
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const triggered = useRef(false)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const triggered = useRef(false);
 
   const start = useCallback(() => {
-    triggered.current = false
+    triggered.current = false;
     timerRef.current = setTimeout(() => {
-      triggered.current = true
-      onLongPress()
-    }, delay)
-  }, [onLongPress, delay])
+      triggered.current = true;
+      onLongPress();
+    }, delay);
+  }, [onLongPress, delay]);
 
   const cancel = useCallback(() => {
-    if (timerRef.current) clearTimeout(timerRef.current)
-  }, [])
+    if (timerRef.current) clearTimeout(timerRef.current);
+  }, []);
 
   const onClick = useCallback((e: React.MouseEvent) => {
     if (triggered.current) {
-      e.preventDefault()
-      e.stopPropagation()
-      triggered.current = false
+      e.preventDefault();
+      e.stopPropagation();
+      triggered.current = false;
     }
-  }, [])
+  }, []);
 
   return {
     onTouchStart: start,
@@ -49,5 +49,5 @@ export function useLongPress(onLongPress: () => void, delay = 500): LongPressHan
     onMouseUp: cancel,
     onMouseLeave: cancel,
     onClick,
-  }
+  };
 }

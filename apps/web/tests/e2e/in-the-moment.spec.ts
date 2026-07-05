@@ -4,14 +4,17 @@ test.describe('In-the-Moment Coach', () => {
   test.beforeEach(async ({ page }) => {
     // Mock authenticated parent
     await page.addInitScript(() => {
-      localStorage.setItem('supabase.auth.token', JSON.stringify({
-        access_token: 'mock-token',
-        user: {
-          id: 'mock-parent-id',
-          email: 'parent@example.com',
-          app_metadata: { role: 'parent' },
-        },
-      }));
+      localStorage.setItem(
+        'supabase.auth.token',
+        JSON.stringify({
+          access_token: 'mock-token',
+          user: {
+            id: 'mock-parent-id',
+            email: 'parent@example.com',
+            app_metadata: { role: 'parent' },
+          },
+        })
+      );
     });
   });
 
@@ -72,7 +75,7 @@ test.describe('In-the-Moment Coach', () => {
         status: 200,
         contentType: 'application/json',
         body: JSON.stringify({
-          empathy: 'Tantrums are tough. You're doing the right thing by reaching out.',
+          empathy: "Tantrums are tough. You're doing the right thing by reaching out.",
           steps: ['Stay calm', 'Get to their level', 'Use labeled praise when they calm'],
           safetyNote: null,
           crisisResponsePayload: null,

@@ -8,16 +8,16 @@
 // friendly.
 
 export interface ToggleRowProps {
-  label: string
-  description?: string
-  checked: boolean
-  onChange: (next: boolean) => void
-  disabled?: boolean
-  experimental?: boolean
+  label: string;
+  description?: string;
+  checked: boolean;
+  onChange: (next: boolean) => void;
+  disabled?: boolean;
+  experimental?: boolean;
   // When true, renders a small "Saves automatically" hint.
   // Therapists and parents both see this — saves are live, no
   // explicit Save button.
-  autoSave?: boolean
+  autoSave?: boolean;
 }
 
 export default function ToggleRow({
@@ -38,9 +38,7 @@ export default function ToggleRow({
     >
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-sm md:text-base font-semibold text-gray-900">
-            {label}
-          </span>
+          <span className="text-sm md:text-base font-semibold text-gray-900">{label}</span>
           {experimental && (
             <span className="text-[10px] font-semibold uppercase tracking-wider bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">
               Experimental
@@ -48,15 +46,9 @@ export default function ToggleRow({
           )}
         </div>
         {description && (
-          <p className="text-xs md:text-sm text-gray-500 mt-0.5 leading-snug">
-            {description}
-          </p>
+          <p className="text-xs md:text-sm text-gray-500 mt-0.5 leading-snug">{description}</p>
         )}
-        {autoSave && (
-          <p className="text-[11px] text-gray-400 mt-1">
-            Saves automatically
-          </p>
-        )}
+        {autoSave && <p className="text-[11px] text-gray-400 mt-1">Saves automatically</p>}
       </div>
 
       {/* Switch — visually styled, real <input> for accessibility */}
@@ -85,5 +77,5 @@ export default function ToggleRow({
         />
       </span>
     </label>
-  )
+  );
 }

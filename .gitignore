@@ -40,6 +40,9 @@ apps/android/fastlane/*.json
 apps/ios/fastlane/AuthKey_*.p8
 apps/ios/fastlane/*.json
 !apps/ios/fastlane/metadata
+apps/fastlane/play-store-credentials.json
+play-store-credentials*.json
+!apps/fastlane/play-store-credentials.example.json
 
 # Local debug helpers — never commit
 apps/backend/*.debug.mjs

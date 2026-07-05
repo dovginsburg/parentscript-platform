@@ -23,10 +23,10 @@ The values Dov entered are **correct**. The IP `76.76.21.21` and host `@` are th
 
 Per Vercel's official docs (`vercel.com/docs/domains/troubleshooting`):
 
-| Record | Host | Value / Target | TTL |
-|---|---|---|---|
-| A | `@` | `76.76.21.21` | Automatic |
-| CNAME | `www` | `cname.vercel-dns.com` | Automatic |
+| Record | Host  | Value / Target         | TTL       |
+| ------ | ----- | ---------------------- | --------- |
+| A      | `@`   | `76.76.21.21`          | Automatic |
+| CNAME  | `www` | `cname.vercel-dns.com` | Automatic |
 
 > The IP `76.76.21.21` is a Vercel anycast IP — a single IP that routes to the nearest Vercel edge. There is no regional variant. This is the **only** correct A-record value for Vercel apex domains.
 
@@ -38,13 +38,13 @@ Vercel will also tell you the exact value it expects on the project's **Settings
 
 Namecheap's "please provide valid address" / "Please provide a valid IP address" error appears for A records when the **Value** field doesn't parse as an IPv4 octet. The IP itself is valid, so the form is choking on one of these:
 
-| Cause | How to detect | Fix |
-|---|---|---|
-| **Trailing space after the IP** | Paste the IP into a plain-text editor and check the bytes | Re-type by hand; do not paste |
-| **Non-breaking space (U+00A0) introduced by a browser extension / clipboard manager** | Hex-dump the field content (`xxd` in terminal) | Re-type; disable clipboard clean-up extensions |
-| **Typo in the IP** (`76.76.21.210`, `76.76.21,21`, etc.) | Compare character-by-character with `76.76.21.21` | Re-type |
-| **Form bug when `Host` is left blank** | Make sure `@` is selected (not blank) | Pick `@` from the Host dropdown — don't type it |
-| **Domain not using Namecheap DNS** (BasicDNS / PremiumDNS / FreeDNS) | Check Domain List → Manage → Nameservers section at top of domain page | If nameservers point elsewhere, switch to Namecheap BasicDNS first |
+| Cause                                                                                 | How to detect                                                          | Fix                                                                |
+| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **Trailing space after the IP**                                                       | Paste the IP into a plain-text editor and check the bytes              | Re-type by hand; do not paste                                      |
+| **Non-breaking space (U+00A0) introduced by a browser extension / clipboard manager** | Hex-dump the field content (`xxd` in terminal)                         | Re-type; disable clipboard clean-up extensions                     |
+| **Typo in the IP** (`76.76.21.210`, `76.76.21,21`, etc.)                              | Compare character-by-character with `76.76.21.21`                      | Re-type                                                            |
+| **Form bug when `Host` is left blank**                                                | Make sure `@` is selected (not blank)                                  | Pick `@` from the Host dropdown — don't type it                    |
+| **Domain not using Namecheap DNS** (BasicDNS / PremiumDNS / FreeDNS)                  | Check Domain List → Manage → Nameservers section at top of domain page | If nameservers point elsewhere, switch to Namecheap BasicDNS first |
 
 The single highest-probability fix: **re-type `76.76.21.21` into the Value field instead of pasting it.** This eliminates 90% of these reports.
 
@@ -57,7 +57,7 @@ The single highest-probability fix: **re-type `76.76.21.21` into the Value field
 5. Click **Add New Record**:
    - Type: **A Record**
    - Host: **@**
-   - Value: `76.76.21.21` *(typed, not pasted)*
+   - Value: `76.76.21.21` _(typed, not pasted)_
    - TTL: **Automatic**
 6. Also add for `www`:
    - Type: **CNAME Record**
@@ -80,7 +80,7 @@ Expected output:
 cname.vercel-dns.com.
 ```
 
-Then in Vercel, go to Settings → Domains → `parentscript.app` and click **Refresh** (or re-run `vercel domains inspect parentscript.app`) — status should flip from *Invalid Configuration* to *Valid Configuration*.
+Then in Vercel, go to Settings → Domains → `parentscript.app` and click **Refresh** (or re-run `vercel domains inspect parentscript.app`) — status should flip from _Invalid Configuration_ to _Valid Configuration_.
 
 ---
 
@@ -110,7 +110,7 @@ ns1.vercel-dns.com.
 ns2.vercel-dns.com.
 ```
 
-…and the Vercel Domains page will show *Valid Configuration* without you ever touching the Advanced DNS tab.
+…and the Vercel Domains page will show _Valid Configuration_ without you ever touching the Advanced DNS tab.
 
 ---
 

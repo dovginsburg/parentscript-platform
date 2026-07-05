@@ -24,16 +24,16 @@ ParentScript proved the model: therapist-controlled progressive unlock of eviden
 
 The 8 expansion domains represent a **$2.8M+ ARR opportunity within 36 months** and position MAZE as the only unified behavioral health platform where one therapist dashboard serves all conditions.
 
-| Domain | Market Size (US Therapists) | Regulatory Risk | Launch Priority |
-|--------|---------------------------|-----------------|-----------------|
-| Anxiety | ~40,000 CBT therapists | Medium | **1st (Q1)** |
-| Depression | ~50,000 therapists | **High** (suicide) | **2nd (Q2)** |
-| ADHD | ~25,000 clinicians | Low | **3rd (Q2)** |
-| Trauma/PTSD | ~20,000 trauma specialists | High | 4th (Q3) |
-| Relationships | ~30,000 couples therapists | Medium | 5th (Q3) |
-| Autism | ~15,000 ND-affirming providers | Medium | 6th (Q4) |
-| Eating Disorders | ~8,000 ED specialists | **Very High** | 7th (Q4/Y2) |
-| Addiction | ~12,000 SUD counselors | **Very High** | 8th (Y2) |
+| Domain           | Market Size (US Therapists)    | Regulatory Risk    | Launch Priority |
+| ---------------- | ------------------------------ | ------------------ | --------------- |
+| Anxiety          | ~40,000 CBT therapists         | Medium             | **1st (Q1)**    |
+| Depression       | ~50,000 therapists             | **High** (suicide) | **2nd (Q2)**    |
+| ADHD             | ~25,000 clinicians             | Low                | **3rd (Q2)**    |
+| Trauma/PTSD      | ~20,000 trauma specialists     | High               | 4th (Q3)        |
+| Relationships    | ~30,000 couples therapists     | Medium             | 5th (Q3)        |
+| Autism           | ~15,000 ND-affirming providers | Medium             | 6th (Q4)        |
+| Eating Disorders | ~8,000 ED specialists          | **Very High**      | 7th (Q4/Y2)     |
+| Addiction        | ~12,000 SUD counselors         | **Very High**      | 8th (Y2)        |
 
 ---
 
@@ -95,28 +95,28 @@ No competitor combines all three of MAZE's differentiators:
 2. **Unified multi-condition dashboard** (not 8 separate apps)
 3. **Outcome tracking with validated instruments** (not generic mood trackers)
 
-| Competitor | Therapist Control | Multi-Condition | Outcome Tracking |
-|-----------|-------------------|-----------------|------------------|
-| NOCD | ❌ | ❌ | ❌ |
-| Woebot | ❌ | ❌ | ❌ |
-| PTSD Coach | ❌ | ❌ | ❌ |
-| Recovery Record | ❌ | ❌ | ❌ |
-| Ginger/Headspace | ❌ | ❌ | ❌ |
-| **MAZE** | **✅** | **✅** | **✅** |
+| Competitor       | Therapist Control | Multi-Condition | Outcome Tracking |
+| ---------------- | ----------------- | --------------- | ---------------- |
+| NOCD             | ❌                | ❌              | ❌               |
+| Woebot           | ❌                | ❌              | ❌               |
+| PTSD Coach       | ❌                | ❌              | ❌               |
+| Recovery Record  | ❌                | ❌              | ❌               |
+| Ginger/Headspace | ❌                | ❌              | ❌               |
+| **MAZE**         | **✅**            | **✅**          | **✅**           |
 
 ---
 
 ## Next Steps (This Week)
 
-| Action | Owner | Deadline |
-|--------|-------|----------|
-| Review all 4 expansion documents | Dov / Ariella | June 29 |
-| Confirm anxiety module launch priority | Dov | June 30 |
-| Identify clinical advisor for anxiety module | Ariella | July 3 |
-| Begin module framework engineering (schema + router) | Gary | July 7 |
-| Draft anxiety module skill catalog (L1–L5) | Mira | July 10 |
-| Legal review of suicide-care rail design | Dov | July 14 |
-| Post clinical lead job description | Dov / Ariella | July 7 |
+| Action                                               | Owner         | Deadline |
+| ---------------------------------------------------- | ------------- | -------- |
+| Review all 4 expansion documents                     | Dov / Ariella | June 29  |
+| Confirm anxiety module launch priority               | Dov           | June 30  |
+| Identify clinical advisor for anxiety module         | Ariella       | July 3   |
+| Begin module framework engineering (schema + router) | Gary          | July 7   |
+| Draft anxiety module skill catalog (L1–L5)           | Mira          | July 10  |
+| Legal review of suicide-care rail design             | Dov           | July 14  |
+| Post clinical lead job description                   | Dov / Ariella | July 7   |
 
 ---
 
@@ -132,4 +132,4 @@ The first-mover window on therapist-controlled behavioral health platforms is op
 
 ---
 
-*Delivered by Mira | AMAZED Labs | June 27, 2026*
+_Delivered by Mira | AMAZED Labs | June 27, 2026_

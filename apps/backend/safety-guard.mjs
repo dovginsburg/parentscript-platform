@@ -55,15 +55,15 @@ export const CRISIS_RESPONSE_EN_US = `It sounds like you're going through someth
 • 1-800-422-4453 — Childhelp National Child Abuse Hotline
 • Text HOME to 741741 — Crisis Text Line
 • 1-800-799-SAFE (7233) — National Domestic Violence Hotline
-If you're outside the U.S., please contact your local emergency number. You don't have to handle this alone.`
+If you're outside the U.S., please contact your local emergency number. You don't have to handle this alone.`;
 
-export const CRISIS_RESPONSE_TEXT = CRISIS_RESPONSE_EN_US // legacy alias
+export const CRISIS_RESPONSE_TEXT = CRISIS_RESPONSE_EN_US; // legacy alias
 
 // ── Scope-of-practice disclosure (shown on first launch + settings) ──
 export const SCOPE_DISCLOSURE_EN_US =
-  'ParentScript is a parenting support tool, not therapy, counseling, or medical advice. It is not a crisis service. If you or your child are in crisis, call 988, 911, the Childhelp National Child Abuse Hotline (1-800-422-4453), or text HOME to 741741.'
+  'ParentScript is a parenting support tool, not therapy, counseling, or medical advice. It is not a crisis service. If you or your child are in crisis, call 988, 911, the Childhelp National Child Abuse Hotline (1-800-422-4453), or text HOME to 741741.';
 
-export const SCOPE_DISCLOSURE_TEXT = SCOPE_DISCLOSURE_EN_US // legacy alias
+export const SCOPE_DISCLOSURE_TEXT = SCOPE_DISCLOSURE_EN_US; // legacy alias
 
 // ── Localization registry ─────────────────────────────────────────
 // Each entry is a human-reviewed translation. Adding a new locale
@@ -79,41 +79,40 @@ export const SCOPE_DISCLOSURE_TEXT = SCOPE_DISCLOSURE_EN_US // legacy alias
 export const LOCALES = Object.freeze({
   'en-US': Object.freeze({
     crisis: CRISIS_RESPONSE_EN_US,
-    scope:  SCOPE_DISCLOSURE_EN_US,
+    scope: SCOPE_DISCLOSURE_EN_US,
     reviewer: 'Mira (clinical psychologist)',
     reviewedAt: '2026-06-30',
   }),
   // 'es-US': PENDING — register here once Mira signs off.
   // Add as: 'es-US': Object.freeze({ crisis: '...', scope: '...', reviewer: '...', reviewedAt: '...' })
-})
+});
 
-export const DEFAULT_LOCALE = 'en-US'
+export const DEFAULT_LOCALE = 'en-US';
 
 export function getLocale(code) {
-  const entry = LOCALES[code]
+  const entry = LOCALES[code];
   if (!entry) {
     throw new Error(
       `safety-guard: locale "${code}" is not human-reviewed. ` +
-      `Per Mira's protocol, crisis responses must NOT be auto-translated. ` +
-      `Add a hand-reviewed entry to LOCALES in api/safety-guard.mjs after clinical sign-off. ` +
-      `Available locales: ${Object.keys(LOCALES).join(', ')}`,
-    )
+        `Per Mira's protocol, crisis responses must NOT be auto-translated. ` +
+        `Add a hand-reviewed entry to LOCALES in api/safety-guard.mjs after clinical sign-off. ` +
+        `Available locales: ${Object.keys(LOCALES).join(', ')}`
+    );
   }
-  return entry
+  return entry;
 }
 
 export function getCrisisResponse(code = DEFAULT_LOCALE) {
-  return getLocale(code).crisis
+  return getLocale(code).crisis;
 }
 
 export function getScopeDisclosure(code = DEFAULT_LOCALE) {
-  return getLocale(code).scope
+  return getLocale(code).scope;
 }
 
 export function listLocales() {
-  return Object.keys(LOCALES)
+  return Object.keys(LOCALES);
 }
-
 
 // ── Trigger categories ─────────────────────────────────────────────
 // `category` doubles as the routing hint for which hotline is the
@@ -128,7 +127,7 @@ export const CRISIS_CATEGORIES = Object.freeze({
   IPV: 'ipv',
   COERCION: 'coercion',
   DIAGNOSTIC_SEEKING: 'diagnostic_seeking',
-})
+});
 
 // ── Direct phrases ──────────────────────────────────────────────────
 // Strings matched as exact substrings (case-insensitive). Each entry
@@ -183,51 +182,78 @@ const SAFETY_NEGATIVE_GUARDS = [
   // threshold for genuine child SI distress is 8+ (per Mira's memo
   // on developmental normativity of dramatic language in 3-6y).
   /\bmy\s+(4|5|6)\s*-\s*year\s*-\s*old\s+(said|says|told\s+me).{0,80}(wants?\s+to\s+die|kill\s+themselves?)\b/i,
-]
+];
 
 // Apply negative guards before any positive match. A text matching a
 // guard is treated as non-triggering, full stop. Order of guards
 // matters only for readability — guards are independent.
 function passesNegativeGuards(text) {
   for (const re of SAFETY_NEGATIVE_GUARDS) {
-    if (re.test(text)) return false
+    if (re.test(text)) return false;
   }
-  return true
+  return true;
 }
 
 const DIRECT_PATTERNS = [
   // Parent suicidal ideation
-  { cat: CRISIS_CATEGORIES.SUICIDAL_PARENT, re: /\b(i\s+wants?\s+to\s+(die|kill\s+myself|end\s*(it|my\s*life))|i\s+(want|wish(ed)?|plan(ning)?|decided)\s*to\s*(die|kill\s+myself)|i\s+want\s+to\s+die|kill\s+myself\s+tonight|kill\s+myself\b|suicide|suicidal|better\s+off\s+dead|wish\s+i\s+was\s*dead|end\s+it\s+all|end\s+my\s+life|take\s+my\s+own\s+life|i\s+should\s+(just\s+)?disappear|i\s+have\s+no\s+reason\s+to\s+live)\b/i },
+  {
+    cat: CRISIS_CATEGORIES.SUICIDAL_PARENT,
+    re: /\b(i\s+wants?\s+to\s+(die|kill\s+myself|end\s*(it|my\s*life))|i\s+(want|wish(ed)?|plan(ning)?|decided)\s*to\s*(die|kill\s+myself)|i\s+want\s+to\s+die|kill\s+myself\s+tonight|kill\s+myself\b|suicide|suicidal|better\s+off\s+dead|wish\s+i\s+was\s*dead|end\s+it\s+all|end\s+my\s+life|take\s+my\s+own\s+life|i\s+should\s+(just\s+)?disappear|i\s+have\s+no\s+reason\s+to\s+live)\b/i,
+  },
 
   // Plan disclosure (parent or child, with various verbs)
   { cat: CRISIS_CATEGORIES.SUICIDAL_PARENT, re: /\b(i\s+have\s+a\s+plan(\s+for\s+how|\s+to)?)\b/i },
 
   // Persistent intrusive SI ("keep thinking about killing/dying")
-  { cat: CRISIS_CATEGORIES.SUICIDAL_PARENT, re: /\b(keep|keeps|kept)\s+thinking\s+about\s+(kill\w*\s*(myself|himself|herself|themselves)?|dying|die|end\w*\s*(it|my\s+life|my\s+story))\b/i },
+  {
+    cat: CRISIS_CATEGORIES.SUICIDAL_PARENT,
+    re: /\b(keep|keeps|kept)\s+thinking\s+about\s+(kill\w*\s*(myself|himself|herself|themselves)?|dying|die|end\w*\s*(it|my\s+life|my\s+story))\b/i,
+  },
 
   // Self-harm
-  { cat: CRISIS_CATEGORIES.SELF_HARM, re: /\b(hurting\s+myself|cutting\s+myself|cutting\s+my|burning\s+myself|hitting\s+myself|i\s+cut|i\s+burn\s+myself|self[- ]?harm|i\s+want\s+to\s+hurt\s+myself|i\s+caught\s+myself\s+cutting|cutting\s+again)\b/i },
+  {
+    cat: CRISIS_CATEGORIES.SELF_HARM,
+    re: /\b(hurting\s+myself|cutting\s+myself|cutting\s+my|burning\s+myself|hitting\s+myself|i\s+cut|i\s+burn\s+myself|self[- ]?harm|i\s+want\s+to\s+hurt\s+myself|i\s+caught\s+myself\s+cutting|cutting\s+again)\b/i,
+  },
 
   // Harm to child (parent admitting)
-  { cat: CRISIS_CATEGORIES.HARM_TO_CHILD, re: /\b(i\s+(hit|kicked|punched|slapped|grabbed|shoved|shook|threw|smacked)\s+(him|her|them|my\s+(son|daughter|kid|child|baby))|i\s+left\s+a\s+mark|i\s+bruised|i\s+couldn'?t\s+stop\s+hitting|i\s+lost\s+control\s+and\s+(hit|kicked|slapped|grabbed)|i\s+shook\s+the\s+baby|i\s+shook\s+(him|her|my\s+baby|my\s+son|my\s+daughter))\b/i },
+  {
+    cat: CRISIS_CATEGORIES.HARM_TO_CHILD,
+    re: /\b(i\s+(hit|kicked|punched|slapped|grabbed|shoved|shook|threw|smacked)\s+(him|her|them|my\s+(son|daughter|kid|child|baby))|i\s+left\s+a\s+mark|i\s+bruised|i\s+couldn'?t\s+stop\s+hitting|i\s+lost\s+control\s+and\s+(hit|kicked|slapped|grabbed)|i\s+shook\s+the\s+baby|i\s+shook\s+(him|her|my\s+baby|my\s+son|my\s+daughter))\b/i,
+  },
 
   // Abuse disclosure (parent disclosing or hinting past abuse,
   // or witnessing abuse of someone else).
-  { cat: CRISIS_CATEGORIES.ABUSE_DISCLOSURE, re: /\b(someone'?s?\s+(hurting|hitting|touching)\s+(my\s+)?(child|kid|son|daughter|baby)|my\s+(partner|husband|boyfriend|girlfriend|wife|ex)\s+(is\s+)?(hurting|hitting|touching|raping|molesting|abusing)|i\s+was\s+(sexually\s+)?(abused|molested|raped)\s+(as\s+a\s+(kid|child)|when\s+i\s+was)|my\s+(dad|mom|parent)\s+(sexually\s+)?(abused|molested)\s+me|i\s+was\s+touched\s+inappropriately|someone\s+is\s+hurting(\s+(and\s+i\s+don'?t\s+know\s+how\s+to\s+help|\s+them|\s+him|\s+her|\s+my))?)\b/i },
+  {
+    cat: CRISIS_CATEGORIES.ABUSE_DISCLOSURE,
+    re: /\b(someone'?s?\s+(hurting|hitting|touching)\s+(my\s+)?(child|kid|son|daughter|baby)|my\s+(partner|husband|boyfriend|girlfriend|wife|ex)\s+(is\s+)?(hurting|hitting|touching|raping|molesting|abusing)|i\s+was\s+(sexually\s+)?(abused|molested|raped)\s+(as\s+a\s+(kid|child)|when\s+i\s+was)|my\s+(dad|mom|parent)\s+(sexually\s+)?(abused|molested)\s+me|i\s+was\s+touched\s+inappropriately|someone\s+is\s+hurting(\s+(and\s+i\s+don'?t\s+know\s+how\s+to\s+help|\s+them|\s+him|\s+her|\s+my))?)\b/i,
+  },
 
   // Child suicidal ideation or self-harm
-  { cat: CRISIS_CATEGORIES.SUICIDAL_CHILD, re: /\b(my\s+\d+\s*-\s*year\s*-\s*old\s+(said|says|told\s+me)\s+.{0,80}(wants?\s+to\s+die|kill\s+(himself|herself|themselves)|killed?\s+(himself|herself|themselves)|suicide|suicidal|hurt\s+(himself|herself|themselves|him|her|them)|cutting\s+(himself|herself|themselves))|my\s+(son|daughter|kid|child)\s+(said|says|told\s+me\s+(they|he|she|i))\s+.{0,80}(wants?\s+to\s+die|kill\s+(himself|herself|themselves)|killed?\s+(himself|herself|themselves)|suicide|suicidal|hurt\s+(himself|herself|themselves|him|her|them)|cutting\s+(himself|herself|themselves))|my\s+(son|daughter|kid|child)\s+(wants|wanted)\s+to\s+die|my\s+(son|daughter|kid|child)\s+(is|are|has\s+been|[\u2019']?s\s+been)\s+(cutting|hurting)\s+(themselves|himself|herself)|my\s+(son|daughter|kid|child)\s+.{0,30}\s+been\s+(cutting|hurting)\s+(themselves|himself|herself))\b/i },
+  {
+    cat: CRISIS_CATEGORIES.SUICIDAL_CHILD,
+    re: /\b(my\s+\d+\s*-\s*year\s*-\s*old\s+(said|says|told\s+me)\s+.{0,80}(wants?\s+to\s+die|kill\s+(himself|herself|themselves)|killed?\s+(himself|herself|themselves)|suicide|suicidal|hurt\s+(himself|herself|themselves|him|her|them)|cutting\s+(himself|herself|themselves))|my\s+(son|daughter|kid|child)\s+(said|says|told\s+me\s+(they|he|she|i))\s+.{0,80}(wants?\s+to\s+die|kill\s+(himself|herself|themselves)|killed?\s+(himself|herself|themselves)|suicide|suicidal|hurt\s+(himself|herself|themselves|him|her|them)|cutting\s+(himself|herself|themselves))|my\s+(son|daughter|kid|child)\s+(wants|wanted)\s+to\s+die|my\s+(son|daughter|kid|child)\s+(is|are|has\s+been|[\u2019']?s\s+been)\s+(cutting|hurting)\s+(themselves|himself|herself)|my\s+(son|daughter|kid|child)\s+.{0,30}\s+been\s+(cutting|hurting)\s+(themselves|himself|herself))\b/i,
+  },
 
   // Intimate partner violence (parent is the victim)
-  { cat: CRISIS_CATEGORIES.IPV, re: /\b(my\s+(partner|husband|boyfriend|girlfriend|wife|ex)\s+(hits?|kicks?|beats?|chokes?)\s+me|i'?m\s+(scared|afraid)\s+of\s+my\s+(partner|husband|boyfriend|girlfriend|wife|ex)|i\s+have\s+to\s+hide\s+(my|the)\s+(bruises?|injuries?|money)|he\s+(won'?t|will\s+not)\s+let\s+me\s+(leave|go|work)|i'?m\s+being\s+controlled)\b/i },
+  {
+    cat: CRISIS_CATEGORIES.IPV,
+    re: /\b(my\s+(partner|husband|boyfriend|girlfriend|wife|ex)\s+(hits?|kicks?|beats?|chokes?)\s+me|i'?m\s+(scared|afraid)\s+of\s+my\s+(partner|husband|boyfriend|girlfriend|wife|ex)|i\s+have\s+to\s+hide\s+(my|the)\s+(bruises?|injuries?|money)|he\s+(won'?t|will\s+not)\s+let\s+me\s+(leave|go|work)|i'?m\s+being\s+controlled)\b/i,
+  },
 
   // Coercion / privacy breach hint
-  { cat: CRISIS_CATEGORIES.COERCION, re: /\b((don'?t|do\s+not)\s+tell\s+(anyone|my\s+(husband|wife|partner|therapist|doctor))|(promise|swear)(\s+me)?\s+you\s+won'?t\s+tell|this\s+is\s+(just\s+)?between\s+us|keep\s+(it|this)\s+(secret|quiet)|don'?t\s+tell\s+(anyone|my\s+(wife|husband))|told\s+me\s+not\s+to\s+tell\s+(anyone|anybody))\b/i },
+  {
+    cat: CRISIS_CATEGORIES.COERCION,
+    re: /\b((don'?t|do\s+not)\s+tell\s+(anyone|my\s+(husband|wife|partner|therapist|doctor))|(promise|swear)(\s+me)?\s+you\s+won'?t\s+tell|this\s+is\s+(just\s+)?between\s+us|keep\s+(it|this)\s+(secret|quiet)|don'?t\s+tell\s+(anyone|my\s+(wife|husband))|told\s+me\s+not\s+to\s+tell\s+(anyone|anybody))\b/i,
+  },
 
   // Diagnostic seeking (out of scope) — widened to first-person
   // "I think" form and to alternate phrasings Mira flagged.
-  { cat: CRISIS_CATEGORIES.DIAGNOSTIC_SEEKING, re: /\b((do\s+you|i)\s+think\s+my\s+(child|kid|son|daughter|teen)\s+(has|have|might\s+have|could\s+have)\s+(adhd|autism|asd|odd|anxiety|depression|bipolar|ptsd|conduct\s+disorder)|does\s+my\s+(child|kid)\s+have\s+(adhd|autism|odd)|what\s+medication\s+(should|do|would|can)\s+(i|my\s+(son|daughter|kid|child))\s+(take|be\s+on|use)|should\s+(i|my\s+(child|kid|son|daughter))\s+(be\s+on|try|take)\s+(medication|meds)|(does|do)\s+my\s+(son|daughter|kid|child)\s+have\s+(adhd|autism|odd))\b/i },
-]
+  {
+    cat: CRISIS_CATEGORIES.DIAGNOSTIC_SEEKING,
+    re: /\b((do\s+you|i)\s+think\s+my\s+(child|kid|son|daughter|teen)\s+(has|have|might\s+have|could\s+have)\s+(adhd|autism|asd|odd|anxiety|depression|bipolar|ptsd|conduct\s+disorder)|does\s+my\s+(child|kid)\s+have\s+(adhd|autism|odd)|what\s+medication\s+(should|do|would|can)\s+(i|my\s+(son|daughter|kid|child))\s+(take|be\s+on|use)|should\s+(i|my\s+(child|kid|son|daughter))\s+(be\s+on|try|take)\s+(medication|meds)|(does|do)\s+my\s+(son|daughter|kid|child)\s+have\s+(adhd|autism|odd))\b/i,
+  },
+];
 
 // ── Indirect phrasing — high-risk FOR suicidal ideation ────────────
 // These don't mention suicide directly but are well-documented
@@ -268,7 +294,7 @@ const INDIRECT_PATTERNS = [
 
   // Giving up / nothing to live for
   /\b(giving\s+(up|it\s+all\s+up)|nothing\s+to\s+live\s+for|no\s+reason\s+to\s+(live|keep\s+going))\b/i,
-]
+];
 
 // ── "Not today" filter — single-day phrasing should not flag ───────
 //
@@ -303,7 +329,7 @@ const INDIRECT_PATTERNS = [
 // pattern, then checks if (a) the match was a day-scope phrase AND (b)
 // the surrounding text only contains a single-day-scope token — if so,
 // skip the flag.
-const DAY_SCOPE_REGEX = /\b(today|tonight|this\s+morning|right\s+now\s+alone|just\s+today)\b/i
+const DAY_SCOPE_REGEX = /\b(today|tonight|this\s+morning|right\s+now\s+alone|just\s+today)\b/i;
 const DOWNGRADEABLE_INDIRECT_INDICES = new Set([
   1, // "can't keep going"
   2, // "can't go on anymore/like this"
@@ -311,21 +337,21 @@ const DOWNGRADEABLE_INDIRECT_INDICES = new Set([
   5, // "no point in (continuing|living|waking up|trying)"
   6, // "wouldn't mind if I didn't wake up"
   7, // "wish I could (just) sleep and never wake"
-])
+]);
 
 // ── Detective helper ────────────────────────────────────────────────
 export function detectCrisisTrigger(situation) {
-  if (typeof situation !== 'string' || !situation.trim()) return null
-  const text = situation
+  if (typeof situation !== 'string' || !situation.trim()) return null;
+  const text = situation;
 
   // Negative guards first — figurative / accidental / minor phrasings
   // that should never trigger. (See AUDIT TRAIL at top of file.)
-  if (!passesNegativeGuards(text)) return null
+  if (!passesNegativeGuards(text)) return null;
 
   // Direct patterns first — these are unambiguous.
   for (const { cat, re } of DIRECT_PATTERNS) {
     if (re.test(text)) {
-      return { category: cat, indirect: false, matchSource: 'direct' }
+      return { category: cat, indirect: false, matchSource: 'direct' };
     }
   }
   // Indirect patterns — flag as well; route to the same verbatim
@@ -338,12 +364,16 @@ export function detectCrisisTrigger(situation) {
       // alone", they are overwhelmed in the moment but not
       // suicidal. Skip the flag — let the AI coach respond.
       if (DOWNGRADEABLE_INDIRECT_INDICES.has(i) && DAY_SCOPE_REGEX.test(text)) {
-        return null
+        return null;
       }
-      return { category: CRISIS_CATEGORIES.SUICIDAL_PARENT, indirect: true, matchSource: 'indirect' }
+      return {
+        category: CRISIS_CATEGORIES.SUICIDAL_PARENT,
+        indirect: true,
+        matchSource: 'indirect',
+      };
     }
   }
-  return null
+  return null;
 }
 
 // ── Wire shape returned by shieldSituation ──────────────────────────
@@ -357,7 +387,7 @@ export function detectCrisisTrigger(situation) {
 // Returns a CoachingResponse matching @parentscript/shared types.
 // This ensures crisis responses follow the same shape as regular coaching responses.
 export function crisisResponsePayload(locale = DEFAULT_LOCALE) {
-  const loc = getLocale(locale)
+  const loc = getLocale(locale);
   return {
     risk_level: 'high',
     empathy: 'You are not alone. Help is available right now.',
@@ -370,17 +400,17 @@ export function crisisResponsePayload(locale = DEFAULT_LOCALE) {
     safetyNote: loc.scope, // camelCase mirror for client/SPA consumers (tests + UI surface tests)
     crisis_response: true, // Canonical API flag (CoachingResponse type)
     _crisis: true, // UI-only marker — kept for legacy client + surface-tests compatibility
-  }
+  };
 }
 
 // ── Top-level helper for /api/coach ─────────────────────────────────
 export function shieldSituation(situation, locale = DEFAULT_LOCALE) {
-  const trigger = detectCrisisTrigger(situation)
-  if (!trigger) return { safe: true }
+  const trigger = detectCrisisTrigger(situation);
+  if (!trigger) return { safe: true };
   return {
     safe: false,
     category: trigger.category,
     indirect: trigger.indirect,
     response: crisisResponsePayload(locale),
-  }
+  };
 }

@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 // ParentScript — design system v1.0 (Mark, 2026-07-03)
 // Source of truth: /Users/Ezra/Projects/team/mark-deliverables/design-tokens.json
@@ -130,4 +130,4 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config
+} satisfies Config;

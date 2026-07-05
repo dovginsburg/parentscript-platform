@@ -21,6 +21,7 @@ plain `text/plain`. The root URL `/` works (200), but `/signup`, `/login`,
 `/therapist/clients`, `/invite/:code`, `/parent/...` — everything except `/` — 404s.
 
 **Verified:**
+
 ```
 GET /                → HTTP/2 200  (index.html)
 GET /signup          → HTTP/2 404  (NOT_FOUND)
@@ -71,6 +72,7 @@ auth provider, `signUp` succeeds but no session is created, so the subsequent
 description ("Something went wrong on submit") matches this exactly.
 
 **Fix (defense-in-depth, applied):**
+
 1. Better error surfacing (see P0-2) so the real Supabase message shows.
 2. Add a console.error in the catch so the actual failure is in the browser
    console even if the user only sees the toast.
@@ -114,6 +116,7 @@ SSL cert isn't provisioned yet (or the domain is on a registrar with
 incorrect DNS records pointing at Vercel).
 
 **Out of scope** for this codebase fix. Dov needs to either:
+
 - Verify Vercel domain settings → "parentscript.app" shows "Valid Configuration"
 - Or use `maze-rho-murex.vercel.app` until the cert is up
 
@@ -129,14 +132,16 @@ The code is fine; both URLs deploy the same build.
 rendering a different component."
 
 **Files:**
+
 - `src/pages/parent/InTheMoment.tsx:112-115`
 - `src/pages/parent/PracticeLog.tsx:23-26`
 
 Both files do:
+
 ```tsx
 if (!loading && !canUse('inTheMoment')) {
-  navigate('/parent', { replace: true })
-  return null
+  navigate('/parent', { replace: true });
+  return null;
 }
 ```
 
@@ -148,6 +153,7 @@ if (!loading && !canUse('inTheMoment')) {
 clicks "Unlock" and the UI flickers but no row is created; no error shown.
 
 **Files:**
+
 - `src/pages/therapist/ClientDetail.tsx:63-95`
 
 ```ts
@@ -204,8 +210,8 @@ disappears from every parent's home screen immediately" in
 
 ```ts
 if (!error) {
-  setDone(true)
-  setTimeout(() => navigate('/parent'), 1500)
+  setDone(true);
+  setTimeout(() => navigate('/parent'), 1500);
 }
 ```
 
@@ -224,10 +230,10 @@ const stateRes = await supabase
   .select('*')
   .eq('client_id', parent!.client_id)
   .then(async res => {
-    if (!res.data) return { data: null }
-    const skillId = (await supabase.from('skills').select('id').eq('slug', slug).single()).data?.id
-    return { data: res.data.find(s => s.skill_id === skillId) ?? null }
-  })
+    if (!res.data) return { data: null };
+    const skillId = (await supabase.from('skills').select('id').eq('slug', slug).single()).data?.id;
+    return { data: res.data.find(s => s.skill_id === skillId) ?? null };
+  });
 ```
 
 This pulls ALL `client_skill_state` rows for the client (could be N skills)

@@ -4,16 +4,19 @@ test.describe('Skill Library (Parent View)', () => {
   test.beforeEach(async ({ page }) => {
     // Mock authenticated parent user
     await page.addInitScript(() => {
-      localStorage.setItem('supabase.auth.token', JSON.stringify({
-        access_token: 'mock-token',
-        refresh_token: 'mock-refresh',
-        expires_at: Date.now() + 3600000,
-        user: {
-          id: 'mock-parent-id',
-          email: 'parent@example.com',
-          app_metadata: { role: 'parent' },
-        },
-      }));
+      localStorage.setItem(
+        'supabase.auth.token',
+        JSON.stringify({
+          access_token: 'mock-token',
+          refresh_token: 'mock-refresh',
+          expires_at: Date.now() + 3600000,
+          user: {
+            id: 'mock-parent-id',
+            email: 'parent@example.com',
+            app_metadata: { role: 'parent' },
+          },
+        })
+      );
     });
   });
 

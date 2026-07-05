@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useAuth } from '@/hooks/useAuth'
-import MarkHeader from '@/components/MarkHeader'
-import MarkFooter from '@/components/MarkFooter'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import MarkHeader from '@/components/MarkHeader';
+import MarkFooter from '@/components/MarkFooter';
 
 // ──────────────────────────────────────────────────────────────────────
 // Pricing — Plan selection page for therapists and parents
@@ -81,7 +81,7 @@ const PLANS = [
     cta: 'Contact Sales',
     popular: false,
   },
-]
+];
 
 const FREE_PLAN = {
   name: 'Free',
@@ -97,47 +97,70 @@ const FREE_PLAN = {
   ],
   cta: 'Try it free',
   href: '/parent-signup',
-}
+};
 
-function formatPrice(plan: typeof PLANS[number]): string {
-  return `$${plan.price}/${plan.interval}`
+function formatPrice(plan: (typeof PLANS)[number]): string {
+  return `$${plan.price}/${plan.interval}`;
 }
 
 const COMPARISON_ROWS: { feature: string; values: Record<string, string | boolean> }[] = [
-  { feature: 'Price', values: { free: 'Free', solo: formatPrice(PLANS[0]), pro: formatPrice(PLANS[1]), clinic: formatPrice(PLANS[2]) } },
-  { feature: 'Parents enrolled', values: { free: 'Self-serve', solo: 'Up to 25', pro: 'Unlimited', clinic: 'Unlimited' } },
+  {
+    feature: 'Price',
+    values: {
+      free: 'Free',
+      solo: formatPrice(PLANS[0]),
+      pro: formatPrice(PLANS[1]),
+      clinic: formatPrice(PLANS[2]),
+    },
+  },
+  {
+    feature: 'Parents enrolled',
+    values: { free: 'Self-serve', solo: 'Up to 25', pro: 'Unlimited', clinic: 'Unlimited' },
+  },
   { feature: 'Therapist accounts', values: { free: '—', solo: '1', pro: '1', clinic: 'Multiple' } },
-  { feature: 'Evidence-based skills library', values: { free: 'L1-L2 only', solo: 'L1-L5', pro: 'L1-L5', clinic: 'L1-L5' } },
-  { feature: 'In-the-moment coaching', values: { free: '1/day', solo: 'Unlimited', pro: 'Unlimited', clinic: 'Unlimited' } },
+  {
+    feature: 'Evidence-based skills library',
+    values: { free: 'L1-L2 only', solo: 'L1-L5', pro: 'L1-L5', clinic: 'L1-L5' },
+  },
+  {
+    feature: 'In-the-moment coaching',
+    values: { free: '1/day', solo: 'Unlimited', pro: 'Unlimited', clinic: 'Unlimited' },
+  },
   { feature: 'Practice logging', values: { free: true, solo: true, pro: true, clinic: true } },
   { feature: 'Session prep reports', values: { free: false, solo: true, pro: true, clinic: true } },
-  { feature: 'Shared client roster', values: { free: false, solo: false, pro: false, clinic: true } },
-  { feature: 'Admin & team management', values: { free: false, solo: false, pro: false, clinic: true } },
+  {
+    feature: 'Shared client roster',
+    values: { free: false, solo: false, pro: false, clinic: true },
+  },
+  {
+    feature: 'Admin & team management',
+    values: { free: false, solo: false, pro: false, clinic: true },
+  },
   { feature: 'Email support', values: { free: false, solo: true, pro: true, clinic: true } },
   { feature: 'Priority support', values: { free: false, solo: false, pro: true, clinic: false } },
   { feature: 'Dedicated support', values: { free: false, solo: false, pro: false, clinic: true } },
-]
+];
 
-const TIER_ORDER = ['free', 'solo', 'pro', 'clinic'] as const
+const TIER_ORDER = ['free', 'solo', 'pro', 'clinic'] as const;
 
 export default function Pricing() {
-  const { therapist } = useAuth()
-  const [loading, setLoading] = useState<string | null>(null)
-  const [error, setError] = useState<string | null>(null)
+  const { therapist } = useAuth();
+  const [loading, setLoading] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   async function handleSubscribe(planId: string) {
-    setError(null)
+    setError(null);
 
     // Auth gating: unauthenticated visitors land on /signup where they can
     // create a therapist account. We route with ?plan= so the next /signup
     // iteration can pre-select the tier; the redirect is explicit-not-silent
     // so the click feels responsive (vs. the old "do nothing" perception).
     if (!therapist?.id) {
-      window.location.href = `/signup?plan=${planId}`
-      return
+      window.location.href = `/signup?plan=${planId}`;
+      return;
     }
 
-    setLoading(planId)
+    setLoading(planId);
     try {
       const res = await fetch('/api/stripe/checkout', {
         method: 'POST',
@@ -147,12 +170,12 @@ export default function Pricing() {
           therapist_id: therapist.id,
           seats: planId === 'clinic' ? 1 : undefined,
         }),
-      })
+      });
 
-      const data = await res.json()
+      const data = await res.json();
       if (data.url) {
-        window.location.href = data.url
-        return
+        window.location.href = data.url;
+        return;
       }
 
       // Map the most common server errors to friendly copy. 503 = "Stripe
@@ -163,20 +186,20 @@ export default function Pricing() {
       if (res.status === 503) {
         setError(
           'Subscriptions are temporarily unavailable. Please email ' +
-            'support@parentscript.app and we will get you set up.',
-        )
+            'support@parentscript.app and we will get you set up.'
+        );
       } else if (res.status === 401 || res.status === 403) {
-        setError('Your session expired. Please sign in again.')
+        setError('Your session expired. Please sign in again.');
         setTimeout(() => {
-          window.location.href = '/login'
-        }, 1500)
+          window.location.href = '/login';
+        }, 1500);
       } else {
-        setError(data.error || 'Failed to create checkout session.')
+        setError(data.error || 'Failed to create checkout session.');
       }
     } catch (err) {
-      setError('Network error. Please try again.')
+      setError('Network error. Please try again.');
     } finally {
-      setLoading(null)
+      setLoading(null);
     }
   }
 
@@ -193,9 +216,9 @@ export default function Pricing() {
               Pricing built for clinicians.
             </h2>
             <p className="text-lg text-ps-text-soft max-w-2xl mx-auto leading-relaxed">
-              Parents get started free. Therapists choose the plan that fits
-              their caseload — Solo, Pro, or Clinic. All paid plans include a
-              14-day free trial with no credit card required.
+              Parents get started free. Therapists choose the plan that fits their caseload — Solo,
+              Pro, or Clinic. All paid plans include a 14-day free trial with no credit card
+              required.
             </p>
           </div>
 
@@ -208,9 +231,11 @@ export default function Pricing() {
               </div>
               <h3 className="text-2xl font-bold text-ps-text mb-2">{FREE_PLAN.description}</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-sm text-ps-text-soft">
-                {FREE_PLAN.features.map((f) => (
+                {FREE_PLAN.features.map(f => (
                   <li key={f} className="flex items-start gap-2">
-                    <span className="text-ps-success mt-0.5 shrink-0" aria-hidden="true">✓</span>
+                    <span className="text-ps-success mt-0.5 shrink-0" aria-hidden="true">
+                      ✓
+                    </span>
                     {f}
                   </li>
                 ))}
@@ -230,7 +255,9 @@ export default function Pricing() {
           {/* Therapist plan cards */}
           <div className="mb-5 flex items-center gap-3">
             <span className="ps-eyebrow">For therapists</span>
-            <span className="text-sm text-ps-text-softer">— cancel anytime, 14-day free trial on all paid plans</span>
+            <span className="text-sm text-ps-text-softer">
+              — cancel anytime, 14-day free trial on all paid plans
+            </span>
           </div>
 
           {/* Inline error banner — replaces the silent alert() that made the
@@ -243,10 +270,7 @@ export default function Pricing() {
               className="mb-5 ps-card border-ps-danger bg-ps-danger-softer text-ps-text"
             >
               <div className="flex items-start gap-3">
-                <span
-                  className="text-ps-danger mt-0.5 shrink-0"
-                  aria-hidden="true"
-                >
+                <span className="text-ps-danger mt-0.5 shrink-0" aria-hidden="true">
                   !
                 </span>
                 <div className="flex-1 text-sm">
@@ -268,7 +292,7 @@ export default function Pricing() {
           )}
 
           <div className="grid md:grid-cols-3 gap-5 mb-14">
-            {PLANS.map((plan) => (
+            {PLANS.map(plan => (
               <div
                 key={plan.id}
                 className={`relative ps-card flex flex-col ${
@@ -293,9 +317,11 @@ export default function Pricing() {
                 </div>
 
                 <ul className="space-y-3 mb-7 flex-1">
-                  {plan.features.map((feature) => (
+                  {plan.features.map(feature => (
                     <li key={feature} className="flex items-start gap-2 text-sm text-ps-text-soft">
-                      <span className="text-ps-success mt-0.5 shrink-0" aria-hidden="true">✓</span>
+                      <span className="text-ps-success mt-0.5 shrink-0" aria-hidden="true">
+                        ✓
+                      </span>
                       {feature}
                     </li>
                   ))}
@@ -337,38 +363,50 @@ export default function Pricing() {
               <table className="w-full text-sm border-collapse min-w-[640px]">
                 <thead>
                   <tr className="bg-ps-bg-soft text-left">
-                    <th className="px-4 py-3 font-semibold text-ps-text-soft border-b border-ps-border">Feature</th>
-                    {TIER_ORDER.map((tier) => (
+                    <th className="px-4 py-3 font-semibold text-ps-text-soft border-b border-ps-border">
+                      Feature
+                    </th>
+                    {TIER_ORDER.map(tier => (
                       <th
                         key={tier}
                         className={`px-4 py-3 font-semibold border-b border-ps-border text-center ${
                           tier === 'pro' ? 'text-ps-accent' : 'text-ps-text-soft'
                         }`}
                       >
-                        {tier === 'free' ? 'Free' : tier === 'solo' ? 'Solo' : tier === 'pro' ? 'Pro ★' : 'Clinic'}
+                        {tier === 'free'
+                          ? 'Free'
+                          : tier === 'solo'
+                            ? 'Solo'
+                            : tier === 'pro'
+                              ? 'Pro ★'
+                              : 'Clinic'}
                       </th>
                     ))}
                   </tr>
                 </thead>
                 <tbody>
-                  {COMPARISON_ROWS.map((row) => (
+                  {COMPARISON_ROWS.map(row => (
                     <tr key={row.feature} className="border-b border-ps-border">
                       <td className="px-4 py-3 text-ps-text-soft">{row.feature}</td>
-                      {TIER_ORDER.map((tier) => {
-                        const value = row.values[tier]
+                      {TIER_ORDER.map(tier => {
+                        const value = row.values[tier];
                         return (
                           <td key={tier} className="px-4 py-3 text-center">
                             {typeof value === 'boolean' ? (
                               value ? (
-                                <span className="text-ps-success font-bold" aria-label="included">✓</span>
+                                <span className="text-ps-success font-bold" aria-label="included">
+                                  ✓
+                                </span>
                               ) : (
-                                <span className="text-ps-muted" aria-label="not included">—</span>
+                                <span className="text-ps-muted" aria-label="not included">
+                                  —
+                                </span>
                               )
                             ) : (
                               <span className="text-ps-text">{value}</span>
                             )}
                           </td>
-                        )
+                        );
                       })}
                     </tr>
                   ))}
@@ -380,14 +418,20 @@ export default function Pricing() {
                         Start free →
                       </Link>
                     </td>
-                    {TIER_ORDER.slice(1).map((tier) => (
+                    {TIER_ORDER.slice(1).map(tier => (
                       <td key={tier} className="px-4 py-4 text-center">
                         {tier === 'clinic' ? (
-                          <a href="mailto:sales@parentscript.app" className="ps-link text-xs font-semibold">
+                          <a
+                            href="mailto:sales@parentscript.app"
+                            className="ps-link text-xs font-semibold"
+                          >
                             Contact sales →
                           </a>
                         ) : (
-                          <Link to={`/signup?plan=${tier}`} className="ps-link text-xs font-semibold">
+                          <Link
+                            to={`/signup?plan=${tier}`}
+                            className="ps-link text-xs font-semibold"
+                          >
                             Start trial →
                           </Link>
                         )}
@@ -432,5 +476,5 @@ export default function Pricing() {
 
       <MarkFooter product="parentscript" />
     </div>
-  )
+  );
 }

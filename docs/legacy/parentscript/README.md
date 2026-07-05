@@ -19,13 +19,13 @@ This repo (parentscript-platform) and the legacy repo (parentscript)
 have the SAME active code at the time of cherry-pick. The differences
 are:
 
-| Concern | parentscript-platform | parentscript (legacy) |
-|---|---|---|
-| Top-level README | Yes | Yes (older) |
-| OWNERSHIP.md | Yes | No |
-| docs/legacy/maze/ | Yes | No |
-| Top-level CI matrix | Yes | No |
-| Apps under apps/ | Yes | Yes |
+| Concern               | parentscript-platform     | parentscript (legacy)     |
+| --------------------- | ------------------------- | ------------------------- |
+| Top-level README      | Yes                       | Yes (older)               |
+| OWNERSHIP.md          | Yes                       | No                        |
+| docs/legacy/maze/     | Yes                       | No                        |
+| Top-level CI matrix   | Yes                       | No                        |
+| Apps under apps/      | Yes                       | Yes                       |
 | Recovery of `647601e` | Carried via 10394a6 merge | Carried via 10394a6 merge |
 
 ## Source of truth

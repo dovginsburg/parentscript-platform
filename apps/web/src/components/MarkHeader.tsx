@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 // ──────────────────────────────────────────────────────────────────────
 // MarkHeader — shared marketing-page header
@@ -25,16 +25,20 @@ import { Link } from 'react-router-dom'
 // MarkHeader.
 
 type MarkHeaderProps = {
-  product?: 'parentscript' | 'sibling'
-  cta?: { label: string; href: string }
-}
+  product?: 'parentscript' | 'sibling';
+  cta?: { label: string; href: string };
+};
 
 export default function MarkHeader({ product = 'parentscript', cta }: MarkHeaderProps) {
   if (product === 'sibling') {
     return (
       <header className="bg-ps-bg border-b border-ps-border">
         <div className="max-w-[1240px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
-          <Link to="/sibling" className="flex items-center gap-3" aria-label="SiblingSupport — back to landing">
+          <Link
+            to="/sibling"
+            className="flex items-center gap-3"
+            aria-label="SiblingSupport — back to landing"
+          >
             <span
               aria-hidden="true"
               className="w-8 h-8 grid place-items-center bg-ps-accent text-white rounded-[10px] font-bold text-[15px]"
@@ -55,24 +59,18 @@ export default function MarkHeader({ product = 'parentscript', cta }: MarkHeader
               Safety
             </Link>
             {cta ? (
-              <Link
-                to={cta.href}
-                className="ps-btn ps-btn-primary ps-btn-sm"
-              >
+              <Link to={cta.href} className="ps-btn ps-btn-primary ps-btn-sm">
                 {cta.label}
               </Link>
             ) : (
-              <Link
-                to="/sibling/app"
-                className="ps-btn ps-btn-primary ps-btn-sm"
-              >
+              <Link to="/sibling/app" className="ps-btn ps-btn-primary ps-btn-sm">
                 Open the coach
               </Link>
             )}
           </nav>
         </div>
       </header>
-    )
+    );
   }
 
   // parentscript (default)
@@ -86,9 +84,7 @@ export default function MarkHeader({ product = 'parentscript', cta }: MarkHeader
           >
             P
           </span>
-          <span className="font-bold text-[17px] tracking-tight text-ps-text">
-            ParentScript
-          </span>
+          <span className="font-bold text-[17px] tracking-tight text-ps-text">ParentScript</span>
           <span className="text-xs text-ps-muted hidden sm:inline">AMAZED Labs</span>
         </Link>
 
@@ -117,14 +113,11 @@ export default function MarkHeader({ product = 'parentscript', cta }: MarkHeader
           >
             Sign in
           </Link>
-          <Link
-            to="/signup"
-            className="ps-btn ps-btn-primary ps-btn-sm hidden sm:inline-flex"
-          >
+          <Link to="/signup" className="ps-btn ps-btn-primary ps-btn-sm hidden sm:inline-flex">
             Start free trial
           </Link>
         </nav>
       </div>
     </header>
-  )
+  );
 }

@@ -1,28 +1,24 @@
-import { useState, useRef, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useSwipeBack } from '@/hooks/useSwipe'
-import { useFeatureFlags } from '@/hooks/useFeatureFlags'
-import { useAuth } from '@/hooks/useAuth'
-import { useDailyUsage } from '@/hooks/useDailyUsage'
-import { supabase } from '@/lib/supabase'
+import { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useSwipeBack } from '@/hooks/useSwipe';
+import { useFeatureFlags } from '@/hooks/useFeatureFlags';
+import { useAuth } from '@/hooks/useAuth';
+import { useDailyUsage } from '@/hooks/useDailyUsage';
+import { supabase } from '@/lib/supabase';
 import {
   AI_GENERATED_LABEL,
   FALLBACK_SAFETY_NOTE,
   FALLBACK_DISCLAIMER,
   type CoachResponse,
-} from '@/lib/ai-prompts'
-import {
-  detectCrisisTrigger,
-  shieldSituationClient,
-  isCrisisResponse,
-} from '@/lib/safety'
-import CrisisResponseModal from '@/components/CrisisResponseModal'
+} from '@/lib/ai-prompts';
+import { detectCrisisTrigger, shieldSituationClient, isCrisisResponse } from '@/lib/safety';
+import CrisisResponseModal from '@/components/CrisisResponseModal';
 
 interface Situation {
-  id: string
-  label: string
-  emoji: string
-  tips: string[]
+  id: string;
+  label: string;
+  emoji: string;
+  tips: string[];
 }
 
 const SITUATIONS: Situation[] = [
@@ -33,12 +29,12 @@ const SITUATIONS: Situation[] = [
     tips: [
       'Stay calm. Your nervous system regulates theirs.',
       'Get low — crouch or sit nearby. No lectures right now.',
-      'Say: "I\'m right here. I\'ll wait until you\'re ready."',
+      "Say: \"I'm right here. I'll wait until you're ready.\"",
     ],
   },
   {
     id: 'defiance',
-    label: 'Defiance / Won\'t listen',
+    label: "Defiance / Won't listen",
     emoji: '🚫',
     tips: [
       'One calm, clear command. Only one.',
@@ -66,184 +62,197 @@ const SITUATIONS: Situation[] = [
       'If safe: let them work it out. Stay close, but step back.',
     ],
   },
-]
+];
 
-const DISCLAIMER = 'This app guides everyday difficult moments. For any situation involving danger to yourself or others, call 911 immediately.'
+const DISCLAIMER =
+  'This app guides everyday difficult moments. For any situation involving danger to yourself or others, call 911 immediately.';
 
 function parseStreamedText(text: string): CoachResponse {
-  const lines = text.trim().split('\n')
-  const steps: string[] = []
-  let empathy = '', safetyNote = '', disclaimer = ''
+  const lines = text.trim().split('\n');
+  const steps: string[] = [];
+  let empathy = '',
+    safetyNote = '',
+    disclaimer = '';
   for (const line of lines) {
-    const idx = line.indexOf(': ')
-    if (idx < 0) continue
-    const label = line.slice(0, idx)
-    const val = line.slice(idx + 2).trim()
-    if (!val) continue
-    if (label === 'EMPATHY') empathy = val
-    else if (label === 'STEP1') steps[0] = val
-    else if (label === 'STEP2') steps[1] = val
-    else if (label === 'STEP3') steps[2] = val
-    else if (label === 'SAFETY') safetyNote = val
-    else if (label === 'DISCLAIMER') disclaimer = val
+    const idx = line.indexOf(': ');
+    if (idx < 0) continue;
+    const label = line.slice(0, idx);
+    const val = line.slice(idx + 2).trim();
+    if (!val) continue;
+    if (label === 'EMPATHY') empathy = val;
+    else if (label === 'STEP1') steps[0] = val;
+    else if (label === 'STEP2') steps[1] = val;
+    else if (label === 'STEP3') steps[2] = val;
+    else if (label === 'SAFETY') safetyNote = val;
+    else if (label === 'DISCLAIMER') disclaimer = val;
   }
-  const validSteps = steps.filter(Boolean)
+  const validSteps = steps.filter(Boolean);
   return {
     empathy,
     steps: validSteps.length > 0 ? validSteps : ['Take a breath. Try again in a moment.'],
     safetyNote: safetyNote || FALLBACK_SAFETY_NOTE,
     disclaimer: disclaimer || FALLBACK_DISCLAIMER,
-  }
+  };
 }
 
-type AiMode = 'off' | 'input' | 'streaming' | 'result'
+type AiMode = 'off' | 'input' | 'streaming' | 'result';
 
 export default function InTheMoment() {
-  const navigate = useNavigate()
-  const { canUse, loading } = useFeatureFlags()
-  const { parent } = useAuth()
+  const navigate = useNavigate();
+  const { canUse, loading } = useFeatureFlags();
+  const { parent } = useAuth();
   // Daily usage is only enforced for free-tier parents. Therapist-connected
   // parents have unlimited coaching interactions.
-  const isFreeTier = Boolean(parent?.is_self_serve)
-  const {
-    canCoach,
-    loading: usageLoading,
-    increment,
-  } = useDailyUsage()
-  const [selected, setSelected] = useState<Situation | null>(null)
-  const [showEscalation, setShowEscalation] = useState(false)
+  const isFreeTier = Boolean(parent?.is_self_serve);
+  const { canCoach, loading: usageLoading, increment } = useDailyUsage();
+  const [selected, setSelected] = useState<Situation | null>(null);
+  const [showEscalation, setShowEscalation] = useState(false);
 
   // AI coaching state
-  const [aiMode, setAiMode] = useState<AiMode>('off')
-  const [situationText, setSituationText] = useState('')
-  const [aiResult, setAiResult] = useState<CoachResponse | null>(null)
-  const [aiError, setAiError] = useState<string | null>(null)
+  const [aiMode, setAiMode] = useState<AiMode>('off');
+  const [situationText, setSituationText] = useState('');
+  const [aiResult, setAiResult] = useState<CoachResponse | null>(null);
+  const [aiError, setAiError] = useState<string | null>(null);
 
   // Streaming state — filled progressively as text arrives
-  const [streamedEmpathy, setStreamedEmpathy] = useState('')
-  const [streamedSteps, setStreamedSteps] = useState<string[]>([])
-  const [_streamedSafety, setStreamedSafety] = useState('')
-  const [streamTyping, setStreamTyping] = useState('')
+  const [streamedEmpathy, setStreamedEmpathy] = useState('');
+  const [streamedSteps, setStreamedSteps] = useState<string[]>([]);
+  const [_streamedSafety, setStreamedSafety] = useState('');
+  const [streamTyping, setStreamTyping] = useState('');
 
   // Persist the AI situation + result so we can offer a "save as practice log"
   // follow-up on the result screen without re-asking the parent.
-  const [lastSituation, setLastSituation] = useState('')
-  const [savedAsLog, setSavedAsLog] = useState(false)
-  const [savingLog, setSavingLog] = useState(false)
+  const [lastSituation, setLastSituation] = useState('');
+  const [savedAsLog, setSavedAsLog] = useState(false);
+  const [savingLog, setSavingLog] = useState(false);
 
   // Crisis-flag state — when the preflight matches, we render the
   // full-screen CrisisResponseModal instead of the regular result
   // list. See src/lib/safety.ts (Mira, 2026-06-30).
-  const [crisisTrigger, setCrisisTrigger] = useState<
-    { category: string; indirect: boolean } | null
-  >(null)
+  const [crisisTrigger, setCrisisTrigger] = useState<{
+    category: string;
+    indirect: boolean;
+  } | null>(null);
 
-  const abortRef = useRef<AbortController | null>(null)
+  const abortRef = useRef<AbortController | null>(null);
 
   // Redirect during render is forbidden — do it after commit.
   useEffect(() => {
     if (!loading && !canUse('inTheMoment')) {
-      navigate('/parent', { replace: true })
+      navigate('/parent', { replace: true });
     }
-  }, [loading, canUse, navigate])
+  }, [loading, canUse, navigate]);
 
   if (!loading && !canUse('inTheMoment')) {
-    return null
+    return null;
   }
 
   // Free-tier parents who have already used today's interaction see a
   // "come back tomorrow" panel instead of the input form.
-  const blockedByUsage = isFreeTier && !usageLoading && !canCoach
+  const blockedByUsage = isFreeTier && !usageLoading && !canCoach;
 
   function handleBack() {
-    if (aiMode === 'result') { setAiMode('input'); setAiResult(null); setSavedAsLog(false); return }
-    if (aiMode === 'streaming') {
-      abortRef.current?.abort()
-      setStreamTyping('')
-      setAiMode('off')
-      setAiError(null)
-      return
+    if (aiMode === 'result') {
+      setAiMode('input');
+      setAiResult(null);
+      setSavedAsLog(false);
+      return;
     }
-    if (aiMode === 'input') { setAiMode('off'); setAiError(null); return }
-    if (selected) { setSelected(null); return }
-    navigate('/parent')
+    if (aiMode === 'streaming') {
+      abortRef.current?.abort();
+      setStreamTyping('');
+      setAiMode('off');
+      setAiError(null);
+      return;
+    }
+    if (aiMode === 'input') {
+      setAiMode('off');
+      setAiError(null);
+      return;
+    }
+    if (selected) {
+      setSelected(null);
+      return;
+    }
+    navigate('/parent');
   }
 
-  const swipeHandlers = useSwipeBack(handleBack)
+  const swipeHandlers = useSwipeBack(handleBack);
 
   async function handleAiSubmit() {
-    if (!situationText.trim()) return
+    if (!situationText.trim()) return;
     // Pre-flight: free-tier parents can't burn the request if they're capped.
     if (isFreeTier && !canCoach) {
       setAiError(
         "You've used today's free coaching interaction. It resets at midnight UTC, or upgrade for unlimited use."
-      )
-      return
+      );
+      return;
     }
     // Clinical-safety preflight (client mirror of api/safety-guard.mjs).
     // Runs BEFORE the network roundtrip so the verbatim crisis response
     // is instant and works even if the LLM is offline / unconfigured.
     // When `_crisis: true` is returned, we swap to a full-screen modal
     // instead of the normal step-list render.
-    const localShield = shieldSituationClient(situationText)
+    const localShield = shieldSituationClient(situationText);
     if (localShield && isCrisisResponse(localShield)) {
-      const trigger = detectCrisisTrigger(situationText)
-      setAiError(null)
-      setSituationText('')
-      setAiResult(localShield)
-      setAiMode('off') // CrisisResponseModal renders outside aiMode
+      const trigger = detectCrisisTrigger(situationText);
+      setAiError(null);
+      setSituationText('');
+      setAiResult(localShield);
+      setAiMode('off'); // CrisisResponseModal renders outside aiMode
       setCrisisTrigger({
         category: trigger?.category ?? 'unknown',
         indirect: !!trigger?.indirect,
-      })
-      return
+      });
+      return;
     }
-    setAiError(null)
-    setStreamedEmpathy('')
-    setStreamedSteps([])
-    setStreamedSafety('')
-    setStreamTyping('')
-    setAiMode('streaming')
-    setLastSituation(situationText)
-    setSavedAsLog(false)
+    setAiError(null);
+    setStreamedEmpathy('');
+    setStreamedSteps([]);
+    setStreamedSafety('');
+    setStreamTyping('');
+    setAiMode('streaming');
+    setLastSituation(situationText);
+    setSavedAsLog(false);
 
-    abortRef.current = new AbortController()
-    let accText = ''
+    abortRef.current = new AbortController();
+    let accText = '';
     // Track whether we landed on a real, complete result so we can
     // decide whether to charge the free-tier daily interaction.
-    let chargedUsage = false
+    let chargedUsage = false;
 
     // Parse accumulated text incrementally, updating streaming state on each chunk
     function updateFromText(text: string) {
-      const lines = text.split('\n')
-      const lastLine = lines[lines.length - 1]
-      const completedLines = lines.slice(0, -1)
-      const steps: string[] = ['', '', '']
-      let empathy = '', safety = ''
+      const lines = text.split('\n');
+      const lastLine = lines[lines.length - 1];
+      const completedLines = lines.slice(0, -1);
+      const steps: string[] = ['', '', ''];
+      let empathy = '',
+        safety = '';
       for (const line of completedLines) {
-        const idx = line.indexOf(': ')
-        if (idx < 0) continue
-        const label = line.slice(0, idx)
-        const val = line.slice(idx + 2).trim()
-        if (label === 'EMPATHY') empathy = val
-        else if (label === 'STEP1') steps[0] = val
-        else if (label === 'STEP2') steps[1] = val
-        else if (label === 'STEP3') steps[2] = val
-        else if (label === 'SAFETY') safety = val
+        const idx = line.indexOf(': ');
+        if (idx < 0) continue;
+        const label = line.slice(0, idx);
+        const val = line.slice(idx + 2).trim();
+        if (label === 'EMPATHY') empathy = val;
+        else if (label === 'STEP1') steps[0] = val;
+        else if (label === 'STEP2') steps[1] = val;
+        else if (label === 'STEP3') steps[2] = val;
+        else if (label === 'SAFETY') safety = val;
       }
-      setStreamedEmpathy(empathy)
-      setStreamedSteps([...steps])
-      setStreamedSafety(safety)
+      setStreamedEmpathy(empathy);
+      setStreamedSteps([...steps]);
+      setStreamedSafety(safety);
       // Track the content of the line currently being typed for blinking cursor
-      const partIdx = lastLine.indexOf(': ')
-      const partLabel = partIdx >= 0 ? lastLine.slice(0, partIdx) : ''
-      const partContent = partIdx >= 0 ? lastLine.slice(partIdx + 2) : ''
-      setStreamTyping(['STEP1', 'STEP2', 'STEP3'].includes(partLabel) ? partContent : '')
+      const partIdx = lastLine.indexOf(': ');
+      const partLabel = partIdx >= 0 ? lastLine.slice(0, partIdx) : '';
+      const partContent = partIdx >= 0 ? lastLine.slice(partIdx + 2) : '';
+      setStreamTyping(['STEP1', 'STEP2', 'STEP3'].includes(partLabel) ? partContent : '');
     }
 
     try {
-      const { data: sessData } = await supabase.auth.getSession()
-      const token = sessData.session?.access_token ?? ''
+      const { data: sessData } = await supabase.auth.getSession();
+      const token = sessData.session?.access_token ?? '';
       const response = await fetch('/api/coach', {
         method: 'POST',
         headers: {
@@ -253,64 +262,72 @@ export default function InTheMoment() {
         },
         body: JSON.stringify({ situation: situationText }),
         signal: abortRef.current.signal,
-      })
+      });
       if (!response.ok || !response.body) {
-        const json = await response.json().catch(() => ({}))
-        setAiError((json as { error?: string }).error ?? 'Request failed. Please try again.')
-        setAiMode('input')
-        return
+        const json = await response.json().catch(() => ({}));
+        setAiError((json as { error?: string }).error ?? 'Request failed. Please try again.');
+        setAiMode('input');
+        return;
       }
-      const reader = response.body.getReader()
-      const decoder = new TextDecoder()
-      let buffer = ''
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
       while (true) {
-        const { done, value } = await reader.read()
-        if (done) break
-        buffer += decoder.decode(value, { stream: true })
-        const parts = buffer.split('\n\n')
-        buffer = parts.pop() ?? ''
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const parts = buffer.split('\n\n');
+        buffer = parts.pop() ?? '';
         for (const part of parts) {
-          const dataLine = part.split('\n').find(l => l.startsWith('data: '))
-          if (!dataLine) continue
-          const data = dataLine.slice(6)
+          const dataLine = part.split('\n').find(l => l.startsWith('data: '));
+          if (!dataLine) continue;
+          const data = dataLine.slice(6);
           if (data === '[DONE]') {
-            const result = parseStreamedText(accText)
-            setAiResult(result)
-            setAiMode('result')
-            chargedUsage = true
-            return
+            const result = parseStreamedText(accText);
+            setAiResult(result);
+            setAiMode('result');
+            chargedUsage = true;
+            return;
           }
-          let parsed: unknown
-          try { parsed = JSON.parse(data) } catch { continue }
+          let parsed: unknown;
+          try {
+            parsed = JSON.parse(data);
+          } catch {
+            continue;
+          }
           if (typeof parsed === 'string') {
-            accText += parsed
-            updateFromText(accText)
+            accText += parsed;
+            updateFromText(accText);
           } else if (parsed && typeof parsed === 'object' && 'error' in parsed) {
-            setAiError((parsed as { error: string }).error)
-            setAiMode('input')
-            return
+            setAiError((parsed as { error: string }).error);
+            setAiMode('input');
+            return;
           }
         }
       }
       // Stream closed without [DONE] — use what arrived
-      const result = parseStreamedText(accText)
+      const result = parseStreamedText(accText);
       if (result.steps.filter(Boolean).length > 0) {
-        setAiResult(result)
-        setAiMode('result')
-        chargedUsage = true
+        setAiResult(result);
+        setAiMode('result');
+        chargedUsage = true;
       } else {
-        setAiError('No response received. Please try again.')
-        setAiMode('input')
+        setAiError('No response received. Please try again.');
+        setAiMode('input');
       }
     } catch (err: unknown) {
-      if (err instanceof Error && err.name === 'AbortError') return
-      setAiError('Connection failed. Please try again.')
-      setAiMode('input')
+      if (err instanceof Error && err.name === 'AbortError') return;
+      setAiError('Connection failed. Please try again.');
+      setAiMode('input');
     } finally {
       // Charge the free-tier daily interaction only when we got a real
       // result. We don't decrement on errors, aborts, or empty streams.
       if (chargedUsage && isFreeTier) {
-        try { await increment('coaching') } catch { /* swallow — UI already shows result */ }
+        try {
+          await increment('coaching');
+        } catch {
+          /* swallow — UI already shows result */
+        }
       }
     }
   }
@@ -321,9 +338,9 @@ export default function InTheMoment() {
   // to read the log — and client_id would be NULL, which only works
   // after migration 007 runs).
   async function handleSaveAsLog() {
-    if (!parent || !lastSituation.trim() || savedAsLog || savingLog) return
-    if (!parent.client_id) return // safety: self-serve parents have no therapist
-    setSavingLog(true)
+    if (!parent || !lastSituation.trim() || savedAsLog || savingLog) return;
+    if (!parent.client_id) return; // safety: self-serve parents have no therapist
+    setSavingLog(true);
     const { error } = await supabase.from('practice_logs').insert({
       client_id: parent.client_id,
       parent_id: parent.id,
@@ -331,23 +348,20 @@ export default function InTheMoment() {
       practiced_at: new Date().toISOString(),
       went_how: 'mixed', // AI interaction: not a clean "good"/"hard" outcome
       reflection_tags: ['in-the-moment'],
-    })
+    });
     if (error) {
-      console.error('[InTheMoment] save-as-log failed:', error)
-      setSavingLog(false)
-      return
+      console.error('[InTheMoment] save-as-log failed:', error);
+      setSavingLog(false);
+      return;
     }
-    setSavedAsLog(true)
-    setSavingLog(false)
+    setSavedAsLog(true);
+    setSavingLog(false);
   }
 
-  const isAiFlow = aiMode !== 'off'
+  const isAiFlow = aiMode !== 'off';
 
   return (
-    <div
-      className="min-h-dvh bg-gray-900 text-white flex flex-col swipeable"
-      {...swipeHandlers}
-    >
+    <div className="min-h-dvh bg-gray-900 text-white flex flex-col swipeable" {...swipeHandlers}>
       {/* Full-screen crisis modal — overlaid when the safety preflight
           catches a trigger pattern. Renders outside the normal layout
           so the hotlines are above the fold and tappable. */}
@@ -356,9 +370,9 @@ export default function InTheMoment() {
           category={crisisTrigger.category}
           indirect={crisisTrigger.indirect}
           onClose={() => {
-            setCrisisTrigger(null)
-            setAiResult(null)
-            setSituationText('')
+            setCrisisTrigger(null);
+            setAiResult(null);
+            setSituationText('');
           }}
         />
       )}
@@ -368,7 +382,7 @@ export default function InTheMoment() {
           onClick={handleBack}
           className="text-gray-300 hover:text-white text-sm font-medium min-h-tap flex items-center gap-1"
         >
-          ← {(selected || isAiFlow) ? 'Back' : 'Exit'}
+          ← {selected || isAiFlow ? 'Back' : 'Exit'}
         </button>
         <h1 className="text-lg font-bold text-white">In the Moment</h1>
         <div className="w-16" />
@@ -377,7 +391,6 @@ export default function InTheMoment() {
       {/* Main content */}
       <div className="flex-1 px-4 md:px-8 pb-4 overflow-y-auto panel-scroll">
         <div className="md:max-w-3xl md:mx-auto">
-
           {/* ── Preset situation list ── */}
           {!selected && !isAiFlow && (
             <>
@@ -392,18 +405,28 @@ export default function InTheMoment() {
                     className="w-full bg-gray-800 hover:bg-gray-700 active:bg-gray-600 text-left rounded-2xl md:rounded-3xl px-5 py-5 md:py-8 transition min-h-tap flex items-center gap-4 touch-feedback"
                   >
                     <span className="text-4xl md:text-5xl">{situation.emoji}</span>
-                    <span className="text-parent-xl md:text-2xl font-bold text-white">{situation.label}</span>
+                    <span className="text-parent-xl md:text-2xl font-bold text-white">
+                      {situation.label}
+                    </span>
                   </button>
                 ))}
                 {/* AI coaching option */}
                 <button
-                  onClick={() => { setAiMode('input'); setAiError(null); setSituationText('') }}
+                  onClick={() => {
+                    setAiMode('input');
+                    setAiError(null);
+                    setSituationText('');
+                  }}
                   className="w-full bg-brand-900 hover:bg-brand-800 active:bg-brand-700 border border-brand-600 text-left rounded-2xl md:rounded-3xl px-5 py-5 md:py-8 transition min-h-tap flex items-center gap-4 touch-feedback md:col-span-2"
                 >
                   <span className="text-4xl md:text-5xl">✨</span>
                   <div>
-                    <span className="text-parent-xl md:text-2xl font-bold text-white block">Describe what's happening</span>
-                    <span className="text-brand-300 text-sm mt-0.5 block">Get personalized AI guidance</span>
+                    <span className="text-parent-xl md:text-2xl font-bold text-white block">
+                      Describe what's happening
+                    </span>
+                    <span className="text-brand-300 text-sm mt-0.5 block">
+                      Get personalized AI guidance
+                    </span>
                   </div>
                 </button>
               </div>
@@ -414,7 +437,9 @@ export default function InTheMoment() {
           {selected && !isAiFlow && (
             <>
               <div className="mb-6">
-                <p className="text-gray-400 text-sm mb-1">{selected.emoji} {selected.label}</p>
+                <p className="text-gray-400 text-sm mb-1">
+                  {selected.emoji} {selected.label}
+                </p>
                 <h2 className="text-parent-2xl md:text-4xl font-black text-white leading-tight">
                   Try this:
                 </h2>
@@ -434,9 +459,7 @@ export default function InTheMoment() {
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-gray-500 mt-6 text-center px-4">
-                {DISCLAIMER}
-              </p>
+              <p className="text-xs text-gray-500 mt-6 text-center px-4">{DISCLAIMER}</p>
             </>
           )}
 
@@ -458,7 +481,9 @@ export default function InTheMoment() {
                     <h2 className="text-parent-2xl md:text-3xl font-black text-white leading-tight mb-1">
                       What's happening?
                     </h2>
-                    <p className="text-gray-400 text-sm">Describe the situation in your own words.</p>
+                    <p className="text-gray-400 text-sm">
+                      Describe the situation in your own words.
+                    </p>
                   </div>
                   <textarea
                     className="w-full bg-gray-800 text-white rounded-2xl px-5 py-4 text-parent-base md:text-lg resize-none focus:outline-none focus:ring-2 focus:ring-brand-500 placeholder-gray-500 min-h-[140px]"
@@ -467,7 +492,9 @@ export default function InTheMoment() {
                     onChange={e => setSituationText(e.target.value)}
                     maxLength={2000}
                   />
-                  <p className="text-xs text-gray-600 text-right mt-1 mb-4">{situationText.length}/2000</p>
+                  <p className="text-xs text-gray-600 text-right mt-1 mb-4">
+                    {situationText.length}/2000
+                  </p>
                   {aiError && (
                     <div className="bg-danger-900 border border-danger-600 rounded-xl px-4 py-3 mb-4">
                       <p className="text-danger-200 text-sm">{aiError}</p>
@@ -481,7 +508,8 @@ export default function InTheMoment() {
                     Get guidance
                   </button>
                   <p className="text-xs text-gray-600 text-center mt-4 px-4">
-                    Your description is sent to an AI for analysis. Do not include full names or identifying details.
+                    Your description is sent to an AI for analysis. Do not include full names or
+                    identifying details.
                   </p>
                 </>
               )}
@@ -511,20 +539,22 @@ export default function InTheMoment() {
               )}
 
               <div className="space-y-4 mb-6">
-                {streamedSteps.map((step, i) => step ? (
-                  <div
-                    key={i}
-                    className="bg-gray-800 rounded-2xl md:rounded-3xl px-5 md:px-7 py-5 md:py-6 flex gap-4 items-start"
-                    style={{ animation: 'fadeSlideIn 0.3s ease-out' }}
-                  >
-                    <span className="text-brand-400 font-black text-2xl md:text-3xl leading-none mt-0.5 shrink-0">
-                      {i + 1}
-                    </span>
-                    <p className="text-parent-lg md:text-2xl text-white font-semibold leading-snug flex-1">
-                      {step}
-                    </p>
-                  </div>
-                ) : null)}
+                {streamedSteps.map((step, i) =>
+                  step ? (
+                    <div
+                      key={i}
+                      className="bg-gray-800 rounded-2xl md:rounded-3xl px-5 md:px-7 py-5 md:py-6 flex gap-4 items-start"
+                      style={{ animation: 'fadeSlideIn 0.3s ease-out' }}
+                    >
+                      <span className="text-brand-400 font-black text-2xl md:text-3xl leading-none mt-0.5 shrink-0">
+                        {i + 1}
+                      </span>
+                      <p className="text-parent-lg md:text-2xl text-white font-semibold leading-snug flex-1">
+                        {step}
+                      </p>
+                    </div>
+                  ) : null
+                )}
 
                 {/* Next step: typewriter content with blinking cursor, or loading dots */}
                 {streamedEmpathy && streamedSteps.filter(Boolean).length < 3 && (
@@ -534,7 +564,8 @@ export default function InTheMoment() {
                     </span>
                     {streamTyping ? (
                       <p className="text-parent-lg md:text-2xl text-white font-semibold leading-snug flex-1">
-                        {streamTyping}<span className="animate-pulse">▋</span>
+                        {streamTyping}
+                        <span className="animate-pulse">▋</span>
                       </p>
                     ) : (
                       <div className="flex gap-1.5 items-center pt-2">
@@ -612,9 +643,7 @@ export default function InTheMoment() {
               </div>
 
               {/* Disclaimer */}
-              <p className="text-xs text-gray-500 text-center px-4 mb-2">
-                {aiResult.disclaimer}
-              </p>
+              <p className="text-xs text-gray-500 text-center px-4 mb-2">{aiResult.disclaimer}</p>
 
               {/* Save as practice log — therapist-connected parents only.
                   Gives the therapist visibility into AI-guided moments
@@ -640,14 +669,17 @@ export default function InTheMoment() {
               )}
 
               <button
-                onClick={() => { setAiMode('input'); setAiResult(null); setSavedAsLog(false) }}
+                onClick={() => {
+                  setAiMode('input');
+                  setAiResult(null);
+                  setSavedAsLog(false);
+                }}
                 className="w-full py-3 text-brand-400 hover:text-brand-200 text-sm font-medium transition"
               >
                 Try a different description →
               </button>
             </>
           )}
-
         </div>
       </div>
 
@@ -695,5 +727,5 @@ export default function InTheMoment() {
         </div>
       )}
     </div>
-  )
+  );
 }

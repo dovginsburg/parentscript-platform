@@ -3,12 +3,14 @@
 ## Chrome Web Store
 
 ### Basic Info
+
 **Name:** ParentScript — In-the-moment skills  
 **Category:** Productivity  
 **Language:** English (US)  
 **Visibility:** Public
 
 ### Short Description (132 chars max)
+
 Search evidence-based parenting skills from any webpage. Built for parents working with a child therapist.
 
 ### Full Description (16,000 chars max)
@@ -102,12 +104,15 @@ Caption: "Skills appear as your therapist unlocks them session-by-session"
 (Icons already exist in apps/browser-extension/icons/)
 
 ### Website
+
 https://parentscript.app
 
 ### Support Email
+
 support@parentscript.app
 
 ### Privacy Policy
+
 https://parentscript.app/privacy
 
 ---
@@ -115,6 +120,7 @@ https://parentscript.app/privacy
 ## Firefox Add-ons
 
 ### Basic Info
+
 **Name:** ParentScript  
 **Add-on URL:** parentscript-skills  
 **Summary:** Evidence-based parenting skills search for parents working with a therapist
@@ -122,16 +128,20 @@ https://parentscript.app/privacy
 ### Description (same as Chrome, but formatted for Firefox)
 
 ### Categories
+
 - **Primary:** Productivity
 - **Secondary:** Health & Fitness
 
 ### License
+
 Proprietary (not open source)
 
 ### Support Site
+
 https://parentscript.app/about
 
 ### Privacy Policy
+
 https://parentscript.app/privacy
 
 ---
@@ -145,6 +155,7 @@ https://parentscript.app/privacy
 ## Submission Checklist
 
 ### Pre-Submission
+
 - [ ] Test extension in Chrome Canary
 - [ ] Test extension in Firefox Developer Edition
 - [ ] Test extension in Edge Dev
@@ -157,6 +168,7 @@ https://parentscript.app/privacy
 - [ ] Legal review of store listing text
 
 ### Chrome Web Store
+
 - [ ] Create Developer account ($5 one-time fee)
 - [ ] Prepare payment ($5 USD)
 - [ ] Upload extension ZIP
@@ -166,6 +178,7 @@ https://parentscript.app/privacy
 - [ ] Submit for review (7-14 days typical)
 
 ### Firefox Add-ons
+
 - [ ] Create AMO account (free)
 - [ ] Build Firefox-specific version with manifest-firefox.json
 - [ ] Upload XPI file
@@ -174,6 +187,7 @@ https://parentscript.app/privacy
 - [ ] Submit for review (1-2 weeks typical)
 
 ### Edge Add-ons
+
 - [ ] Create Partner Center account
 - [ ] Upload extension (same as Chrome)
 - [ ] Fill in metadata
@@ -184,17 +198,20 @@ https://parentscript.app/privacy
 ## Post-Launch
 
 ### Analytics Setup
+
 - [ ] Add anonymous usage tracking (skill search count)
 - [ ] Monitor install/uninstall rate
 - [ ] Track active users
 
 ### User Feedback
+
 - [ ] Monitor Chrome Web Store reviews
 - [ ] Monitor Firefox Add-ons reviews
 - [ ] Respond to all reviews within 48 hours
 - [ ] Create feedback channel in Slack
 
 ### Marketing
+
 - [ ] Announce to existing ParentScript therapists
 - [ ] Add download link to parentscript.app
 - [ ] Include in therapist onboarding emails

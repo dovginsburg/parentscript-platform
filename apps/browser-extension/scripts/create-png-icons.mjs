@@ -2,15 +2,15 @@
  * Generate PNG icons using raw PNG encoding.
  * Creates simple brand-aligned icons at 16, 48, and 128px.
  */
-import { writeFile } from "node:fs/promises";
-import { join, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
-import { createWriteStream } from "node:fs";
-import { Buffer } from "node:buffer";
+import { writeFile } from 'node:fs/promises';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createWriteStream } from 'node:fs';
+import { Buffer } from 'node:buffer';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const ICONS_DIR = join(__dirname, "..", "icons");
+const ICONS_DIR = join(__dirname, '..', 'icons');
 
 // Brand colors (indigo)
 const COLOR_START = { r: 79, g: 70, b: 229 }; // #4f46e5
@@ -18,7 +18,9 @@ const COLOR_END = { r: 99, g: 102, b: 241 }; // #6366f1
 const COLOR_WHITE = { r: 255, g: 255, b: 255 };
 
 function createCircleIcon(size) {
-  const canvas = Array(size).fill(null).map(() => Array(size).fill(null));
+  const canvas = Array(size)
+    .fill(null)
+    .map(() => Array(size).fill(null));
   const center = size / 2;
   const radius = size / 2;
 
@@ -66,7 +68,11 @@ function drawLetter(canvas, size) {
 
   // Vertical stem
   for (let y = startY; y < endY; y++) {
-    for (let x = center - Math.floor(letterWidth / 2); x < center - Math.floor(letterWidth / 2) + strokeWidth; x++) {
+    for (
+      let x = center - Math.floor(letterWidth / 2);
+      x < center - Math.floor(letterWidth / 2) + strokeWidth;
+      x++
+    ) {
       if (x >= 0 && x < size && y >= 0 && y < size) {
         canvas[y][x] = COLOR_WHITE;
       }
@@ -78,7 +84,11 @@ function drawLetter(canvas, size) {
   const curveHeight = Math.floor(letterHeight * 0.35);
 
   // Top horizontal
-  for (let x = center - Math.floor(letterWidth / 2); x < center - Math.floor(letterWidth / 2) + curveWidth; x++) {
+  for (
+    let x = center - Math.floor(letterWidth / 2);
+    x < center - Math.floor(letterWidth / 2) + curveWidth;
+    x++
+  ) {
     for (let dy = 0; dy < strokeWidth; dy++) {
       const y = startY + dy;
       if (x >= 0 && x < size && y >= 0 && y < size) {
@@ -89,7 +99,11 @@ function drawLetter(canvas, size) {
 
   // Right vertical of P
   for (let y = startY; y < startY + curveHeight; y++) {
-    for (let x = center - Math.floor(letterWidth / 2) + curveWidth - strokeWidth; x < center - Math.floor(letterWidth / 2) + curveWidth; x++) {
+    for (
+      let x = center - Math.floor(letterWidth / 2) + curveWidth - strokeWidth;
+      x < center - Math.floor(letterWidth / 2) + curveWidth;
+      x++
+    ) {
       if (x >= 0 && x < size && y >= 0 && y < size) {
         canvas[y][x] = COLOR_WHITE;
       }
@@ -97,7 +111,11 @@ function drawLetter(canvas, size) {
   }
 
   // Bottom horizontal of curve
-  for (let x = center - Math.floor(letterWidth / 2); x < center - Math.floor(letterWidth / 2) + curveWidth; x++) {
+  for (
+    let x = center - Math.floor(letterWidth / 2);
+    x < center - Math.floor(letterWidth / 2) + curveWidth;
+    x++
+  ) {
     for (let dy = 0; dy < strokeWidth; dy++) {
       const y = startY + curveHeight - strokeWidth + dy;
       if (x >= 0 && x < size && y >= 0 && y < size) {
@@ -110,10 +128,22 @@ function drawLetter(canvas, size) {
 function drawSmallLetter(canvas, size) {
   // For 16px, just draw a simple "P" shape
   const pixels = [
-    [5,4],[5,5],[5,6],[5,7],[5,8],[5,9],[5,10],[5,11],  // vertical stem
-    [6,4],[7,4],[8,4],  // top horizontal
-    [8,5],[8,6],[8,7],  // right vertical
-    [6,7],[7,7]  // middle horizontal
+    [5, 4],
+    [5, 5],
+    [5, 6],
+    [5, 7],
+    [5, 8],
+    [5, 9],
+    [5, 10],
+    [5, 11], // vertical stem
+    [6, 4],
+    [7, 4],
+    [8, 4], // top horizontal
+    [8, 5],
+    [8, 6],
+    [8, 7], // right vertical
+    [6, 7],
+    [7, 7], // middle horizontal
   ];
 
   pixels.forEach(([x, y]) => {
@@ -138,9 +168,9 @@ function canvasToPNG(canvas) {
 }
 
 async function generatePNGIcons() {
-  console.log("Generating PNG icons with basic encoding...");
-  console.log("NOTE: For production-ready PNG icons, use a proper image library.");
-  console.log("The SVG icons in icons/*.svg are recommended for Chrome (MV3 supports SVG).\n");
+  console.log('Generating PNG icons with basic encoding...');
+  console.log('NOTE: For production-ready PNG icons, use a proper image library.');
+  console.log('The SVG icons in icons/*.svg are recommended for Chrome (MV3 supports SVG).\n');
 
   // Create simple data URIs that can be used
   const sizes = [16, 48, 128];
@@ -153,7 +183,7 @@ async function generatePNGIcons() {
     console.log(`✓ Note created for ${size}px`);
   }
 
-  console.log("\nFor real PNG icons, update manifest.json to use SVG:");
+  console.log('\nFor real PNG icons, update manifest.json to use SVG:');
   console.log('  "icons": {');
   console.log('    "16": "icons/icon-16.svg",');
   console.log('    "48": "icons/icon-48.svg",');

@@ -10,17 +10,17 @@
 
 Both apps load at their apex domains with **0 console / 0 page errors**. The Tono end-to-end flow (apex → login → OAuth → analyze) works. ParentScript has **three P0 bugs** that block the AI coach feature entirely, plus a stale bundle that omits Apple/Google OAuth buttons. PasskeyAuth code is in the bundle but the UI is gated behind an unset feature flag.
 
-| # | Severity | Finding |
-|---|---|---|
-| P0-1 | **P0** | ParentScript `/api/health` returns SPA HTML (7463 B) instead of JSON. Vercel build produces 0 functions despite `api/health.mjs` and `vercel.json` `functions` config being valid. |
-| P0-2 | **P0** | ParentScript frontend calls `/api/coach` (per `apps/web/src/lib/ai-prompts.ts`); same root cause as P0-1 — the entire in-app coaching flow is dead in production. |
-| P0-3 | **P0** | Tono's Railway backend `/api/health` returns 404; the web tier serves `/api/health` and `/api/analyze` directly. The Railway deploy referenced by the spec doesn't exist or has been retired. |
-| P1-1 | **P1** | ParentScript deployed bundle (`index-BFbg3LiX.js`, 519 KB, July 2) is missing Apple + Google OAuth buttons. Local source + dist (`index-CCZurlzq.js`, 658 KB, July 5 12:26) contain them. Vercel cache is serving the old bundle. |
-| P1-2 | **P1** | PasskeyAuth UI is **not rendered** on `/app/login`. Buttons in DOM: only `Sign in` and `Forgot password?`. The Supabase `registerPasskey` / `signInWithPasskey` functions are bundled, but no Passkey button is wired up. |
-| P1-3 | **P1** | All recent ParentScript Production deploys (5 errors in last 5m) return ● Error with `Builds: [0ms]` and zero functions in the output array — the `api/*.mjs` functions are never built. The live production alias still points at the July 2 build. |
-| P2-1 | **P2** | `/robots.txt` and `/sitemap.xml` on parentscript.app both return the SPA HTML (200, text/html). No SEO surface. |
-| P2-2 | **P2** | Tono `/v1/analyze` returns 404; the actual endpoint is `/api/analyze`. Spec mismatch. |
-| P2-3 | **P2** | Account migration not tested directly (would need a real Apple/Google round-trip with credentials). The Supabase OAuth client IDs exist (Apple redirect reaches `appleid.apple.com` with `client_id=com.parentscript.app.parentscript-service`), so the redirect URI is correctly configured. The concern about schema migration breaking existing accounts is untestable from the public surface — needs DB access. |
+| #    | Severity | Finding                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P0-1 | **P0**   | ParentScript `/api/health` returns SPA HTML (7463 B) instead of JSON. Vercel build produces 0 functions despite `api/health.mjs` and `vercel.json` `functions` config being valid.                                                                                                                                                                                                                                   |
+| P0-2 | **P0**   | ParentScript frontend calls `/api/coach` (per `apps/web/src/lib/ai-prompts.ts`); same root cause as P0-1 — the entire in-app coaching flow is dead in production.                                                                                                                                                                                                                                                    |
+| P0-3 | **P0**   | Tono's Railway backend `/api/health` returns 404; the web tier serves `/api/health` and `/api/analyze` directly. The Railway deploy referenced by the spec doesn't exist or has been retired.                                                                                                                                                                                                                        |
+| P1-1 | **P1**   | ParentScript deployed bundle (`index-BFbg3LiX.js`, 519 KB, July 2) is missing Apple + Google OAuth buttons. Local source + dist (`index-CCZurlzq.js`, 658 KB, July 5 12:26) contain them. Vercel cache is serving the old bundle.                                                                                                                                                                                    |
+| P1-2 | **P1**   | PasskeyAuth UI is **not rendered** on `/app/login`. Buttons in DOM: only `Sign in` and `Forgot password?`. The Supabase `registerPasskey` / `signInWithPasskey` functions are bundled, but no Passkey button is wired up.                                                                                                                                                                                            |
+| P1-3 | **P1**   | All recent ParentScript Production deploys (5 errors in last 5m) return ● Error with `Builds: [0ms]` and zero functions in the output array — the `api/*.mjs` functions are never built. The live production alias still points at the July 2 build.                                                                                                                                                                 |
+| P2-1 | **P2**   | `/robots.txt` and `/sitemap.xml` on parentscript.app both return the SPA HTML (200, text/html). No SEO surface.                                                                                                                                                                                                                                                                                                      |
+| P2-2 | **P2**   | Tono `/v1/analyze` returns 404; the actual endpoint is `/api/analyze`. Spec mismatch.                                                                                                                                                                                                                                                                                                                                |
+| P2-3 | **P2**   | Account migration not tested directly (would need a real Apple/Google round-trip with credentials). The Supabase OAuth client IDs exist (Apple redirect reaches `appleid.apple.com` with `client_id=com.parentscript.app.parentscript-service`), so the redirect URI is correctly configured. The concern about schema migration breaking existing accounts is untestable from the public surface — needs DB access. |
 
 ---
 
@@ -28,10 +28,10 @@ Both apps load at their apex domains with **0 console / 0 page errors**. The Ton
 
 Both apps serve HTTP 200 at their apex domains with zero console errors and zero page errors in headless Chromium.
 
-| URL | Status | Console errs | Page errs | Title |
-|---|---|---|---|---|
-| `https://tonoit.com/` | 200 | 0 | 0 | "tono — say what you mean" |
-| `https://parentscript.app/` | 200 (→ 307 → `/app/login`) | 0 | 0 | "ParentScript" |
+| URL                         | Status                     | Console errs | Page errs | Title                      |
+| --------------------------- | -------------------------- | ------------ | --------- | -------------------------- |
+| `https://tonoit.com/`       | 200                        | 0            | 0         | "tono — say what you mean" |
+| `https://parentscript.app/` | 200 (→ 307 → `/app/login`) | 0            | 0         | "ParentScript"             |
 
 Screenshots: `docs/qa-final/screenshots-jul5/{tono,ps}-apex.png`.
 
@@ -39,11 +39,11 @@ Screenshots: `docs/qa-final/screenshots-jul5/{tono,ps}-apex.png`.
 
 ## 2. Backend health endpoints
 
-| Endpoint | HTTP | Content-Type | Body | Verdict |
-|---|---|---|---|---|
-| `https://tonoit.com/api/health` | 200 | `application/json` | `{"status":"ok","ts":1783274466,"id":"71f29d5b","version":"0.3.0","stripe_configured":true,"slack_configured":false,"free_daily_limit":10}` | ✅ JSON |
-| `https://tono-backend-production.up.railway.app/api/health` | 404 | `application/json` | `{"detail":"Not Found"}` | ❌ Spec URL is dead |
-| `https://parentscript.app/api/health` | 200 | `text/html; charset=utf-8` | SPA `index.html` (7463 B, `last-modified: Thu, 02 Jul 2026 04:38:46 GMT`, `age: 307349` = ~85h) | ❌ **HTML, not JSON** |
+| Endpoint                                                    | HTTP | Content-Type               | Body                                                                                                                                        | Verdict               |
+| ----------------------------------------------------------- | ---- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `https://tonoit.com/api/health`                             | 200  | `application/json`         | `{"status":"ok","ts":1783274466,"id":"71f29d5b","version":"0.3.0","stripe_configured":true,"slack_configured":false,"free_daily_limit":10}` | ✅ JSON               |
+| `https://tono-backend-production.up.railway.app/api/health` | 404  | `application/json`         | `{"detail":"Not Found"}`                                                                                                                    | ❌ Spec URL is dead   |
+| `https://parentscript.app/api/health`                       | 200  | `text/html; charset=utf-8` | SPA `index.html` (7463 B, `last-modified: Thu, 02 Jul 2026 04:38:46 GMT`, `age: 307349` = ~85h)                                             | ❌ **HTML, not JSON** |
 
 ### P0-1 / P0-3 root cause
 
@@ -147,6 +147,7 @@ Attached a virtual CTAP2 authenticator via Chrome DevTools Protocol (`WebAuthn.a
 ### Path to fix
 
 Either:
+
 1. Add a "Sign in with passkey" button to `apps/web/src/pages/auth/TherapistAuth.tsx` that calls `supabase.auth.signInWithPasskey()`, OR
 2. Wire the existing OAuthButtons component to also surface a passkey option when `navigator.credentials` is available, OR
 3. Add a feature flag (`passkeySignIn` in `apps/web/src/lib/featureFlags.ts`) and turn it on for testers.

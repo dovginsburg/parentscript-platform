@@ -100,9 +100,7 @@
     },
     "snippet": "404\nThis page could not be found.",
     "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/tono-pricing-desktop.png",
-    "http_errors": [
-      "404 https://tonoit.com/pricing"
-    ]
+    "http_errors": ["404 https://tonoit.com/pricing"]
   },
   {
     "name": "tono-account-desktop",
@@ -130,9 +128,7 @@
     },
     "snippet": "404\nThis page could not be found.",
     "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/tono-account-desktop.png",
-    "http_errors": [
-      "404 https://tonoit.com/account"
-    ]
+    "http_errors": ["404 https://tonoit.com/account"]
   },
   {
     "name": "ps-root-desktop",

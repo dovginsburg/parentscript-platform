@@ -12,10 +12,7 @@
       },
       "ui": {
         "allTextSnippet": "parentscript\n\namazed labs\n\ntherapist sign in\nemail address\npassword\nsign inforgot password?\n\nno account? sign up\n\nparent without a therapist? sign up free \u2192\n\npricing\u00b7security & hipaa\u00b7privacy policy\u00b7contact support",
-        "buttons": [
-          "Sign in",
-          "Forgot password?"
-        ],
+        "buttons": ["Sign in", "Forgot password?"],
         "links": [
           "Sign up",
           "Sign up free \u2192",

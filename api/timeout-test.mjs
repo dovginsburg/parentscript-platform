@@ -6,6 +6,7 @@ export default function handler(req, res) {
   res.status(200).json({
     ok: true,
     message: 'Vercel serverless functions are working',
-    env_keys: Object.keys(process.env).filter(k => k.includes('RATE') || k.includes('LIMIT')).length,
+    env_keys: Object.keys(process.env).filter(k => k.includes('RATE') || k.includes('LIMIT'))
+      .length,
   });
 }

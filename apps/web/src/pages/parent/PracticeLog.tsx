@@ -1,60 +1,63 @@
-import { useState, useEffect } from 'react'
-import { useNavigate, useSearchParams } from 'react-router-dom'
-import { supabase } from '@/lib/supabase'
-import { useAuth } from '@/hooks/useAuth'
-import { useFeatureFlags } from '@/hooks/useFeatureFlags'
-import type { Skill, PracticeWentHow } from '@/lib/types'
-import { REFLECTION_TAGS } from '@/lib/types'
+import { useState, useEffect } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { supabase } from '@/lib/supabase';
+import { useAuth } from '@/hooks/useAuth';
+import { useFeatureFlags } from '@/hooks/useFeatureFlags';
+import type { Skill, PracticeWentHow } from '@/lib/types';
+import { REFLECTION_TAGS } from '@/lib/types';
 
 const WENT_HOW_OPTIONS: { value: PracticeWentHow; emoji: string; label: string }[] = [
   { value: 'good', emoji: '😀', label: 'Good' },
   { value: 'mixed', emoji: '😐', label: 'Mixed' },
   { value: 'hard', emoji: '😞', label: 'Hard' },
-]
+];
 
 export default function PracticeLog() {
-  const { parent } = useAuth()
-  const { canUse, loading } = useFeatureFlags()
-  const navigate = useNavigate()
-  const [searchParams] = useSearchParams()
-  const skillId = searchParams.get('skill')
+  const { parent } = useAuth();
+  const { canUse, loading } = useFeatureFlags();
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const skillId = searchParams.get('skill');
 
-  const [skill, setSkill] = useState<Skill | null>(null)
-  const [wentHow, setWentHow] = useState<PracticeWentHow | null>(null)
-  const [selectedTags, setSelectedTags] = useState<string[]>([])
-  const [submitting, setSubmitting] = useState(false)
-  const [done, setDone] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [skill, setSkill] = useState<Skill | null>(null);
+  const [wentHow, setWentHow] = useState<PracticeWentHow | null>(null);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [submitting, setSubmitting] = useState(false);
+  const [done, setDone] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   // If practice logging is disabled by therapist or parent, redirect home.
   // Redirect during render is forbidden — do it after commit.
   useEffect(() => {
     if (!loading && !canUse('practiceLogging')) {
-      navigate('/parent', { replace: true })
+      navigate('/parent', { replace: true });
     }
-  }, [loading, canUse, navigate])
+  }, [loading, canUse, navigate]);
 
   if (!loading && !canUse('practiceLogging')) {
-    return null
+    return null;
   }
 
   useEffect(() => {
-    if (!skillId) return
-    supabase.from('skills').select('*').eq('id', skillId).single().then(({ data }) => {
-      setSkill(data)
-    })
-  }, [skillId])
+    if (!skillId) return;
+    supabase
+      .from('skills')
+      .select('*')
+      .eq('id', skillId)
+      .single()
+      .then(({ data }) => {
+        setSkill(data);
+      });
+  }, [skillId]);
 
   function toggleTag(tag: string) {
-    setSelectedTags(prev =>
-      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
-    )
+    setSelectedTags(prev => (prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]));
   }
 
   async function handleSubmit() {
-    if (!parent || !wentHow) return
-    setSubmitting(true)
-    setError(null)
+    if (!parent || !wentHow) return;
+    setSubmitting(true);
+    setError(null);
 
     const { error: insertError } = await supabase.from('practice_logs').insert({
       client_id: parent.client_id,
@@ -63,19 +66,19 @@ export default function PracticeLog() {
       practiced_at: new Date().toISOString(),
       went_how: wentHow,
       reflection_tags: selectedTags.length > 0 ? selectedTags : null,
-    })
+    });
 
     if (insertError) {
-      console.error('[PracticeLog] insert failed:', insertError)
+      console.error('[PracticeLog] insert failed:', insertError);
       setError(
         (insertError as { message?: string })?.message ||
           'Could not save the log. Please try again.'
-      )
-      setSubmitting(false)
-      return
+      );
+      setSubmitting(false);
+      return;
     }
-    setDone(true)
-    setTimeout(() => navigate('/parent'), 1500)
+    setDone(true);
+    setTimeout(() => navigate('/parent'), 1500);
   }
 
   if (done) {
@@ -85,7 +88,7 @@ export default function PracticeLog() {
         <h2 className="text-parent-2xl md:text-5xl font-black text-gray-900">Logged!</h2>
         <p className="text-gray-500 mt-2 md:text-lg">Great work. Keep it up.</p>
       </div>
-    )
+    );
   }
 
   return (
@@ -104,7 +107,9 @@ export default function PracticeLog() {
       <div className="flex-1 px-4 md:px-8 py-6 space-y-8 md:max-w-2xl md:mx-auto w-full overflow-y-auto panel-scroll">
         {skill && (
           <div className="bg-brand-50 border border-brand-100 rounded-2xl px-4 py-3 md:px-5 md:py-4">
-            <p className="text-xs text-brand-600 font-semibold uppercase tracking-wide mb-0.5">Skill</p>
+            <p className="text-xs text-brand-600 font-semibold uppercase tracking-wide mb-0.5">
+              Skill
+            </p>
             <p className="text-parent-lg font-bold text-gray-900">{skill.title}</p>
           </div>
         )}
@@ -124,7 +129,9 @@ export default function PracticeLog() {
                 }`}
               >
                 <span className="text-4xl md:text-5xl">{option.emoji}</span>
-                <span className="text-sm md:text-base font-semibold text-gray-700">{option.label}</span>
+                <span className="text-sm md:text-base font-semibold text-gray-700">
+                  {option.label}
+                </span>
               </button>
             ))}
           </div>
@@ -132,7 +139,9 @@ export default function PracticeLog() {
 
         {/* Optional reflection tags */}
         <section>
-          <h2 className="text-parent-base font-bold text-gray-900 mb-1">Anything else? (optional)</h2>
+          <h2 className="text-parent-base font-bold text-gray-900 mb-1">
+            Anything else? (optional)
+          </h2>
           <p className="text-sm text-gray-500 mb-4">Select all that apply</p>
           <div className="flex flex-wrap gap-2 md:gap-3">
             {REFLECTION_TAGS.map(tag => (
@@ -171,5 +180,5 @@ export default function PracticeLog() {
         </div>
       </div>
     </div>
-  )
+  );
 }

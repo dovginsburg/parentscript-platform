@@ -17,8 +17,8 @@ Every surface in this family has three rails:
    standard empathy → steps → safetyNote shape. `crisisResponsePayload`
    swaps in for any flagged input.
 3. **Evidence-based scripts rail** — skill cards, leveled L1–L5, with
-   age adaptations. The skill *content* is the surface-specific bit.
-   The *infrastructure* is shared.
+   age adaptations. The skill _content_ is the surface-specific bit.
+   The _infrastructure_ is shared.
 
 What changes per surface is the **script library** (different modalities
 in the citation), the **user role** (parent / teen / partner), and the
@@ -27,13 +27,13 @@ couples therapist).
 
 ## Surfaces in the family
 
-| Surface | User | Script modality | Lead review | Build cost | 0-to-1 status |
-|---------|------|------------------|-------------|------------|---------------|
-| **ParentScript** (live) | Parent of child 0–13 | PCIT, BPT, CPS, Triple P, Circle of Security | Mira (parenting psych) | shipped | **LIVE at parentscript.app** |
-| **SiblingSupport** (next) | Teen 13–18, supporting a sibling in distress | Active listening, validation, I-statements, de-escalation | Mira + school counselor review | ~1 day | **build this next** |
-| **CouplesCompanion** (later) | Partner in a relationship | Gottman, EFT, attachment, nonviolent communication | Couples / family therapist | ~3 days | design only |
-| **CaregiverCoach** (later) | Adult child of elderly parent | Validation, boundary-setting, self-care | Geriatric psych | ~3 days | design only |
-| **TeacherAid** (later) | K-12 teacher in classroom | Restorative practice, de-escalation, trauma-informed | School psych | ~5 days | design only |
+| Surface                      | User                                         | Script modality                                           | Lead review                    | Build cost | 0-to-1 status                |
+| ---------------------------- | -------------------------------------------- | --------------------------------------------------------- | ------------------------------ | ---------- | ---------------------------- |
+| **ParentScript** (live)      | Parent of child 0–13                         | PCIT, BPT, CPS, Triple P, Circle of Security              | Mira (parenting psych)         | shipped    | **LIVE at parentscript.app** |
+| **SiblingSupport** (next)    | Teen 13–18, supporting a sibling in distress | Active listening, validation, I-statements, de-escalation | Mira + school counselor review | ~1 day     | **build this next**          |
+| **CouplesCompanion** (later) | Partner in a relationship                    | Gottman, EFT, attachment, nonviolent communication        | Couples / family therapist     | ~3 days    | design only                  |
+| **CaregiverCoach** (later)   | Adult child of elderly parent                | Validation, boundary-setting, self-care                   | Geriatric psych                | ~3 days    | design only                  |
+| **TeacherAid** (later)       | K-12 teacher in classroom                    | Restorative practice, de-escalation, trauma-informed      | School psych                   | ~5 days    | design only                  |
 
 ## Why SiblingSupport first
 
@@ -41,14 +41,15 @@ couples therapist).
 the first-responder for siblings in distress — older siblings of
 trans kids, neurodivergent siblings, siblings of parents in crisis.
 There's no good product for this. Adult-facing crisis rails (988)
-exist. School counselors exist. But the *peer* moment — when a 16-year-old
+exist. School counselors exist. But the _peer_ moment — when a 16-year-old
 is sitting with their 13-year-old brother who just said something scary —
 is unaddressed.
 
 **Supply fit (us):**
+
 - The clinical safety rail already has SUICIDAL_CHILD and SELF_HARM
   categories; we just surface them to a teen audience.
-- The In-the-Moment rail is *already* designed for a single user typing
+- The In-the-Moment rail is _already_ designed for a single user typing
   a paragraph; a teen describing a sibling's behavior is structurally
   identical.
 - Mira is the right reviewer (developmental psychology, family systems).
@@ -57,7 +58,7 @@ is unaddressed.
 
 **Risk if we wait:** every quarter we delay, that's a quarter of teens
 talking to ChatGPT without a safety rail. The ParentScript safety work
-is *exactly* what's needed for this. Shipping it is a moral move, not
+is _exactly_ what's needed for this. Shipping it is a moral move, not
 just a product move.
 
 ## SiblingSupport v0 scope
@@ -77,6 +78,7 @@ What ships:
   call 988, text HOME to 741741, or call 911."
 
 What does NOT ship in v0:
+
 - Direct messaging / 1:1 chat (out of scope; we are not building a
   social network)
 - Parental dashboard (we are not the parent in this surface)

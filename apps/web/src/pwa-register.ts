@@ -28,46 +28,46 @@
 // Build-time stamp injected by Vite. Every `npm run build` produces a
 // fresh value, so the SW URL is unique per build and can never be
 // served from a stale edge cache.
-const BUILD_VERSION = '__BUILD_VERSION__'
+const BUILD_VERSION = '__BUILD_VERSION__';
 // Capacitor WebView serves from capacitor://localhost/ with no prefix,
 // so the SW URL/scope must be root-relative. The cache-busting ?v= query
 // still defeats Vercel's CDN edge cache on the web build.
-const SW_URL = `/sw.js?v=${BUILD_VERSION}`
-const SW_SCOPE = '/'
+const SW_URL = `/sw.js?v=${BUILD_VERSION}`;
+const SW_SCOPE = '/';
 
 export function registerSW(): void {
-  if (typeof window === 'undefined') return
-  if (!('serviceWorker' in navigator)) return
+  if (typeof window === 'undefined') return;
+  if (!('serviceWorker' in navigator)) return;
 
   // Defer registration until after first paint so the SW install
   // doesn't compete with the main JS bundle for bandwidth.
   window.addEventListener('load', () => {
     navigator.serviceWorker
       .register(SW_URL, { scope: SW_SCOPE, updateViaCache: 'none' })
-      .then((reg) => {
+      .then(reg => {
         // Check for updates every time the page becomes visible.
         // Cheap (HEAD-equivalent against sw.js) and catches builds
         // that shipped while the tab was in the background.
-        const checkForUpdate = () => reg.update().catch(() => {})
+        const checkForUpdate = () => reg.update().catch(() => {});
         document.addEventListener('visibilitychange', () => {
-          if (document.visibilityState === 'visible') checkForUpdate()
-        })
-        window.addEventListener('focus', checkForUpdate)
+          if (document.visibilityState === 'visible') checkForUpdate();
+        });
+        window.addEventListener('focus', checkForUpdate);
       })
-      .catch((err) => {
+      .catch(err => {
         // Don't crash the app on SW registration failure (e.g. Safari
         // private mode). Log so it shows up in Vercel runtime logs.
-        console.warn('[pwa] service worker registration failed:', err)
-      })
+        console.warn('[pwa] service worker registration failed:', err);
+      });
 
     // When the new SW takes over, reload the page so the user sees
     // the fresh app shell. The old SW's cache is already replaced
     // by the new one at this point (skipWaiting ran before claiming).
-    let reloading = false
+    let reloading = false;
     navigator.serviceWorker.addEventListener('controllerchange', () => {
-      if (reloading) return
-      reloading = true
-      window.location.reload()
-    })
-  })
+      if (reloading) return;
+      reloading = true;
+      window.location.reload();
+    });
+  });
 }

@@ -13,7 +13,8 @@ export { checkIpRate, envLimit, ipRateMiddleware };
 export default async function handler(req, res) {
   // Per-IP rate limit (default: 20 req/min)
   const limit = envLimit('PARENTSCRIPT_RATE_LIMIT_COACH_PER_MIN', 20);
-  const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.socket?.remoteAddress || 'unknown';
+  const ip =
+    req.headers['x-forwarded-for']?.split(',')[0] || req.socket?.remoteAddress || 'unknown';
   if (!checkIpRate('coach', ip, limit, 60)) {
     res.status(429).json({
       error: `too many coach requests from this IP — try again in 60s`,

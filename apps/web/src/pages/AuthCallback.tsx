@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { supabase } from '@/lib/supabase'
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { supabase } from '@/lib/supabase';
 
 // ────────────────────────────────────────────────────────────────────
 // AuthCallback — shared post-auth landing for OAuth + email confirm
@@ -26,121 +26,111 @@ import { supabase } from '@/lib/supabase'
 //   keep that convention so Quinn's QA pass still covers the routes.
 // ────────────────────────────────────────────────────────────────────
 
-type Status = 'pending' | 'ok' | 'error'
+type Status = 'pending' | 'ok' | 'error';
 
 export default function AuthCallback() {
-  const navigate = useNavigate()
-  const [status, setStatus] = useState<Status>('pending')
-  const [detail, setDetail] = useState<string>('')
+  const navigate = useNavigate();
+  const [status, setStatus] = useState<Status>('pending');
+  const [detail, setDetail] = useState<string>('');
 
   useEffect(() => {
-    let cancelled = false
-    let redirectTimer: ReturnType<typeof setTimeout> | null = null
+    let cancelled = false;
+    let redirectTimer: ReturnType<typeof setTimeout> | null = null;
 
     async function resolve() {
       // 1. If there's an OAuth error in the hash, surface it.
-      const hash = window.location.hash.slice(1)
-      const params = new URLSearchParams(hash)
-      const oauthError =
-        params.get('error_description') || params.get('error')
+      const hash = window.location.hash.slice(1);
+      const params = new URLSearchParams(hash);
+      const oauthError = params.get('error_description') || params.get('error');
       if (oauthError) {
-        if (cancelled) return
-        setDetail(oauthError)
-        setStatus('error')
-        return
+        if (cancelled) return;
+        setDetail(oauthError);
+        setStatus('error');
+        return;
       }
 
       // 2. getSession() — Supabase JS client parses the hash automatically
       //    on construction of createClient, but only when persistSession is
       //    on (default). If a session is already present we're done.
-      const { data: sessionData, error: sessionError } =
-        await supabase.auth.getSession()
+      const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
       if (sessionError) {
-        if (cancelled) return
-        setDetail(sessionError.message)
-        setStatus('error')
-        return
+        if (cancelled) return;
+        setDetail(sessionError.message);
+        setStatus('error');
+        return;
       }
 
-      const user = sessionData.session?.user
+      const user = sessionData.session?.user;
       if (!user) {
         // No session and no error — user may have landed here directly.
         // Send them to /start (RootRedirect → /login if unauthed).
-        if (cancelled) return
-        setStatus('ok')
-        navigate('/start', { replace: true })
-        return
+        if (cancelled) return;
+        setStatus('ok');
+        navigate('/start', { replace: true });
+        return;
       }
 
       // 3. Look up role. Mirror useAuth's fetchRole logic so we can
       //    redirect immediately without waiting for the full provider
       //    re-render cycle.
       const [tRes, pRes] = await Promise.all([
-        supabase
-          .from('therapists')
-          .select('id')
-          .eq('id', user.id)
-          .maybeSingle(),
-        supabase
-          .from('parents')
-          .select('id')
-          .eq('id', user.id)
-          .maybeSingle(),
-      ])
+        supabase.from('therapists').select('id').eq('id', user.id).maybeSingle(),
+        supabase.from('parents').select('id').eq('id', user.id).maybeSingle(),
+      ]);
 
-      if (cancelled) return
+      if (cancelled) return;
 
       // RLS errors on a public-row lookup are usually "not found", not
       // a real failure — log but don't block the redirect.
       if (tRes.error) {
-        console.warn('[AuthCallback] therapists lookup failed:', tRes.error)
+        console.warn('[AuthCallback] therapists lookup failed:', tRes.error);
       }
       if (pRes.error) {
-        console.warn('[AuthCallback] parents lookup failed:', pRes.error)
+        console.warn('[AuthCallback] parents lookup failed:', pRes.error);
       }
 
       // Clear the URL hash so a refresh doesn't replay the OAuth flow.
       try {
-        const clean = new URL(window.location.href)
-        clean.hash = ''
-        clean.searchParams.delete('error')
-        clean.searchParams.delete('error_description')
-        window.history.replaceState(null, '', clean.toString())
+        const clean = new URL(window.location.href);
+        clean.hash = '';
+        clean.searchParams.delete('error');
+        clean.searchParams.delete('error_description');
+        window.history.replaceState(null, '', clean.toString());
       } catch {
         // best-effort
       }
 
-      setStatus('ok')
+      setStatus('ok');
       if (tRes.data) {
-        navigate('/therapist/clients', { replace: true })
+        navigate('/therapist/clients', { replace: true });
       } else if (pRes.data) {
-        navigate('/parent', { replace: true })
+        navigate('/parent', { replace: true });
       } else {
         // Authenticated but no role row — let RootRedirect decide.
-        navigate('/start', { replace: true })
+        navigate('/start', { replace: true });
       }
     }
 
     // 5s safety timeout — if anything hangs (slow Supabase, RLS issue),
     // send the user to /login rather than spinning forever.
     redirectTimer = setTimeout(() => {
-      if (cancelled || status !== 'pending') return
-      setDetail('Timed out waiting for session — please sign in again.')
-      setStatus('error')
-    }, 5000)
+      if (cancelled || status !== 'pending') return;
+      setDetail('Timed out waiting for session — please sign in again.');
+      setStatus('error');
+    }, 5000);
 
-    resolve()
+    resolve();
 
     return () => {
-      cancelled = true
-      if (redirectTimer) clearTimeout(redirectTimer)
-    }
+      cancelled = true;
+      if (redirectTimer) clearTimeout(redirectTimer);
+    };
     // status intentionally not in deps — we only want to run once.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [navigate])
+  }, [navigate]);
 
   if (status === 'error') {
-    const qs = detail ? `?auth_error=1&msg=${encodeURIComponent(detail)}` : '?auth_error=1'
+    const qs = detail ? `?auth_error=1&msg=${encodeURIComponent(detail)}` : '?auth_error=1';
     return (
       <CallbackScreen
         title="Sign-in didn't complete"
@@ -148,7 +138,7 @@ export default function AuthCallback() {
         actionLabel="Back to sign in"
         onAction={() => navigate(`/login${qs}`, { replace: true })}
       />
-    )
+    );
   }
 
   return (
@@ -157,7 +147,7 @@ export default function AuthCallback() {
       body="One moment while we get you set up."
       showSpinner
     />
-  )
+  );
 }
 
 function CallbackScreen({
@@ -167,18 +157,16 @@ function CallbackScreen({
   onAction,
   showSpinner,
 }: {
-  title: string
-  body: string
-  actionLabel?: string
-  onAction?: () => void
-  showSpinner?: boolean
+  title: string;
+  body: string;
+  actionLabel?: string;
+  onAction?: () => void;
+  showSpinner?: boolean;
 }) {
   return (
     <div className="min-h-dvh bg-gray-50 flex flex-col items-center justify-center px-4">
       <div className="bg-white shadow sm:rounded-xl px-8 py-10 max-w-md w-full text-center">
-        <h1 className="text-4xl font-black text-brand-800 tracking-tight mb-6">
-          ParentScript
-        </h1>
+        <h1 className="text-4xl font-black text-brand-800 tracking-tight mb-6">ParentScript</h1>
         {showSpinner && (
           <div
             className="mx-auto mb-4 w-8 h-8 border-2 border-brand-200 border-t-brand-700 rounded-full animate-spin"
@@ -198,5 +186,5 @@ function CallbackScreen({
         )}
       </div>
     </div>
-  )
+  );
 }

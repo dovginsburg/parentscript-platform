@@ -19,25 +19,25 @@ A two-sided companion app for parents working with a child therapist.
 
 ## Tech stack
 
-| Layer | Tech |
-|-------|------|
-| **Web** | React + Vite + TypeScript + Tailwind |
-| **Mobile** | Capacitor (iOS, Android) |
-| **Desktop** | Tauri (planned) |
-| **Backend** | Python FastAPI (`api/`) |
-| **Auth + DB** | Supabase (Postgres + Auth + RLS) |
-| **Hosting** | Vercel (web), App Store (iOS), Play Store (Android) |
+| Layer         | Tech                                                |
+| ------------- | --------------------------------------------------- |
+| **Web**       | React + Vite + TypeScript + Tailwind                |
+| **Mobile**    | Capacitor (iOS, Android)                            |
+| **Desktop**   | Tauri (planned)                                     |
+| **Backend**   | Python FastAPI (`api/`)                             |
+| **Auth + DB** | Supabase (Postgres + Auth + RLS)                    |
+| **Hosting**   | Vercel (web), App Store (iOS), Play Store (Android) |
 
 ## Surfaces
 
-| Surface | Status |
-|---------|--------|
-| Web PWA | ✅ Live at https://parentscript.app |
-| iOS (Capacitor wrap) | 🟡 Scaffolded in `ios/` |
-| Android (Capacitor wrap) | 🟡 Scaffolded in `android/` |
-| Desktop (Tauri) | 🔲 Not started |
-| Chrome extension | 🔲 Not started |
-| Slack app | 🔲 Not started |
+| Surface                  | Status                              |
+| ------------------------ | ----------------------------------- |
+| Web PWA                  | ✅ Live at https://parentscript.app |
+| iOS (Capacitor wrap)     | 🟡 Scaffolded in `ios/`             |
+| Android (Capacitor wrap) | 🟡 Scaffolded in `android/`         |
+| Desktop (Tauri)          | 🔲 Not started                      |
+| Chrome extension         | 🔲 Not started                      |
+| Slack app                | 🔲 Not started                      |
 
 ## Monorepo target
 

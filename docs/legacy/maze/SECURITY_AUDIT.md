@@ -13,24 +13,25 @@ The app is in good shape for a real-email production use. RLS is on every table 
 
 The HIGH finding is not an exploit against current users — it's a hardening gap that should be closed before public deploy because Ariella's email (and any parent's email) is at risk from a credential-stuffing adversary on the public signup endpoint.
 
-| Severity | Finding | File |
-|---|---|---|
-| HIGH | No rate-limit / lockout on `signInWithPassword` or `signUp` | `src/pages/auth/TherapistAuth.tsx`, `src/pages/auth/ParentOnboarding.tsx` |
-| MEDIUM | `dev-dist/` (VitePWA dev-mode SW) is tracked by git | `/dev-dist/` (missing `.gitignore` entry) |
-| MEDIUM | Service-role key read into JS module-scope vars (loaded on `require`) | `api/server.mjs:148` |
-| MEDIUM | Supabase anon key used as anon in analytics auth header (intended but worth noting) | `api/server.mjs:154` |
-| MEDIUM | Invite-link shown in plaintext UI (no copy-with-mask, screenshot-safe) | `src/pages/therapist/ClientDetail.tsx:312-329` |
-| MEDIUM | Auth bootstrap falls open if Supabase config is broken mid-session (no try/catch in `loadUser`) | `src/hooks/useAuth.tsx:44-51` |
-| LOW | Email pattern validation is browser-default only (no format check beyond `type="email"`) | `TherapistAuth.tsx:97-100`, `ParentOnboarding.tsx:135-138` |
-| LOW | XSS-safe but `dangerouslySetInnerHTML`-style string concat used to build markdown-like lines | `api/prompts.mjs:111-118` (server-side only) |
-| LOW | No CSP / X-Frame-Options / Referrer-Policy set on HTML or via headers | `index.html` (no `<meta http-equiv>`); no helmet/CSP middleware on `api/server.mjs` |
-| LOW | Boot log reveals which providers are configured (small fingerprint, not secret) | `api/server.mjs:445-447` |
+| Severity | Finding                                                                                         | File                                                                                |
+| -------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| HIGH     | No rate-limit / lockout on `signInWithPassword` or `signUp`                                     | `src/pages/auth/TherapistAuth.tsx`, `src/pages/auth/ParentOnboarding.tsx`           |
+| MEDIUM   | `dev-dist/` (VitePWA dev-mode SW) is tracked by git                                             | `/dev-dist/` (missing `.gitignore` entry)                                           |
+| MEDIUM   | Service-role key read into JS module-scope vars (loaded on `require`)                           | `api/server.mjs:148`                                                                |
+| MEDIUM   | Supabase anon key used as anon in analytics auth header (intended but worth noting)             | `api/server.mjs:154`                                                                |
+| MEDIUM   | Invite-link shown in plaintext UI (no copy-with-mask, screenshot-safe)                          | `src/pages/therapist/ClientDetail.tsx:312-329`                                      |
+| MEDIUM   | Auth bootstrap falls open if Supabase config is broken mid-session (no try/catch in `loadUser`) | `src/hooks/useAuth.tsx:44-51`                                                       |
+| LOW      | Email pattern validation is browser-default only (no format check beyond `type="email"`)        | `TherapistAuth.tsx:97-100`, `ParentOnboarding.tsx:135-138`                          |
+| LOW      | XSS-safe but `dangerouslySetInnerHTML`-style string concat used to build markdown-like lines    | `api/prompts.mjs:111-118` (server-side only)                                        |
+| LOW      | No CSP / X-Frame-Options / Referrer-Policy set on HTML or via headers                           | `index.html` (no `<meta http-equiv>`); no helmet/CSP middleware on `api/server.mjs` |
+| LOW      | Boot log reveals which providers are configured (small fingerprint, not secret)                 | `api/server.mjs:445-447`                                                            |
 
 ---
 
 ## 1. `.gitignore` review — MEDIUM + LOW findings
 
 `.gitignore` correctly excludes:
+
 - `.env`, `.env.local`, `.env.*.local` ✓
 - `node_modules/` ✓
 - `dist/`, `dist-ssr/` ✓
@@ -38,6 +39,7 @@ The HIGH finding is not an exploit against current users — it's a hardening ga
 - `*.tsbuildinfo` ✓
 
 Verified by `git check-ignore`:
+
 ```
 .env        ✓ ignored
 .env.local  ✓ ignored
@@ -91,14 +93,14 @@ Neither contains secrets; low-risk cleanup.
 The file is 11 lines:
 
 ```ts
-import { createClient } from '@supabase/supabase-js'
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL ?? ''
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY ?? ''
-export const isConfigured = Boolean(supabaseUrl && supabaseAnonKey)
+import { createClient } from '@supabase/supabase-js';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL ?? '';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY ?? '';
+export const isConfigured = Boolean(supabaseUrl && supabaseAnonKey);
 export const supabase = createClient(
   supabaseUrl || 'https://placeholder.supabase.co',
   supabaseAnonKey || 'placeholder-anon-key'
-)
+);
 ```
 
 Verdict: **No secrets exposed beyond the documented design.** `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are intentionally client-visible (they have the `VITE_` prefix that Vite replaces at build time). The anon key is a JWT with RLS-enforced permissions — by definition safe to ship to the client. The placeholder fallback prevents the app from crashing on misconfiguration (good UX, no security impact).
@@ -151,15 +153,15 @@ No findings.
 
 Read `docs/supabase-schema.sql` (318 lines). Verified:
 
-| Table | RLS enabled | Policies | Verdict |
-|---|---|---|---|
-| `therapists` | ✓ | SELECT/INSERT/UPDATE own row | ✓ |
-| `clients` | ✓ | ALL for owning therapist | ✓ |
-| `parents` | ✓ | SELECT/INSERT own; therapist sees parents of own clients | ✓ |
-| `invites` | ✓ | public SELECT (active only); therapist INSERT for own clients; therapist SELECT own; auth'd UPDATE to consume | ⚠ See note |
-| `skills` | ✓ | SELECT (published only) | ✓ |
-| `client_skill_state` | ✓ | parent SELECT own; therapist ALL for own clients | ✓ |
-| `practice_logs` | ✓ | parent INSERT/SELECT own; therapist SELECT own clients | ✓ |
+| Table                | RLS enabled | Policies                                                                                                      | Verdict    |
+| -------------------- | ----------- | ------------------------------------------------------------------------------------------------------------- | ---------- |
+| `therapists`         | ✓           | SELECT/INSERT/UPDATE own row                                                                                  | ✓          |
+| `clients`            | ✓           | ALL for owning therapist                                                                                      | ✓          |
+| `parents`            | ✓           | SELECT/INSERT own; therapist sees parents of own clients                                                      | ✓          |
+| `invites`            | ✓           | public SELECT (active only); therapist INSERT for own clients; therapist SELECT own; auth'd UPDATE to consume | ⚠ See note |
+| `skills`             | ✓           | SELECT (published only)                                                                                       | ✓          |
+| `client_skill_state` | ✓           | parent SELECT own; therapist ALL for own clients                                                              | ✓          |
+| `practice_logs`      | ✓           | parent INSERT/SELECT own; therapist SELECT own clients                                                        | ✓          |
 
 **MEDIUM design note on invites — race + over-permissive consume policy:**
 
@@ -203,14 +205,17 @@ Ran grep across `src/`, `api/`, `website/` (excluding `node_modules`, `dist`, `.
 ```bash
 grep -rnE 'sk-[A-Za-z0-9]{20,}|sk_live_|sk_test_|AKIA[A-Z0-9]{16}|ghp_[A-Za-z0-9]{20,}|xox[abp]-[A-Za-z0-9-]{20,}|sk-ant-[A-Za-z0-9_-]{20,}|sk-proj-[A-Za-z0-9_-]{20,}'
 ```
+
 **Result: 0 matches.**
 
 ```bash
 grep -rnE 'password\s*[:=]\s*["\x27][^"\x27]+["\x27]|api[_-]?key\s*[:=]\s*["\x27][^"\x27]+["\x27]|secret\s*[:=]\s*["\x27][^"\x27]+["\x27]'
 ```
+
 **Result: 0 matches** (after filtering out `.env.example` placeholders).
 
 The only env vars read are:
+
 - `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` (intentionally client-public)
 - `ANTHROPIC_API_KEY`, `OPENAI_API_KEY` (server-only, read from env)
 - `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` (server-only)
@@ -225,9 +230,11 @@ No findings.
 ```bash
 grep -rnE 'dangerouslySetInnerHTML|innerHTML|eval\(|new Function' src/
 ```
+
 **Result: 0 matches.**
 
 All user-supplied or DB-supplied strings are rendered via React's standard text interpolation (`{variable}`), which auto-escapes. Verified for:
+
 - `practice_logs.reflection_tags.join(', ')` → `{log.reflection_tags?.join(', ') || 'General practice'}` (auto-escaped)
 - AI-generated steps and empathy text → `{step}`, `{aiResult.empathy}` (auto-escaped)
 - Skill content from DB → `{skill.title}`, `{skill.goal}`, etc. (auto-escaped)
@@ -242,6 +249,7 @@ No findings. Safe.
 ```bash
 grep -rnE 'localStorage|sessionStorage|document\.cookie' src/
 ```
+
 **One match: `src/pages/parent/ParentHome.tsx:175`** — uses `sessionStorage.getItem('ios-install-dismissed')` and `sessionStorage.setItem('ios-install-dismissed', '1')`.
 
 This is a non-sensitive UX flag (whether to show the iOS install banner). Not a security finding.
@@ -254,14 +262,14 @@ No findings.
 
 ## 9. Form input validation — MOSTLY CLEAN (1 LOW)
 
-| Form | File | Client validation | Server validation | Verdict |
-|---|---|---|---|---|
-| Therapist signup/login | `TherapistAuth.tsx` | `type="email"`, `required`, `minLength={8}` | Supabase Auth (server-side) | ✓ |
-| Parent signup via invite | `ParentOnboarding.tsx` | same | same | ✓ |
-| Client label | `ClientList.tsx:165-172` | `type="text"`, `required`, `.trim()` | RLS / CHECK constraint missing? | ⚠ |
-| Note tag (select) | `ClientDetail.tsx:218-227` | `<option>` enum | n/a (cast in component) | ✓ |
-| Reflection tags | `PracticeLog.tsx` | `<button>`-driven enum | server stores `text[]` | ⚠ |
-| Situation textarea | `InTheMoment.tsx:332-339` | `maxLength={2000}` (server mirrors) | `server.mjs:94` checks length | ✓ |
+| Form                     | File                       | Client validation                           | Server validation               | Verdict |
+| ------------------------ | -------------------------- | ------------------------------------------- | ------------------------------- | ------- |
+| Therapist signup/login   | `TherapistAuth.tsx`        | `type="email"`, `required`, `minLength={8}` | Supabase Auth (server-side)     | ✓       |
+| Parent signup via invite | `ParentOnboarding.tsx`     | same                                        | same                            | ✓       |
+| Client label             | `ClientList.tsx:165-172`   | `type="text"`, `required`, `.trim()`        | RLS / CHECK constraint missing? | ⚠       |
+| Note tag (select)        | `ClientDetail.tsx:218-227` | `<option>` enum                             | n/a (cast in component)         | ✓       |
+| Reflection tags          | `PracticeLog.tsx`          | `<button>`-driven enum                      | server stores `text[]`          | ⚠       |
+| Situation textarea       | `InTheMoment.tsx:332-339`  | `maxLength={2000}` (server mirrors)         | `server.mjs:94` checks length   | ✓       |
 
 ### LOW-3: Email format only validated by browser default
 
@@ -319,10 +327,12 @@ No findings.
 Neither the React client nor the Node server implements rate limiting. Supabase's hosted Auth has its own rate limits, but the Node API server (`/api/analytics`, `/api/coach`) does not.
 
 **Specifically relevant for real-email protection:**
+
 - `/api/analytics` accepts a bearer token + a `clientId` (or `therapistId`) and returns the caller's scoped data. It correctly verifies scope (therapist must own the client; parent must own the client). Without rate-limiting, an attacker who obtains a valid therapist token (phishing, leak, credential-stuffing) can enumerate `clientId` UUIDs across the caseload. UUID enumeration is impractical at scale (2^122 space), so this is not an immediate exploit, but it's a defense-in-depth gap.
 - `/api/coach` accepts any string up to 2000 chars and forwards it to Anthropic/OpenAI. **No auth at all** — anyone (unauthenticated) can POST to it. This means a malicious actor can (a) drive up Anthropic/OpenAI bills for the operator, (b) test prompt-injection payloads at scale, (c) exfiltrate the AI-generated response. The cost is the real risk here.
 
 **Fix — minimum viable:**
+
 1. Add `express-rate-limit` to `api/server.mjs`. 10 req/min/IP on `/api/coach`, 60 req/min/IP on `/api/analytics`.
 2. For `/api/coach`, require a Supabase bearer token (currently optional). Reject 401 if no/invalid token.
 3. For Supabase Auth itself, enable "Leaked password protection" in the Supabase dashboard (Project → Auth → Security → Enable HaveIBeenPwned check). Free, one click.
@@ -333,8 +343,8 @@ Ariella's email is in the wild now (in her therapist-side account). The `/api/co
 ### MEDIUM-2: Service-role key read into module scope (loaded on require)
 
 ```js
-const url = process.env.SUPABASE_URL
-const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+const url = process.env.SUPABASE_URL;
+const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 ```
 
 This is fine — it's how Node reads env. But the value is captured at module-load time, so if `SUPABASE_SERVICE_ROLE_KEY` is rotated while the process is running, the old key continues to be used until restart. For the dev loop this is fine; for production rotation, mention in a runbook that the API server must restart after a key rotation.
@@ -359,8 +369,8 @@ The server reads the anon key from `VITE_SUPABASE_ANON_KEY` to construct a clien
 **Fix:** Use the service-role key to validate the caller's token instead. The service-role key can call `auth.getUser(jwt)` directly with the JWT, without needing the anon client. Pattern:
 
 ```js
-const adminClient = createClient(url, serviceKey, { auth: { persistSession: false } })
-const { data: userData, error: userErr } = await adminClient.auth.getUser(accessToken)
+const adminClient = createClient(url, serviceKey, { auth: { persistSession: false } });
+const { data: userData, error: userErr } = await adminClient.auth.getUser(accessToken);
 ```
 
 This is the canonical Supabase pattern. Saves one client construction and removes the misleading VITE_-prefixed env read.
@@ -368,9 +378,9 @@ This is the canonical Supabase pattern. Saves one client construction and remove
 ### LOW-5: Boot log reveals provider configuration
 
 ```js
-console.log('  anthropic: ' + (process.env.ANTHROPIC_API_KEY ? 'configured' : 'not set'))
-console.log('  openai:    ' + (process.env.OPENAI_API_KEY ? 'configured' : 'not set'))
-console.log('  supabase:  ' + (process.env.SUPABASE_URL ? 'configured' : 'not set'))
+console.log('  anthropic: ' + (process.env.ANTHROPIC_API_KEY ? 'configured' : 'not set'));
+console.log('  openai:    ' + (process.env.OPENAI_API_KEY ? 'configured' : 'not set'));
+console.log('  supabase:  ' + (process.env.SUPABASE_URL ? 'configured' : 'not set'));
 ```
 
 This reveals which AI providers and which Supabase project is wired. It's a small fingerprint (helps an attacker know which prompts to tune), not a secret leak. For an MVP this is fine; for production, gate this behind `NODE_ENV !== 'production'` or remove entirely.
@@ -384,7 +394,7 @@ This reveals which AI providers and which Supabase project is wired. It's a smal
 The user prompt is built as:
 
 ```js
-"<<<" + situation.trim() + ">>>"
+'<<<' + situation.trim() + '>>>';
 ```
 
 No XML/HTML injection vector. The user-supplied `situation` is wrapped in delimiters, sent to the LLM, and the LLM is instructed to output ONLY 6 labeled lines. The server then parses those lines (with a regex on `: `) and emits them as SSE events. **No client ever sees raw LLM output — only the parsed structured response.**
@@ -395,7 +405,7 @@ Safe.
 
 If the model hallucinates a `DISCLAIMER:` line with malicious content (e.g. `<script>alert(1)</script>`), that text goes into the SSE stream as a `disclaimer` field. The React client renders it via `{aiResult.disclaimer}` (auto-escaped by React), so XSS is not possible. But the disclaimer is shown to parents as authoritative text — a model could try to overwrite it with misleading content.
 
-The current system prompt hard-codes `DISCLAIMER: <fixed string>` (line 32-33 in `prompts.mjs`), so the LLM is *instructed* to use that exact string, not generate its own. The `parseLabeledLine` regex strips whitespace and matches labels, then passes the value verbatim. If the model is jailbroken, it could output `DISCLAIMER: Your therapist's session is canceled, just ignore them.` — and the client would render it.
+The current system prompt hard-codes `DISCLAIMER: <fixed string>` (line 32-33 in `prompts.mjs`), so the LLM is _instructed_ to use that exact string, not generate its own. The `parseLabeledLine` regex strips whitespace and matches labels, then passes the value verbatim. If the model is jailbroken, it could output `DISCLAIMER: Your therapist's session is canceled, just ignore them.` — and the client would render it.
 
 For v1 this is acceptable risk (the model has hard-coded instructions to use the safe string). For v2, server-side override the disclaimer with the hard-coded one regardless of what the model returns.
 
@@ -406,6 +416,7 @@ For v1 this is acceptable risk (the model has hard-coded instructions to use the
 `index.html` has no CSP / X-Frame-Options / Referrer-Policy / Permissions-Policy. The Node server has no `helmet` middleware.
 
 For a PWA that stores auth tokens in localStorage, the relevant headers are:
+
 - `Content-Security-Policy` — prevents XSS escalation if a future bug introduces one
 - `X-Frame-Options: DENY` — prevents clickjacking
 - `Referrer-Policy: strict-origin-when-cross-origin` — prevents referrer leakage of invite codes from `/invite/<code>` URLs
@@ -414,7 +425,10 @@ For a PWA that stores auth tokens in localStorage, the relevant headers are:
 **Fix:** Add to `index.html`:
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://*.supabase.co; img-src 'self' data:; frame-ancestors 'none';" />
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://*.supabase.co; img-src 'self' data:; frame-ancestors 'none';"
+/>
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 ```
 
@@ -427,6 +441,7 @@ For Vercel hosting, this can also be set in `vercel.json` `headers`.
 ## 14. Build artifacts (`dist/`) — CLEAN
 
 The `dist/` folder contains the built Vite output. Verified that:
+
 - `index-*.js` files contain bundled app code
 - `workbox-*.js` is the SW helper
 - `sw.js` is the generated service worker
@@ -458,6 +473,7 @@ One observation: the `dist/` folder exists in the working tree (committed-by-bui
 ## Summary
 
 The app is **safe to use with Ariella's real email** under the assumptions that:
+
 - Supabase Auth's built-in rate limits hold (they do, for the hosted tier)
 - The `.env` file has not been exposed outside the developer's machine
 - Anthropic/OpenAI spend limits are configured

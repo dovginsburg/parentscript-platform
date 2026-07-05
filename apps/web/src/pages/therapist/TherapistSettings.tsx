@@ -1,8 +1,8 @@
-import { Link, useNavigate } from 'react-router-dom'
-import { useAuth } from '@/hooks/useAuth'
-import { useFeatureFlags } from '@/hooks/useFeatureFlags'
-import ToggleRow from '@/components/ToggleRow'
-import { groupTherapistFlagsByCategory } from '@/lib/featureFlags'
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { useFeatureFlags } from '@/hooks/useFeatureFlags';
+import ToggleRow from '@/components/ToggleRow';
+import { groupTherapistFlagsByCategory } from '@/lib/featureFlags';
 
 // ────────────────────────────────────────────────────────────────────
 // TherapistSettings — feature flags admin page
@@ -16,12 +16,12 @@ import { groupTherapistFlagsByCategory } from '@/lib/featureFlags'
 // update and rolls back on error.
 
 export default function TherapistSettings() {
-  const { therapist, signOut } = useAuth()
-  const navigate = useNavigate()
-  const { therapistFlags, setTherapistFlag, loading } = useFeatureFlags()
+  const { therapist, signOut } = useAuth();
+  const navigate = useNavigate();
+  const { therapistFlags, setTherapistFlag, loading } = useFeatureFlags();
 
-  const grouped = groupTherapistFlagsByCategory()
-  const categories = Object.keys(grouped)
+  const grouped = groupTherapistFlagsByCategory();
+  const categories = Object.keys(grouped);
 
   return (
     <div className="min-h-dvh bg-gray-50">
@@ -54,8 +54,8 @@ export default function TherapistSettings() {
         <div className="mb-6">
           <h2 className="text-xl font-bold text-gray-900">Feature settings</h2>
           <p className="text-sm text-gray-500 mt-1">
-            Turn features on or off for your account. Parents in your caseload
-            see only the features you enable here.
+            Turn features on or off for your account. Parents in your caseload see only the features
+            you enable here.
           </p>
         </div>
 
@@ -89,14 +89,12 @@ export default function TherapistSettings() {
             ))}
 
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <p className="text-sm font-semibold text-blue-900 mb-1">
-                How this affects parents
-              </p>
+              <p className="text-sm font-semibold text-blue-900 mb-1">How this affects parents</p>
               <p className="text-sm text-blue-800 leading-snug">
-                When you turn off a parent-facing feature (like In-the-Moment),
-                the button disappears from every parent's home screen immediately.
-                The parent can still toggle their own display and notification
-                preferences, but they can't override your clinical decisions.
+                When you turn off a parent-facing feature (like In-the-Moment), the button
+                disappears from every parent's home screen immediately. The parent can still toggle
+                their own display and notification preferences, but they can't override your
+                clinical decisions.
               </p>
             </div>
 
@@ -112,5 +110,5 @@ export default function TherapistSettings() {
         )}
       </main>
     </div>
-  )
+  );
 }

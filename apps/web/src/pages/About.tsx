@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
-import MarkHeader from '@/components/MarkHeader'
-import MarkFooter from '@/components/MarkFooter'
+import { Link } from 'react-router-dom';
+import MarkHeader from '@/components/MarkHeader';
+import MarkFooter from '@/components/MarkFooter';
 
 // ──────────────────────────────────────────────────────────────────────
 // About — ParentScript story, team, contact
@@ -21,17 +21,16 @@ const SECTIONS = [
     body: (
       <>
         <p className="text-ps-text-soft leading-relaxed mb-3">
-          ParentScript is a two-sided companion for parents working with a
-          child therapist. Therapists assign evidence-based skills session
-          by session. Parents get a quiet, judgment-free place to practice
-          them — including a single tap for "In the Moment" coaching when
-          things are escalating at home.
+          ParentScript is a two-sided companion for parents working with a child therapist.
+          Therapists assign evidence-based skills session by session. Parents get a quiet,
+          judgment-free place to practice them — including a single tap for "In the Moment" coaching
+          when things are escalating at home.
         </p>
         <p className="text-ps-text-soft leading-relaxed">
-          Everything is grounded in established modalities — PCIT, Parent–Child
-          Interaction Therapy; BPT, Brief Parent Training; Triple P; CBT-based
-          parenting interventions; CPS, Collaborative Problem Solving; and
-          Circle of Security — adapted for the realities of modern family life.
+          Everything is grounded in established modalities — PCIT, Parent–Child Interaction Therapy;
+          BPT, Brief Parent Training; Triple P; CBT-based parenting interventions; CPS,
+          Collaborative Problem Solving; and Circle of Security — adapted for the realities of
+          modern family life.
         </p>
       </>
     ),
@@ -42,13 +41,12 @@ const SECTIONS = [
     body: (
       <>
         <p className="text-ps-text-soft leading-relaxed mb-3">
-          ParentScript is built by <strong>AMAZED Labs</strong> — a small studio
-          focused on evidence-based tools for the moments between therapy sessions.
+          ParentScript is built by <strong>AMAZED Labs</strong> — a small studio focused on
+          evidence-based tools for the moments between therapy sessions.
         </p>
         <p className="text-ps-text-soft leading-relaxed">
-          Clinical content is reviewed by Dr. Eisenberg and a network of
-          licensed child and family therapists. Engineering, design, and
-          product are handled in-house.
+          Clinical content is reviewed by Dr. Eisenberg and a network of licensed child and family
+          therapists. Engineering, design, and product are handled in-house.
         </p>
       </>
     ),
@@ -58,9 +56,26 @@ const SECTIONS = [
     title: 'Not therapy. Not a tracker. Not an emergency resource.',
     body: (
       <ul className="space-y-2 text-ps-text-soft">
-        <li className="flex gap-2"><span className="text-ps-success shrink-0" aria-hidden="true">✓</span>It's not therapy. ParentScript is a practice companion, not a replacement for clinical care.</li>
-        <li className="flex gap-2"><span className="text-ps-success shrink-0" aria-hidden="true">✓</span>It's not a tracker. We don't run ads, sell data, or score parents on "compliance."</li>
-        <li className="flex gap-2"><span className="text-ps-success shrink-0" aria-hidden="true">✓</span>It's not an emergency resource. In a crisis, call 911 or the Suicide & Crisis Lifeline at 988.</li>
+        <li className="flex gap-2">
+          <span className="text-ps-success shrink-0" aria-hidden="true">
+            ✓
+          </span>
+          It's not therapy. ParentScript is a practice companion, not a replacement for clinical
+          care.
+        </li>
+        <li className="flex gap-2">
+          <span className="text-ps-success shrink-0" aria-hidden="true">
+            ✓
+          </span>
+          It's not a tracker. We don't run ads, sell data, or score parents on "compliance."
+        </li>
+        <li className="flex gap-2">
+          <span className="text-ps-success shrink-0" aria-hidden="true">
+            ✓
+          </span>
+          It's not an emergency resource. In a crisis, call 911 or the Suicide & Crisis Lifeline at
+          988.
+        </li>
       </ul>
     ),
   },
@@ -96,7 +111,7 @@ const SECTIONS = [
       </div>
     ),
   },
-]
+];
 
 export default function About() {
   return (
@@ -110,14 +125,13 @@ export default function About() {
             About ParentScript
           </h2>
           <p className="text-base md:text-lg text-ps-text-soft leading-relaxed">
-            ParentScript gives therapists a fast way to send the right script
-            to the right parent at the right moment — and gives parents
-            something to lean on when it's hard.
+            ParentScript gives therapists a fast way to send the right script to the right parent at
+            the right moment — and gives parents something to lean on when it's hard.
           </p>
         </div>
 
         <div className="space-y-5">
-          {SECTIONS.map((s) => (
+          {SECTIONS.map(s => (
             <section key={s.eyebrow} className="ps-card">
               <span className="ps-eyebrow">{s.eyebrow}</span>
               <h3 className="text-xl md:text-[22px] font-semibold text-ps-text mt-2 mb-3 tracking-tight">
@@ -140,5 +154,5 @@ export default function About() {
 
       <MarkFooter product="parentscript" />
     </div>
-  )
+  );
 }

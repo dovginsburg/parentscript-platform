@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 /* ============================================================
    CrisisCard — "In-the-Moment" emergency banner for ParentScript
@@ -38,26 +38,26 @@ import { useState } from 'react'
 
 interface CrisisCardProps {
   /** Optional override for the headline. Default is clinical, plain. */
-  heading?: string
+  heading?: string;
   /** Optional override for the body. Default is judgment-free. */
-  body?: string
+  body?: string;
   /** Force-hide (e.g. feature flag off, demo mode). */
-  hidden?: boolean
+  hidden?: boolean;
 }
 
 interface Hotline {
-  label: string
-  full: string
-  href: string
+  label: string;
+  full: string;
+  href: string;
 }
 
 const HOTLINES: Hotline[] = [
   { label: '988', full: 'Suicide & Crisis Lifeline', href: 'tel:988' },
   { label: '911', full: 'Emergency services', href: 'tel:911' },
   { label: '1-800-422-4453', full: 'Childhelp (child abuse)', href: 'tel:18004224453' },
-]
+];
 
-const SESSION_KEY = 'parentscript-crisis-card-dismissed'
+const SESSION_KEY = 'parentscript-crisis-card-dismissed';
 
 export default function CrisisCard({
   heading = 'If it feels too big to hold alone, call someone.',
@@ -66,19 +66,19 @@ export default function CrisisCard({
 }: CrisisCardProps) {
   // Read once on mount so we don't re-hide on re-render.
   const [dismissed, setDismissed] = useState<boolean>(() => {
-    if (typeof window === 'undefined') return false
-    return sessionStorage.getItem(SESSION_KEY) === '1'
-  })
+    if (typeof window === 'undefined') return false;
+    return sessionStorage.getItem(SESSION_KEY) === '1';
+  });
 
-  if (hidden || dismissed) return null
+  if (hidden || dismissed) return null;
 
   function handleDismiss() {
     try {
-      sessionStorage.setItem(SESSION_KEY, '1')
+      sessionStorage.setItem(SESSION_KEY, '1');
     } catch {
       // sessionStorage may be blocked; that's fine — card stays visible.
     }
-    setDismissed(true)
+    setDismissed(true);
   }
 
   return (
@@ -122,7 +122,7 @@ export default function CrisisCard({
         </button>
       </div>
     </aside>
-  )
+  );
 }
 
 /* ============================================================
@@ -291,4 +291,4 @@ export const CRISIS_CARD_CSS = `
   .crisis-card-hotline:hover { transform: none; }
   .crisis-card-dismiss { transition: none; }
 }
-`.trim()
+`.trim();

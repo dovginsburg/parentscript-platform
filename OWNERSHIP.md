@@ -4,30 +4,30 @@ The canonical repo for every ParentScript surface. Where two platforms live, thi
 
 ## Canonical home
 
-| Surface | Canonical location | Notes |
-|---|---|---|
-| Web app (parentscript.app) | `apps/web/` | Next.js 14. Deployed to Vercel. |
-| Backend API | `apps/backend/` | Node.js, ESM. Safety-guard middleware (`safety-guard.mjs`), rate-limit (`middleware/rate-limit.mjs`), error-tracking (`middleware/error-tracking.mjs`). |
-| Vercel serverless functions | `api/` | Top-level for Vercel's automatic function discovery. |
-| Browser extension | `apps/browser-extension/` | Manifest V3. |
-| Desktop (Tauri 2) | `apps/desktop/` | Wraps the web bundle. |
-| Mobile — iOS | `apps/ios/` | Capacitor wrapper + SwiftPM CapApp-SPM bridge. |
-| Mobile — Android | `apps/android/` | Capacitor wrapper. |
-| Slack app | `apps/slack-app/` | Slack Bolt app. |
-| Mobile release automation | `apps/fastlane/` | Fastlane shared by iOS/Android. |
-| Shared design tokens | `packages/design/` | |
-| Shared utilities, types, schemas | `packages/shared/` | |
-| Brand, docs, marketing | `docs/` | Top-level docs. |
-| Repo-level scripts | `scripts/` | |
-| CI workflows (top-level orchestrator) | `.github/workflows/ci.yml` | Matrix dispatch across all platforms. |
-| CI workflows (per-app) | `apps/<name>/.github/workflows/*.yml` | Run when the app's `apps/<name>/**` changes. |
+| Surface                               | Canonical location                    | Notes                                                                                                                                                   |
+| ------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Web app (parentscript.app)            | `apps/web/`                           | Next.js 14. Deployed to Vercel.                                                                                                                         |
+| Backend API                           | `apps/backend/`                       | Node.js, ESM. Safety-guard middleware (`safety-guard.mjs`), rate-limit (`middleware/rate-limit.mjs`), error-tracking (`middleware/error-tracking.mjs`). |
+| Vercel serverless functions           | `api/`                                | Top-level for Vercel's automatic function discovery.                                                                                                    |
+| Browser extension                     | `apps/browser-extension/`             | Manifest V3.                                                                                                                                            |
+| Desktop (Tauri 2)                     | `apps/desktop/`                       | Wraps the web bundle.                                                                                                                                   |
+| Mobile — iOS                          | `apps/ios/`                           | Capacitor wrapper + SwiftPM CapApp-SPM bridge.                                                                                                          |
+| Mobile — Android                      | `apps/android/`                       | Capacitor wrapper.                                                                                                                                      |
+| Slack app                             | `apps/slack-app/`                     | Slack Bolt app.                                                                                                                                         |
+| Mobile release automation             | `apps/fastlane/`                      | Fastlane shared by iOS/Android.                                                                                                                         |
+| Shared design tokens                  | `packages/design/`                    |                                                                                                                                                         |
+| Shared utilities, types, schemas      | `packages/shared/`                    |                                                                                                                                                         |
+| Brand, docs, marketing                | `docs/`                               | Top-level docs.                                                                                                                                         |
+| Repo-level scripts                    | `scripts/`                            |                                                                                                                                                         |
+| CI workflows (top-level orchestrator) | `.github/workflows/ci.yml`            | Matrix dispatch across all platforms.                                                                                                                   |
+| CI workflows (per-app)                | `apps/<name>/.github/workflows/*.yml` | Run when the app's `apps/<name>/**` changes.                                                                                                            |
 
 ## Legacy repos (read-only)
 
-| Legacy repo | Reason archived | What it holds that this repo preserved |
-|---|---|---|
-| `dovginsburg/parentscript` | Became the unification zone, then was superseded by this repo | All apps/ + docs/ + packages/ + configs carried here |
-| `dovginsburg/maze` | Pre-monorepo state (flat Vite/React + iOS/Android Capacitor at root + api/ at root) | Historical docs only — `docs/legacy/maze/` |
+| Legacy repo                | Reason archived                                                                     | What it holds that this repo preserved               |
+| -------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `dovginsburg/parentscript` | Became the unification zone, then was superseded by this repo                       | All apps/ + docs/ + packages/ + configs carried here |
+| `dovginsburg/maze`         | Pre-monorepo state (flat Vite/React + iOS/Android Capacitor at root + api/ at root) | Historical docs only — `docs/legacy/maze/`           |
 
 ## Source-of-truth rules (enforced for the build-out)
 

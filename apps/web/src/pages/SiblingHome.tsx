@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
-import MarkHeader from '@/components/MarkHeader'
-import MarkFooter from '@/components/MarkFooter'
-import ScopeOfPracticeDisclosure from '@/components/ScopeOfPracticeDisclosure'
+import { Link } from 'react-router-dom';
+import MarkHeader from '@/components/MarkHeader';
+import MarkFooter from '@/components/MarkFooter';
+import ScopeOfPracticeDisclosure from '@/components/ScopeOfPracticeDisclosure';
 
 // ──────────────────────────────────────────────────────────────────────
 // SiblingSupport — public marketing landing page (sibling-support.parentscript.app)
@@ -38,10 +38,10 @@ const SIBLING_PILLARS = [
   {
     eyebrow: 'You are not the only helper',
     title: 'Real support, and real trusted adults.',
-    body: "Sibling support is real, and so is telling a trusted adult. The app never asks you to keep a secret that puts your sibling at risk.",
+    body: 'Sibling support is real, and so is telling a trusted adult. The app never asks you to keep a secret that puts your sibling at risk.',
     pillTone: 'neutral' as const,
   },
-]
+];
 
 export default function SiblingHome() {
   return (
@@ -63,11 +63,10 @@ export default function SiblingHome() {
                   <span className="text-ps-accent">here's how to help.</span>
                 </h2>
                 <p className="text-base md:text-[17px] text-ps-text-soft leading-relaxed mb-8 max-w-xl">
-                  SiblingSupport is a peer-support app built on the same clinical
-                  safety rail as ParentScript. One tap to get grounded when your
-                  sibling is in crisis. Active-listening scripts you can actually
-                  use. Always: 988, 911, and a trusted adult when things are too
-                  big to hold alone.
+                  SiblingSupport is a peer-support app built on the same clinical safety rail as
+                  ParentScript. One tap to get grounded when your sibling is in crisis.
+                  Active-listening scripts you can actually use. Always: 988, 911, and a trusted
+                  adult when things are too big to hold alone.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link to="/sibling/app" className="ps-btn ps-btn-primary ps-btn-lg">
@@ -88,7 +87,7 @@ export default function SiblingHome() {
                 <ol className="space-y-3">
                   {[
                     "of course you're worried. that sounds exhausting to sit with.",
-                    "before trying to talk, name it for yourself: scared, frustrated, missing him.",
+                    'before trying to talk, name it for yourself: scared, frustrated, missing him.',
                     "if he does open up, try mirroring — 'what i'm hearing is…' — before offering any fix.",
                   ].map((step, i) => (
                     <li key={i} className="flex gap-3 items-start">
@@ -117,7 +116,7 @@ export default function SiblingHome() {
               </h3>
             </div>
             <div className="grid md:grid-cols-2 gap-5">
-              {SIBLING_PILLARS.map((p) => (
+              {SIBLING_PILLARS.map(p => (
                 <article key={p.title} className="ps-card">
                   <span className={`ps-pill ps-pill-${p.pillTone} mb-3`}>
                     <span className="dot" />
@@ -163,5 +162,5 @@ export default function SiblingHome() {
 
       <MarkFooter product="sibling" />
     </div>
-  )
+  );
 }

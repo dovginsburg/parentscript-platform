@@ -20,14 +20,14 @@ Both products share the same primitives — radius, spacing, type scale,
 motion, z-index, and a feedback channel — and only diverge on color, tone
 voice, and surface.
 
-| | **Tono** | **ParentScript** |
-|---|---|---|
-| Surface | operate (operational tool) | monitor (status / glanceable) |
-| Color scheme | dark | light |
-| Accent | `#A855F7` (violet) | `#6366F1` (indigo) |
-| Tone | professional, premium, confident, dry-witty | calm, clinical, reassuring, judgment-free |
-| One-liner | *say what you mean.* | *say the right thing at the right time.* |
-| Voice rule | lowercase everywhere | sentence case, never shouty |
+|              | **Tono**                                    | **ParentScript**                          |
+| ------------ | ------------------------------------------- | ----------------------------------------- |
+| Surface      | operate (operational tool)                  | monitor (status / glanceable)             |
+| Color scheme | dark                                        | light                                     |
+| Accent       | `#A855F7` (violet)                          | `#6366F1` (indigo)                        |
+| Tone         | professional, premium, confident, dry-witty | calm, clinical, reassuring, judgment-free |
+| One-liner    | _say what you mean._                        | _say the right thing at the right time._  |
+| Voice rule   | lowercase everywhere                        | sentence case, never shouty               |
 
 Voice and copy are owned by `brand-voice-guide.md` (Mark). This doc only
 covers the visual language.
@@ -62,16 +62,16 @@ products.parentscript.color  // light surface palette
 
 **Slots used by every component:**
 
-| Slot | Tono | ParentScript |
-|---|---|---|
-| `bg` | `#000000` | `#FFFFFF` |
-| `bgSoft` | `#0A0A0A` | `#FAFBFC` |
-| `bgCard` | `#111113` | `#FFFFFF` |
-| `border` | `#1F1F23` | `#E5E7EB` |
-| `text` | `#FFFFFF` | `#111827` |
-| `textSoft` | `#C9C9D1` | `#4B5563` |
-| `accent` | `#A855F7` | `#6366F1` |
-| `accentSoft` | `rgba(168,85,247,0.12)` | `#EEF2FF` |
+| Slot         | Tono                    | ParentScript |
+| ------------ | ----------------------- | ------------ |
+| `bg`         | `#000000`               | `#FFFFFF`    |
+| `bgSoft`     | `#0A0A0A`               | `#FAFBFC`    |
+| `bgCard`     | `#111113`               | `#FFFFFF`    |
+| `border`     | `#1F1F23`               | `#E5E7EB`    |
+| `text`       | `#FFFFFF`               | `#111827`    |
+| `textSoft`   | `#C9C9D1`               | `#4B5563`    |
+| `accent`     | `#A855F7`               | `#6366F1`    |
+| `accentSoft` | `rgba(168,85,247,0.12)` | `#EEF2FF`    |
 
 **Tono has tone accents for the four rewrites:**
 
@@ -84,8 +84,8 @@ products.tono.toneAccents:
 ```
 
 These are the only allowed source for "warmer / clearer / funnier / safer"
-UI accents — never invent hex values on the fly. The tones are *named* in
-copy and *colored* on screen, in lockstep.
+UI accents — never invent hex values on the fly. The tones are _named_ in
+copy and _colored_ on screen, in lockstep.
 
 ### 2.3 Feedback
 
@@ -167,17 +167,17 @@ Both products use Inter (sans) and JetBrains Mono (mono). Type scales are
 product-specific because ParentScript's parents need slightly larger body
 text than Tono's professional audience.
 
-| | Tono | ParentScript |
-|---|---|---|
-| display | 48px / 56 / -0.025em / 700 | 40px / 48 / -0.02em / 700 |
-| h1 | 36px / 44 / -0.02em / 700 | 30px / 38 / -0.01em / 700 |
-| h2 | 24px / 32 / -0.01em / 600 | 22px / 30 / -0.005em / 600 |
-| h3 | 18px / 26 / 600 | 18px / 26 / 600 |
-| body | 15px / 24 / 400 | 16px / 26 / 400 |
-| bodySm | 13px / 20 / 400 | 14px / 22 / 400 |
-| caption | 12px / 16 / 500 / +0.02em | 12px / 16 / 500 / +0.01em |
-| mono | 13px / 20 / 400 | — |
-| parentLg | — | 20px / 30 / 500 |
+|          | Tono                       | ParentScript               |
+| -------- | -------------------------- | -------------------------- |
+| display  | 48px / 56 / -0.025em / 700 | 40px / 48 / -0.02em / 700  |
+| h1       | 36px / 44 / -0.02em / 700  | 30px / 38 / -0.01em / 700  |
+| h2       | 24px / 32 / -0.01em / 600  | 22px / 30 / -0.005em / 600 |
+| h3       | 18px / 26 / 600            | 18px / 26 / 600            |
+| body     | 15px / 24 / 400            | 16px / 26 / 400            |
+| bodySm   | 13px / 20 / 400            | 14px / 22 / 400            |
+| caption  | 12px / 16 / 500 / +0.02em  | 12px / 16 / 500 / +0.01em  |
+| mono     | 13px / 20 / 400            | —                          |
+| parentLg | —                          | 20px / 30 / 500            |
 
 ---
 
@@ -192,13 +192,14 @@ files reference the same token paths, so the styles stay in sync.
 Three buttons. **Apple is black, Google is white, Email is ghost.** The
 color stack is in `components.button.variants.oauth*`.
 
-| Variant | bg | fg | hover | border |
-|---|---|---|---|---|
-| `oauthApple` | `#000000` | `#FFFFFF` | `#1F1F23` | `#000000` |
-| `oauthGoogle` | `#FFFFFF` | `#1F1F23` | `#F9FAFB` | `#D1D5DB` |
-| `oauthEmail` | transparent | `textSoft` | `text` | `borderStrong` |
+| Variant       | bg          | fg         | hover     | border         |
+| ------------- | ----------- | ---------- | --------- | -------------- |
+| `oauthApple`  | `#000000`   | `#FFFFFF`  | `#1F1F23` | `#000000`      |
+| `oauthGoogle` | `#FFFFFF`   | `#1F1F23`  | `#F9FAFB` | `#D1D5DB`      |
+| `oauthEmail`  | transparent | `textSoft` | `text`    | `borderStrong` |
 
 A11y:
+
 - `min-height: 44px` (WCAG 2.5.5 target size)
 - `focus-visible` uses `shadow.focus` (3px indigo ring)
 - `prefers-reduced-motion` kills the active-state lift
@@ -209,6 +210,7 @@ A11y:
 The "in-the-moment" emergency banner. Token-aligned to `global.feedback.crisis`.
 
 **Properties:**
+
 - z-index: `z.crisis` (400) — above modals, above nav
 - Always above the fold on parent pages
 - Tappable phone numbers (`<a href="tel:…">`)
@@ -248,12 +250,12 @@ uses `--tone-glow` per card so the ring matches the tone accent.
 
 Token-aligned variants in `components.button.variants`:
 
-| Variant | bg | fg | hover |
-|---|---|---|---|
-| primary | accent | white | accentHover |
-| secondary | bgSoft | text | (border emphasis) |
-| ghost | transparent | textSoft | text |
-| danger | danger | white | (darker red) |
+| Variant   | bg          | fg       | hover             |
+| --------- | ----------- | -------- | ----------------- |
+| primary   | accent      | white    | accentHover       |
+| secondary | bgSoft      | text     | (border emphasis) |
+| ghost     | transparent | textSoft | text              |
+| danger    | danger      | white    | (darker red)      |
 
 Min height 44px. Padding `sm 6/12`, `md 10/18`, `lg 14/24`. Radius `md` (12px).
 
@@ -294,11 +296,11 @@ These are table stakes. None are optional.
 
 Three hero screens live in [`docs/designs/`](./designs/):
 
-| File | Audience | Skin | Surface |
-|---|---|---|---|
-| `landing-tone.html` | Tono prospects | dark / violet / lowercase | operate-as-marketing |
-| `landing-therapist.html` | Licensed clinicians | light / indigo / sentence case | clinical authority |
-| `landing-parent.html` | Parents | light / indigo / sentence case | monitor / crisis-aware |
+| File                     | Audience            | Skin                           | Surface                |
+| ------------------------ | ------------------- | ------------------------------ | ---------------------- |
+| `landing-tone.html`      | Tono prospects      | dark / violet / lowercase      | operate-as-marketing   |
+| `landing-therapist.html` | Licensed clinicians | light / indigo / sentence case | clinical authority     |
+| `landing-parent.html`    | Parents             | light / indigo / sentence case | monitor / crisis-aware |
 
 Each one is a static HTML file with the tokens inlined as CSS custom
 properties — so designers can open them in a browser without running the
@@ -342,6 +344,7 @@ is the actual editor, not a screenshot of it.
 ### Skins / white-labeling
 
 If a third product is added later:
+
 1. Add `products.<name>` in `tokens.json` with `colorScheme`, `color`,
    `toneAccents` (optional), `type`.
 2. Add `<name>.<role>` colors to `tailwindTheme.colors`.
@@ -355,9 +358,9 @@ If a third product is added later:
 **Clinical authority:** Mira / Dr. Ariella Eisenberg, PsyD
 **Engineering:** Gary (CTO), Sherlock (infra), Quinn (QA)
 
-| Date | Change |
-|---|---|
-| 2026-07-03 | v1.0 — Mark shipped initial design tokens + two hero screens (tone + dashboard) |
+| Date       | Change                                                                                                              |
+| ---------- | ------------------------------------------------------------------------------------------------------------------- |
+| 2026-07-03 | v1.0 — Mark shipped initial design tokens + two hero screens (tone + dashboard)                                     |
 | 2026-07-05 | v1.1 — added `global.feedback.crisis` tokens, OAuthButtons polish, CrisisCard, TonePreview, and three landing pages |
 
 ---

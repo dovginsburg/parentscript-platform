@@ -1,170 +1,188 @@
-import { useState, useEffect, useCallback } from 'react'
-import { useParams, Link } from 'react-router-dom'
-import { supabase } from '@/lib/supabase'
-import type {
-  Client, Skill, ClientSkillState, PracticeLog,
-  NoteTag, Parent
-} from '@/lib/types'
-import { NOTE_TAG_LABELS } from '@/lib/types'
+import { useState, useEffect, useCallback } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { supabase } from '@/lib/supabase';
+import type { Client, Skill, ClientSkillState, PracticeLog, NoteTag, Parent } from '@/lib/types';
+import { NOTE_TAG_LABELS } from '@/lib/types';
 
 interface SkillWithState extends Skill {
-  state: ClientSkillState | null
+  state: ClientSkillState | null;
 }
 
 function generateInviteCode() {
-  return crypto.randomUUID()
+  return crypto.randomUUID();
 }
 
 const LEVEL_NAMES: Record<number, string> = {
   1: 'L1 — Connection & Foundation',
   2: 'L2 — Shaping Behavior',
   3: 'L3 — Limits & Boundaries',
-}
+};
 
 export default function ClientDetail() {
-  const { id } = useParams<{ id: string }>()
-  const [client, setClient] = useState<Client | null>(null)
-  const [skills, setSkills] = useState<SkillWithState[]>([])
-  const [parents, setParents] = useState<Parent[]>([])
-  const [logs, setLogs] = useState<PracticeLog[]>([])
-  const [loading, setLoading] = useState(true)
-  const [inviteLink, setInviteLink] = useState<string | null>(null)
-  const [generatingInvite, setGeneratingInvite] = useState(false)
-  const [inviteError, setInviteError] = useState<string | null>(null)
-  const [mutationError, setMutationError] = useState<string | null>(null)
-  const [tab, setTab] = useState<'skills' | 'logs'>('skills')
+  const { id } = useParams<{ id: string }>();
+  const [client, setClient] = useState<Client | null>(null);
+  const [skills, setSkills] = useState<SkillWithState[]>([]);
+  const [parents, setParents] = useState<Parent[]>([]);
+  const [logs, setLogs] = useState<PracticeLog[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [inviteLink, setInviteLink] = useState<string | null>(null);
+  const [generatingInvite, setGeneratingInvite] = useState(false);
+  const [inviteError, setInviteError] = useState<string | null>(null);
+  const [mutationError, setMutationError] = useState<string | null>(null);
+  const [tab, setTab] = useState<'skills' | 'logs'>('skills');
 
   const load = useCallback(async () => {
-    if (!id) return
-    setLoading(true)
+    if (!id) return;
+    setLoading(true);
 
     const [clientRes, skillsRes, statesRes, parentsRes, logsRes] = await Promise.all([
       supabase.from('clients').select('*').eq('id', id).single(),
-      supabase.from('skills').select('*').eq('is_published', true).order('level').order('sort_order'),
+      supabase
+        .from('skills')
+        .select('*')
+        .eq('is_published', true)
+        .order('level')
+        .order('sort_order'),
       supabase.from('client_skill_state').select('*').eq('client_id', id),
       supabase.from('parents').select('*').eq('client_id', id),
-      supabase.from('practice_logs').select('*').eq('client_id', id).order('practiced_at', { ascending: false }),
-    ])
+      supabase
+        .from('practice_logs')
+        .select('*')
+        .eq('client_id', id)
+        .order('practiced_at', { ascending: false }),
+    ]);
 
-    setClient(clientRes.data)
-    setParents(parentsRes.data ?? [])
-    setLogs(logsRes.data ?? [])
+    setClient(clientRes.data);
+    setParents(parentsRes.data ?? []);
+    setLogs(logsRes.data ?? []);
 
-    const stateMap = new Map((statesRes.data ?? []).map(s => [s.skill_id, s]))
+    const stateMap = new Map((statesRes.data ?? []).map(s => [s.skill_id, s]));
     setSkills(
       (skillsRes.data ?? []).map(skill => ({
         ...skill,
         state: stateMap.get(skill.id) ?? null,
       }))
-    )
-    setLoading(false)
-  }, [id])
+    );
+    setLoading(false);
+  }, [id]);
 
-  useEffect(() => { load() }, [load])
+  useEffect(() => {
+    load();
+  }, [load]);
 
   async function toggleSkill(skill: SkillWithState) {
-    if (!id) return
-    setMutationError(null)
-    const newStatus = skill.state?.status === 'unlocked' ? 'locked' : 'unlocked'
+    if (!id) return;
+    setMutationError(null);
+    const newStatus = skill.state?.status === 'unlocked' ? 'locked' : 'unlocked';
 
-    let error: { message?: string } | null = null
+    let error: { message?: string } | null = null;
     if (skill.state) {
-      const res = await supabase.from('client_skill_state').update({
-        status: newStatus,
-        unlocked_at: newStatus === 'unlocked' ? new Date().toISOString() : null,
-      }).eq('id', skill.state.id)
-      error = res.error
+      const res = await supabase
+        .from('client_skill_state')
+        .update({
+          status: newStatus,
+          unlocked_at: newStatus === 'unlocked' ? new Date().toISOString() : null,
+        })
+        .eq('id', skill.state.id);
+      error = res.error;
     } else {
       const res = await supabase.from('client_skill_state').insert({
         client_id: id,
         skill_id: skill.id,
         status: newStatus,
         unlocked_at: newStatus === 'unlocked' ? new Date().toISOString() : null,
-      })
-      error = res.error
+      });
+      error = res.error;
     }
     if (error) {
-      console.error('[ClientDetail] toggleSkill failed:', error)
-      setMutationError(error.message || 'Could not update skill.')
-      return
+      console.error('[ClientDetail] toggleSkill failed:', error);
+      setMutationError(error.message || 'Could not update skill.');
+      return;
     }
-    await load()
+    await load();
   }
 
   async function setNoteTag(skill: SkillWithState, tag: NoteTag | null) {
-    if (!id) return
-    setMutationError(null)
-    let error: { message?: string } | null = null
+    if (!id) return;
+    setMutationError(null);
+    let error: { message?: string } | null = null;
     if (skill.state) {
-      const res = await supabase.from('client_skill_state').update({ note_tag: tag }).eq('id', skill.state.id)
-      error = res.error
+      const res = await supabase
+        .from('client_skill_state')
+        .update({ note_tag: tag })
+        .eq('id', skill.state.id);
+      error = res.error;
     } else {
       const res = await supabase.from('client_skill_state').insert({
         client_id: id,
         skill_id: skill.id,
         status: 'locked',
         note_tag: tag,
-      })
-      error = res.error
+      });
+      error = res.error;
     }
     if (error) {
-      console.error('[ClientDetail] setNoteTag failed:', error)
-      setMutationError(error.message || 'Could not update note.')
-      return
+      console.error('[ClientDetail] setNoteTag failed:', error);
+      setMutationError(error.message || 'Could not update note.');
+      return;
     }
-    await load()
+    await load();
   }
 
   async function generateInvite() {
-    if (!id) return
-    setGeneratingInvite(true)
-    setInviteError(null)
-    setInviteLink(null)
-    const code = generateInviteCode()
-    const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()
+    if (!id) return;
+    setGeneratingInvite(true);
+    setInviteError(null);
+    setInviteLink(null);
+    const code = generateInviteCode();
+    const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
 
     const { error } = await supabase.from('invites').insert({
       client_id: id,
       code,
       expires_at: expiresAt,
-    })
+    });
 
     if (error) {
-      console.error('[ClientDetail] generateInvite failed:', error)
-      setInviteError(error.message || 'Could not generate invite link.')
-      setGeneratingInvite(false)
-      return
+      console.error('[ClientDetail] generateInvite failed:', error);
+      setInviteError(error.message || 'Could not generate invite link.');
+      setGeneratingInvite(false);
+      return;
     }
-    const url = `${window.location.origin}/invite/${code}`
-    setInviteLink(url)
-    setGeneratingInvite(false)
+    const url = `${window.location.origin}/invite/${code}`;
+    setInviteLink(url);
+    setGeneratingInvite(false);
   }
 
   function logSummary() {
     const last7 = logs.filter(
       l => new Date(l.practiced_at) > new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
-    )
-    const good = logs.filter(l => l.went_how === 'good').length
-    const mixed = logs.filter(l => l.went_how === 'mixed').length
-    const hard = logs.filter(l => l.went_how === 'hard').length
-    return { total: logs.length, last7: last7.length, good, mixed, hard }
+    );
+    const good = logs.filter(l => l.went_how === 'good').length;
+    const mixed = logs.filter(l => l.went_how === 'mixed').length;
+    const hard = logs.filter(l => l.went_how === 'hard').length;
+    return { total: logs.length, last7: last7.length, good, mixed, hard };
   }
 
   if (loading) {
-    return <div className="min-h-dvh flex items-center justify-center text-gray-500">Loading…</div>
+    return <div className="min-h-dvh flex items-center justify-center text-gray-500">Loading…</div>;
   }
 
   if (!client) {
-    return <div className="min-h-dvh flex items-center justify-center text-gray-500">Client not found.</div>
+    return (
+      <div className="min-h-dvh flex items-center justify-center text-gray-500">
+        Client not found.
+      </div>
+    );
   }
 
   const byLevel = [1, 2, 3].map(level => ({
     level,
     name: LEVEL_NAMES[level],
     skills: skills.filter(s => s.level === level),
-  }))
+  }));
 
-  const summary = logSummary()
+  const summary = logSummary();
 
   // ── Shared content blocks (rendered in both mobile-tab and tablet-column views) ──
 
@@ -177,10 +195,7 @@ export default function ClientDetail() {
           </h2>
           <div className="space-y-2">
             {levelSkills.map(skill => (
-              <div
-                key={skill.id}
-                className="bg-white rounded-xl border border-gray-200 p-4 md:p-5"
-              >
+              <div key={skill.id} className="bg-white rounded-xl border border-gray-200 p-4 md:p-5">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1 flex-wrap">
@@ -233,7 +248,7 @@ export default function ClientDetail() {
         </section>
       ))}
     </div>
-  )
+  );
 
   const logsContent = (
     <div>
@@ -258,11 +273,13 @@ export default function ClientDetail() {
       ) : (
         <div className="space-y-2">
           {logs.map(log => (
-            <div key={log.id} className="bg-white rounded-xl border border-gray-200 px-4 py-3 flex items-center justify-between">
+            <div
+              key={log.id}
+              className="bg-white rounded-xl border border-gray-200 px-4 py-3 flex items-center justify-between"
+            >
               <div>
                 <p className="text-sm text-gray-900">
-                  {log.went_how === 'good' ? '😀' : log.went_how === 'mixed' ? '😐' : '😞'}
-                  {' '}
+                  {log.went_how === 'good' ? '😀' : log.went_how === 'mixed' ? '😐' : '😞'}{' '}
                   {log.reflection_tags?.join(', ') || 'General practice'}
                 </p>
                 <p className="text-xs text-gray-500 mt-0.5">
@@ -274,7 +291,7 @@ export default function ClientDetail() {
         </div>
       )}
     </div>
-  )
+  );
 
   return (
     <div className="min-h-dvh bg-gray-50">
@@ -289,9 +306,8 @@ export default function ClientDetail() {
             <p className="text-sm text-gray-500 mt-0.5">
               {parents.length > 0
                 ? `${parents.length} parent(s) connected`
-                : 'No parent account yet'}
-              {' '}·{' '}
-              {summary.total} practice log{summary.total !== 1 ? 's' : ''}
+                : 'No parent account yet'}{' '}
+              · {summary.total} practice log{summary.total !== 1 ? 's' : ''}
             </p>
           </div>
           <button
@@ -311,7 +327,9 @@ export default function ClientDetail() {
 
         {inviteLink && (
           <div className="mt-3 bg-brand-50 border border-brand-200 rounded-lg p-3">
-            <p className="text-xs font-semibold text-brand-800 mb-1">Parent invite link (expires 7 days):</p>
+            <p className="text-xs font-semibold text-brand-800 mb-1">
+              Parent invite link (expires 7 days):
+            </p>
             <div className="flex gap-2 items-center">
               <input
                 readOnly
@@ -386,7 +404,10 @@ export default function ClientDetail() {
                 { label: '😀 Good', value: summary.good },
                 { label: '😐 Mixed', value: summary.mixed },
               ].map(({ label, value }) => (
-                <div key={label} className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+                <div
+                  key={label}
+                  className="bg-white rounded-xl border border-gray-200 p-4 text-center"
+                >
                   <p className="text-2xl font-bold text-gray-900">{value}</p>
                   <p className="text-xs text-gray-500 mt-1">{label}</p>
                 </div>
@@ -398,11 +419,13 @@ export default function ClientDetail() {
             ) : (
               <div className="space-y-2 max-h-[60vh] overflow-y-auto panel-scroll">
                 {logs.map(log => (
-                  <div key={log.id} className="bg-white rounded-xl border border-gray-200 px-4 py-3 flex items-center justify-between">
+                  <div
+                    key={log.id}
+                    className="bg-white rounded-xl border border-gray-200 px-4 py-3 flex items-center justify-between"
+                  >
                     <div>
                       <p className="text-sm text-gray-900">
-                        {log.went_how === 'good' ? '😀' : log.went_how === 'mixed' ? '😐' : '😞'}
-                        {' '}
+                        {log.went_how === 'good' ? '😀' : log.went_how === 'mixed' ? '😐' : '😞'}{' '}
                         {log.reflection_tags?.join(', ') || 'General practice'}
                       </p>
                       <p className="text-xs text-gray-500 mt-0.5">
@@ -417,5 +440,5 @@ export default function ClientDetail() {
         </div>
       </main>
     </div>
-  )
+  );
 }

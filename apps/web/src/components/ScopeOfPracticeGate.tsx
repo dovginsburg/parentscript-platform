@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import ScopeOfPracticeDisclosure from '@/components/ScopeOfPracticeDisclosure'
+import { useEffect, useState } from 'react';
+import ScopeOfPracticeDisclosure from '@/components/ScopeOfPracticeDisclosure';
 
 // ──────────────────────────────────────────────────────────────────────
 // ScopeOfPracticeGate — required acknowledgement modal
@@ -21,36 +21,36 @@ import ScopeOfPracticeDisclosure from '@/components/ScopeOfPracticeDisclosure'
 //   - DO NOT change this version without coordinating with Mira —
 //     re-acknowledgement must be tied to an actual disclosure update.
 
-const STORAGE_KEY = 'parentscript:scope-ack:v1'
-const DISCLOSURE_VERSION = '2026-06-30'
+const STORAGE_KEY = 'parentscript:scope-ack:v1';
+const DISCLOSURE_VERSION = '2026-06-30';
 
 export default function ScopeOfPracticeGate({ children }: { children: React.ReactNode }) {
   const [ackState, setAckState] = useState<'loading' | 'accepted' | 'pending'>(
     typeof window === 'undefined' ? 'loading' : 'pending'
-  )
+  );
 
   useEffect(() => {
     try {
-      const stored = window.localStorage.getItem(STORAGE_KEY)
+      const stored = window.localStorage.getItem(STORAGE_KEY);
       if (stored === DISCLOSURE_VERSION) {
-        setAckState('accepted')
+        setAckState('accepted');
       } else {
-        setAckState('pending')
+        setAckState('pending');
       }
     } catch {
       // localStorage can throw in private modes / sandboxed iframes.
       // Fail closed: show the gate so the user still sees the disclosure.
-      setAckState('pending')
+      setAckState('pending');
     }
-  }, [])
+  }, []);
 
   function accept() {
     try {
-      window.localStorage.setItem(STORAGE_KEY, DISCLOSURE_VERSION)
+      window.localStorage.setItem(STORAGE_KEY, DISCLOSURE_VERSION);
     } catch {
       // Best-effort persistence; if it fails the user just sees the gate again next visit.
     }
-    setAckState('accepted')
+    setAckState('accepted');
   }
 
   function decline() {
@@ -59,7 +59,7 @@ export default function ScopeOfPracticeGate({ children }: { children: React.Reac
     // knows the boundaries of what ParentScript is. This matches Mira's
     // spec: "do not bury it" — we surface it again rather than blocking
     // access, since the underlying product is still safe to evaluate.
-    setAckState('pending')
+    setAckState('pending');
   }
 
   if (ackState === 'loading') {
@@ -67,11 +67,11 @@ export default function ScopeOfPracticeGate({ children }: { children: React.Reac
       <div className="min-h-dvh flex items-center justify-center">
         <p className="text-gray-400 text-sm">Loading…</p>
       </div>
-    )
+    );
   }
 
   if (ackState === 'accepted') {
-    return <>{children}</>
+    return <>{children}</>;
   }
 
   return (
@@ -101,10 +101,9 @@ export default function ScopeOfPracticeGate({ children }: { children: React.Reac
 
         <div className="px-6 md:px-8 pb-6 md:pb-8 pt-2 border-t border-gray-100 bg-gray-50 rounded-b-2xl">
           <p className="text-xs text-gray-500 mb-4">
-            By continuing, you acknowledge that you understand ParentScript is
-            parenting support, not therapy, and that you will reach out to a
-            licensed professional or crisis resource for any of the situations
-            listed above.
+            By continuing, you acknowledge that you understand ParentScript is parenting support,
+            not therapy, and that you will reach out to a licensed professional or crisis resource
+            for any of the situations listed above.
           </p>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
             <button
@@ -125,5 +124,5 @@ export default function ScopeOfPracticeGate({ children }: { children: React.Reac
         </div>
       </div>
     </div>
-  )
+  );
 }

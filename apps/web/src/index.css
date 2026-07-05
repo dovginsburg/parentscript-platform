@@ -22,32 +22,32 @@
    ───────────────────────────────────────────────────────────────────── */
 :root {
   /* color */
-  --ps-bg: #FFFFFF;
-  --ps-bg-soft: #FAFBFC;
-  --ps-border: #E5E7EB;
-  --ps-border-strong: #D1D5DB;
+  --ps-bg: #ffffff;
+  --ps-bg-soft: #fafbfc;
+  --ps-border: #e5e7eb;
+  --ps-border-strong: #d1d5db;
   --ps-text: #111827;
-  --ps-text-soft: #4B5563;
-  --ps-text-softer: #6B7280;
-  --ps-muted: #9CA3AF;
+  --ps-text-soft: #4b5563;
+  --ps-text-softer: #6b7280;
+  --ps-muted: #9ca3af;
 
-  --ps-accent: #6366F1;
-  --ps-accent-hover: #4F46E5;
-  --ps-accent-soft: #EEF2FF;
-  --ps-accent-softer: #F5F5FF;
-  --ps-accent-light: #A5B4FC;
-  --ps-accent-ink: #3730A3;
+  --ps-accent: #6366f1;
+  --ps-accent-hover: #4f46e5;
+  --ps-accent-soft: #eef2ff;
+  --ps-accent-softer: #f5f5ff;
+  --ps-accent-light: #a5b4fc;
+  --ps-accent-ink: #3730a3;
 
-  --ps-warm: #F59E0B;
-  --ps-warm-soft: #FEF3C7;
-  --ps-warm-ink: #92400E;
-  --ps-success: #10B981;
-  --ps-success-soft: #D1FAE5;
-  --ps-danger: #DC2626;
-  --ps-danger-soft: #FEE2E2;
-  --ps-info: #0EA5E9;
-  --ps-info-soft: #E0F2FE;
-  --ps-info-ink: #0369A1;
+  --ps-warm: #f59e0b;
+  --ps-warm-soft: #fef3c7;
+  --ps-warm-ink: #92400e;
+  --ps-success: #10b981;
+  --ps-success-soft: #d1fae5;
+  --ps-danger: #dc2626;
+  --ps-danger-soft: #fee2e2;
+  --ps-info: #0ea5e9;
+  --ps-info-soft: #e0f2fe;
+  --ps-info-ink: #0369a1;
 
   /* radius */
   --ps-radius-sm: 8px;
@@ -68,8 +68,15 @@
   }
 
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      'Helvetica Neue', Arial, sans-serif;
+    font-family:
+      'Inter',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      'Helvetica Neue',
+      Arial,
+      sans-serif;
     color: var(--ps-text);
     background-color: var(--ps-bg-soft);
     overflow-x: hidden;
@@ -84,13 +91,17 @@
   }
 
   /* Better touch targets on all buttons and links by default */
-  button, a, [role="button"] {
+  button,
+  a,
+  [role='button'] {
     touch-action: manipulation;
     cursor: pointer;
   }
 
   /* Inputs: disable iOS zoom on focus (font-size ≥ 16px prevents auto-zoom) */
-  input, select, textarea {
+  input,
+  select,
+  textarea {
     font-size: max(16px, 1rem);
   }
 
@@ -150,14 +161,31 @@
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
-  .ps-pill-warm  { background: var(--ps-warm-soft);    color: var(--ps-warm-ink); }
-  .ps-pill-info  { background: var(--ps-info-soft);    color: var(--ps-info-ink); }
-  .ps-pill-success { background: var(--ps-success-soft); color: #047857; }
-  .ps-pill-neutral { background: var(--ps-bg-soft); color: var(--ps-text-soft); border: 1px solid var(--ps-border); }
-  .ps-pill-accent  { background: var(--ps-accent-soft); color: var(--ps-accent-ink); }
+  .ps-pill-warm {
+    background: var(--ps-warm-soft);
+    color: var(--ps-warm-ink);
+  }
+  .ps-pill-info {
+    background: var(--ps-info-soft);
+    color: var(--ps-info-ink);
+  }
+  .ps-pill-success {
+    background: var(--ps-success-soft);
+    color: #047857;
+  }
+  .ps-pill-neutral {
+    background: var(--ps-bg-soft);
+    color: var(--ps-text-soft);
+    border: 1px solid var(--ps-border);
+  }
+  .ps-pill-accent {
+    background: var(--ps-accent-soft);
+    color: var(--ps-accent-ink);
+  }
 
   .ps-pill .dot {
-    width: 6px; height: 6px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: currentColor;
   }
@@ -209,7 +237,7 @@
     color: #fff;
   }
   .ps-btn-danger:hover {
-    background: #B91C1C;
+    background: #b91c1c;
   }
   .ps-btn-lg {
     padding: 14px 24px;
@@ -232,8 +260,9 @@
     color: var(--ps-text);
     font: inherit;
     min-height: 44px;
-    transition: border-color var(--ps-duration) var(--ps-ease),
-                box-shadow var(--ps-duration) var(--ps-ease);
+    transition:
+      border-color var(--ps-duration) var(--ps-ease),
+      box-shadow var(--ps-duration) var(--ps-ease);
   }
   .ps-input:focus {
     outline: none;
@@ -263,14 +292,18 @@
     border-left-color: var(--ps-info);
   }
   .ps-alert-icon {
-    width: 44px; height: 44px;
-    display: grid; place-items: center;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
     background: var(--ps-accent-soft);
     color: var(--ps-accent);
     border-radius: var(--ps-radius-md);
     flex-shrink: 0;
   }
-  .ps-alert-content { flex: 1; }
+  .ps-alert-content {
+    flex: 1;
+  }
   .ps-alert-content .eyebrow {
     font-size: 11px;
     font-weight: 600;
@@ -363,10 +396,11 @@
 
   /* ── Smooth color transition for hover states ────────────────────── */
   .transition-ps {
-    transition: color var(--ps-duration) var(--ps-ease),
-                background-color var(--ps-duration) var(--ps-ease),
-                border-color var(--ps-duration) var(--ps-ease),
-                box-shadow var(--ps-duration) var(--ps-ease),
-                transform var(--ps-duration) var(--ps-ease);
+    transition:
+      color var(--ps-duration) var(--ps-ease),
+      background-color var(--ps-duration) var(--ps-ease),
+      border-color var(--ps-duration) var(--ps-ease),
+      box-shadow var(--ps-duration) var(--ps-ease),
+      transform var(--ps-duration) var(--ps-ease);
   }
 }

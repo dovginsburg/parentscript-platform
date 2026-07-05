@@ -15,15 +15,8 @@
   },
   "ps_signup_form": {
     "radios": [],
-    "labels": [
-      "Display name (optional)",
-      "Email address",
-      "Password"
-    ],
-    "headings": [
-      "ParentScript",
-      "Create therapist account"
-    ]
+    "labels": ["Display name (optional)", "Email address", "Password"],
+    "headings": ["ParentScript", "Create therapist account"]
   },
   "ps_parent_login": {
     "url": "https://parentscript.app/app/login",

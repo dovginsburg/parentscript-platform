@@ -1,15 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { VitePWA } from 'vite-plugin-pwa'
-import path from 'path'
-import crypto from 'crypto'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { VitePWA } from 'vite-plugin-pwa';
+import path from 'path';
+import crypto from 'crypto';
 
 // Build-time SW version. Inlined into src/pwa-register.ts so the
 // registration URL `/app/sw.js?v=<hash>` is unique per build and
 // can't be served from a stale Vercel edge cache. The hash mixes
 // a timestamp with a random nonce so two builds in the same second
 // still get distinct versions.
-const SW_BUILD_VERSION = `${Date.now()}-${crypto.randomBytes(4).toString('hex')}`
+const SW_BUILD_VERSION = `${Date.now()}-${crypto.randomBytes(4).toString('hex')}`;
 
 export default defineConfig({
   // Vercel-hosted build needs `/app/` (set VITE_BASE=/app/ in Vercel env).
@@ -126,4 +126,4 @@ export default defineConfig({
       },
     }),
   ],
-})
+});

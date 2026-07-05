@@ -135,10 +135,7 @@
       "ok": true,
       "status": 200,
       "passkey_mentioned": false,
-      "button_labels": [
-        "Sign in",
-        "Forgot password?"
-      ],
+      "button_labels": ["Sign in", "Forgot password?"],
       "has_navigator_credentials": true,
       "is_public_key_capable": true,
       "page_errors": [],

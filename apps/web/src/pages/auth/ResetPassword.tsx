@@ -1,53 +1,58 @@
-import React, { useState, useEffect } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
-import { supabase } from '@/lib/supabase'
+import React, { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import { supabase } from '@/lib/supabase';
 
-type Status = 'idle' | 'ready' | 'submitting' | 'done' | 'invalid'
+type Status = 'idle' | 'ready' | 'submitting' | 'done' | 'invalid';
 
 export default function ResetPassword() {
-  const navigate = useNavigate()
-  const [status, setStatus] = useState<Status>('idle')
-  const [password, setPassword] = useState('')
-  const [confirm, setConfirm] = useState('')
-  const [error, setError] = useState<string | null>(null)
+  const navigate = useNavigate();
+  const [status, setStatus] = useState<Status>('idle');
+  const [password, setPassword] = useState('');
+  const [confirm, setConfirm] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     // Supabase fires PASSWORD_RECOVERY once it processes the reset token
     // in the URL hash. If no event arrives within 4 s, the link is invalid.
     const timer = setTimeout(() => {
-      setStatus(prev => prev === 'idle' ? 'invalid' : prev)
-    }, 4000)
+      setStatus(prev => (prev === 'idle' ? 'invalid' : prev));
+    }, 4000);
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange(event => {
       if (event === 'PASSWORD_RECOVERY') {
-        clearTimeout(timer)
-        setStatus('ready')
+        clearTimeout(timer);
+        setStatus('ready');
       }
-    })
+    });
 
-    return () => { subscription.unsubscribe(); clearTimeout(timer) }
-  }, [])
+    return () => {
+      subscription.unsubscribe();
+      clearTimeout(timer);
+    };
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setError(null)
+    e.preventDefault();
+    setError(null);
     if (password.length < 8) {
-      setError('Password must be at least 8 characters.')
-      return
+      setError('Password must be at least 8 characters.');
+      return;
     }
     if (password !== confirm) {
-      setError('Passwords do not match.')
-      return
+      setError('Passwords do not match.');
+      return;
     }
-    setStatus('submitting')
-    const { error: updateError } = await supabase.auth.updateUser({ password })
+    setStatus('submitting');
+    const { error: updateError } = await supabase.auth.updateUser({ password });
     if (updateError) {
-      setError(updateError.message)
-      setStatus('ready')
-      return
+      setError(updateError.message);
+      setStatus('ready');
+      return;
     }
-    setStatus('done')
-    setTimeout(() => navigate('/login'), 2500)
+    setStatus('done');
+    setTimeout(() => navigate('/login'), 2500);
   }
 
   if (status === 'idle') {
@@ -55,19 +60,21 @@ export default function ResetPassword() {
       <div className="min-h-dvh flex items-center justify-center">
         <p className="text-gray-500 text-sm">Checking reset link…</p>
       </div>
-    )
+    );
   }
 
   if (status === 'invalid') {
     return (
       <div className="min-h-dvh flex flex-col items-center justify-center px-6 text-center">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Link expired or invalid</h1>
-        <p className="text-gray-600 mb-6">Password reset links expire after 1 hour and can only be used once.</p>
+        <p className="text-gray-600 mb-6">
+          Password reset links expire after 1 hour and can only be used once.
+        </p>
         <Link to="/login" className="text-brand-700 font-medium hover:underline">
           Back to sign in
         </Link>
       </div>
-    )
+    );
   }
 
   if (status === 'done') {
@@ -77,7 +84,7 @@ export default function ResetPassword() {
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Password updated</h1>
         <p className="text-gray-600">Redirecting you to sign in…</p>
       </div>
-    )
+    );
   }
 
   return (
@@ -91,9 +98,7 @@ export default function ResetPassword() {
         <div className="bg-white py-8 px-6 shadow sm:rounded-xl md:py-10 md:px-10">
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                New password
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">New password</label>
               <input
                 type="password"
                 required
@@ -138,5 +143,5 @@ export default function ResetPassword() {
         </div>
       </div>
     </div>
-  )
+  );
 }

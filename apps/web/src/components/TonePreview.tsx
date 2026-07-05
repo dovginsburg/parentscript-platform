@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 /* ============================================================
    TonePreview — Tono 4-tone rewrite preview
@@ -39,29 +39,29 @@ import { useState } from 'react'
 
 export interface TonePreviewProps {
   /** The user's original text (left rail). */
-  original: string
+  original: string;
   /** The four rewrites from the Tono API. Missing tones are skipped. */
   rewrites: Partial<{
-    warmer: string
-    clearer: string
-    funnier: string
-    safer: string
-  }>
+    warmer: string;
+    clearer: string;
+    funnier: string;
+    safer: string;
+  }>;
   /** Optional copy handler. Defaults to clipboard. */
-  onCopy?: (tone: ToneKey, text: string) => void | Promise<void>
+  onCopy?: (tone: ToneKey, text: string) => void | Promise<void>;
   /** Compact mode — single column, smaller cards. */
-  compact?: boolean
+  compact?: boolean;
 }
 
-export type ToneKey = 'warmer' | 'clearer' | 'funnier' | 'safer'
+export type ToneKey = 'warmer' | 'clearer' | 'funnier' | 'safer';
 
 interface ToneMeta {
-  key: ToneKey
-  label: string
-  blurb: string
-  color: string
-  soft: string
-  glow: string
+  key: ToneKey;
+  label: string;
+  blurb: string;
+  color: string;
+  soft: string;
+  glow: string;
 }
 
 const TONE_META: Record<ToneKey, ToneMeta> = {
@@ -97,9 +97,9 @@ const TONE_META: Record<ToneKey, ToneMeta> = {
     soft: 'rgba(52, 211, 153, 0.14)',
     glow: 'rgba(52, 211, 153, 0.30)',
   },
-}
+};
 
-const TONE_ORDER: ToneKey[] = ['warmer', 'clearer', 'funnier', 'safer']
+const TONE_ORDER: ToneKey[] = ['warmer', 'clearer', 'funnier', 'safer'];
 
 export default function TonePreview({
   original,
@@ -107,31 +107,31 @@ export default function TonePreview({
   onCopy,
   compact = false,
 }: TonePreviewProps) {
-  const [copiedTone, setCopiedTone] = useState<ToneKey | null>(null)
-  const [errorTone, setErrorTone] = useState<ToneKey | null>(null)
+  const [copiedTone, setCopiedTone] = useState<ToneKey | null>(null);
+  const [errorTone, setErrorTone] = useState<ToneKey | null>(null);
 
   const handleCopy = async (tone: ToneKey) => {
-    const text = rewrites[tone]
-    if (!text) return
+    const text = rewrites[tone];
+    if (!text) return;
     try {
       if (onCopy) {
-        await onCopy(tone, text)
+        await onCopy(tone, text);
       } else if (typeof navigator !== 'undefined' && navigator.clipboard) {
-        await navigator.clipboard.writeText(text)
+        await navigator.clipboard.writeText(text);
       }
-      setCopiedTone(tone)
-      setErrorTone(null)
-      setTimeout(() => setCopiedTone(prev => (prev === tone ? null : prev)), 1400)
+      setCopiedTone(tone);
+      setErrorTone(null);
+      setTimeout(() => setCopiedTone(prev => (prev === tone ? null : prev)), 1400);
     } catch (err) {
-      console.error('[TonePreview] copy failed:', err)
-      setErrorTone(tone)
-      setTimeout(() => setErrorTone(prev => (prev === tone ? null : prev)), 1800)
+      console.error('[TonePreview] copy failed:', err);
+      setErrorTone(tone);
+      setTimeout(() => setErrorTone(prev => (prev === tone ? null : prev)), 1800);
     }
-  }
+  };
 
-  const availableTones = TONE_ORDER.filter(t => rewrites[t])
-  const charCount = original.length
-  const wordCount = original.trim() ? original.trim().split(/\s+/).length : 0
+  const availableTones = TONE_ORDER.filter(t => rewrites[t]);
+  const charCount = original.length;
+  const wordCount = original.trim() ? original.trim().split(/\s+/).length : 0;
 
   return (
     <div className={`tono-tone-preview ${compact ? 'is-compact' : ''}`}>
@@ -156,10 +156,10 @@ export default function TonePreview({
         aria-label="four rewrites"
       >
         {availableTones.map(tone => {
-          const meta = TONE_META[tone]
-          const text = rewrites[tone]!
-          const isCopied = copiedTone === tone
-          const isError = errorTone === tone
+          const meta = TONE_META[tone];
+          const text = rewrites[tone]!;
+          const isCopied = copiedTone === tone;
+          const isError = errorTone === tone;
           return (
             <article
               key={tone}
@@ -192,11 +192,11 @@ export default function TonePreview({
                 </button>
               </footer>
             </article>
-          )
+          );
         })}
       </div>
     </div>
-  )
+  );
 }
 
 /* ============================================================
@@ -380,4 +380,4 @@ export const TONE_PREVIEW_CSS = `
     box-shadow: 0 8px 24px rgba(17,24,39,0.08);
   }
 }
-`.trim()
+`.trim();

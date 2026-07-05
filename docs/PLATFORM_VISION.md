@@ -11,7 +11,7 @@ MAZE is not a collection of single-condition apps. It is a **unified clinical pl
 
 The thesis in one sentence:
 
-> *The unlock mechanic, therapist-controlled surface, evidence-based curriculum, and privacy-minimized data model that powered ParentScript are not parenting-specific. They are the general shape for delivering any therapist-prescribed behavioral intervention at scale.*
+> _The unlock mechanic, therapist-controlled surface, evidence-based curriculum, and privacy-minimized data model that powered ParentScript are not parenting-specific. They are the general shape for delivering any therapist-prescribed behavioral intervention at scale._
 
 ---
 
@@ -84,12 +84,12 @@ See `PHASE2_VISION.md` §7.2 for full SQL. Key additions:
 
 ### 2.4 Multi-Tenancy Evolution
 
-| Phase | Tenancy Model | Use Case |
-|-------|--------------|----------|
-| **Today** | Therapist-level RLS | Solo practitioners |
-| **Phase 2a** | Clinic tenancy (clinic_id) | Group practices (3–20 therapists) |
-| **Phase 2b** | Organization tenancy (org_id) | Enterprise / health systems |
-| **Phase 3** | White-label tenant isolation | B2B2C branded deployments |
+| Phase        | Tenancy Model                 | Use Case                          |
+| ------------ | ----------------------------- | --------------------------------- |
+| **Today**    | Therapist-level RLS           | Solo practitioners                |
+| **Phase 2a** | Clinic tenancy (clinic_id)    | Group practices (3–20 therapists) |
+| **Phase 2b** | Organization tenancy (org_id) | Enterprise / health systems       |
+| **Phase 3**  | White-label tenant isolation  | B2B2C branded deployments         |
 
 All tenancy enforced in PostgreSQL RLS. No middleware auth changes required.
 
@@ -122,13 +122,13 @@ Clinical Advisor Authors → Mira Clinical Review → Ariella Final Review →
 
 ### 3.4 Safety Content Governance
 
-| Content Type | Review Frequency | Approver |
-|-------------|-----------------|----------|
-| Crisis scripts | Quarterly | Mira + Crisis Counselor |
-| Safety escalation flows | Quarterly | Mira + Legal |
-| AI system prompts | Monthly | Mira + AI Safety Review |
-| Outcome instruments | Annually (or on validation update) | Clinical Advisor |
-| Skill cheat sheets | Bi-annually | Mira + Clinical Advisor |
+| Content Type            | Review Frequency                   | Approver                |
+| ----------------------- | ---------------------------------- | ----------------------- |
+| Crisis scripts          | Quarterly                          | Mira + Crisis Counselor |
+| Safety escalation flows | Quarterly                          | Mira + Legal            |
+| AI system prompts       | Monthly                            | Mira + AI Safety Review |
+| Outcome instruments     | Annually (or on validation update) | Clinical Advisor        |
+| Skill cheat sheets      | Bi-annually                        | Mira + Clinical Advisor |
 
 ---
 
@@ -206,14 +206,14 @@ Therapist reviews in 60 seconds. No manual chart review required.
 
 Per-module note templates (no free-text in Solo tier):
 
-| Module | Note Options |
-|--------|-------------|
-| Anxiety | focus_this_week / going_well / revisit / exposure_ready |
-| Depression | activation_on_track / sleep_concern / social_withdrawal / safety_review |
-| ADHD | tool_adopted / tool_struggling / emotional_dysregulation / medication_review |
-| Trauma | stabilization_stable / processing_ready / dissociation_present / safety_review |
-| Autism | accommodation_working / burnout_risk / unmasking_progress / family_support |
-| Relationships | cycle_disrupted / repair_attempted / gridlocked / individual_session_needed |
+| Module        | Note Options                                                                   |
+| ------------- | ------------------------------------------------------------------------------ |
+| Anxiety       | focus_this_week / going_well / revisit / exposure_ready                        |
+| Depression    | activation_on_track / sleep_concern / social_withdrawal / safety_review        |
+| ADHD          | tool_adopted / tool_struggling / emotional_dysregulation / medication_review   |
+| Trauma        | stabilization_stable / processing_ready / dissociation_present / safety_review |
+| Autism        | accommodation_working / burnout_risk / unmasking_progress / family_support     |
+| Relationships | cycle_disrupted / repair_attempted / gridlocked / individual_session_needed    |
 
 ---
 
@@ -228,76 +228,79 @@ Per-module note templates (no free-text in Solo tier):
 
 ### 5.2 Therapist Growth by Module
 
-| Module | Launch | Month 6 | Month 12 | Month 18 | Module-Specific ARPU |
-|--------|--------|---------|----------|----------|---------------------|
-| Parenting | M0 | 400 | 1,200 | 3,000 | $22 (blended) |
-| Anxiety | M3 | 100 | 500 | 1,500 | $21 |
-| Depression | M6 | 80 | 400 | 1,200 | $21 |
-| ADHD | M9 | 60 | 300 | 900 | $20 |
-| Trauma | M12 | 40 | 200 | 600 | $24 |
-| Relationships | M15 | 50 | 250 | 750 | $24 |
-| Autism | M18 | 30 | 150 | 450 | $20 |
-| Eating Disorders | M21 | 20 | 100 | 300 | $30 |
-| Addiction | M24 | 15 | 75 | 225 | $30 |
+| Module           | Launch | Month 6 | Month 12 | Month 18 | Module-Specific ARPU |
+| ---------------- | ------ | ------- | -------- | -------- | -------------------- |
+| Parenting        | M0     | 400     | 1,200    | 3,000    | $22 (blended)        |
+| Anxiety          | M3     | 100     | 500      | 1,500    | $21                  |
+| Depression       | M6     | 80      | 400      | 1,200    | $21                  |
+| ADHD             | M9     | 60      | 300      | 900      | $20                  |
+| Trauma           | M12    | 40      | 200      | 600      | $24                  |
+| Relationships    | M15    | 50      | 250      | 750      | $24                  |
+| Autism           | M18    | 30      | 150      | 450      | $20                  |
+| Eating Disorders | M21    | 20      | 100      | 300      | $30                  |
+| Addiction        | M24    | 15      | 75       | 225      | $30                  |
 
 ### 5.3 Revenue Projections
 
 #### Year 1 (Months 1–12)
-| Metric | Value |
-|--------|-------|
-| Total paying therapists | 1,200 |
-| Blended ARPU | $22/mo |
-| MRR (end Y1) | $26,400 |
-| ARR | $316,800 |
-| Parents/patients on platform | 12,000 |
-| Clinic accounts | 40 |
+
+| Metric                       | Value    |
+| ---------------------------- | -------- |
+| Total paying therapists      | 1,200    |
+| Blended ARPU                 | $22/mo   |
+| MRR (end Y1)                 | $26,400  |
+| ARR                          | $316,800 |
+| Parents/patients on platform | 12,000   |
+| Clinic accounts              | 40       |
 
 #### Year 2 (Months 13–24)
-| Metric | Value |
-|--------|-------|
-| Total paying therapists | 3,500 |
-| Blended ARPU | $26/mo (Pro upsells, clinic growth) |
-| MRR (end Y2) | $91,000 |
-| ARR | $1,092,000 |
-| Parents/patients on platform | 42,000 |
-| Clinic accounts | 120 |
-| Modules live | 8 |
+
+| Metric                       | Value                               |
+| ---------------------------- | ----------------------------------- |
+| Total paying therapists      | 3,500                               |
+| Blended ARPU                 | $26/mo (Pro upsells, clinic growth) |
+| MRR (end Y2)                 | $91,000                             |
+| ARR                          | $1,092,000                          |
+| Parents/patients on platform | 42,000                              |
+| Clinic accounts              | 120                                 |
+| Modules live                 | 8                                   |
 
 #### Year 3 (Months 25–36)
-| Metric | Value |
-|--------|-------|
-| Total paying therapists | 8,000 |
-| Blended ARPU | $30/mo |
-| MRR (end Y3) | $240,000 |
-| ARR | $2,880,000 |
-| Parents/patients on platform | 96,000 |
-| Clinic accounts | 300 |
-| White-label deals | 2–3 |
-| CE course revenue | $50,000/yr |
+
+| Metric                       | Value      |
+| ---------------------------- | ---------- |
+| Total paying therapists      | 8,000      |
+| Blended ARPU                 | $30/mo     |
+| MRR (end Y3)                 | $240,000   |
+| ARR                          | $2,880,000 |
+| Parents/patients on platform | 96,000     |
+| Clinic accounts              | 300        |
+| White-label deals            | 2–3        |
+| CE course revenue            | $50,000/yr |
 
 ### 5.4 Revenue Mix Evolution
 
-| Source | Y1 | Y2 | Y3 |
-|--------|-----|-----|-----|
+| Source             | Y1  | Y2  | Y3  |
+| ------------------ | --- | --- | --- |
 | Solo subscriptions | 70% | 55% | 40% |
-| Pro subscriptions | 20% | 30% | 35% |
-| Clinic/Enterprise | 8% | 12% | 18% |
-| CE courses | 0% | 2% | 4% |
-| White-label / API | 2% | 3% | 3% |
+| Pro subscriptions  | 20% | 30% | 35% |
+| Clinic/Enterprise  | 8%  | 12% | 18% |
+| CE courses         | 0%  | 2%  | 4%  |
+| White-label / API  | 2%  | 3%  | 3%  |
 
 ### 5.5 Cost Projections
 
-| Cost Category | Y1 | Y2 | Y3 |
-|--------------|-----|-----|-----|
-| Infrastructure (Supabase + Vercel) | $3,600 | $8,000 | $18,000 |
-| Development (Claude Code + contractor) | $24,000 | $60,000 | $120,000 |
-| Clinical advisors (per module) | $15,000 | $40,000 | $60,000 |
-| Legal / compliance | $5,000 | $10,000 | $15,000 |
-| Conferences / marketing | $8,000 | $25,000 | $50,000 |
-| Content creation | $5,000 | $20,000 | $40,000 |
-| Customer success | $0 | $15,000 | $40,000 |
-| **Total Costs** | **$60,600** | **$178,000** | **$343,000** |
-| **Profit** | **$256,200** | **$914,000** | **$2,537,000** |
+| Cost Category                          | Y1           | Y2           | Y3             |
+| -------------------------------------- | ------------ | ------------ | -------------- |
+| Infrastructure (Supabase + Vercel)     | $3,600       | $8,000       | $18,000        |
+| Development (Claude Code + contractor) | $24,000      | $60,000      | $120,000       |
+| Clinical advisors (per module)         | $15,000      | $40,000      | $60,000        |
+| Legal / compliance                     | $5,000       | $10,000      | $15,000        |
+| Conferences / marketing                | $8,000       | $25,000      | $50,000        |
+| Content creation                       | $5,000       | $20,000      | $40,000        |
+| Customer success                       | $0           | $15,000      | $40,000        |
+| **Total Costs**                        | **$60,600**  | **$178,000** | **$343,000**   |
+| **Profit**                             | **$256,200** | **$914,000** | **$2,537,000** |
 
 ---
 
@@ -305,74 +308,74 @@ Per-module note templates (no free-text in Solo tier):
 
 ### 6.1 Module Launch Priority
 
-| Rank | Module | Rationale | Launch Quarter |
-|------|--------|-----------|---------------|
-| **1** | **Anxiety** | Largest market, lowest risk, strongest evidence, fastest content build | Q1 |
-| **2** | **Depression** | Massive market, but suicide-care rail must ship first | Q2 |
-| **3** | **ADHD** | Natural ParentScript extension, growing adult diagnosis market | Q2 |
-| **4** | **Trauma** | High need, good differentiation, requires stabilization protocol | Q3 |
-| **5** | **Relationships** | Large market, different UX model (couple), Gottman/EFT recognition | Q3 |
-| **6** | **Autism** | Underserved adult market, strong community alignment, lower competition | Q4 |
-| **7** | **Eating Disorders** | High clinical value, high liability, requires medical team integration | Q4/Y2 |
-| **8** | **Addiction** | Highest regulatory burden, partner-led recommended, smallest therapist market | Y2 |
+| Rank  | Module               | Rationale                                                                     | Launch Quarter |
+| ----- | -------------------- | ----------------------------------------------------------------------------- | -------------- |
+| **1** | **Anxiety**          | Largest market, lowest risk, strongest evidence, fastest content build        | Q1             |
+| **2** | **Depression**       | Massive market, but suicide-care rail must ship first                         | Q2             |
+| **3** | **ADHD**             | Natural ParentScript extension, growing adult diagnosis market                | Q2             |
+| **4** | **Trauma**           | High need, good differentiation, requires stabilization protocol              | Q3             |
+| **5** | **Relationships**    | Large market, different UX model (couple), Gottman/EFT recognition            | Q3             |
+| **6** | **Autism**           | Underserved adult market, strong community alignment, lower competition       | Q4             |
+| **7** | **Eating Disorders** | High clinical value, high liability, requires medical team integration        | Q4/Y2          |
+| **8** | **Addiction**        | Highest regulatory burden, partner-led recommended, smallest therapist market | Y2             |
 
 ### 6.2 Technical Priority
 
-| Rank | Initiative | Rationale | Timeline |
-|------|-----------|-----------|----------|
-| **1** | Module framework (schema + UI router) | Unblocks all verticals | Month 1–2 |
-| **2** | Instrument framework (PHQ-9, GAD-7, etc.) | Required for outcome tracking | Month 2–3 |
-| **3** | AI Coach v1 (module-aware prompts) | Pro tier differentiator | Month 3–4 |
-| **4** | Multi-client dashboard | Therapist retention feature | Month 4–5 |
-| **5** | Native iOS/Android apps | Push notifications, wider reach | Month 5–7 |
-| **6** | EHR integrations | Clinic-tier requirement | Month 8–10 |
-| **7** | API v1 (partner access) | Research + integration revenue | Month 10–12 |
-| **8** | White-label infrastructure | Enterprise revenue | Year 2 |
+| Rank  | Initiative                                | Rationale                       | Timeline    |
+| ----- | ----------------------------------------- | ------------------------------- | ----------- |
+| **1** | Module framework (schema + UI router)     | Unblocks all verticals          | Month 1–2   |
+| **2** | Instrument framework (PHQ-9, GAD-7, etc.) | Required for outcome tracking   | Month 2–3   |
+| **3** | AI Coach v1 (module-aware prompts)        | Pro tier differentiator         | Month 3–4   |
+| **4** | Multi-client dashboard                    | Therapist retention feature     | Month 4–5   |
+| **5** | Native iOS/Android apps                   | Push notifications, wider reach | Month 5–7   |
+| **6** | EHR integrations                          | Clinic-tier requirement         | Month 8–10  |
+| **7** | API v1 (partner access)                   | Research + integration revenue  | Month 10–12 |
+| **8** | White-label infrastructure                | Enterprise revenue              | Year 2      |
 
 ### 6.3 Clinical Priority
 
-| Rank | Initiative | Rationale | Timeline |
-|------|-----------|-----------|----------|
-| **1** | Suicide-care rail (CSSRS + 988 routing) | Blocks depression module; moral imperative | Month 1–2 |
-| **2** | Clinical advisor network (8 specialties) | Content quality gate | Month 1–6 |
-| **3** | Outcome measurement validation | Defensibility to clinic admins | Month 3–9 |
-| **4** | Safety script review (all modules) | Liability protection | Month 2–4 |
-| **5** | CE credit accreditation | Retention + revenue lever | Month 6–12 |
-| **6** | Peer-reviewed outcome research | Insurance / enterprise credibility | Year 2–3 |
+| Rank  | Initiative                               | Rationale                                  | Timeline   |
+| ----- | ---------------------------------------- | ------------------------------------------ | ---------- |
+| **1** | Suicide-care rail (CSSRS + 988 routing)  | Blocks depression module; moral imperative | Month 1–2  |
+| **2** | Clinical advisor network (8 specialties) | Content quality gate                       | Month 1–6  |
+| **3** | Outcome measurement validation           | Defensibility to clinic admins             | Month 3–9  |
+| **4** | Safety script review (all modules)       | Liability protection                       | Month 2–4  |
+| **5** | CE credit accreditation                  | Retention + revenue lever                  | Month 6–12 |
+| **6** | Peer-reviewed outcome research           | Insurance / enterprise credibility         | Year 2–3   |
 
 ---
 
 ## 7. Risk Matrix
 
-| Risk | Likelihood | Impact | Mitigation |
-|------|-----------|--------|------------|
-| Regulatory shutdown (HIPAA/FTC/state) | Low | Catastrophic | Legal review before each module; BAA with Supabase; no PHI in v1 |
-| Suicide-care rail failure | Low | Catastrophic | Quarterly testing; 988 API integration; human escalation backup |
-| Clinical content error | Medium | High | Mira review + clinical advisor sign-off + soft launch period |
-| Therapist churn > 5%/month | Medium | High | NPS tracking; monthly feedback calls; responsive support |
-| Competitor launches equivalent | Medium | Medium | Curriculum moat (Ariella + advisors); therapist relationships; outcome data |
-| Module content delay | High | Medium | Staged launches; anxiety/depression first; buffer time built in |
-| AI hallucination / bad advice | Medium | High | Human-in-the-loop; therapist approval required; audit logs; no diagnosis |
-| Founder burnout | Medium | High | Hire clinical lead + backend engineer by Month 6 |
-| Insurance/payer pressure | Low | Medium | Stay cash-pay B2B; defer PDT path until Year 3 |
+| Risk                                  | Likelihood | Impact       | Mitigation                                                                  |
+| ------------------------------------- | ---------- | ------------ | --------------------------------------------------------------------------- |
+| Regulatory shutdown (HIPAA/FTC/state) | Low        | Catastrophic | Legal review before each module; BAA with Supabase; no PHI in v1            |
+| Suicide-care rail failure             | Low        | Catastrophic | Quarterly testing; 988 API integration; human escalation backup             |
+| Clinical content error                | Medium     | High         | Mira review + clinical advisor sign-off + soft launch period                |
+| Therapist churn > 5%/month            | Medium     | High         | NPS tracking; monthly feedback calls; responsive support                    |
+| Competitor launches equivalent        | Medium     | Medium       | Curriculum moat (Ariella + advisors); therapist relationships; outcome data |
+| Module content delay                  | High       | Medium       | Staged launches; anxiety/depression first; buffer time built in             |
+| AI hallucination / bad advice         | Medium     | High         | Human-in-the-loop; therapist approval required; audit logs; no diagnosis    |
+| Founder burnout                       | Medium     | High         | Hire clinical lead + backend engineer by Month 6                            |
+| Insurance/payer pressure              | Low        | Medium       | Stay cash-pay B2B; defer PDT path until Year 3                              |
 
 ---
 
 ## 8. Success Metrics (36-Month Horizon)
 
-| Metric | Month 12 | Month 24 | Month 36 |
-|--------|----------|----------|----------|
-| Paying therapists | 1,200 | 3,500 | 8,000 |
-| Modules live | 4 | 7 | 8+ |
-| ARR | $317K | $1.09M | $2.88M |
-| Parents/patients | 12,000 | 42,000 | 96,000 |
-| Clinic accounts | 40 | 120 | 300 |
-| NPS (therapists) | >60 | >65 | >70 |
-| Monthly churn | <3% | <2.5% | <2% |
-| Outcome publications | 0 | 1 | 3+ |
-| Safety incidents | 0 | 0 | 0 |
-| White-label deals | 0 | 1 | 3 |
+| Metric               | Month 12 | Month 24 | Month 36 |
+| -------------------- | -------- | -------- | -------- |
+| Paying therapists    | 1,200    | 3,500    | 8,000    |
+| Modules live         | 4        | 7        | 8+       |
+| ARR                  | $317K    | $1.09M   | $2.88M   |
+| Parents/patients     | 12,000   | 42,000   | 96,000   |
+| Clinic accounts      | 40       | 120      | 300      |
+| NPS (therapists)     | >60      | >65      | >70      |
+| Monthly churn        | <3%      | <2.5%    | <2%      |
+| Outcome publications | 0        | 1        | 3+       |
+| Safety incidents     | 0        | 0        | 0        |
+| White-label deals    | 0        | 1        | 3        |
 
 ---
 
-*End of Unified Platform Vision. This document should be reviewed monthly by Dov, quarterly by the full team, and updated before any major strategic decision.*
+_End of Unified Platform Vision. This document should be reviewed monthly by Dov, quarterly by the full team, and updated before any major strategic decision._

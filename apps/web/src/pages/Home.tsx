@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import MarkHeader from '@/components/MarkHeader'
-import MarkFooter from '@/components/MarkFooter'
-import ScopeOfPracticeDisclosure from '@/components/ScopeOfPracticeDisclosure'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import MarkHeader from '@/components/MarkHeader';
+import MarkFooter from '@/components/MarkFooter';
+import ScopeOfPracticeDisclosure from '@/components/ScopeOfPracticeDisclosure';
 
 // ──────────────────────────────────────────────────────────────────────
 // Home — public marketing landing page (parentscript.app/)
@@ -49,7 +49,7 @@ const PILLARS = [
     body: 'What was practiced, what worked, what to revisit. No black box. Your clinician walks into the next session already knowing what happened at home.',
     pillTone: 'neutral' as const,
   },
-]
+];
 
 // Mira-verified headline candidates. Quinn picks one or writes a
 // better one. These are pre-approved by clinical review.
@@ -60,7 +60,7 @@ const HEADLINE_CANDIDATES = [
   'Scripts your therapist can stand behind.',
   'Between-session support, organized by framework.',
   'Built on PCIT, BPT, CPS, and DBT — not vibes.',
-]
+];
 
 // FAQ — Mira-vetted. Each answer stays inside the "Claims we MAY make"
 // boundary. No clinical-outcome numbers, no HIPAA certification claim,
@@ -96,19 +96,19 @@ const FAQ = [
     q: 'Which therapy approaches is ParentScript built on?',
     a: 'The skill library is grounded in the modalities clinicians already use: PCIT (Eyberg), BPT (Kazdin), CPS (Greene), Triple P (Sanders), Circle of Security (Hoffman/Marvin), DBT (Linehan), 1-2-3 Magic (Phelan), PMT (Forehand), and CBT-parent (Abelsohn). Every script cites its source modality so your clinician can review the lineage with you.',
   },
-]
+];
 
 export default function Home() {
   // TODO(QUINN): pick one headline candidate or replace.
   // Default uses Mark's brand-voice one-liner.
-  const headline = HEADLINE_CANDIDATES[0]
+  const headline = HEADLINE_CANDIDATES[0];
 
-  const [openFaq, setOpenFaq] = useState<string | null>(null)
+  const [openFaq, setOpenFaq] = useState<string | null>(null);
 
   // TODO(QUINN): sub-headline / value prop paragraph.
   // Mira-vetted. Keep clinical guardrails (no "perfect," no "guaranteed").
   const subheadline =
-    "ParentScript turns what your therapist assigns into something your family can actually use at 7pm on a Tuesday. Evidence-based scripts, a single tap for the hard moments, and a clinician who can see what's working."
+    "ParentScript turns what your therapist assigns into something your family can actually use at 7pm on a Tuesday. Evidence-based scripts, a single tap for the hard moments, and a clinician who can see what's working.";
 
   // TODO(QUINN): source a real clinician testimonial with license
   // context disclosed. NO fabricated quotes.
@@ -117,7 +117,7 @@ export default function Home() {
       '"ParentScript gives me a way to extend the work we do in session into the moments families actually live in. The framing is right; the citations are right; my families trust it."',
     attribution: '— [Name, Credential, License #, State]',
     note: 'TODO(QUINN): replace with a real, signed clinician quote. Marketer-lane.',
-  }
+  };
 
   return (
     <div className="min-h-dvh bg-ps-bg-soft flex flex-col">
@@ -153,10 +153,7 @@ export default function Home() {
               </div>
 
               {/* Inline dashboard preview — concrete artifact, not abstract promise */}
-              <aside
-                aria-label="Sample dashboard preview"
-                className="ps-card"
-              >
+              <aside aria-label="Sample dashboard preview" className="ps-card">
                 <div className="ps-card-head">
                   <div className="ps-card-title">
                     <span className="ps-eyebrow">Today's recommended script</span>
@@ -164,7 +161,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="ps-pill ps-pill-warm"><span className="dot" />tantrum</span>
+                  <span className="ps-pill ps-pill-warm">
+                    <span className="dot" />
+                    tantrum
+                  </span>
                   <span className="ps-pill ps-pill-neutral">age 4</span>
                   <span className="ps-pill ps-pill-info">PCIT · CDI</span>
                 </div>
@@ -173,10 +173,12 @@ export default function Home() {
                   <em className="not-italic bg-ps-warm-soft px-1 rounded text-ps-warm-ink font-medium">
                     i can't say yes right now.
                   </em>{' '}
-                  what i can do is offer a banana, or we can read a story together while we wait for dinner. which sounds good to you?"
+                  what i can do is offer a banana, or we can read a story together while we wait for
+                  dinner. which sounds good to you?"
                 </p>
                 <p className="text-xs text-ps-text-softer">
-                  Why this works: validates the want, holds the limit, offers two acceptable alternatives. Source: PCIT manual (Eyberg).
+                  Why this works: validates the want, holds the limit, offers two acceptable
+                  alternatives. Source: PCIT manual (Eyberg).
                 </p>
               </aside>
             </div>
@@ -193,7 +195,7 @@ export default function Home() {
               </h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-              {PILLARS.map((p) => (
+              {PILLARS.map(p => (
                 <article key={p.title} className="ps-card">
                   <span className={`ps-pill ps-pill-${p.pillTone} mb-3`}>
                     <span className="dot" />
@@ -223,7 +225,7 @@ export default function Home() {
                 {
                   step: '1',
                   title: 'Therapist assigns skills session by session',
-                  body: 'Your clinician unlocks the specific skill — a PCIT-CDI narration, a 1-2-3 Magic counting protocol, a CPS Plan B — that fits your family\'s presenting issue this week.',
+                  body: "Your clinician unlocks the specific skill — a PCIT-CDI narration, a 1-2-3 Magic counting protocol, a CPS Plan B — that fits your family's presenting issue this week.",
                 },
                 {
                   step: '2',
@@ -233,14 +235,14 @@ export default function Home() {
                 {
                   step: '3',
                   title: '"In the moment" for the hard days',
-                  body: 'When it\'s loud and your nervous system is shot, one tap walks you through TIPP, a co-regulation script, and a Plan B conversation — all on a single screen.',
+                  body: "When it's loud and your nervous system is shot, one tap walks you through TIPP, a co-regulation script, and a Plan B conversation — all on a single screen.",
                 },
                 {
                   step: '4',
                   title: 'Clinician sees what happened',
                   body: 'Practice logs, reflections, and red-flag events surface in the therapist dashboard between sessions — so the next visit starts where this week ended.',
                 },
-              ].map((s) => (
+              ].map(s => (
                 <li key={s.step} className="ps-card flex gap-4 items-start">
                   <span
                     aria-hidden="true"
@@ -270,17 +272,38 @@ export default function Home() {
                   Simple, clinician-friendly pricing.
                 </h3>
               </div>
-              <Link to="/pricing" className="ps-link inline-flex items-center gap-1 text-sm font-medium">
+              <Link
+                to="/pricing"
+                className="ps-link inline-flex items-center gap-1 text-sm font-medium"
+              >
                 Compare all features
                 <span aria-hidden="true">→</span>
               </Link>
             </div>
             <div className="grid md:grid-cols-3 gap-5">
               {[
-                { tier: 'Solo', price: '$19', suffix: '/mo', note: '1 therapist · up to 25 parents', tone: 'plain' },
-                { tier: 'Pro', price: '$39', suffix: '/mo', note: '1 therapist · unlimited parents', tone: 'popular' },
-                { tier: 'Clinic', price: '$29', suffix: '/seat/mo', note: 'Multiple therapists · shared roster', tone: 'plain' },
-              ].map((p) => (
+                {
+                  tier: 'Solo',
+                  price: '$19',
+                  suffix: '/mo',
+                  note: '1 therapist · up to 25 parents',
+                  tone: 'plain',
+                },
+                {
+                  tier: 'Pro',
+                  price: '$39',
+                  suffix: '/mo',
+                  note: '1 therapist · unlimited parents',
+                  tone: 'popular',
+                },
+                {
+                  tier: 'Clinic',
+                  price: '$29',
+                  suffix: '/seat/mo',
+                  note: 'Multiple therapists · shared roster',
+                  tone: 'plain',
+                },
+              ].map(p => (
                 <div
                   key={p.tier}
                   className={`ps-card relative ${p.tone === 'popular' ? 'border-ps-accent border-2 shadow-md' : ''}`}
@@ -310,7 +333,16 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <div className="ps-alert">
               <div className="ps-alert-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z" />
                 </svg>
               </div>
@@ -318,7 +350,8 @@ export default function Home() {
                 <span className="eyebrow">Built for clinical trust</span>
                 <h2>HIPAA-aligned, US-only data residency.</h2>
                 <p>
-                  Row-level security ensures your therapist sees only their caseload. Data is encrypted in transit and at rest. BAAs available on request.
+                  Row-level security ensures your therapist sees only their caseload. Data is
+                  encrypted in transit and at rest. BAAs available on request.
                 </p>
               </div>
               <div className="ps-alert-actions">
@@ -354,13 +387,10 @@ export default function Home() {
               </h3>
             </div>
             <div className="space-y-3">
-              {FAQ.map((item) => {
-                const isOpen = openFaq === item.id
+              {FAQ.map(item => {
+                const isOpen = openFaq === item.id;
                 return (
-                  <div
-                    key={item.id}
-                    className="ps-card !p-0 overflow-hidden"
-                  >
+                  <div key={item.id} className="ps-card !p-0 overflow-hidden">
                     <button
                       type="button"
                       onClick={() => setOpenFaq(isOpen ? null : item.id)}
@@ -388,7 +418,7 @@ export default function Home() {
                       </div>
                     )}
                   </div>
-                )
+                );
               })}
             </div>
             <p className="text-xs text-ps-text-softer mt-6 text-center">
@@ -431,5 +461,5 @@ export default function Home() {
 
       <MarkFooter product="parentscript" />
     </div>
-  )
+  );
 }

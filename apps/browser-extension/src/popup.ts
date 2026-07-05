@@ -22,23 +22,23 @@
  * when Supabase isn't reachable or the anon key isn't configured.
  */
 
-import type { Skill } from "@parentscript/shared";
-import { getSupabase, SupabaseConfigMissingError } from "./supabase.js";
+import type { Skill } from '@parentscript/shared';
+import { getSupabase, SupabaseConfigMissingError } from './supabase.js';
 
 const PREVIEW_LINE_LIMIT = 2;
 
-type ListState = "loading" | "ready" | "error";
+type ListState = 'loading' | 'ready' | 'error';
 
 const els = {
-  search: document.getElementById("ps-search") as HTMLInputElement,
-  list: document.getElementById("ps-list") as HTMLUListElement,
-  status: document.getElementById("ps-status") as HTMLDivElement,
-  refresh: document.getElementById("ps-refresh") as HTMLButtonElement,
-  meta: document.getElementById("ps-meta") as HTMLSpanElement,
+  search: document.getElementById('ps-search') as HTMLInputElement,
+  list: document.getElementById('ps-list') as HTMLUListElement,
+  status: document.getElementById('ps-status') as HTMLDivElement,
+  refresh: document.getElementById('ps-refresh') as HTMLButtonElement,
+  meta: document.getElementById('ps-meta') as HTMLSpanElement,
 };
 
 let allSkills: Skill[] = [];
-let state: ListState = "loading";
+let state: ListState = 'loading';
 
 /* ---------- network ---------- */
 
@@ -48,20 +48,20 @@ let state: ListState = "loading";
  */
 interface SupabaseSkillRow {
   id: string;
-  level: number;            // 1..4 (DB CHECK constraint)
+  level: number; // 1..4 (DB CHECK constraint)
   sort_order: number;
   title: string;
-  goal: string;             // DB column
-  use_when: string;         // DB column
+  goal: string; // DB column
+  use_when: string; // DB column
   modality: string | null;
   principle_citation: string | null;
 }
 
-const LEVEL_LABEL: Record<number, Skill["level"]> = {
-  1: "L1",
-  2: "L2",
-  3: "L3",
-  4: "L4",
+const LEVEL_LABEL: Record<number, Skill['level']> = {
+  1: 'L1',
+  2: 'L2',
+  3: 'L3',
+  4: 'L4',
 };
 
 /**
@@ -71,12 +71,12 @@ const LEVEL_LABEL: Record<number, Skill["level"]> = {
  * only on the full web page that opens in a new tab.
  */
 function rowToSkill(row: SupabaseSkillRow): Skill {
-  const level = LEVEL_LABEL[row.level] ?? "L1";
+  const level = LEVEL_LABEL[row.level] ?? 'L1';
   // Use the level label `L1..L4` for `level`, default to L1 if the DB
   // ever returned an out-of-range value (defensive — schema CHECK prevents it).
-  const modality = row.modality ?? "";
+  const modality = row.modality ?? '';
   // The shared `Skill.modality` is required-string in v1; we coerce nulls.
-  const body = row.goal || row.use_when || "";
+  const body = row.goal || row.use_when || '';
   const evidence_refs = row.principle_citation ? [row.principle_citation] : [];
   return {
     id: row.id,
@@ -85,7 +85,7 @@ function rowToSkill(row: SupabaseSkillRow): Skill {
     title: row.title,
     body,
     evidence_refs,
-    reviewed_by: "ParentScript clinical team",
+    reviewed_by: 'ParentScript clinical team',
   };
 }
 
@@ -96,11 +96,11 @@ async function fetchSkills(): Promise<Skill[]> {
     throw new SupabaseConfigMissingError();
   }
   const { data, error } = await supabase
-    .from("skills")
-    .select("id, level, sort_order, title, goal, use_when, modality, principle_citation")
-    .eq("is_published", true)
-    .order("level", { ascending: true })
-    .order("sort_order", { ascending: true });
+    .from('skills')
+    .select('id, level, sort_order, title, goal, use_when, modality, principle_citation')
+    .eq('is_published', true)
+    .order('level', { ascending: true })
+    .order('sort_order', { ascending: true });
 
   if (error) throw error;
   if (!data) return [];
@@ -111,18 +111,18 @@ async function fetchSkills(): Promise<Skill[]> {
 
 function escape(s: string): string {
   return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 function preview(body: string): string {
-  const words = body.replace(/\s+/g, " ").trim().split(" ");
+  const words = body.replace(/\s+/g, ' ').trim().split(' ');
   const limit = 26; // ~2 lines at 13px in a 336px-wide content area
   if (words.length <= limit) return body.trim();
-  return words.slice(0, limit).join(" ") + "…";
+  return words.slice(0, limit).join(' ') + '…';
 }
 
 function renderEmpty(): void {
@@ -130,17 +130,17 @@ function renderEmpty(): void {
 }
 
 function renderError(message: string): void {
-  els.list.innerHTML = "";
-  els.status.classList.add("is-warn");
+  els.list.innerHTML = '';
+  els.status.classList.add('is-warn');
   els.status.textContent = message;
 }
 
 function renderStatus(): void {
-  els.status.classList.toggle("is-warn", state === "error");
-  if (state === "loading") {
-    els.status.textContent = "Loading skills…";
-  } else if (state === "ready") {
-    els.status.textContent = "";
+  els.status.classList.toggle('is-warn', state === 'error');
+  if (state === 'loading') {
+    els.status.textContent = 'Loading skills…';
+  } else if (state === 'ready') {
+    els.status.textContent = '';
   } else {
     // error message already set by renderError
   }
@@ -152,24 +152,24 @@ function renderSkills(skills: Skill[]): void {
     return;
   }
   const html = skills
-    .map((s) => {
+    .map(s => {
       const title = escape(s.title);
-      const body = escape(preview(s.body ?? ""));
-      const modality = escape(s.modality ?? "");
+      const body = escape(preview(s.body ?? ''));
+      const modality = escape(s.modality ?? '');
       const level = escape(s.level);
       const href = `https://parentscript.app/app/parent/skills/${encodeURIComponent(s.id)}`;
       return `
         <li class="ps-item" role="option" tabindex="0" data-skill-id="${escape(s.id)}" data-href="${escape(href)}" aria-label="${title}">
           <div class="ps-item-head">
             <span class="ps-badge">${level}</span>
-            ${modality ? `<span class="ps-modality">${modality}</span>` : ""}
+            ${modality ? `<span class="ps-modality">${modality}</span>` : ''}
           </div>
           <div class="ps-item-title">${title}</div>
           <div class="ps-item-body">${body}</div>
         </li>
       `;
     })
-    .join("");
+    .join('');
   els.list.innerHTML = html;
 }
 
@@ -177,7 +177,7 @@ function setMeta(filteredCount: number): void {
   const total = allSkills.length;
   els.meta.textContent =
     filteredCount === total
-      ? `${total} skill${total === 1 ? "" : "s"}`
+      ? `${total} skill${total === 1 ? '' : 's'}`
       : `${filteredCount} of ${total}`;
 }
 
@@ -186,14 +186,9 @@ function setMeta(filteredCount: number): void {
 function filterSkills(query: string): Skill[] {
   const q = query.trim().toLowerCase();
   if (!q) return allSkills;
-  return allSkills.filter((s) => {
-    const hay = [
-      s.title,
-      s.modality ?? "",
-      s.body ?? "",
-      ...(s.evidence_refs ?? []),
-    ]
-      .join(" ")
+  return allSkills.filter(s => {
+    const hay = [s.title, s.modality ?? '', s.body ?? '', ...(s.evidence_refs ?? [])]
+      .join(' ')
       .toLowerCase();
     return hay.includes(q);
   });
@@ -217,15 +212,15 @@ function openSkill(item: HTMLLIElement): void {
 }
 
 function wireList(): void {
-  els.list.addEventListener("click", (e) => {
+  els.list.addEventListener('click', e => {
     const target = e.target as HTMLElement;
-    const item = target.closest<HTMLLIElement>(".ps-item");
+    const item = target.closest<HTMLLIElement>('.ps-item');
     if (item) openSkill(item);
   });
-  els.list.addEventListener("keydown", (e) => {
-    if (e.key !== "Enter" && e.key !== " ") return;
+  els.list.addEventListener('keydown', e => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
     const target = e.target as HTMLElement;
-    const item = target.closest<HTMLLIElement>(".ps-item");
+    const item = target.closest<HTMLLIElement>('.ps-item');
     if (!item) return;
     e.preventDefault();
     openSkill(item);
@@ -235,15 +230,15 @@ function wireList(): void {
 /* ---------- bootstrap ---------- */
 
 async function load(): Promise<void> {
-  state = "loading";
+  state = 'loading';
   renderStatus();
   try {
     allSkills = await fetchSkills();
-    state = "ready";
+    state = 'ready';
     renderStatus();
     applyFilter();
   } catch (err) {
-    state = "error";
+    state = 'error';
     // Config-missing gets its own message: it's the single most likely
     // failure on a fresh install, and the fix is one click (options page).
     const msg =
@@ -251,13 +246,13 @@ async function load(): Promise<void> {
         ? err.message
         : "Couldn't load skills — check your connection and try again.";
     renderError(msg);
-    els.meta.textContent = "0 skills";
+    els.meta.textContent = '0 skills';
   }
 }
 
 function init(): void {
-  els.search.addEventListener("input", applyFilter);
-  els.refresh.addEventListener("click", () => {
+  els.search.addEventListener('input', applyFilter);
+  els.refresh.addEventListener('click', () => {
     void load();
   });
   wireList();
@@ -266,8 +261,8 @@ function init(): void {
   void load();
 }
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", init, { once: true });
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init, { once: true });
 } else {
   init();
 }

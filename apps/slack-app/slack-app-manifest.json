@@ -43,11 +43,7 @@
   "settings": {
     "event_subscriptions": {
       "request_url": "https://api.parentscript.app/slack/events",
-      "bot_events": [
-        "app_home_opened",
-        "app_mention",
-        "message.im"
-      ]
+      "bot_events": ["app_home_opened", "app_mention", "message.im"]
     },
     "interactivity": {
       "request_url": "https://api.parentscript.app/slack/interactivity",

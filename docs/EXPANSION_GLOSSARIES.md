@@ -7,905 +7,905 @@
 
 ## 1. ANXIETY DISORDERS
 
-| # | Term | Plain-English Definition |
-|---|------|--------------------------|
-| 1 | **Generalized Anxiety Disorder (GAD)** | A condition where someone feels excessive, uncontrollable worry about everyday things most days for 6+ months |
-| 2 | **Social Anxiety Disorder** | Intense fear of being judged, embarrassed, or humiliated in social or performance situations |
-| 3 | **Panic Disorder** | Recurrent unexpected panic attacks—sudden surges of intense fear with physical symptoms—plus persistent worry about having more |
-| 4 | **Specific Phobia** | An irrational, excessive fear of a particular object or situation (spiders, flying, heights, etc.) that leads to avoidance |
-| 5 | **Agoraphobia** | Fear of situations where escape might be difficult or help unavailable—crowds, public transit, being outside the home |
-| 6 | **Separation Anxiety Disorder** | Excessive fear or anxiety about separation from attachment figures, beyond what is developmentally appropriate |
-| 7 | **Selective Mutism** | Consistent failure to speak in specific social situations (like school) despite speaking normally in other settings |
-| 8 | **Obsessive-Compulsive Disorder (OCD)** | Persistent unwanted thoughts (obsessions) that drive repetitive behaviors or mental acts (compulsions) performed to reduce anxiety |
-| 9 | **Health Anxiety (Hypochondriasis)** | Excessive worry about having or developing a serious illness, often accompanied by body checking and reassurance-seeking |
-| 10 | **Illness Anxiety Disorder** | Preoccupation with having or acquiring a serious illness with minimal or no somatic symptoms |
-| 11 | **Cognitive Distortions** | Automatic, biased ways of thinking that reinforce negative emotions—e.g., catastrophizing, black-and-white thinking, mind-reading |
-| 12 | **Catastrophizing** | Assuming the worst possible outcome will happen, even when evidence suggests otherwise |
-| 13 | **Mind Reading** | Believing you know what others are thinking (usually negative) without actual evidence |
-| 14 | **Fortune Telling** | Predicting negative outcomes as if they are certain, without sufficient evidence |
-| 15 | **Emotional Reasoning** | Believing that because you feel something, it must be true—"I feel anxious, so something bad must be about to happen" |
-| 16 | **Thought-Action Fusion** | The belief that thinking about something bad makes it more likely to happen, or is morally equivalent to doing it |
-| 17 | **Avoidance Behavior** | Anything a person does or doesn't do to reduce anxiety in the short term, which maintains the anxiety long-term |
-| 18 | **Safety Behaviors** | Subtle actions taken to prevent feared outcomes (carrying water in case of choking, sitting near exits) that prevent disconfirmation of fears |
-| 19 | **Exposure and Response Prevention (ERP)** | A CBT technique for OCD: gradually face feared situations (exposure) while resisting compulsions (response prevention) |
-| 20 | **Systematic Desensitization** | Gradually exposing someone to a feared stimulus while pairing it with relaxation, starting from least to most anxiety-provoking |
-| 21 | **Interoceptive Exposure** | Deliberately inducing feared physical sensations (racing heart, dizziness) to reduce fear of the sensations themselves |
-| 22 | **Fear Hierarchy (Exposure Hierarchy)** | A ranked list of feared situations from least to most distressing, used to plan graduated exposure |
-| 23 | **SUDS (Subjective Units of Distress Scale)** | A 0-100 self-rating of how anxious or distressed you feel right now, used to track exposure progress |
-| 24 | **Anxiety Sensitivity** | Fear of anxiety-related sensations themselves (e.g., fear that a racing heart means a heart attack), amplifying the anxiety cycle |
-| 25 | **Anticipatory Anxiety** | Worry and dread about a future event that may or may not be threatening |
-| 26 | **Worry** | A chain of negative thoughts about future "what-if" scenarios, often repetitive and difficult to control |
-| 27 | **Rumination** | Repetitively going over past events, mistakes, or distressing experiences without reaching resolution |
-| 28 | **Grounding Techniques** | Sensory-based strategies (5-4-3-2-1 method, holding ice, naming objects) that bring attention back to the present moment during anxiety |
-| 29 | **Diaphragmatic Breathing** | Slow, deep belly breathing that activates the parasympathetic nervous system to reduce physiological arousal |
-| 30 | **Vagal Toning** | Stimulating the vagus nerve (via breathing, cold water, humming) to shift from fight-or-flight to rest-and-digest |
-| 31 | **Window of Tolerance** | The zone of emotional arousal in which a person can function effectively—above it is hyperarousal, below is hypoarousal |
-| 32 | **Hyperarousal** | Being in a state of heightened activation: racing heart, tension, irritability, hypervigilance, difficulty sleeping |
-| 33 | **Hypoarousal** | Being in a state of emotional shutdown: numbness, disconnection, fatigue, feeling "foggy" or "frozen" |
-| 34 | **Autonomic Nervous System (ANS)** | The body's automatic control system with two branches: sympathetic (fight/flight) and parasympathetic (rest/digest) |
-| 35 | **Fight-Flight-Freeze** | The body's automatic survival responses to perceived threat |
-| 36 | **Amygdala** | The brain's "alarm system" that detects threats and triggers fear responses before the thinking brain can evaluate the situation |
-| 37 | **Prefrontal Cortex** | The front part of the brain responsible for planning, decision-making, and regulating emotional responses |
-| 38 | **Neuroplasticity** | The brain's ability to reorganize itself by forming new neural connections, allowing learned behaviors to become automatic |
-| 39 | **ACT (Acceptance and Commitment Therapy)** | A therapy approach that teaches people to accept difficult thoughts and feelings while committing to value-driven action |
-| 40 | **Cognitive Restructuring** | Identifying, challenging, and replacing unhelpful thought patterns with more balanced, evidence-based ones |
-| 41 | **Thought Record** | A structured worksheet used to capture negative automatic thoughts, examine evidence for/against them, and generate balanced alternatives |
-| 42 | **Behavioral Experiment** | A structured test designed to reality-check a feared prediction and gather evidence about what actually happens |
-| 43 | **Dropping Anchor** | An ACT technique for grounding yourself in the present moment while making room for difficult internal experiences |
-| 44 | **Defusion** | Learning to observe thoughts as just thoughts—mental events—rather than truths that must be obeyed |
-| 45 | **Acceptance** | Willingness to experience uncomfortable thoughts, feelings, and sensations without trying to control or avoid them |
-| 46 | **Mindfulness** | Paying attention to the present moment on purpose, without judgment |
-| 47 | **Body Scan** | A mindfulness practice of systematically noticing sensations throughout the body, often used for relaxation and body awareness |
-| 48 | **Progressive Muscle Relaxation (PMR)** | Systematically tensing and releasing muscle groups to release physical tension associated with anxiety |
-| 49 | **Applied Relaxation** | Learning to relax quickly in anxiety-provoking situations through graduated practice of relaxation skills |
-| 50 | **Exposure Therapy** | Any therapeutic approach that involves confronting feared stimuli (situations, thoughts, sensations) to reduce avoidance |
-| 51 | **In Vivo Exposure** | Facing a real-life feared situation in real time (not imagined or simulated) |
-| 52 | **Imaginal Exposure** | Vividly imagining a feared situation repeatedly until anxiety diminishes, used when in vivo exposure isn't practical |
-| 53 | **Virtual Reality Exposure (VRE)** | Using VR technology to simulate feared situations in a controlled therapeutic environment |
-| 54 | **Social Phobia** | An older term for Social Anxiety Disorder—intense fear and avoidance of social situations where scrutiny by others is possible |
-| 55 | **Performance Anxiety** | Excessive fear of performing in front of others—speaking, singing, playing sports—leading to avoidance or impaired functioning |
-| 56 | **Test Anxiety** | Excessive worry and physical symptoms before or during exams, impairing academic performance |
-| 57 | **Panic Attack** | A sudden episode of intense fear with physical symptoms: racing heart, shortness of breath, dizziness, chest pain, tingling, derealization |
-| 58 | **Panic Cycle** | The self-reinforcing loop: physical sensation → catastrophic interpretation → more anxiety → stronger sensations |
-| 59 | **Derealization** | Feeling detached from one's surroundings, as if the world isn't real—common during severe anxiety |
-| 60 | **Depersonalization** | Feeling detached from oneself, as if watching yourself from outside your body |
-| 61 | **Freeze Response** | A survival response where the body becomes immobilized—often called "deer in headlights"—when fight/flight isn't possible |
-| 62 | **Fawning** | A trauma response where someone appeases or people-pleases a perceived threat to avoid conflict |
-| 63 | **Hypervigilance** | Being excessively alert and scanning the environment for threats, common in anxiety and PTSD |
-| 64 | **Reassurance Seeking** | Repeatedly asking others "Am I okay?" or "Will this be okay?" to temporarily reduce anxiety (maintains the cycle) |
-| 65 | **Cognitive Behavioral Therapy (CBT)** | An evidence-based therapy that focuses on changing unhelpful thinking patterns and behaviors that maintain emotional distress |
-| 66 | **Mindfulness-Based Stress Reduction (MBSR)** | An 8-week structured program combining mindfulness meditation, body awareness, and gentle yoga to reduce stress and anxiety |
-| 67 | **Mindfulness-Based Cognitive Therapy (MBCT)** | Combines CBT with mindfulness practices to help people recognize and disengage from negative thought patterns |
-| 68 | **DBT (Dialectical Behavior Therapy)** | A therapy originally for borderline personality disorder that teaches distress tolerance, emotion regulation, mindfulness, and interpersonal skills |
-| 69 | **Distress Tolerance** | The ability to endure difficult emotions without making the situation worse—core DBT skill |
-| 70 | **Emotion Regulation** | Understanding, labeling, and managing emotions in healthy ways |
-| 71 | **Interpersonal Effectiveness** | Skills for communicating needs, maintaining relationships, and setting boundaries assertively |
-| 72 | **Self-Compassion** | Treating yourself with the same kindness you'd offer a friend when you're struggling |
-| 73 | **Exposure Anxiety** | The temporary increase in anxiety that occurs when first confronting a feared situation—the "it gets worse before it gets better" phase |
-| 74 | **Habituation** | The natural process where repeated exposure to a stimulus leads to decreased anxiety response over time |
-| 75 | **Inhibitory Learning** | The theory that exposure works by creating new, non-threatening associations that compete with fear associations |
-| 76 | **Fear Conditioning** | Learning to associate a neutral stimulus with something threatening, creating a fear response |
-| 77 | **Generalization** | When a fear response spreads from the original trigger to similar situations or stimuli |
-| 78 | **Safety Signal** | An object, person, or ritual believed to prevent danger, which becomes a crutch that prevents natural anxiety reduction |
-| 79 | **Contamination OCD** | OCD subtype focused on fears of germs, dirt, or impurity, leading to excessive cleaning and avoidance |
-| 80 | **Checking OCD** | OCD subtype involving repeated checking of locks, stoves, work, or body for feared mistakes or harm |
-| 81 | **Symmetry/Ordering OCD** | OCD subtype focused on things being "just right" or perfectly arranged |
-| 82 | **Intrusive Thoughts** | Unwanted, involuntary thoughts, images, or urges that are often disturbing but do not reflect actual desires or intentions |
-| 83 | **Pure-O** | Informal term for OCD where obsessions are primarily mental (intrusive thoughts) with less visible compulsions |
-| 84 | **Somatic Symptoms** | Physical symptoms (headaches, stomachaches, tension) caused or worsened by psychological distress |
-| 85 | **Psychosomatic** | Physical symptoms that arise from or are worsened by emotional or psychological factors |
-| 86 | **Fight-Flight-Freeze-Fawn** | Expanded model of survival responses including people-pleasing (fawn) as a trauma adaptation |
-| 87 | **Polyvagal Theory** | Stephen Porges' framework explaining how the vagus nerve mediates three autonomic states: ventral vagal (safe), sympathetic (fight/flight), dorsal vagal (shutdown) |
-| 88 | **Ventral Vagal State** | The state of feeling safe, connected, and socially engaged—where healing and learning happen |
-| 89 | **Dorsal Vagal State** | A state of collapse, shutdown, numbness, or dissociation when the nervous system is overwhelmed |
-| 90 | **Activation Level** | The degree of physiological arousal—too high (panic) or too low (shutdown) impairs coping |
-| 91 | **Behavioral Activation** | Scheduling and engaging in pleasant or meaningful activities to counteract avoidance and withdrawal |
-| 92 | **Anxiety Management Plan** | A personalized written plan outlining triggers, early warning signs, coping strategies, and when to seek help |
-| 93 | **Psychoeducation** | Teaching patients about their condition, how it works, and why treatment strategies are effective |
-| 94 | **Co-occurrence (Comorbidity)** | Having two or more conditions at the same time—e.g., anxiety + depression, or anxiety + substance use |
-| 95 | **Functional Impairment** | The degree to which a condition interferes with daily life, work, relationships, or self-care |
-| 96 | **Global Assessment of Functioning (GAF)** | A scale (0-100) used to rate overall psychological, social, and occupational functioning |
-| 97 | **PHQ-9** | Patient Health Questionnaire-9: a 9-item screening tool for depression severity |
-| 98 | **GAD-7** | Generalized Anxiety Disorder-7: a 7-item screening tool for anxiety severity |
-| 99 | **Y-BOCS** | Yale-Brown Obsessive Compulsive Scale: a clinician-rated scale measuring OCD severity |
-| 100 | **LSAS** | Liebowitz Social Anxiety Scale: measures fear and avoidance in social and performance situations |
-| 101 | **Lie Scale** | Questions on psychological tests designed to detect whether someone is underreporting or overreporting symptoms |
-| 102 | **Treatment-Resistant Anxiety** | Anxiety that hasn't responded adequately to first-line treatments, requiring modified or adjunct approaches |
-| 103 | **Medication Augmentation** | Adding a second medication to enhance the effect of an initial medication for anxiety |
-| 104 | **SSRI** | Selective Serotonin Reuptake Inhibitor: a class of antidepressant medications commonly used for anxiety disorders |
-| 105 | **SNRI** | Serotonin-Norepinephrine Reuptake Inhibitor: another class of antidepressant used for anxiety and depression |
-| 106 | **Benzodiazepine** | A class of fast-acting anti-anxiety medications (e.g., Xanax, Ativan) that can be addictive with long-term use |
-| 107 | **Beta-Blocker** | A medication that blocks adrenaline effects, sometimes used for performance anxiety (reduces trembling, racing heart) |
-| 108 | **ERP Dosing** | The principle that more frequent, prolonged exposure practice leads to faster and more durable anxiety reduction |
-| 109 | **Relapse Prevention** | Identifying high-risk situations and developing plans to maintain gains after formal treatment ends |
-| 110 | **Maintenance Phase** | The stage of treatment focused on consolidating gains and preventing relapse after active symptoms have improved |
+| #   | Term                                           | Plain-English Definition                                                                                                                                            |
+| --- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Generalized Anxiety Disorder (GAD)**         | A condition where someone feels excessive, uncontrollable worry about everyday things most days for 6+ months                                                       |
+| 2   | **Social Anxiety Disorder**                    | Intense fear of being judged, embarrassed, or humiliated in social or performance situations                                                                        |
+| 3   | **Panic Disorder**                             | Recurrent unexpected panic attacks—sudden surges of intense fear with physical symptoms—plus persistent worry about having more                                     |
+| 4   | **Specific Phobia**                            | An irrational, excessive fear of a particular object or situation (spiders, flying, heights, etc.) that leads to avoidance                                          |
+| 5   | **Agoraphobia**                                | Fear of situations where escape might be difficult or help unavailable—crowds, public transit, being outside the home                                               |
+| 6   | **Separation Anxiety Disorder**                | Excessive fear or anxiety about separation from attachment figures, beyond what is developmentally appropriate                                                      |
+| 7   | **Selective Mutism**                           | Consistent failure to speak in specific social situations (like school) despite speaking normally in other settings                                                 |
+| 8   | **Obsessive-Compulsive Disorder (OCD)**        | Persistent unwanted thoughts (obsessions) that drive repetitive behaviors or mental acts (compulsions) performed to reduce anxiety                                  |
+| 9   | **Health Anxiety (Hypochondriasis)**           | Excessive worry about having or developing a serious illness, often accompanied by body checking and reassurance-seeking                                            |
+| 10  | **Illness Anxiety Disorder**                   | Preoccupation with having or acquiring a serious illness with minimal or no somatic symptoms                                                                        |
+| 11  | **Cognitive Distortions**                      | Automatic, biased ways of thinking that reinforce negative emotions—e.g., catastrophizing, black-and-white thinking, mind-reading                                   |
+| 12  | **Catastrophizing**                            | Assuming the worst possible outcome will happen, even when evidence suggests otherwise                                                                              |
+| 13  | **Mind Reading**                               | Believing you know what others are thinking (usually negative) without actual evidence                                                                              |
+| 14  | **Fortune Telling**                            | Predicting negative outcomes as if they are certain, without sufficient evidence                                                                                    |
+| 15  | **Emotional Reasoning**                        | Believing that because you feel something, it must be true—"I feel anxious, so something bad must be about to happen"                                               |
+| 16  | **Thought-Action Fusion**                      | The belief that thinking about something bad makes it more likely to happen, or is morally equivalent to doing it                                                   |
+| 17  | **Avoidance Behavior**                         | Anything a person does or doesn't do to reduce anxiety in the short term, which maintains the anxiety long-term                                                     |
+| 18  | **Safety Behaviors**                           | Subtle actions taken to prevent feared outcomes (carrying water in case of choking, sitting near exits) that prevent disconfirmation of fears                       |
+| 19  | **Exposure and Response Prevention (ERP)**     | A CBT technique for OCD: gradually face feared situations (exposure) while resisting compulsions (response prevention)                                              |
+| 20  | **Systematic Desensitization**                 | Gradually exposing someone to a feared stimulus while pairing it with relaxation, starting from least to most anxiety-provoking                                     |
+| 21  | **Interoceptive Exposure**                     | Deliberately inducing feared physical sensations (racing heart, dizziness) to reduce fear of the sensations themselves                                              |
+| 22  | **Fear Hierarchy (Exposure Hierarchy)**        | A ranked list of feared situations from least to most distressing, used to plan graduated exposure                                                                  |
+| 23  | **SUDS (Subjective Units of Distress Scale)**  | A 0-100 self-rating of how anxious or distressed you feel right now, used to track exposure progress                                                                |
+| 24  | **Anxiety Sensitivity**                        | Fear of anxiety-related sensations themselves (e.g., fear that a racing heart means a heart attack), amplifying the anxiety cycle                                   |
+| 25  | **Anticipatory Anxiety**                       | Worry and dread about a future event that may or may not be threatening                                                                                             |
+| 26  | **Worry**                                      | A chain of negative thoughts about future "what-if" scenarios, often repetitive and difficult to control                                                            |
+| 27  | **Rumination**                                 | Repetitively going over past events, mistakes, or distressing experiences without reaching resolution                                                               |
+| 28  | **Grounding Techniques**                       | Sensory-based strategies (5-4-3-2-1 method, holding ice, naming objects) that bring attention back to the present moment during anxiety                             |
+| 29  | **Diaphragmatic Breathing**                    | Slow, deep belly breathing that activates the parasympathetic nervous system to reduce physiological arousal                                                        |
+| 30  | **Vagal Toning**                               | Stimulating the vagus nerve (via breathing, cold water, humming) to shift from fight-or-flight to rest-and-digest                                                   |
+| 31  | **Window of Tolerance**                        | The zone of emotional arousal in which a person can function effectively—above it is hyperarousal, below is hypoarousal                                             |
+| 32  | **Hyperarousal**                               | Being in a state of heightened activation: racing heart, tension, irritability, hypervigilance, difficulty sleeping                                                 |
+| 33  | **Hypoarousal**                                | Being in a state of emotional shutdown: numbness, disconnection, fatigue, feeling "foggy" or "frozen"                                                               |
+| 34  | **Autonomic Nervous System (ANS)**             | The body's automatic control system with two branches: sympathetic (fight/flight) and parasympathetic (rest/digest)                                                 |
+| 35  | **Fight-Flight-Freeze**                        | The body's automatic survival responses to perceived threat                                                                                                         |
+| 36  | **Amygdala**                                   | The brain's "alarm system" that detects threats and triggers fear responses before the thinking brain can evaluate the situation                                    |
+| 37  | **Prefrontal Cortex**                          | The front part of the brain responsible for planning, decision-making, and regulating emotional responses                                                           |
+| 38  | **Neuroplasticity**                            | The brain's ability to reorganize itself by forming new neural connections, allowing learned behaviors to become automatic                                          |
+| 39  | **ACT (Acceptance and Commitment Therapy)**    | A therapy approach that teaches people to accept difficult thoughts and feelings while committing to value-driven action                                            |
+| 40  | **Cognitive Restructuring**                    | Identifying, challenging, and replacing unhelpful thought patterns with more balanced, evidence-based ones                                                          |
+| 41  | **Thought Record**                             | A structured worksheet used to capture negative automatic thoughts, examine evidence for/against them, and generate balanced alternatives                           |
+| 42  | **Behavioral Experiment**                      | A structured test designed to reality-check a feared prediction and gather evidence about what actually happens                                                     |
+| 43  | **Dropping Anchor**                            | An ACT technique for grounding yourself in the present moment while making room for difficult internal experiences                                                  |
+| 44  | **Defusion**                                   | Learning to observe thoughts as just thoughts—mental events—rather than truths that must be obeyed                                                                  |
+| 45  | **Acceptance**                                 | Willingness to experience uncomfortable thoughts, feelings, and sensations without trying to control or avoid them                                                  |
+| 46  | **Mindfulness**                                | Paying attention to the present moment on purpose, without judgment                                                                                                 |
+| 47  | **Body Scan**                                  | A mindfulness practice of systematically noticing sensations throughout the body, often used for relaxation and body awareness                                      |
+| 48  | **Progressive Muscle Relaxation (PMR)**        | Systematically tensing and releasing muscle groups to release physical tension associated with anxiety                                                              |
+| 49  | **Applied Relaxation**                         | Learning to relax quickly in anxiety-provoking situations through graduated practice of relaxation skills                                                           |
+| 50  | **Exposure Therapy**                           | Any therapeutic approach that involves confronting feared stimuli (situations, thoughts, sensations) to reduce avoidance                                            |
+| 51  | **In Vivo Exposure**                           | Facing a real-life feared situation in real time (not imagined or simulated)                                                                                        |
+| 52  | **Imaginal Exposure**                          | Vividly imagining a feared situation repeatedly until anxiety diminishes, used when in vivo exposure isn't practical                                                |
+| 53  | **Virtual Reality Exposure (VRE)**             | Using VR technology to simulate feared situations in a controlled therapeutic environment                                                                           |
+| 54  | **Social Phobia**                              | An older term for Social Anxiety Disorder—intense fear and avoidance of social situations where scrutiny by others is possible                                      |
+| 55  | **Performance Anxiety**                        | Excessive fear of performing in front of others—speaking, singing, playing sports—leading to avoidance or impaired functioning                                      |
+| 56  | **Test Anxiety**                               | Excessive worry and physical symptoms before or during exams, impairing academic performance                                                                        |
+| 57  | **Panic Attack**                               | A sudden episode of intense fear with physical symptoms: racing heart, shortness of breath, dizziness, chest pain, tingling, derealization                          |
+| 58  | **Panic Cycle**                                | The self-reinforcing loop: physical sensation → catastrophic interpretation → more anxiety → stronger sensations                                                    |
+| 59  | **Derealization**                              | Feeling detached from one's surroundings, as if the world isn't real—common during severe anxiety                                                                   |
+| 60  | **Depersonalization**                          | Feeling detached from oneself, as if watching yourself from outside your body                                                                                       |
+| 61  | **Freeze Response**                            | A survival response where the body becomes immobilized—often called "deer in headlights"—when fight/flight isn't possible                                           |
+| 62  | **Fawning**                                    | A trauma response where someone appeases or people-pleases a perceived threat to avoid conflict                                                                     |
+| 63  | **Hypervigilance**                             | Being excessively alert and scanning the environment for threats, common in anxiety and PTSD                                                                        |
+| 64  | **Reassurance Seeking**                        | Repeatedly asking others "Am I okay?" or "Will this be okay?" to temporarily reduce anxiety (maintains the cycle)                                                   |
+| 65  | **Cognitive Behavioral Therapy (CBT)**         | An evidence-based therapy that focuses on changing unhelpful thinking patterns and behaviors that maintain emotional distress                                       |
+| 66  | **Mindfulness-Based Stress Reduction (MBSR)**  | An 8-week structured program combining mindfulness meditation, body awareness, and gentle yoga to reduce stress and anxiety                                         |
+| 67  | **Mindfulness-Based Cognitive Therapy (MBCT)** | Combines CBT with mindfulness practices to help people recognize and disengage from negative thought patterns                                                       |
+| 68  | **DBT (Dialectical Behavior Therapy)**         | A therapy originally for borderline personality disorder that teaches distress tolerance, emotion regulation, mindfulness, and interpersonal skills                 |
+| 69  | **Distress Tolerance**                         | The ability to endure difficult emotions without making the situation worse—core DBT skill                                                                          |
+| 70  | **Emotion Regulation**                         | Understanding, labeling, and managing emotions in healthy ways                                                                                                      |
+| 71  | **Interpersonal Effectiveness**                | Skills for communicating needs, maintaining relationships, and setting boundaries assertively                                                                       |
+| 72  | **Self-Compassion**                            | Treating yourself with the same kindness you'd offer a friend when you're struggling                                                                                |
+| 73  | **Exposure Anxiety**                           | The temporary increase in anxiety that occurs when first confronting a feared situation—the "it gets worse before it gets better" phase                             |
+| 74  | **Habituation**                                | The natural process where repeated exposure to a stimulus leads to decreased anxiety response over time                                                             |
+| 75  | **Inhibitory Learning**                        | The theory that exposure works by creating new, non-threatening associations that compete with fear associations                                                    |
+| 76  | **Fear Conditioning**                          | Learning to associate a neutral stimulus with something threatening, creating a fear response                                                                       |
+| 77  | **Generalization**                             | When a fear response spreads from the original trigger to similar situations or stimuli                                                                             |
+| 78  | **Safety Signal**                              | An object, person, or ritual believed to prevent danger, which becomes a crutch that prevents natural anxiety reduction                                             |
+| 79  | **Contamination OCD**                          | OCD subtype focused on fears of germs, dirt, or impurity, leading to excessive cleaning and avoidance                                                               |
+| 80  | **Checking OCD**                               | OCD subtype involving repeated checking of locks, stoves, work, or body for feared mistakes or harm                                                                 |
+| 81  | **Symmetry/Ordering OCD**                      | OCD subtype focused on things being "just right" or perfectly arranged                                                                                              |
+| 82  | **Intrusive Thoughts**                         | Unwanted, involuntary thoughts, images, or urges that are often disturbing but do not reflect actual desires or intentions                                          |
+| 83  | **Pure-O**                                     | Informal term for OCD where obsessions are primarily mental (intrusive thoughts) with less visible compulsions                                                      |
+| 84  | **Somatic Symptoms**                           | Physical symptoms (headaches, stomachaches, tension) caused or worsened by psychological distress                                                                   |
+| 85  | **Psychosomatic**                              | Physical symptoms that arise from or are worsened by emotional or psychological factors                                                                             |
+| 86  | **Fight-Flight-Freeze-Fawn**                   | Expanded model of survival responses including people-pleasing (fawn) as a trauma adaptation                                                                        |
+| 87  | **Polyvagal Theory**                           | Stephen Porges' framework explaining how the vagus nerve mediates three autonomic states: ventral vagal (safe), sympathetic (fight/flight), dorsal vagal (shutdown) |
+| 88  | **Ventral Vagal State**                        | The state of feeling safe, connected, and socially engaged—where healing and learning happen                                                                        |
+| 89  | **Dorsal Vagal State**                         | A state of collapse, shutdown, numbness, or dissociation when the nervous system is overwhelmed                                                                     |
+| 90  | **Activation Level**                           | The degree of physiological arousal—too high (panic) or too low (shutdown) impairs coping                                                                           |
+| 91  | **Behavioral Activation**                      | Scheduling and engaging in pleasant or meaningful activities to counteract avoidance and withdrawal                                                                 |
+| 92  | **Anxiety Management Plan**                    | A personalized written plan outlining triggers, early warning signs, coping strategies, and when to seek help                                                       |
+| 93  | **Psychoeducation**                            | Teaching patients about their condition, how it works, and why treatment strategies are effective                                                                   |
+| 94  | **Co-occurrence (Comorbidity)**                | Having two or more conditions at the same time—e.g., anxiety + depression, or anxiety + substance use                                                               |
+| 95  | **Functional Impairment**                      | The degree to which a condition interferes with daily life, work, relationships, or self-care                                                                       |
+| 96  | **Global Assessment of Functioning (GAF)**     | A scale (0-100) used to rate overall psychological, social, and occupational functioning                                                                            |
+| 97  | **PHQ-9**                                      | Patient Health Questionnaire-9: a 9-item screening tool for depression severity                                                                                     |
+| 98  | **GAD-7**                                      | Generalized Anxiety Disorder-7: a 7-item screening tool for anxiety severity                                                                                        |
+| 99  | **Y-BOCS**                                     | Yale-Brown Obsessive Compulsive Scale: a clinician-rated scale measuring OCD severity                                                                               |
+| 100 | **LSAS**                                       | Liebowitz Social Anxiety Scale: measures fear and avoidance in social and performance situations                                                                    |
+| 101 | **Lie Scale**                                  | Questions on psychological tests designed to detect whether someone is underreporting or overreporting symptoms                                                     |
+| 102 | **Treatment-Resistant Anxiety**                | Anxiety that hasn't responded adequately to first-line treatments, requiring modified or adjunct approaches                                                         |
+| 103 | **Medication Augmentation**                    | Adding a second medication to enhance the effect of an initial medication for anxiety                                                                               |
+| 104 | **SSRI**                                       | Selective Serotonin Reuptake Inhibitor: a class of antidepressant medications commonly used for anxiety disorders                                                   |
+| 105 | **SNRI**                                       | Serotonin-Norepinephrine Reuptake Inhibitor: another class of antidepressant used for anxiety and depression                                                        |
+| 106 | **Benzodiazepine**                             | A class of fast-acting anti-anxiety medications (e.g., Xanax, Ativan) that can be addictive with long-term use                                                      |
+| 107 | **Beta-Blocker**                               | A medication that blocks adrenaline effects, sometimes used for performance anxiety (reduces trembling, racing heart)                                               |
+| 108 | **ERP Dosing**                                 | The principle that more frequent, prolonged exposure practice leads to faster and more durable anxiety reduction                                                    |
+| 109 | **Relapse Prevention**                         | Identifying high-risk situations and developing plans to maintain gains after formal treatment ends                                                                 |
+| 110 | **Maintenance Phase**                          | The stage of treatment focused on consolidating gains and preventing relapse after active symptoms have improved                                                    |
 
 ---
 
 ## 2. ADDICTION / SUBSTANCE USE
 
-| # | Term | Plain-English Definition |
-|---|------|--------------------------|
-| 1 | **Substance Use Disorder (SUD)** | A medical condition where continued use of a substance causes significant problems—health, social, occupational, or legal |
-| 2 | **Addiction** | Compulsive substance use despite harmful consequences, involving loss of control over use |
-| 3 | **Dependence** | When the body adapts to a substance and needs it to function normally, experiencing withdrawal without it |
-| 4 | **Tolerance** | Needing increasing amounts of a substance to achieve the same effect |
-| 5 | **Withdrawal** | Physical and emotional symptoms that occur when stopping or reducing a substance after regular use |
-| 6 | **Detoxification (Detox)** | The process of safely managing withdrawal symptoms when stopping a substance, often medically supervised |
-| 7 | **Motivational Interviewing (MI)** | A counseling style that helps people explore and resolve ambivalence about change without confrontation |
-| 8 | **Motivational Enhancement Therapy (MET)** | A structured MI-based intervention that uses assessment feedback to strengthen motivation for change |
-| 9 | **Contingency Management** | Using tangible rewards (vouchers, prizes) to reinforce positive behaviors like clean drug tests or treatment attendance |
-| 10 | **Cognitive Behavioral Therapy (CBT-SUD)** | Adapted CBT focused on identifying triggers, changing thought patterns around substance use, and building coping skills |
-| 11 | **Relapse Prevention** | A structured approach to identifying high-risk situations and developing plans to avoid or manage them |
-| 12 | **Relapse** | Returning to substance use after a period of abstinence or controlled use |
-| 13 | **Abstinence** | Complete cessation of substance use |
-| 14 | **Harm Reduction** | A set of strategies that aims to reduce the negative consequences of substance use, even if the person isn't ready to stop |
-| 15 | ** MAT (Medication-Assisted Treatment)** | Using FDA-approved medications combined with counseling and behavioral therapies to treat SUD |
-| 16 | **Buprenorphine (Suboxone)** | A partial opioid agonist used to reduce cravings and withdrawal in opioid use disorder treatment |
-| 17 | **Naltrexone (Vivitrol)** | An opioid antagonist that blocks the euphoric effects of opioids and reduces alcohol cravings |
-| 18 | **Methadone** | A long-acting opioid agonist used for opioid use disorder maintenance treatment |
-| 19 | **Acamprosate (Campral)** | A medication that helps restore brain chemistry disrupted by chronic alcohol use, reducing cravings |
-| 20 | **Disulfiram (Antabuse)** | A medication that causes unpleasant reactions (nausea, vomiting) if alcohol is consumed, creating a deterrent |
-| 21 | **Dual Diagnosis** | Having both a substance use disorder and a mental health condition simultaneously |
-| 22 | **Co-Occurring Disorders** | The presence of both a mental health disorder and a substance use disorder |
-| 13 | **Trigger** | A person, place, emotion, situation, or time of day that increases the urge to use substances |
-| 24 | **Craving** | An intense desire or urge to use a substance, often triggered by environmental cues |
-| 25 | **High-Risk Situation** | Any circumstance that increases the probability of substance use—stress, negative emotions, social pressure, celebration |
-| 26 | **Coping Skills** | Healthy strategies for managing stress, emotions, and cravings without substances |
-| 27 | **Functional Tolerance** | Being able to appear "normal" while under the influence, masking impairment |
-| 28 | **Cross-Tolerance** | When tolerance to one substance also increases tolerance to a similar substance |
-| 29 | **Cross-Dependence** | When one substance can substitute for another in preventing withdrawal (e.g., benzodiazepines for alcohol withdrawal) |
-| 30 | **Enabling** | Actions by loved ones that unintentionally make it easier for someone to continue using substances |
-| 31 | **Codependency** | A pattern of relationship where one person's self-worth becomes excessively tied to controlling or caretaking another's behavior |
-| 32 | **Intervention** | A structured conversation where loved ones express concern and encourage someone to seek treatment |
-| 33 | **Staging of Change (Transtheoretical Model)** | Five stages of readiness for change: precontemplation, contemplation, preparation, action, maintenance |
-| 34 | **Precontemplation** | Not yet recognizing that substance use is a problem or considering change |
-| 35 | **Contemplation** | Aware of the problem and thinking about change but not yet committed |
-| 36 | **Preparation** | Intending to take action soon and starting to plan |
-| 37 | **Action** | Actively modifying behavior, environment, or experiences to overcome the problem |
-| 38 | **Maintenance** | Sustaining the changes made during the action stage and preventing relapse |
-| 39 | **Alcoholics Anonymous (AA)** | A 12-step peer support program for people recovering from alcohol addiction |
-| 40 | **Narcotics Anonymous (NA)** | A 12-step peer support program for people recovering from drug addiction |
-| 41 | **SMART Recovery** | A science-based mutual support program using CBT and motivational tools as an alternative to 12-step programs |
-| 42 | **12-Step Facilitation** | A structured therapy that encourages engagement with 12-step programs like AA or NA |
-| 43 | **Recovery Capital** | The internal and external resources (skills, relationships, housing, employment) that support sustained recovery |
-| 44 | **Recovery Management** | An approach that views recovery as an ongoing process requiring ongoing support, not a one-time event |
-| 45 | **Sober Living** | A structured, substance-free residential environment that provides support during the transition to independent living |
-| 46 | **Recovery Coach** | A trained peer or professional who provides support, motivation, and resource connection for people in recovery |
-| 47 | **Substance** | Any chemical that alters mood, perception, consciousness, or behavior when introduced into the body |
-| 48 | **Psychoactive Substance** | A substance that affects the mind—mood, perception, thought, or consciousness |
-| 49 | **Alcohol Use Disorder (AUD)** | A pattern of alcohol use involving impaired control, preoccupation, and continued use despite problems |
-| 50 | **Opioid Use Disorder (OUD)** | Compulsive opioid use despite harmful consequences, including heroin, fentanyl, and prescription painkillers |
-| 51 | **Stimulant Use Disorder** | Compulsive use of stimulants like cocaine, methamphetamine, or prescription amphetamines |
-| 52 | **Cannabis Use Disorder** | Problematic cannabis use leading to impairment or distress |
-| 53 | **Benzodiazepine Use Disorder** | Compulsive use of anti-anxiety medications like Xanax, Valium, or Klonopin |
-| 54 | **Sedative/Hypnotic/Anxiolytic Use Disorder** | Use disorder involving substances that depress the central nervous system |
-| 55 | **Polysubstance Use** | Using more than one substance at the same time or in combination |
-| 56 | **Fentanyl** | A synthetic opioid 50-100x stronger than morphine, driving the current overdose crisis |
-| 57 | **Naloxone (Narcan)** | A medication that rapidly reverses opioid overdose by blocking opioid receptors in the brain |
-| 58 | **Overdose** | When too much of a substance is consumed, causing life-threatening medical complications |
-| 59 | **Lethal Dose** | The amount of a substance sufficient to cause death |
-| 60 | **Fentanyl Test Strip** | A tool that allows users to check substances for the presence of fentanyl before use |
-| 61 | **Needle Exchange/Syringe Services** | Programs that provide sterile injection equipment to reduce disease transmission among people who inject drugs |
-| 62 | **Clean Needle Program** | Harm reduction service providing sterile supplies and disposal for people who inject substances |
-| 63 | **Cognitive Distortions in SUD** | Thinking patterns that maintain substance use—denial, minimization, rationalization, "I can control it" |
-| 64 | **Denial** | Refusing to acknowledge the severity of a substance use problem or its consequences |
-| 65 | **Minimization** | Reducing the perceived severity of substance use—"It's not that bad, I only drink on weekends" |
-| 66 | **Rationalization** | Creating seemingly logical excuses for substance use—"I deserve a drink after the day I had" |
-| 67 | **Euphoric Recall** | Remembering only the positive effects of substance use while forgetting the negative consequences |
-| 68 | **Emotional Sobriety** | Being able to manage emotions effectively without substances or other unhealthy coping mechanisms |
-| 69 | **Trigger Map** | A visual tool identifying personal triggers organized by type—people, places, emotions, times, events |
-| 70 | **Play the Tape Through** | A coping technique: when a craving hits, imagine the full consequences of using, not just the initial relief |
-| 71 | **HALT** | An acronym reminding people in recovery to check if they are Hungry, Angry, Lonely, or Tired—states that increase vulnerability |
-| 72 | **Urinalysis (UA)** | A drug test using urine to detect the presence or absence of substances |
-| 73 | **Point System** | A tracking tool for contingency management where patients earn points for clean tests, attendance, and positive behaviors |
-| 74 | **Treatment Plan** | A written, collaborative agreement between therapist and patient outlining goals, strategies, and timelines |
-| 75 | **Aftercare Plan** | A post-treatment plan for maintaining recovery, including ongoing support, coping strategies, and emergency contacts |
-| 76 | **Intensive Outpatient Program (IOP)** | A structured treatment program providing 9-20 hours/week of therapy while living at home |
-| 77 | **Partial Hospitalization Program (PHP)** | A structured program providing 20+ hours/week of treatment, more intensive than IOP but less than inpatient |
-| 78 | **Residential Treatment** | 24-hour live-in treatment facility providing intensive therapy and structured living |
-| 79 | **Inpatient Detox** | Medically supervised withdrawal management in a hospital or specialized facility |
-| 80 | **Outpatient Treatment** | Regularly scheduled therapy sessions (1-2x/week) while living at home and maintaining daily activities |
-| 81 | **Case Management** | Coordinating services—housing, employment, healthcare, legal—to support recovery |
-| 82 | **Peer Support Specialist** | A person in recovery who uses their lived experience to support others in their recovery journey |
-| 83 | **Recovery Community Organization** | Peer-run organizations providing support, advocacy, and services for people in recovery |
-| 84 | **Stigma** | Negative attitudes, stereotypes, and discrimination directed at people with substance use disorders |
-| 85 | **Language Matters** | Using person-first language (person with SUD) instead of stigmatizing labels (addict, junkie) |
-| 86 | **Resilience** | The ability to recover from setbacks and adapt to challenging circumstances in recovery |
-| 87 | **Self-Efficacy** | Belief in one's own ability to succeed in specific situations or accomplish a goal—key for sustained recovery |
-| 88 | **Cravings Surfing** | A mindfulness technique where you observe a craving without acting on it, watching it rise and fall like a wave |
-| 89 | **Urge Surfing** | Same as cravings surfing—riding out the urge without giving in, recognizing it will pass |
-| 90 | **Dialectical Abstinence** | Combining absolute commitment to abstinence with compassion for lapses, avoiding the abstinence violation effect |
-| 91 | **Abstinence Violation Effect** | When a lapse ("I slipped once") is interpreted as full relapse ("I'm an addict, I can't do this"), leading to giving up |
-| 92 | **Lapse vs. Relapse** | A lapse is a single slip; a relapse is a return to the pre-treatment pattern of substance use |
-| 93 | **Chain Analysis (DBT)** | A detailed examination of the sequence of events, thoughts, and emotions leading to a problematic behavior |
-| 94 | **Solution Analysis** | Identifying what could have been done differently at each link in the chain to prevent the problematic behavior |
-| 95 | **Motivational Scale** | A tool rating a patient's readiness for change on a 1-10 scale, used to guide interventions |
-| 96 | **Pros and Cons Analysis (Decisional Balance)** | Weighing the benefits and costs of continuing substance use vs. making a change |
-| 97 | **Addiction Severity Index (ASI)** | A comprehensive assessment tool measuring problem severity across multiple life domains |
-| 98 | **AUDIT** | Alcohol Use Disorders Identification Test: a 10-item screening tool for hazardous drinking |
-| 99 | **DAST-10** | Drug Abuse Screening Test: a 10-item screening tool for problematic drug use |
-| 100 | **CAGE Questionnaire** | A 4-question screening tool for alcohol problems (Cut down, Annoyed, Guilty, Eye-opener) |
-| 101 | **ASAM Criteria** | American Society of Addiction Medicine criteria for assessing addiction severity and placing patients in appropriate treatment levels |
-| 102 | **Levels of Care** | A structured hierarchy of treatment intensity from early intervention to medically managed intensive inpatient |
-| 103 | **Recovery Milestone** | A meaningful achievement in recovery—30 days, 90 days, 1 year, etc.—that reinforces progress |
-| 104 | **Values Clarification** | Identifying what matters most to you, which can serve as motivation for change and direction for recovery |
-| 105 | **Functional Analysis** | Understanding the antecedents, behaviors, and consequences (ABC) of substance use episodes |
+| #   | Term                                            | Plain-English Definition                                                                                                              |
+| --- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Substance Use Disorder (SUD)**                | A medical condition where continued use of a substance causes significant problems—health, social, occupational, or legal             |
+| 2   | **Addiction**                                   | Compulsive substance use despite harmful consequences, involving loss of control over use                                             |
+| 3   | **Dependence**                                  | When the body adapts to a substance and needs it to function normally, experiencing withdrawal without it                             |
+| 4   | **Tolerance**                                   | Needing increasing amounts of a substance to achieve the same effect                                                                  |
+| 5   | **Withdrawal**                                  | Physical and emotional symptoms that occur when stopping or reducing a substance after regular use                                    |
+| 6   | **Detoxification (Detox)**                      | The process of safely managing withdrawal symptoms when stopping a substance, often medically supervised                              |
+| 7   | **Motivational Interviewing (MI)**              | A counseling style that helps people explore and resolve ambivalence about change without confrontation                               |
+| 8   | **Motivational Enhancement Therapy (MET)**      | A structured MI-based intervention that uses assessment feedback to strengthen motivation for change                                  |
+| 9   | **Contingency Management**                      | Using tangible rewards (vouchers, prizes) to reinforce positive behaviors like clean drug tests or treatment attendance               |
+| 10  | **Cognitive Behavioral Therapy (CBT-SUD)**      | Adapted CBT focused on identifying triggers, changing thought patterns around substance use, and building coping skills               |
+| 11  | **Relapse Prevention**                          | A structured approach to identifying high-risk situations and developing plans to avoid or manage them                                |
+| 12  | **Relapse**                                     | Returning to substance use after a period of abstinence or controlled use                                                             |
+| 13  | **Abstinence**                                  | Complete cessation of substance use                                                                                                   |
+| 14  | **Harm Reduction**                              | A set of strategies that aims to reduce the negative consequences of substance use, even if the person isn't ready to stop            |
+| 15  | ** MAT (Medication-Assisted Treatment)**        | Using FDA-approved medications combined with counseling and behavioral therapies to treat SUD                                         |
+| 16  | **Buprenorphine (Suboxone)**                    | A partial opioid agonist used to reduce cravings and withdrawal in opioid use disorder treatment                                      |
+| 17  | **Naltrexone (Vivitrol)**                       | An opioid antagonist that blocks the euphoric effects of opioids and reduces alcohol cravings                                         |
+| 18  | **Methadone**                                   | A long-acting opioid agonist used for opioid use disorder maintenance treatment                                                       |
+| 19  | **Acamprosate (Campral)**                       | A medication that helps restore brain chemistry disrupted by chronic alcohol use, reducing cravings                                   |
+| 20  | **Disulfiram (Antabuse)**                       | A medication that causes unpleasant reactions (nausea, vomiting) if alcohol is consumed, creating a deterrent                         |
+| 21  | **Dual Diagnosis**                              | Having both a substance use disorder and a mental health condition simultaneously                                                     |
+| 22  | **Co-Occurring Disorders**                      | The presence of both a mental health disorder and a substance use disorder                                                            |
+| 13  | **Trigger**                                     | A person, place, emotion, situation, or time of day that increases the urge to use substances                                         |
+| 24  | **Craving**                                     | An intense desire or urge to use a substance, often triggered by environmental cues                                                   |
+| 25  | **High-Risk Situation**                         | Any circumstance that increases the probability of substance use—stress, negative emotions, social pressure, celebration              |
+| 26  | **Coping Skills**                               | Healthy strategies for managing stress, emotions, and cravings without substances                                                     |
+| 27  | **Functional Tolerance**                        | Being able to appear "normal" while under the influence, masking impairment                                                           |
+| 28  | **Cross-Tolerance**                             | When tolerance to one substance also increases tolerance to a similar substance                                                       |
+| 29  | **Cross-Dependence**                            | When one substance can substitute for another in preventing withdrawal (e.g., benzodiazepines for alcohol withdrawal)                 |
+| 30  | **Enabling**                                    | Actions by loved ones that unintentionally make it easier for someone to continue using substances                                    |
+| 31  | **Codependency**                                | A pattern of relationship where one person's self-worth becomes excessively tied to controlling or caretaking another's behavior      |
+| 32  | **Intervention**                                | A structured conversation where loved ones express concern and encourage someone to seek treatment                                    |
+| 33  | **Staging of Change (Transtheoretical Model)**  | Five stages of readiness for change: precontemplation, contemplation, preparation, action, maintenance                                |
+| 34  | **Precontemplation**                            | Not yet recognizing that substance use is a problem or considering change                                                             |
+| 35  | **Contemplation**                               | Aware of the problem and thinking about change but not yet committed                                                                  |
+| 36  | **Preparation**                                 | Intending to take action soon and starting to plan                                                                                    |
+| 37  | **Action**                                      | Actively modifying behavior, environment, or experiences to overcome the problem                                                      |
+| 38  | **Maintenance**                                 | Sustaining the changes made during the action stage and preventing relapse                                                            |
+| 39  | **Alcoholics Anonymous (AA)**                   | A 12-step peer support program for people recovering from alcohol addiction                                                           |
+| 40  | **Narcotics Anonymous (NA)**                    | A 12-step peer support program for people recovering from drug addiction                                                              |
+| 41  | **SMART Recovery**                              | A science-based mutual support program using CBT and motivational tools as an alternative to 12-step programs                         |
+| 42  | **12-Step Facilitation**                        | A structured therapy that encourages engagement with 12-step programs like AA or NA                                                   |
+| 43  | **Recovery Capital**                            | The internal and external resources (skills, relationships, housing, employment) that support sustained recovery                      |
+| 44  | **Recovery Management**                         | An approach that views recovery as an ongoing process requiring ongoing support, not a one-time event                                 |
+| 45  | **Sober Living**                                | A structured, substance-free residential environment that provides support during the transition to independent living                |
+| 46  | **Recovery Coach**                              | A trained peer or professional who provides support, motivation, and resource connection for people in recovery                       |
+| 47  | **Substance**                                   | Any chemical that alters mood, perception, consciousness, or behavior when introduced into the body                                   |
+| 48  | **Psychoactive Substance**                      | A substance that affects the mind—mood, perception, thought, or consciousness                                                         |
+| 49  | **Alcohol Use Disorder (AUD)**                  | A pattern of alcohol use involving impaired control, preoccupation, and continued use despite problems                                |
+| 50  | **Opioid Use Disorder (OUD)**                   | Compulsive opioid use despite harmful consequences, including heroin, fentanyl, and prescription painkillers                          |
+| 51  | **Stimulant Use Disorder**                      | Compulsive use of stimulants like cocaine, methamphetamine, or prescription amphetamines                                              |
+| 52  | **Cannabis Use Disorder**                       | Problematic cannabis use leading to impairment or distress                                                                            |
+| 53  | **Benzodiazepine Use Disorder**                 | Compulsive use of anti-anxiety medications like Xanax, Valium, or Klonopin                                                            |
+| 54  | **Sedative/Hypnotic/Anxiolytic Use Disorder**   | Use disorder involving substances that depress the central nervous system                                                             |
+| 55  | **Polysubstance Use**                           | Using more than one substance at the same time or in combination                                                                      |
+| 56  | **Fentanyl**                                    | A synthetic opioid 50-100x stronger than morphine, driving the current overdose crisis                                                |
+| 57  | **Naloxone (Narcan)**                           | A medication that rapidly reverses opioid overdose by blocking opioid receptors in the brain                                          |
+| 58  | **Overdose**                                    | When too much of a substance is consumed, causing life-threatening medical complications                                              |
+| 59  | **Lethal Dose**                                 | The amount of a substance sufficient to cause death                                                                                   |
+| 60  | **Fentanyl Test Strip**                         | A tool that allows users to check substances for the presence of fentanyl before use                                                  |
+| 61  | **Needle Exchange/Syringe Services**            | Programs that provide sterile injection equipment to reduce disease transmission among people who inject drugs                        |
+| 62  | **Clean Needle Program**                        | Harm reduction service providing sterile supplies and disposal for people who inject substances                                       |
+| 63  | **Cognitive Distortions in SUD**                | Thinking patterns that maintain substance use—denial, minimization, rationalization, "I can control it"                               |
+| 64  | **Denial**                                      | Refusing to acknowledge the severity of a substance use problem or its consequences                                                   |
+| 65  | **Minimization**                                | Reducing the perceived severity of substance use—"It's not that bad, I only drink on weekends"                                        |
+| 66  | **Rationalization**                             | Creating seemingly logical excuses for substance use—"I deserve a drink after the day I had"                                          |
+| 67  | **Euphoric Recall**                             | Remembering only the positive effects of substance use while forgetting the negative consequences                                     |
+| 68  | **Emotional Sobriety**                          | Being able to manage emotions effectively without substances or other unhealthy coping mechanisms                                     |
+| 69  | **Trigger Map**                                 | A visual tool identifying personal triggers organized by type—people, places, emotions, times, events                                 |
+| 70  | **Play the Tape Through**                       | A coping technique: when a craving hits, imagine the full consequences of using, not just the initial relief                          |
+| 71  | **HALT**                                        | An acronym reminding people in recovery to check if they are Hungry, Angry, Lonely, or Tired—states that increase vulnerability       |
+| 72  | **Urinalysis (UA)**                             | A drug test using urine to detect the presence or absence of substances                                                               |
+| 73  | **Point System**                                | A tracking tool for contingency management where patients earn points for clean tests, attendance, and positive behaviors             |
+| 74  | **Treatment Plan**                              | A written, collaborative agreement between therapist and patient outlining goals, strategies, and timelines                           |
+| 75  | **Aftercare Plan**                              | A post-treatment plan for maintaining recovery, including ongoing support, coping strategies, and emergency contacts                  |
+| 76  | **Intensive Outpatient Program (IOP)**          | A structured treatment program providing 9-20 hours/week of therapy while living at home                                              |
+| 77  | **Partial Hospitalization Program (PHP)**       | A structured program providing 20+ hours/week of treatment, more intensive than IOP but less than inpatient                           |
+| 78  | **Residential Treatment**                       | 24-hour live-in treatment facility providing intensive therapy and structured living                                                  |
+| 79  | **Inpatient Detox**                             | Medically supervised withdrawal management in a hospital or specialized facility                                                      |
+| 80  | **Outpatient Treatment**                        | Regularly scheduled therapy sessions (1-2x/week) while living at home and maintaining daily activities                                |
+| 81  | **Case Management**                             | Coordinating services—housing, employment, healthcare, legal—to support recovery                                                      |
+| 82  | **Peer Support Specialist**                     | A person in recovery who uses their lived experience to support others in their recovery journey                                      |
+| 83  | **Recovery Community Organization**             | Peer-run organizations providing support, advocacy, and services for people in recovery                                               |
+| 84  | **Stigma**                                      | Negative attitudes, stereotypes, and discrimination directed at people with substance use disorders                                   |
+| 85  | **Language Matters**                            | Using person-first language (person with SUD) instead of stigmatizing labels (addict, junkie)                                         |
+| 86  | **Resilience**                                  | The ability to recover from setbacks and adapt to challenging circumstances in recovery                                               |
+| 87  | **Self-Efficacy**                               | Belief in one's own ability to succeed in specific situations or accomplish a goal—key for sustained recovery                         |
+| 88  | **Cravings Surfing**                            | A mindfulness technique where you observe a craving without acting on it, watching it rise and fall like a wave                       |
+| 89  | **Urge Surfing**                                | Same as cravings surfing—riding out the urge without giving in, recognizing it will pass                                              |
+| 90  | **Dialectical Abstinence**                      | Combining absolute commitment to abstinence with compassion for lapses, avoiding the abstinence violation effect                      |
+| 91  | **Abstinence Violation Effect**                 | When a lapse ("I slipped once") is interpreted as full relapse ("I'm an addict, I can't do this"), leading to giving up               |
+| 92  | **Lapse vs. Relapse**                           | A lapse is a single slip; a relapse is a return to the pre-treatment pattern of substance use                                         |
+| 93  | **Chain Analysis (DBT)**                        | A detailed examination of the sequence of events, thoughts, and emotions leading to a problematic behavior                            |
+| 94  | **Solution Analysis**                           | Identifying what could have been done differently at each link in the chain to prevent the problematic behavior                       |
+| 95  | **Motivational Scale**                          | A tool rating a patient's readiness for change on a 1-10 scale, used to guide interventions                                           |
+| 96  | **Pros and Cons Analysis (Decisional Balance)** | Weighing the benefits and costs of continuing substance use vs. making a change                                                       |
+| 97  | **Addiction Severity Index (ASI)**              | A comprehensive assessment tool measuring problem severity across multiple life domains                                               |
+| 98  | **AUDIT**                                       | Alcohol Use Disorders Identification Test: a 10-item screening tool for hazardous drinking                                            |
+| 99  | **DAST-10**                                     | Drug Abuse Screening Test: a 10-item screening tool for problematic drug use                                                          |
+| 100 | **CAGE Questionnaire**                          | A 4-question screening tool for alcohol problems (Cut down, Annoyed, Guilty, Eye-opener)                                              |
+| 101 | **ASAM Criteria**                               | American Society of Addiction Medicine criteria for assessing addiction severity and placing patients in appropriate treatment levels |
+| 102 | **Levels of Care**                              | A structured hierarchy of treatment intensity from early intervention to medically managed intensive inpatient                        |
+| 103 | **Recovery Milestone**                          | A meaningful achievement in recovery—30 days, 90 days, 1 year, etc.—that reinforces progress                                          |
+| 104 | **Values Clarification**                        | Identifying what matters most to you, which can serve as motivation for change and direction for recovery                             |
+| 105 | **Functional Analysis**                         | Understanding the antecedents, behaviors, and consequences (ABC) of substance use episodes                                            |
 
 ---
 
 ## 3. EATING DISORDERS
 
-| # | Term | Plain-English Definition |
-|---|------|--------------------------|
-| 1 | **Anorexia Nervosa** | Restricting food intake leading to significantly low body weight, with intense fear of gaining weight and distorted body image |
-| 2 | **Bulimia Nervosa** | Cycles of binge eating followed by compensatory behaviors (purging, excessive exercise, fasting) at least once a week for 3 months |
-| 3 | **Binge Eating Disorder (BED)** | Recurrent episodes of eating large amounts of food with a sense of loss of control, without regular compensatory behaviors |
-| 4 | **ARFID (Avoidant/Restrictive Food Intake Disorder)** | Significant limitation in the amount or type of food eaten—not driven by body image concerns but by sensory issues, fear of choking, or lack of interest in food |
-| 5 | **OSFED (Other Specified Feeding or Eating Disorder)** | Eating disorders that cause significant distress but don't meet full criteria for anorexia, bulimia, or BED |
-| 6 | **Body Dysmorphic Disorder (BDD)** | Excessive preoccupation with perceived flaws in physical appearance that are not observable or appear slight to others |
-| 7 | **Body Image Distortion** | Perceiving your body differently than it actually is—seeing fat where there is none, or seeing parts as larger/smaller than reality |
-| 8 | **Body Checking** | Repeatedly measuring, weighing, touching, or examining your body to monitor perceived changes |
-| 9 | **Food Rules** | Arbitrary, rigid rules about what, when, or how much to eat ("no carbs after 6pm," "must eat in even numbers") |
-| 10 | **Calorie Counting** | Obsessively tracking caloric intake, often with rigid daily limits that lead to restriction |
-| 11 | **Restriction** | Deliberately limiting food intake—skipping meals, eating tiny portions, eliminating food groups—to control weight |
-| 12 | **Binge Eating** | Eating a large amount of food in a short period with a subjective sense of loss of control |
-| 13 | **Purging** | Self-induced vomiting or misuse of laxatives, diuretics, or enemas to remove food from the body |
-| 14 | **Compensatory Behaviors** | Actions taken to "undo" the effects of eating—purging, excessive exercise, fasting, diet pills |
-| 15 | **Orthorexia** | An unhealthy obsession with eating "pure" or "clean" food, leading to severe restriction and distress |
-| 16 | **Night Eating Syndrome** | Eating a significant amount of food after the evening meal or during nighttime awakenings |
-| 17 | **Pica** | Eating non-nutritive, non-food substances (ice, paper, clay) regularly |
-| 18 | **Rumination Disorder** | Repeatedly bringing up food and re-chewing, re-swallowing, or spitting it out |
-| 19 | **Muscle Dysmorphia** | A subtype of body dysmorphia (more common in males) focused on not being muscular enough, leading to excessive exercise and protein obsession |
-| 20 | **Thin Ideal Internalization** | Adopting society's cultural standard of thinness as a personal goal and measure of self-worth |
-| 21 | **Weight Stigma** | Discrimination or prejudice based on a person's weight |
-| 22 | **Fat Talk** | Negative conversations about body size and weight among peers—"I feel so fat," "I need to lose 10 pounds" |
-| 23 | **Interoception** | The ability to sense internal body signals—hunger, fullness, pain, temperature—often impaired in eating disorders |
-| 24 | **Hunger Cues** | The body's signals that it needs food—stomach growling, low energy, difficulty concentrating |
-| 25 | **Fullness Cues** | The body's signals that it has had enough food—feeling satisfied, no longer interested in eating |
-| 26 | **Emotional Eating** | Using food to cope with emotions—stress, sadness, boredom—rather than physical hunger |
-| 27 | **Chronic Dieting** | Repeatedly attempting to lose weight through restrictive eating, often creating a cycle of restriction and bingeing |
-| 28 | **Yo-Yo Dieting (Weight Cycling)** | Repeatedly losing and regaining weight, which is harmful to physical and psychological health |
-| 29 | **BMI (Body Mass Index)** | A screening tool using height and weight—has significant limitations and should not be used in isolation for diagnosis |
-| 30 | **Atypical Anorexia** | Meeting all criteria for anorexia except the person's weight is within or above the "normal" range |
-| 31 | **Laxative Abuse** | Using laxatives to lose weight or feel "empty"—they don't prevent calorie absorption but cause dangerous dehydration |
-| 32 | **Diet Pill Abuse** | Misusing over-the-counter or prescription weight loss supplements |
-| 33 | **Metabolic Adaptation** | The body slowing its metabolism in response to prolonged caloric restriction, making weight loss harder and regain easier |
-| 34 | **Refeeding Syndrome** | A dangerous condition that can occur when nutrition is restored too quickly after starvation—electrolyte imbalances can be life-threatening |
-| 35 | **Renourishment** | The careful, medically supervised process of restoring nutrition to a malnourished person |
-| 36 | **Meal Plan** | A structured, personalized eating plan designed by a treatment team to ensure adequate nutrition and restore normal eating |
-| 37 | **Family-Based Treatment (FBT/Maudsley Approach)** | An evidence-based treatment for adolescent eating disorders where parents take an active role in nutritional rehabilitation |
-| 38 | **CBT-E (Enhanced CBT for Eating Disorders)** | The leading evidence-based psychotherapy for adult eating disorders, targeting the core psychopathology |
-| 39 | **DBT for Eating Disorders** | Adapting dialectical behavior therapy to address emotional dysregulation that drives binge-purge behaviors |
-| 40 | **Interpersonal Therapy (IPT)** | A time-limited therapy focusing on improving interpersonal relationships and communication to reduce eating disorder symptoms |
-| 41 | **Exposure Therapy for Eating Disorders** | Gradually confronting feared foods and eating situations to reduce avoidance |
-| 42 | **Fear Food Hierarchy** | A ranked list of avoided foods from least to most anxiety-provoking, used for systematic food exposure |
-| 43 | **Food Exposure** | Deliberately eating a feared food to learn that it doesn't lead to the catastrophic outcome expected |
-| 44 | **All-or-Nothing Thinking** | "I ate one cookie, I might as well eat the whole box"—black-and-white thinking that maintains disordered eating |
-| 45 | **Rigidity** | Inflexible adherence to rules about food, exercise, or body size that limits quality of life |
-| 46 | **Perfectionism** | Setting unrealistically high standards for oneself, often a maintaining factor in eating disorders |
-| 47 | **Self-Worth Contingent on Weight/Appearance** | Basing your entire sense of value on how you look or what you weigh |
-| 48 | **Treatment Team** | The group of professionals involved in eating disorder care: therapist, dietitian, physician, psychiatrist |
-| 49 | **Registered Dietitian (RD)** | A healthcare professional specializing in nutrition who helps restore normal eating patterns |
-| 50 | **Medical Stabilization** | Ensuring the patient is medically safe enough for psychotherapy—addressing malnutrition, electrolyte imbalances, vital signs |
-| 51 | **Vital Signs Monitoring** | Tracking heart rate, blood pressure, temperature, and orthostatic changes—key indicators of malnutrition severity |
-| 52 | **Bradycardia** | Abnormally slow heart rate (<60 bpm), a common and dangerous sign of malnutrition |
-| 53 | **Electrolyte Imbalance** | Dangerous changes in sodium, potassium, and other minerals caused by purging or starvation |
-| 54 | **Amenorrhea** | Loss of menstrual period, a sign that the body doesn't have enough energy to support reproductive function |
-| 55 | **Lanugo** | Fine, downy hair that grows on the body as a response to starvation, as the body tries to stay warm |
-| 56 | **Russell's Sign** | Calluses on the knuckles from self-induced vomiting |
-| 57 | **Edema** | Swelling caused by fluid retention, common during refeeding as the body adjusts to receiving adequate nutrition |
-| 58 | **Bone Density Loss (Osteoporosis)** | Weakening of bones due to malnutrition, common in long-term anorexia |
-| 59 | **Intuitive Eating** | A framework for eating that honors hunger, fullness, satisfaction, and body wisdom rather than external rules |
-| 60 | **Hunger-Fullness Scale** | A 1-10 scale used to reconnect with physical hunger and fullness cues |
-| 61 | **Gentle Nutrition** | Incorporating nutritional knowledge without rigidity, finding balance between nourishment and pleasure |
-| 62 | **Body Neutrality** | Accepting your body as it is without needing to love it or hate it—focusing on what your body does rather than how it looks |
-| 63 | **Body Respect** | Treating your body with care—feeding it adequately, moving it gently, resting it enough—regardless of how it looks |
-| 64 | **Self-Compassion** | Treating yourself with kindness during struggle, recognizing common humanity, and practicing mindfulness |
-| 65 | **Mirror Exposure Therapy** | Gradually looking at your body in a mirror while practicing neutral, non-judgmental descriptions |
-| 66 | **Cognitive Restructuring for ED** | Identifying and challenging eating-disorder-related thoughts—"If I eat carbs, I'll lose control" |
-| 67 | **Values Clarification** | Identifying what matters beyond weight and food—relationships, creativity, purpose, adventure |
-| 68 | **Relapse Prevention in ED** | Identifying warning signs, triggers, and developing a plan to maintain recovery |
-| 69 | **Warning Signs** | Early indicators that eating disorder symptoms may be returning—increased body checking, food anxiety, withdrawal |
-| 70 | **Recovery** | The process of developing a healthy relationship with food and body, not just symptom cessation |
-| 71 | **Full Recovery** | A state where eating disorder symptoms are no longer present and a person has a healthy relationship with food and body |
-| 72 | **Pro-Recovery Community** | Online and in-person communities that support eating disorder recovery and body positivity |
-| 73 | **Toxic Diet Culture** | The pervasive cultural belief that thinness equals health, worth, and morality |
-| 74 | **Health at Every Size (HAES)** | A framework that promotes health-enhancing behaviors without focusing on weight loss |
-| 75 | **Weight-Inclusive Care** | Healthcare that respects body diversity and focuses on health behaviors rather than weight numbers |
-| 76 | **Medical Comorbidities** | Physical health conditions that co-occur with eating disorders—cardiac issues, GI problems, dental erosion, osteoporosis |
-| 77 | **Psychiatric Comorbidities** | Mental health conditions that commonly co-occur with eating disorders—depression, anxiety, OCD, PTSD |
-| 78 | **Substance Use in ED** | Common co-occurrence of substance use (stimulants, laxatives, diuretics) with eating disorders |
-| 79 | **Exercise Abuse** | Compulsive, excessive exercise driven by the need to burn calories rather than for enjoyment or health |
-| 80 | **Exercise Dependence** | Inability to reduce exercise despite injury, illness, or negative consequences |
-| 81 | **Meal Support** | Providing structure and encouragement during meals to help someone maintain adequate eating |
-| 82 | **Exposure with Response Prevention (ERP) for ED** | Eating a feared food (exposure) without compensating (response prevention) |
-| 83 | **Cues of Safety** | Environmental and relational signals that communicate safety to a person with an eating disorder |
-| 84 | **Motivational Enhancement for ED** | Working with ambivalence about recovery, exploring the pros and cons of change |
-| 85 | **Stage of Change in ED** | Applying the transtheoretical model to eating disorder recovery readiness |
-| 86 | **EDE-Q** | Eating Disorder Examination Questionnaire: a self-report measure of eating disorder psychopathology |
-| 87 | **SCOFF Questionnaire** | A 5-question screening tool for eating disorders (Sick, Control, One stone, Fat, Food) |
-| 88 | **MEND** | Medicaid Eligibility for Nutrition Disorders—a program helping people access treatment |
-| 89 | **ANAD** | National Association of Anorexia Nervosa and Associated Disorders—provides support groups and resources |
-| 90 | **Levels of Care in ED** | A stepped care model: self-help → outpatient → IOP → PHP → residential → inpatient hospital |
-| 91 | **Stepped Care** | Starting with the least intensive intervention and increasing intensity if needed |
-| 92 | **Continuing Care** | Ongoing support after formal treatment to maintain recovery gains |
-| 93 | **Body Dissatisfaction** | Negative feelings about one's body size, shape, or weight |
-| 94 | **Overvaluation of Shape/Weight** | Defining self-worth primarily through body shape and weight |
-| 95 | **Bulimic Cognitions** | Thoughts specific to bulimia—concern about shape/weight, guilt about eating, fear of loss of control |
-| 96 | **Dietary Restraint** | Deliberately limiting food intake to control weight, which paradoxically increases binge eating risk |
-| 97 | **Cognitive Restraint** | Mentally restricting food ("I shouldn't eat that") even when not actively dieting |
-| 98 | **Disinhibition** | Losing control over eating, often triggered by breaking a food rule—"I already ruined my diet, I might as well keep eating" |
-| 99 | **Eating Disorder Not Otherwise Specified (EDNOS)** | An older diagnosis (now OSFED) for eating disorders that don't fit neatly into anorexia, bulimia, or BED categories |
-| 100 | **Gender Considerations in ED** | Eating disorders affect all genders, but presentation may differ—males may focus more on muscularity; non-binary individuals may have unique body-image challenges |
-| 101 | **Cultural Considerations in ED** | Cultural background influences body ideals, food practices, and how eating disorders manifest and are perceived |
-| 102 | **Diabulimia** | Deliberately restricting insulin to lose weight in type 1 diabetes—extremely dangerous |
-| 103 | **Chewing and Spitting** | Chewing food and spitting it out to taste without swallowing calories—a form of disordered eating |
-| 104 | **Food Anxiety** | Excessive worry and distress around food, eating, or meal times |
-| 105 | **Recovery Record** | A meal tracking app that promotes recovery-oriented eating behaviors |
+| #   | Term                                                   | Plain-English Definition                                                                                                                                           |
+| --- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1   | **Anorexia Nervosa**                                   | Restricting food intake leading to significantly low body weight, with intense fear of gaining weight and distorted body image                                     |
+| 2   | **Bulimia Nervosa**                                    | Cycles of binge eating followed by compensatory behaviors (purging, excessive exercise, fasting) at least once a week for 3 months                                 |
+| 3   | **Binge Eating Disorder (BED)**                        | Recurrent episodes of eating large amounts of food with a sense of loss of control, without regular compensatory behaviors                                         |
+| 4   | **ARFID (Avoidant/Restrictive Food Intake Disorder)**  | Significant limitation in the amount or type of food eaten—not driven by body image concerns but by sensory issues, fear of choking, or lack of interest in food   |
+| 5   | **OSFED (Other Specified Feeding or Eating Disorder)** | Eating disorders that cause significant distress but don't meet full criteria for anorexia, bulimia, or BED                                                        |
+| 6   | **Body Dysmorphic Disorder (BDD)**                     | Excessive preoccupation with perceived flaws in physical appearance that are not observable or appear slight to others                                             |
+| 7   | **Body Image Distortion**                              | Perceiving your body differently than it actually is—seeing fat where there is none, or seeing parts as larger/smaller than reality                                |
+| 8   | **Body Checking**                                      | Repeatedly measuring, weighing, touching, or examining your body to monitor perceived changes                                                                      |
+| 9   | **Food Rules**                                         | Arbitrary, rigid rules about what, when, or how much to eat ("no carbs after 6pm," "must eat in even numbers")                                                     |
+| 10  | **Calorie Counting**                                   | Obsessively tracking caloric intake, often with rigid daily limits that lead to restriction                                                                        |
+| 11  | **Restriction**                                        | Deliberately limiting food intake—skipping meals, eating tiny portions, eliminating food groups—to control weight                                                  |
+| 12  | **Binge Eating**                                       | Eating a large amount of food in a short period with a subjective sense of loss of control                                                                         |
+| 13  | **Purging**                                            | Self-induced vomiting or misuse of laxatives, diuretics, or enemas to remove food from the body                                                                    |
+| 14  | **Compensatory Behaviors**                             | Actions taken to "undo" the effects of eating—purging, excessive exercise, fasting, diet pills                                                                     |
+| 15  | **Orthorexia**                                         | An unhealthy obsession with eating "pure" or "clean" food, leading to severe restriction and distress                                                              |
+| 16  | **Night Eating Syndrome**                              | Eating a significant amount of food after the evening meal or during nighttime awakenings                                                                          |
+| 17  | **Pica**                                               | Eating non-nutritive, non-food substances (ice, paper, clay) regularly                                                                                             |
+| 18  | **Rumination Disorder**                                | Repeatedly bringing up food and re-chewing, re-swallowing, or spitting it out                                                                                      |
+| 19  | **Muscle Dysmorphia**                                  | A subtype of body dysmorphia (more common in males) focused on not being muscular enough, leading to excessive exercise and protein obsession                      |
+| 20  | **Thin Ideal Internalization**                         | Adopting society's cultural standard of thinness as a personal goal and measure of self-worth                                                                      |
+| 21  | **Weight Stigma**                                      | Discrimination or prejudice based on a person's weight                                                                                                             |
+| 22  | **Fat Talk**                                           | Negative conversations about body size and weight among peers—"I feel so fat," "I need to lose 10 pounds"                                                          |
+| 23  | **Interoception**                                      | The ability to sense internal body signals—hunger, fullness, pain, temperature—often impaired in eating disorders                                                  |
+| 24  | **Hunger Cues**                                        | The body's signals that it needs food—stomach growling, low energy, difficulty concentrating                                                                       |
+| 25  | **Fullness Cues**                                      | The body's signals that it has had enough food—feeling satisfied, no longer interested in eating                                                                   |
+| 26  | **Emotional Eating**                                   | Using food to cope with emotions—stress, sadness, boredom—rather than physical hunger                                                                              |
+| 27  | **Chronic Dieting**                                    | Repeatedly attempting to lose weight through restrictive eating, often creating a cycle of restriction and bingeing                                                |
+| 28  | **Yo-Yo Dieting (Weight Cycling)**                     | Repeatedly losing and regaining weight, which is harmful to physical and psychological health                                                                      |
+| 29  | **BMI (Body Mass Index)**                              | A screening tool using height and weight—has significant limitations and should not be used in isolation for diagnosis                                             |
+| 30  | **Atypical Anorexia**                                  | Meeting all criteria for anorexia except the person's weight is within or above the "normal" range                                                                 |
+| 31  | **Laxative Abuse**                                     | Using laxatives to lose weight or feel "empty"—they don't prevent calorie absorption but cause dangerous dehydration                                               |
+| 32  | **Diet Pill Abuse**                                    | Misusing over-the-counter or prescription weight loss supplements                                                                                                  |
+| 33  | **Metabolic Adaptation**                               | The body slowing its metabolism in response to prolonged caloric restriction, making weight loss harder and regain easier                                          |
+| 34  | **Refeeding Syndrome**                                 | A dangerous condition that can occur when nutrition is restored too quickly after starvation—electrolyte imbalances can be life-threatening                        |
+| 35  | **Renourishment**                                      | The careful, medically supervised process of restoring nutrition to a malnourished person                                                                          |
+| 36  | **Meal Plan**                                          | A structured, personalized eating plan designed by a treatment team to ensure adequate nutrition and restore normal eating                                         |
+| 37  | **Family-Based Treatment (FBT/Maudsley Approach)**     | An evidence-based treatment for adolescent eating disorders where parents take an active role in nutritional rehabilitation                                        |
+| 38  | **CBT-E (Enhanced CBT for Eating Disorders)**          | The leading evidence-based psychotherapy for adult eating disorders, targeting the core psychopathology                                                            |
+| 39  | **DBT for Eating Disorders**                           | Adapting dialectical behavior therapy to address emotional dysregulation that drives binge-purge behaviors                                                         |
+| 40  | **Interpersonal Therapy (IPT)**                        | A time-limited therapy focusing on improving interpersonal relationships and communication to reduce eating disorder symptoms                                      |
+| 41  | **Exposure Therapy for Eating Disorders**              | Gradually confronting feared foods and eating situations to reduce avoidance                                                                                       |
+| 42  | **Fear Food Hierarchy**                                | A ranked list of avoided foods from least to most anxiety-provoking, used for systematic food exposure                                                             |
+| 43  | **Food Exposure**                                      | Deliberately eating a feared food to learn that it doesn't lead to the catastrophic outcome expected                                                               |
+| 44  | **All-or-Nothing Thinking**                            | "I ate one cookie, I might as well eat the whole box"—black-and-white thinking that maintains disordered eating                                                    |
+| 45  | **Rigidity**                                           | Inflexible adherence to rules about food, exercise, or body size that limits quality of life                                                                       |
+| 46  | **Perfectionism**                                      | Setting unrealistically high standards for oneself, often a maintaining factor in eating disorders                                                                 |
+| 47  | **Self-Worth Contingent on Weight/Appearance**         | Basing your entire sense of value on how you look or what you weigh                                                                                                |
+| 48  | **Treatment Team**                                     | The group of professionals involved in eating disorder care: therapist, dietitian, physician, psychiatrist                                                         |
+| 49  | **Registered Dietitian (RD)**                          | A healthcare professional specializing in nutrition who helps restore normal eating patterns                                                                       |
+| 50  | **Medical Stabilization**                              | Ensuring the patient is medically safe enough for psychotherapy—addressing malnutrition, electrolyte imbalances, vital signs                                       |
+| 51  | **Vital Signs Monitoring**                             | Tracking heart rate, blood pressure, temperature, and orthostatic changes—key indicators of malnutrition severity                                                  |
+| 52  | **Bradycardia**                                        | Abnormally slow heart rate (<60 bpm), a common and dangerous sign of malnutrition                                                                                  |
+| 53  | **Electrolyte Imbalance**                              | Dangerous changes in sodium, potassium, and other minerals caused by purging or starvation                                                                         |
+| 54  | **Amenorrhea**                                         | Loss of menstrual period, a sign that the body doesn't have enough energy to support reproductive function                                                         |
+| 55  | **Lanugo**                                             | Fine, downy hair that grows on the body as a response to starvation, as the body tries to stay warm                                                                |
+| 56  | **Russell's Sign**                                     | Calluses on the knuckles from self-induced vomiting                                                                                                                |
+| 57  | **Edema**                                              | Swelling caused by fluid retention, common during refeeding as the body adjusts to receiving adequate nutrition                                                    |
+| 58  | **Bone Density Loss (Osteoporosis)**                   | Weakening of bones due to malnutrition, common in long-term anorexia                                                                                               |
+| 59  | **Intuitive Eating**                                   | A framework for eating that honors hunger, fullness, satisfaction, and body wisdom rather than external rules                                                      |
+| 60  | **Hunger-Fullness Scale**                              | A 1-10 scale used to reconnect with physical hunger and fullness cues                                                                                              |
+| 61  | **Gentle Nutrition**                                   | Incorporating nutritional knowledge without rigidity, finding balance between nourishment and pleasure                                                             |
+| 62  | **Body Neutrality**                                    | Accepting your body as it is without needing to love it or hate it—focusing on what your body does rather than how it looks                                        |
+| 63  | **Body Respect**                                       | Treating your body with care—feeding it adequately, moving it gently, resting it enough—regardless of how it looks                                                 |
+| 64  | **Self-Compassion**                                    | Treating yourself with kindness during struggle, recognizing common humanity, and practicing mindfulness                                                           |
+| 65  | **Mirror Exposure Therapy**                            | Gradually looking at your body in a mirror while practicing neutral, non-judgmental descriptions                                                                   |
+| 66  | **Cognitive Restructuring for ED**                     | Identifying and challenging eating-disorder-related thoughts—"If I eat carbs, I'll lose control"                                                                   |
+| 67  | **Values Clarification**                               | Identifying what matters beyond weight and food—relationships, creativity, purpose, adventure                                                                      |
+| 68  | **Relapse Prevention in ED**                           | Identifying warning signs, triggers, and developing a plan to maintain recovery                                                                                    |
+| 69  | **Warning Signs**                                      | Early indicators that eating disorder symptoms may be returning—increased body checking, food anxiety, withdrawal                                                  |
+| 70  | **Recovery**                                           | The process of developing a healthy relationship with food and body, not just symptom cessation                                                                    |
+| 71  | **Full Recovery**                                      | A state where eating disorder symptoms are no longer present and a person has a healthy relationship with food and body                                            |
+| 72  | **Pro-Recovery Community**                             | Online and in-person communities that support eating disorder recovery and body positivity                                                                         |
+| 73  | **Toxic Diet Culture**                                 | The pervasive cultural belief that thinness equals health, worth, and morality                                                                                     |
+| 74  | **Health at Every Size (HAES)**                        | A framework that promotes health-enhancing behaviors without focusing on weight loss                                                                               |
+| 75  | **Weight-Inclusive Care**                              | Healthcare that respects body diversity and focuses on health behaviors rather than weight numbers                                                                 |
+| 76  | **Medical Comorbidities**                              | Physical health conditions that co-occur with eating disorders—cardiac issues, GI problems, dental erosion, osteoporosis                                           |
+| 77  | **Psychiatric Comorbidities**                          | Mental health conditions that commonly co-occur with eating disorders—depression, anxiety, OCD, PTSD                                                               |
+| 78  | **Substance Use in ED**                                | Common co-occurrence of substance use (stimulants, laxatives, diuretics) with eating disorders                                                                     |
+| 79  | **Exercise Abuse**                                     | Compulsive, excessive exercise driven by the need to burn calories rather than for enjoyment or health                                                             |
+| 80  | **Exercise Dependence**                                | Inability to reduce exercise despite injury, illness, or negative consequences                                                                                     |
+| 81  | **Meal Support**                                       | Providing structure and encouragement during meals to help someone maintain adequate eating                                                                        |
+| 82  | **Exposure with Response Prevention (ERP) for ED**     | Eating a feared food (exposure) without compensating (response prevention)                                                                                         |
+| 83  | **Cues of Safety**                                     | Environmental and relational signals that communicate safety to a person with an eating disorder                                                                   |
+| 84  | **Motivational Enhancement for ED**                    | Working with ambivalence about recovery, exploring the pros and cons of change                                                                                     |
+| 85  | **Stage of Change in ED**                              | Applying the transtheoretical model to eating disorder recovery readiness                                                                                          |
+| 86  | **EDE-Q**                                              | Eating Disorder Examination Questionnaire: a self-report measure of eating disorder psychopathology                                                                |
+| 87  | **SCOFF Questionnaire**                                | A 5-question screening tool for eating disorders (Sick, Control, One stone, Fat, Food)                                                                             |
+| 88  | **MEND**                                               | Medicaid Eligibility for Nutrition Disorders—a program helping people access treatment                                                                             |
+| 89  | **ANAD**                                               | National Association of Anorexia Nervosa and Associated Disorders—provides support groups and resources                                                            |
+| 90  | **Levels of Care in ED**                               | A stepped care model: self-help → outpatient → IOP → PHP → residential → inpatient hospital                                                                        |
+| 91  | **Stepped Care**                                       | Starting with the least intensive intervention and increasing intensity if needed                                                                                  |
+| 92  | **Continuing Care**                                    | Ongoing support after formal treatment to maintain recovery gains                                                                                                  |
+| 93  | **Body Dissatisfaction**                               | Negative feelings about one's body size, shape, or weight                                                                                                          |
+| 94  | **Overvaluation of Shape/Weight**                      | Defining self-worth primarily through body shape and weight                                                                                                        |
+| 95  | **Bulimic Cognitions**                                 | Thoughts specific to bulimia—concern about shape/weight, guilt about eating, fear of loss of control                                                               |
+| 96  | **Dietary Restraint**                                  | Deliberately limiting food intake to control weight, which paradoxically increases binge eating risk                                                               |
+| 97  | **Cognitive Restraint**                                | Mentally restricting food ("I shouldn't eat that") even when not actively dieting                                                                                  |
+| 98  | **Disinhibition**                                      | Losing control over eating, often triggered by breaking a food rule—"I already ruined my diet, I might as well keep eating"                                        |
+| 99  | **Eating Disorder Not Otherwise Specified (EDNOS)**    | An older diagnosis (now OSFED) for eating disorders that don't fit neatly into anorexia, bulimia, or BED categories                                                |
+| 100 | **Gender Considerations in ED**                        | Eating disorders affect all genders, but presentation may differ—males may focus more on muscularity; non-binary individuals may have unique body-image challenges |
+| 101 | **Cultural Considerations in ED**                      | Cultural background influences body ideals, food practices, and how eating disorders manifest and are perceived                                                    |
+| 102 | **Diabulimia**                                         | Deliberately restricting insulin to lose weight in type 1 diabetes—extremely dangerous                                                                             |
+| 103 | **Chewing and Spitting**                               | Chewing food and spitting it out to taste without swallowing calories—a form of disordered eating                                                                  |
+| 104 | **Food Anxiety**                                       | Excessive worry and distress around food, eating, or meal times                                                                                                    |
+| 105 | **Recovery Record**                                    | A meal tracking app that promotes recovery-oriented eating behaviors                                                                                               |
 
 ---
 
 ## 4. ADHD / EXECUTIVE FUNCTION
 
-| # | Term | Plain-English Definition |
-|---|------|--------------------------|
-| 1 | **Attention-Deficit/Hyperactivity Disorder (ADHD)** | A neurodevelopmental condition characterized by persistent patterns of inattention, hyperactivity, and impulsivity that interfere with functioning |
-| 2 | **Predominantly Inattentive Presentation (ADHD-I)** | ADHD with primary symptoms of difficulty sustaining attention, organization, and follow-through (formerly ADD) |
-| 3 | **Predominantly Hyperactive-Impulsive Presentation (ADHD-HI)** | ADHD with primary symptoms of excessive movement, fidgeting, talking, and acting without thinking |
-| 4 | **Combined Presentation (ADHD-C)** | Meeting criteria for both inattentive and hyperactive-impulsive symptoms |
-| 5 | **Executive Functions** | A set of mental skills managed by the prefrontal cortex: planning, organizing, starting tasks, sustaining attention, regulating emotions, and completing tasks |
-| 6 | **Working Memory** | The ability to hold and manipulate information in your mind for short periods—"mental scratchpad" |
-| 7 | **Task Initiation** | The ability to start a task without excessive procrastination or paralysis |
-| 8 | **Time Blindness** | Difficulty perceiving the passage of time, leading to chronic lateness, underestimating task duration, and poor time management |
-| 9 | **Hyperfocus** | An intense, prolonged concentration on a highly engaging activity, often losing track of time and neglecting other responsibilities |
-| 10 | **Distractibility** | Being easily pulled away from tasks by internal thoughts or external stimuli |
-| 11 | **Impulsivity** | Acting on a whim without considering consequences—interrupting, making rash decisions, risk-taking |
-| 12 | **Hyperactivity** | Excessive physical movement, restlessness, and difficulty sitting still (may manifest as inner restlessness in adults) |
-| 13 | **Emotional Dysregulation** | Difficulty managing emotional responses—quick to anger, easily frustrated, intense reactions that are disproportionate to the situation |
-| 14 | **Rejection Sensitive Dysphoria (RSD)** | An intense emotional pain triggered by perceived rejection, criticism, or failure, common in ADHD |
-| 15 | **Dopamine** | A neurotransmitter involved in motivation, reward, and attention—often dysregulated in ADHD |
-| 16 | **Dopamine Deficit** | The theory that ADHD involves reduced dopamine signaling, making it harder to sustain motivation for non-stimulating tasks |
-| 17 | **Reward Deficiency** | Difficulty experiencing satisfaction from tasks that don't provide immediate, intense rewards |
-| 18 | **Novelty-Seeking** | A strong drive toward new experiences and stimulation, which can lead to starting many projects but finishing few |
-| 19 | **Stimulus-Driven Attention** | Being pulled toward whatever is most interesting or novel in the environment, rather than what's most important |
-| 20 | **Prioritization Difficulty** | Struggling to determine what's most important, leading to either doing nothing or focusing on the wrong things |
-| 21 | **Procrastination** | Delaying or avoiding tasks, often due to overwhelm, perfectionism, or difficulty estimating time needed |
-| 22 | **Task Paralysis** | Being so overwhelmed by a task that you can't start at all—a freeze response to executive dysfunction |
-| 23 | **Decision Fatigue** | Becoming overwhelmed and unable to make good decisions after too many choices throughout the day |
-| 24 | **All-or-Nothing Thinking in ADHD** | "If I can't do it perfectly, why bother starting?"—perfectionism that fuels procrastination |
-| 25 | **Externalizing Executive Functions** | Using outside tools (timers, lists, apps, body doubling) to compensate for internal executive function challenges |
-| 26 | **Body Doubling** | Working alongside another person (in person or virtually) to increase accountability and focus |
-| 27 | **ADHD Coaching** | A structured partnership to build skills, strategies, and accountability for managing ADHD in daily life |
-| 28 | **CBT for ADHD** | Cognitive behavioral therapy adapted to address ADHD-specific challenges: procrastination, disorganization, time management, emotional regulation |
-| 29 | **Organizational Skills Training** | Teaching concrete strategies for managing possessions, space, and information (filing systems, checklists, routines) |
-| 30 | **Time Management Skills** | Learning to estimate time, use timers, break tasks into chunks, and build buffer time |
-| 31 | **Environmental Modification** | Changing your physical space to reduce distractions and increase structure (visual reminders, designated spots, minimal clutter) |
-| 32 | **Visual Cues/Reminders** | Using visible prompts (sticky notes, whiteboards, open bins) to make invisible tasks visible |
-| 33 | **Checklists** | Step-by-step lists that reduce reliance on memory and provide a sense of progress when items are checked off |
-| 34 | **Routines/Habits** | Automating regular activities so they require less executive function to initiate and complete |
-| 35 | **Chunking** | Breaking large tasks into smaller, manageable steps with clear completion points |
-| 36 | **The Pomodoro Technique** | Working in focused 25-minute intervals with 5-minute breaks, providing structure and frequent rewards |
-| 37 | **Gamification** | Adding game-like elements (points, levels, rewards) to tasks to increase motivation and engagement |
-| 38 | **Stimulant Medication** | First-line ADHD medication (methylphenidate, amphetamine) that increases dopamine and norepinephrine to improve focus and impulse control |
-| 39 | **Non-Stimulant Medication** | Alternative ADHD medications (atomoxetine, guanfacine, clonidine) that work through different mechanisms |
-| 40 | **Medication Titration** | The process of adjusting medication dosage to find the optimal balance of benefits and side effects |
-| 41 | **Medication Breaks (Drug Holidays)** | Periodically stopping ADHD medication to reassess need and manage tolerance (done under medical supervision) |
-| 42 | **Side Effects of Stimulants** | Common effects: decreased appetite, weight loss, insomnia, irritability, increased heart rate, anxiety |
-| 43 | **Sleep Hygiene** | Practices that promote consistent, quality sleep—regular schedule, cool room, no screens before bed, limit caffeine |
-| 44 | **ADHD and Sleep** | Many people with ADHD have delayed sleep phase, insomnia, or restless sleep, worsening daytime symptoms |
-| 45 | **Comorbidity in ADHD** | Other conditions that commonly co-occur: anxiety (30-50%), depression (20-30%), learning disabilities, ODD, substance use |
-| 46 | **ADHD and Anxiety** | Overlapping symptoms (restlessness, difficulty concentrating) but different underlying mechanisms—must be distinguished for proper treatment |
-| 47 | **ADHD and Depression** | Chronic underachievement, rejection, and frustration from ADHD can lead to secondary depression |
-| 48 | **Oppositional Defiant Disorder (ODD)** | A pattern of angry/irritable mood, argumentative/defiant behavior, and vindictiveness—common comorbidity with childhood ADHD |
-| 49 | **Learning Disabilities** | Conditions like dyslexia, dyscalculia, and dysgraphia that co-occur with ADHD and affect specific academic skills |
-| 50 | **Autistic Traits in ADHD** | Overlap between ADHD and autism spectrum traits—sensory sensitivities, social difficulties, intense interests |
-| 51 | **Sensory Processing** | How the nervous system receives and responds to sensory information—often atypical in ADHD (sensitivity to noise, touch, light) |
-| 52 | **Sensory Seeking** | Craving intense sensory input—fidgeting, movement, music, texture—as a way to regulate arousal |
-| 53 | **Sensory Avoidance** | Being overwhelmed by sensory input—loud noises, bright lights, crowded spaces—leading to withdrawal |
-| 54 | **Fidgeting** | Small, repetitive movements (foot tapping, pen clicking) that actually help some people with ADHD focus by regulating arousal |
-| 55 | **Interpersonal Challenges in ADHD** | Difficulty with turn-taking, reading social cues, interrupting, oversharing, and maintaining friendships |
-| 56 | **Time Blindness Compensation** | Using alarms, timers, countdowns, visual clocks, and time-blocking to counteract poor time perception |
-| 57 | **The ADHD Tax** | The extra cost (financial, emotional, relational) of ADHD-related mistakes—late fees, lost items, missed deadlines, damaged relationships |
-| 58 | **Shame Spiral in ADHD** | The cycle: make ADHD mistake → feel ashamed → avoid responsibility → make more mistakes → more shame |
-| 59 | **ADHD Identity** | Understanding ADHD as a neurodevelopmental difference, not a character flaw—reducing shame and building self-acceptance |
-| 60 | **Strengths-Based Approach** | Focusing on what people with ADHD do well—creativity, energy, hyperfocus, problem-solving, enthusiasm—alongside addressing challenges |
-| 61 | **Creativity in ADHD** | The association between ADHD and creative thinking—divergent thinking, idea generation, unconventional problem-solving |
-| 62 | **Hyperfocus as Strength** | When channeled productively, hyperfocus can lead to deep expertise, creative output, and high achievement |
-| 63 | **ADHD in Girls/Women** | Often underdiagnosed because symptoms present as inattentiveness rather than hyperactivity, and are masked by coping strategies |
-| 64 | **ADHD in Adults** | ADHD persists into adulthood for ~60% of children; adult ADHD affects work, relationships, and daily functioning |
-| 65 | **Late ADHD Diagnosis** | Many adults receive ADHD diagnosis later in life, often after struggling for years without understanding why |
-| 66 | **ADHD Burnout** | Chronic overextension and masking leading to exhaustion, reduced functioning, and emotional collapse |
-| 67 | **Masking in ADHD** | Consciously or unconsciously hiding ADHD symptoms to appear "normal," which is exhausting and unsustainable |
-| 68 | **ADHD Coaching Tools** | Planners designed for ADHD brains (color-coded, visual, flexible), focus apps, accountability check-ins, routine builders |
-| 69 | **Accountability Partners** | Regular check-ins with a coach, friend, or group to maintain progress on goals |
-| 70 | **Goal Setting for ADHD** | Using SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound) with additional ADHD accommodations |
-| 71 | **Break Tasks Down** | Splitting overwhelming tasks into concrete, doable steps—"write the paper" becomes "open the document, write one sentence" |
-| 72 | **Implementation Intentions** | If-then planning: "When [situation X happens], I will [do Y]"—reduces executive function demand |
-| 73 | **Habit Stacking** | Attaching a new habit to an existing one—"After I brush my teeth, I will take my medication" |
-| 74 | **Energy Management** | Matching high-demand tasks to peak energy times and low-demand tasks to low-energy periods |
-| 75 | **ADHD Spiral** | The pattern where one missed task cascades into overwhelm and avoidance of everything |
-| 76 | **Impulse Control Strategies** | Techniques for pausing before acting: counting to 10, writing it down first, sleeping on decisions |
-| 77 | **Emotional Regulation for ADHD** | Learning to identify emotions early, name them, and choose responses rather than reacting immediately |
-| 78 | **Mindfulness for ADHD** | Adapted mindfulness practices (shorter, movement-based) that improve attention and emotional regulation |
-| 79 | **Exercise for ADHD** | Regular physical activity improves focus, mood, and executive function—both aerobic and resistance training help |
-| 80 | **Nutrition and ADHD** | Adequate protein, omega-3s, and regular meals support brain function; excessive sugar and processed food may worsen symptoms |
-| 81 | **Technology and ADHD** | The double-edged sword: phones/apps can be tools for organization but also major sources of distraction |
-| 82 | **Screen Time Management** | Strategies for managing digital distraction—app blockers, phone-free zones, notification management |
-| 83 | **Phone Addiction in ADHD** | The tendency to compulsively check phones due to dopamine-seeking, worsening time blindness and procrastination |
-| 84 | **Financial Management in ADHD** | Challenges with budgeting, impulse spending, bill-paying—addressed through automation, visual budgeting, accountability |
-| 85 | **Relationship Management in ADHD** | Addressing the impact of ADHD symptoms on partnerships—forgetfulness, emotional reactivity, inattention during conversations |
-| 86 | **Parenting with ADHD** | Challenges of managing children's needs when you struggle with executive function—self-compassion and structure are key |
-| 87 | **Workplace Accommodations** | Legal and practical adjustments: flexible schedule, quiet workspace, written instructions, regular check-ins |
-| 88 | **ADHD and Substance Use** | Higher rates of substance use disorders in ADHD, often as self-medication for understimulation or emotional pain |
-| 89 | **ADHD and Eating Disorders** | Impulsive eating, emotional eating, and difficulty with meal planning are common in ADHD |
-| 90 | **ADHD and Anxiety** | Uncertainty intolerance and past failures create anxiety; anxiety then worsens executive function |
-| 91 | **ADHD and Depression** | Underachievement, social difficulties, and chronic frustration contribute to depression risk |
-| 92 | **ADHD and Trauma** | Higher rates of adverse childhood experiences in ADHD, and vice versa—both affect brain development |
-| 93 | **ASRS (Adult ADHD Self-Report Scale)** | A widely used screening tool for ADHD in adults |
-| 94 | **Vanderbilt Rating Scales** | Standardized parent and teacher rating scales for diagnosing ADHD in children |
-| 95 | **Conners Scale** | Another widely used ADHD assessment scale for children and adolescents |
-| 96 | **Neuropsychological Testing** | Comprehensive assessment of cognitive functions (attention, memory, executive function) to differentiate ADHD from other conditions |
-| 97 | **SLD (Specific Learning Disability)** | A disorder in basic psychological processes involved in understanding or using language—must be ruled out as primary cause of attention difficulties |
-| 98 | **Executive Function Assessment** | Tests measuring planning, organization, cognitive flexibility, inhibition, and working memory |
-| 99 | **ADHD Severity Scales** | Tools like the WURS (Wender Utah Rating Scale) for retrospective childhood symptom assessment |
-| 100 | **504 Plan** | A US educational plan providing accommodations for students with ADHD or learning disabilities |
-| 101 | **IEP (Individualized Education Program)** | A legally binding plan for students with disabilities requiring specialized instruction and services |
-| 102 | **Transition Planning** | Helping adolescents with ADHD develop skills for the transition to college, work, or independent living |
-| 103 | **College ADHD Support** | Resources and accommodations for students with ADHD in higher education |
-| 104 | **ADHD Support Groups** | Peer communities (CHADD, ADDA, online groups) providing shared experiences and strategies |
-| 105 | **Psychoeducation for ADHD** | Teaching patients and families about ADHD neuroscience, symptoms, and evidence-based management strategies |
+| #   | Term                                                           | Plain-English Definition                                                                                                                                       |
+| --- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Attention-Deficit/Hyperactivity Disorder (ADHD)**            | A neurodevelopmental condition characterized by persistent patterns of inattention, hyperactivity, and impulsivity that interfere with functioning             |
+| 2   | **Predominantly Inattentive Presentation (ADHD-I)**            | ADHD with primary symptoms of difficulty sustaining attention, organization, and follow-through (formerly ADD)                                                 |
+| 3   | **Predominantly Hyperactive-Impulsive Presentation (ADHD-HI)** | ADHD with primary symptoms of excessive movement, fidgeting, talking, and acting without thinking                                                              |
+| 4   | **Combined Presentation (ADHD-C)**                             | Meeting criteria for both inattentive and hyperactive-impulsive symptoms                                                                                       |
+| 5   | **Executive Functions**                                        | A set of mental skills managed by the prefrontal cortex: planning, organizing, starting tasks, sustaining attention, regulating emotions, and completing tasks |
+| 6   | **Working Memory**                                             | The ability to hold and manipulate information in your mind for short periods—"mental scratchpad"                                                              |
+| 7   | **Task Initiation**                                            | The ability to start a task without excessive procrastination or paralysis                                                                                     |
+| 8   | **Time Blindness**                                             | Difficulty perceiving the passage of time, leading to chronic lateness, underestimating task duration, and poor time management                                |
+| 9   | **Hyperfocus**                                                 | An intense, prolonged concentration on a highly engaging activity, often losing track of time and neglecting other responsibilities                            |
+| 10  | **Distractibility**                                            | Being easily pulled away from tasks by internal thoughts or external stimuli                                                                                   |
+| 11  | **Impulsivity**                                                | Acting on a whim without considering consequences—interrupting, making rash decisions, risk-taking                                                             |
+| 12  | **Hyperactivity**                                              | Excessive physical movement, restlessness, and difficulty sitting still (may manifest as inner restlessness in adults)                                         |
+| 13  | **Emotional Dysregulation**                                    | Difficulty managing emotional responses—quick to anger, easily frustrated, intense reactions that are disproportionate to the situation                        |
+| 14  | **Rejection Sensitive Dysphoria (RSD)**                        | An intense emotional pain triggered by perceived rejection, criticism, or failure, common in ADHD                                                              |
+| 15  | **Dopamine**                                                   | A neurotransmitter involved in motivation, reward, and attention—often dysregulated in ADHD                                                                    |
+| 16  | **Dopamine Deficit**                                           | The theory that ADHD involves reduced dopamine signaling, making it harder to sustain motivation for non-stimulating tasks                                     |
+| 17  | **Reward Deficiency**                                          | Difficulty experiencing satisfaction from tasks that don't provide immediate, intense rewards                                                                  |
+| 18  | **Novelty-Seeking**                                            | A strong drive toward new experiences and stimulation, which can lead to starting many projects but finishing few                                              |
+| 19  | **Stimulus-Driven Attention**                                  | Being pulled toward whatever is most interesting or novel in the environment, rather than what's most important                                                |
+| 20  | **Prioritization Difficulty**                                  | Struggling to determine what's most important, leading to either doing nothing or focusing on the wrong things                                                 |
+| 21  | **Procrastination**                                            | Delaying or avoiding tasks, often due to overwhelm, perfectionism, or difficulty estimating time needed                                                        |
+| 22  | **Task Paralysis**                                             | Being so overwhelmed by a task that you can't start at all—a freeze response to executive dysfunction                                                          |
+| 23  | **Decision Fatigue**                                           | Becoming overwhelmed and unable to make good decisions after too many choices throughout the day                                                               |
+| 24  | **All-or-Nothing Thinking in ADHD**                            | "If I can't do it perfectly, why bother starting?"—perfectionism that fuels procrastination                                                                    |
+| 25  | **Externalizing Executive Functions**                          | Using outside tools (timers, lists, apps, body doubling) to compensate for internal executive function challenges                                              |
+| 26  | **Body Doubling**                                              | Working alongside another person (in person or virtually) to increase accountability and focus                                                                 |
+| 27  | **ADHD Coaching**                                              | A structured partnership to build skills, strategies, and accountability for managing ADHD in daily life                                                       |
+| 28  | **CBT for ADHD**                                               | Cognitive behavioral therapy adapted to address ADHD-specific challenges: procrastination, disorganization, time management, emotional regulation              |
+| 29  | **Organizational Skills Training**                             | Teaching concrete strategies for managing possessions, space, and information (filing systems, checklists, routines)                                           |
+| 30  | **Time Management Skills**                                     | Learning to estimate time, use timers, break tasks into chunks, and build buffer time                                                                          |
+| 31  | **Environmental Modification**                                 | Changing your physical space to reduce distractions and increase structure (visual reminders, designated spots, minimal clutter)                               |
+| 32  | **Visual Cues/Reminders**                                      | Using visible prompts (sticky notes, whiteboards, open bins) to make invisible tasks visible                                                                   |
+| 33  | **Checklists**                                                 | Step-by-step lists that reduce reliance on memory and provide a sense of progress when items are checked off                                                   |
+| 34  | **Routines/Habits**                                            | Automating regular activities so they require less executive function to initiate and complete                                                                 |
+| 35  | **Chunking**                                                   | Breaking large tasks into smaller, manageable steps with clear completion points                                                                               |
+| 36  | **The Pomodoro Technique**                                     | Working in focused 25-minute intervals with 5-minute breaks, providing structure and frequent rewards                                                          |
+| 37  | **Gamification**                                               | Adding game-like elements (points, levels, rewards) to tasks to increase motivation and engagement                                                             |
+| 38  | **Stimulant Medication**                                       | First-line ADHD medication (methylphenidate, amphetamine) that increases dopamine and norepinephrine to improve focus and impulse control                      |
+| 39  | **Non-Stimulant Medication**                                   | Alternative ADHD medications (atomoxetine, guanfacine, clonidine) that work through different mechanisms                                                       |
+| 40  | **Medication Titration**                                       | The process of adjusting medication dosage to find the optimal balance of benefits and side effects                                                            |
+| 41  | **Medication Breaks (Drug Holidays)**                          | Periodically stopping ADHD medication to reassess need and manage tolerance (done under medical supervision)                                                   |
+| 42  | **Side Effects of Stimulants**                                 | Common effects: decreased appetite, weight loss, insomnia, irritability, increased heart rate, anxiety                                                         |
+| 43  | **Sleep Hygiene**                                              | Practices that promote consistent, quality sleep—regular schedule, cool room, no screens before bed, limit caffeine                                            |
+| 44  | **ADHD and Sleep**                                             | Many people with ADHD have delayed sleep phase, insomnia, or restless sleep, worsening daytime symptoms                                                        |
+| 45  | **Comorbidity in ADHD**                                        | Other conditions that commonly co-occur: anxiety (30-50%), depression (20-30%), learning disabilities, ODD, substance use                                      |
+| 46  | **ADHD and Anxiety**                                           | Overlapping symptoms (restlessness, difficulty concentrating) but different underlying mechanisms—must be distinguished for proper treatment                   |
+| 47  | **ADHD and Depression**                                        | Chronic underachievement, rejection, and frustration from ADHD can lead to secondary depression                                                                |
+| 48  | **Oppositional Defiant Disorder (ODD)**                        | A pattern of angry/irritable mood, argumentative/defiant behavior, and vindictiveness—common comorbidity with childhood ADHD                                   |
+| 49  | **Learning Disabilities**                                      | Conditions like dyslexia, dyscalculia, and dysgraphia that co-occur with ADHD and affect specific academic skills                                              |
+| 50  | **Autistic Traits in ADHD**                                    | Overlap between ADHD and autism spectrum traits—sensory sensitivities, social difficulties, intense interests                                                  |
+| 51  | **Sensory Processing**                                         | How the nervous system receives and responds to sensory information—often atypical in ADHD (sensitivity to noise, touch, light)                                |
+| 52  | **Sensory Seeking**                                            | Craving intense sensory input—fidgeting, movement, music, texture—as a way to regulate arousal                                                                 |
+| 53  | **Sensory Avoidance**                                          | Being overwhelmed by sensory input—loud noises, bright lights, crowded spaces—leading to withdrawal                                                            |
+| 54  | **Fidgeting**                                                  | Small, repetitive movements (foot tapping, pen clicking) that actually help some people with ADHD focus by regulating arousal                                  |
+| 55  | **Interpersonal Challenges in ADHD**                           | Difficulty with turn-taking, reading social cues, interrupting, oversharing, and maintaining friendships                                                       |
+| 56  | **Time Blindness Compensation**                                | Using alarms, timers, countdowns, visual clocks, and time-blocking to counteract poor time perception                                                          |
+| 57  | **The ADHD Tax**                                               | The extra cost (financial, emotional, relational) of ADHD-related mistakes—late fees, lost items, missed deadlines, damaged relationships                      |
+| 58  | **Shame Spiral in ADHD**                                       | The cycle: make ADHD mistake → feel ashamed → avoid responsibility → make more mistakes → more shame                                                           |
+| 59  | **ADHD Identity**                                              | Understanding ADHD as a neurodevelopmental difference, not a character flaw—reducing shame and building self-acceptance                                        |
+| 60  | **Strengths-Based Approach**                                   | Focusing on what people with ADHD do well—creativity, energy, hyperfocus, problem-solving, enthusiasm—alongside addressing challenges                          |
+| 61  | **Creativity in ADHD**                                         | The association between ADHD and creative thinking—divergent thinking, idea generation, unconventional problem-solving                                         |
+| 62  | **Hyperfocus as Strength**                                     | When channeled productively, hyperfocus can lead to deep expertise, creative output, and high achievement                                                      |
+| 63  | **ADHD in Girls/Women**                                        | Often underdiagnosed because symptoms present as inattentiveness rather than hyperactivity, and are masked by coping strategies                                |
+| 64  | **ADHD in Adults**                                             | ADHD persists into adulthood for ~60% of children; adult ADHD affects work, relationships, and daily functioning                                               |
+| 65  | **Late ADHD Diagnosis**                                        | Many adults receive ADHD diagnosis later in life, often after struggling for years without understanding why                                                   |
+| 66  | **ADHD Burnout**                                               | Chronic overextension and masking leading to exhaustion, reduced functioning, and emotional collapse                                                           |
+| 67  | **Masking in ADHD**                                            | Consciously or unconsciously hiding ADHD symptoms to appear "normal," which is exhausting and unsustainable                                                    |
+| 68  | **ADHD Coaching Tools**                                        | Planners designed for ADHD brains (color-coded, visual, flexible), focus apps, accountability check-ins, routine builders                                      |
+| 69  | **Accountability Partners**                                    | Regular check-ins with a coach, friend, or group to maintain progress on goals                                                                                 |
+| 70  | **Goal Setting for ADHD**                                      | Using SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound) with additional ADHD accommodations                                                 |
+| 71  | **Break Tasks Down**                                           | Splitting overwhelming tasks into concrete, doable steps—"write the paper" becomes "open the document, write one sentence"                                     |
+| 72  | **Implementation Intentions**                                  | If-then planning: "When [situation X happens], I will [do Y]"—reduces executive function demand                                                                |
+| 73  | **Habit Stacking**                                             | Attaching a new habit to an existing one—"After I brush my teeth, I will take my medication"                                                                   |
+| 74  | **Energy Management**                                          | Matching high-demand tasks to peak energy times and low-demand tasks to low-energy periods                                                                     |
+| 75  | **ADHD Spiral**                                                | The pattern where one missed task cascades into overwhelm and avoidance of everything                                                                          |
+| 76  | **Impulse Control Strategies**                                 | Techniques for pausing before acting: counting to 10, writing it down first, sleeping on decisions                                                             |
+| 77  | **Emotional Regulation for ADHD**                              | Learning to identify emotions early, name them, and choose responses rather than reacting immediately                                                          |
+| 78  | **Mindfulness for ADHD**                                       | Adapted mindfulness practices (shorter, movement-based) that improve attention and emotional regulation                                                        |
+| 79  | **Exercise for ADHD**                                          | Regular physical activity improves focus, mood, and executive function—both aerobic and resistance training help                                               |
+| 80  | **Nutrition and ADHD**                                         | Adequate protein, omega-3s, and regular meals support brain function; excessive sugar and processed food may worsen symptoms                                   |
+| 81  | **Technology and ADHD**                                        | The double-edged sword: phones/apps can be tools for organization but also major sources of distraction                                                        |
+| 82  | **Screen Time Management**                                     | Strategies for managing digital distraction—app blockers, phone-free zones, notification management                                                            |
+| 83  | **Phone Addiction in ADHD**                                    | The tendency to compulsively check phones due to dopamine-seeking, worsening time blindness and procrastination                                                |
+| 84  | **Financial Management in ADHD**                               | Challenges with budgeting, impulse spending, bill-paying—addressed through automation, visual budgeting, accountability                                        |
+| 85  | **Relationship Management in ADHD**                            | Addressing the impact of ADHD symptoms on partnerships—forgetfulness, emotional reactivity, inattention during conversations                                   |
+| 86  | **Parenting with ADHD**                                        | Challenges of managing children's needs when you struggle with executive function—self-compassion and structure are key                                        |
+| 87  | **Workplace Accommodations**                                   | Legal and practical adjustments: flexible schedule, quiet workspace, written instructions, regular check-ins                                                   |
+| 88  | **ADHD and Substance Use**                                     | Higher rates of substance use disorders in ADHD, often as self-medication for understimulation or emotional pain                                               |
+| 89  | **ADHD and Eating Disorders**                                  | Impulsive eating, emotional eating, and difficulty with meal planning are common in ADHD                                                                       |
+| 90  | **ADHD and Anxiety**                                           | Uncertainty intolerance and past failures create anxiety; anxiety then worsens executive function                                                              |
+| 91  | **ADHD and Depression**                                        | Underachievement, social difficulties, and chronic frustration contribute to depression risk                                                                   |
+| 92  | **ADHD and Trauma**                                            | Higher rates of adverse childhood experiences in ADHD, and vice versa—both affect brain development                                                            |
+| 93  | **ASRS (Adult ADHD Self-Report Scale)**                        | A widely used screening tool for ADHD in adults                                                                                                                |
+| 94  | **Vanderbilt Rating Scales**                                   | Standardized parent and teacher rating scales for diagnosing ADHD in children                                                                                  |
+| 95  | **Conners Scale**                                              | Another widely used ADHD assessment scale for children and adolescents                                                                                         |
+| 96  | **Neuropsychological Testing**                                 | Comprehensive assessment of cognitive functions (attention, memory, executive function) to differentiate ADHD from other conditions                            |
+| 97  | **SLD (Specific Learning Disability)**                         | A disorder in basic psychological processes involved in understanding or using language—must be ruled out as primary cause of attention difficulties           |
+| 98  | **Executive Function Assessment**                              | Tests measuring planning, organization, cognitive flexibility, inhibition, and working memory                                                                  |
+| 99  | **ADHD Severity Scales**                                       | Tools like the WURS (Wender Utah Rating Scale) for retrospective childhood symptom assessment                                                                  |
+| 100 | **504 Plan**                                                   | A US educational plan providing accommodations for students with ADHD or learning disabilities                                                                 |
+| 101 | **IEP (Individualized Education Program)**                     | A legally binding plan for students with disabilities requiring specialized instruction and services                                                           |
+| 102 | **Transition Planning**                                        | Helping adolescents with ADHD develop skills for the transition to college, work, or independent living                                                        |
+| 103 | **College ADHD Support**                                       | Resources and accommodations for students with ADHD in higher education                                                                                        |
+| 104 | **ADHD Support Groups**                                        | Peer communities (CHADD, ADDA, online groups) providing shared experiences and strategies                                                                      |
+| 105 | **Psychoeducation for ADHD**                                   | Teaching patients and families about ADHD neuroscience, symptoms, and evidence-based management strategies                                                     |
 
 ---
 
 ## 5. DEPRESSION
 
-| # | Term | Plain-English Definition |
-|---|------|--------------------------|
-| 1 | **Major Depressive Disorder (MDD)** | A mood disorder with persistent depressed mood or loss of interest for 2+ weeks, plus other symptoms affecting daily functioning |
-| 2 | **Persistent Depressive Disorder (Dysthymia)** | A chronic form of depression lasting 2+ years, less severe than MDD but persistent and debilitating |
-| 3 | **Bipolar Disorder** | A condition involving episodes of depression alternating with episodes of mania or hypomania |
-| 4 | **Major Depressive Episode** | A period of at least 2 weeks with depressed mood and/or loss of interest plus changes in sleep, appetite, energy, concentration, or suicidal thoughts |
-| 5 | **Anhedonia** | The inability to feel pleasure in activities that were once enjoyable—a core symptom of depression |
-| 6 | **Psychomotor Retardation** | Noticeably slowed physical movements, speech, and thinking in depression |
-| 7 | **Psychomotor Agitation** | Restlessness, pacing, inability to sit still—sometimes a feature of depression |
-| 8 | **Cognitive Triad (Beck)** | Depression involves negative views of: yourself ("I'm worthless"), the world ("Nothing good happens"), and the future ("Things will never improve") |
-| 9 | **Negative Automatic Thoughts** | Spontaneous, habitual negative interpretations of situations that arise in depression—"Nobody cares about me" |
-| 10 | **Rumination** | Repetitively dwelling on symptoms of depression and their causes/consequences without moving toward solutions |
-| 11 | **Behavioral Activation (BA)** | A therapy approach for depression focusing on increasing engagement in activities that provide pleasure or mastery |
-| 12 | **Activity Scheduling** | Planning specific, timed activities into the day to counteract the withdrawal and inactivity of depression |
-| 13 | **Pleasant Activity Log** | Tracking activities that bring pleasure or a sense of accomplishment to identify what helps mood |
-| 14 | **Mastery Activities** | Tasks that provide a sense of competence and achievement—cleaning a room, completing a project, learning something new |
-| 15 | **Pleasure Activities** | Activities that bring enjoyment—socializing, hobbies, nature, music |
-| 16 | **Sleep Hygiene** | Practices promoting healthy sleep: consistent schedule, dark/cool room, no screens before bed, limiting caffeine |
-| 17 | **Insomnia** | Difficulty falling asleep, staying asleep, or waking too early—common in depression |
-| 18 | **Hypersomnia** | Excessive sleeping or difficulty waking up—a feature of some depressive episodes |
-| 19 | **Appetite Changes** | Depression can cause either decreased appetite and weight loss, or increased appetite and weight gain |
-| 20 | **Fatigue** | Persistent tiredness and low energy, even with adequate sleep—a core depression symptom |
-| 21 | **Concentration Difficulties** | Trouble focusing, making decisions, or remembering things during a depressive episode |
-| 22 | **Worthlessness** | Feeling fundamentally inadequate or without value—a hallmark cognitive symptom of depression |
-| 23 | **Guilt** | Excessive or inappropriate guilt, often about things beyond one's control |
-| 24 | **Hopelessness** | Belief that things will never get better—stronger predictor of suicide than depression alone |
-| 25 | **Suicidal Ideation** | Thoughts about wanting to die or kill oneself, ranging from passive ("I wish I didn't exist") to active ("I'm going to...") |
-| 26 | **Suicide Plan** | Having a specific method, time, and place for ending one's life—indicates high risk |
-| 27 | **Self-Harm (Non-Suicidal Self-Injury)** | Deliberately hurting oneself (cutting, burning, hitting) to cope with emotional pain, without suicidal intent |
-| 28 | **Safety Planning** | A collaborative written plan identifying warning signs, coping strategies, support people, and crisis resources |
-| 29 | **Crisis Resources** | Emergency contacts, hotlines (988 Suicide and Crisis Lifeline), and crisis text lines |
-| 30 | **Lethal Means Restriction** | Removing or securing access to items that could be used for self-harm |
-| 31 | **Cognitive Behavioral Therapy for Depression (CBT-D)** | Evidence-based therapy targeting negative thought patterns and withdrawal behaviors maintaining depression |
-| 32 | **Behavioral Activation Therapy** | A standalone CBT-derived treatment focusing exclusively on activity scheduling and reducing avoidance |
-| 33 | **Interpersonal Therapy (IPT) for Depression** | Time-limited therapy focusing on interpersonal relationships and role transitions contributing to depression |
-| 34 | **Mindfulness-Based Cognitive Therapy (MBCT)** | Combines mindfulness with CBT to prevent depressive relapse, especially effective for recurrent depression |
-| 35 | **Problem-Solving Therapy** | Structured approach to identifying problems, generating solutions, and implementing plans—effective for depression |
-| 36 | **Acceptance and Commitment Therapy (ACT)** | Accepting difficult thoughts/feelings while committing to value-aligned action—reduces experiential avoidance in depression |
-| 37 | **Positive Psychotherapy** | Strengths-based approach focusing on positive emotions, engagement, and meaning—complements traditional CBT |
-| 38 | **Exercise as Treatment** | Regular physical activity has antidepressant effects comparable to medication for mild-moderate depression |
-| 39 | **Light Therapy** | Using a bright light box (10,000 lux) for 30 minutes each morning—effective for seasonal and non-seasonal depression |
-| 40 | **SSRI** | First-line antidepressant medication—increases serotonin availability in the brain |
-| 41 | **SNRI** | Increases both serotonin and norepinephrine—used when SSRIs are insufficient |
-| 42 | **Bupropion (Wellbutrin)** | An atypical antidepressant that affects dopamine and norepinephrine—often used when SSRIs cause sexual side effects |
-| 43 | **Tricyclic Antidepressants (TCAs)** | Older class of antidepressants—effective but more side effects; used when newer medications fail |
-| 44 | **MAOIs (Monoamine Oxidase Inhibitors)** | The earliest class of antidepressants—effective but require dietary restrictions and careful monitoring |
-| 45 | **Ketamine/Esketamine** | Rapid-acting treatments for treatment-resistant depression, administered in clinical settings |
-| 46 | **TMS (Transcranial Magnetic Stimulation)** | Non-invasive brain stimulation using magnetic fields to stimulate underactive brain regions—FDA-cleared for treatment-resistant depression |
-| 47 | **ECT (Electroconvulsive Therapy)** | Inducing controlled seizures under anesthesia—highly effective for severe, treatment-resistant depression |
-| 48 | **Treatment-Resistant Depression** | Depression that hasn't responded to two or more adequate trials of antidepressant medication |
-| 49 | **Response vs. Remission** | Response = significant symptom improvement; remission = near-complete symptom resolution |
-| 50 | **Relapse vs. Recurrence** | Relapse = return of symptoms during an episode; recurrence = a new episode after recovery |
-| 51 | **Partial Remission** | Some improvement but residual symptoms remain—increases risk of relapse |
-| 52 | **Seasonal Pattern (SAD)** | Depression that follows a seasonal pattern, typically worsening in fall/winter with reduced sunlight |
-| 53 | **Postpartum Depression** | Depression occurring after childbirth, affecting mood, bonding, and daily functioning |
-| 54 | **Premenstrual Dysphoric Disorder (PMDD)** | Severe mood symptoms (depression, irritability, anxiety) in the luteal phase of the menstrual cycle |
-| 55 | **Grief and Depression** | Grief involves waves of emotion with self-esteem intact; depression involves persistent sadness with low self-worth |
-| 56 | **Adjustment Disorder with Depressed Mood** | Depression triggered by a specific life stressor, not meeting full MDD criteria |
-| 57 | **Substance-Induced Depression** | Depression caused by substance use or medication, resolving when the substance is removed |
-| 58 | **Medical Causes of Depression** | Thyroid disorders, vitamin deficiencies, chronic illness, and medications can cause or worsen depression |
-| 59 | **Neurotransmitters** | Chemical messengers in the brain (serotonin, dopamine, norepinephrine) that regulate mood, sleep, and motivation |
-| 60 | **Neuroplasticity** | The brain's ability to form new connections, which is reduced in depression and improved by treatment |
-| 61 | **HPA Axis** | The hypothalamic-pituitary-adrenal axis—chronic stress disrupts this system, contributing to depression |
-| 62 | **Cortisol** | The stress hormone—chronically elevated cortisol is associated with depression and anxiety |
-| 63 | **Inflammatory Model of Depression** | Growing evidence that chronic inflammation contributes to depressive symptoms in some people |
-| 64 | **Social Withdrawal** | Pulling away from friends, family, and activities—a maintaining factor that deepens depression |
-| 65 | **Isolation** | Being alone and disconnected—both a symptom and a risk factor for worsening depression |
-| 66 | **Self-Care** | Basic daily activities that maintain health and well-being—hygiene, nutrition, sleep, movement |
-| 67 | **Self-Compassion** | Treating yourself with kindness rather than harsh self-criticism during difficult times |
-| 68 | **Cognitive Restructuring** | Identifying, challenging, and replacing distorted negative thoughts with balanced alternatives |
-| 69 | **Thought Records** | Structured worksheets for capturing negative thoughts, examining evidence, and generating alternatives |
-| 70 | **ABCDE Model** | Activating event → Belief → Consequence → Disputation → Effective new belief—a CBT framework |
-| 71 | **Downward Spiral** | Depression creates withdrawal, which reduces positive reinforcement, which worsens depression |
-| 72 | **Activation Energy** | The initial effort required to start an activity—depression reduces available activation energy |
-| 73 | **"Just Do It" Doesn't Work** | Willpower alone is insufficient for depression; structured, gradual, supported approaches are needed |
-| 74 | **Graded Task Assignment** | Breaking overwhelming tasks into tiny, manageable steps to build momentum |
-| 75 | **Behavioral Experiments** | Testing negative predictions—e.g., "If I go to the party, everyone will ignore me" → go, observe what actually happens |
-| 76 | **Values Work** | Identifying what gives life meaning and direction, then aligning daily actions with those values |
-| 77 | **Goal Setting in Depression** | Starting with extremely small, achievable goals and gradually increasing—celebrate every success |
-| 78 | **Support Networks** | Identifying and mobilizing people who can provide emotional support, practical help, and accountability |
-| 79 | **Psychoeducation** | Understanding that depression is a medical condition, not a weakness—reducing shame and increasing treatment engagement |
-| 80 | **Stigma of Depression** | Cultural and personal beliefs that prevent people from seeking help—"I should be able to handle this" |
-| 81 | **PHQ-9** | Patient Health Questionnaire-9: the standard screening and severity measure for depression |
-| 82 | **Beck Depression Inventory (BDI-II)** | A 21-item self-report measure of depression severity |
-| 83 | **Hamilton Depression Rating Scale (HAM-D)** | A clinician-administered depression severity measure |
-| 84 | **Columbia Suicide Severity Rating Scale (C-SSRS)** | A structured interview assessing suicidal ideation and behavior |
-| 85 | **Functional Impairment** | How much depression interferes with work, relationships, self-care, and daily activities |
-| 86 | **Work Productivity Loss** | Depression is the leading cause of disability worldwide, costing employers billions annually |
-| 87 | **Depression and Chronic Pain** | Depression and chronic pain share brain pathways and often co-occur, worsening each other |
-| 88 | **Depression and Heart Disease** | Depression increases cardiovascular risk; heart disease can trigger depression—bidirectional relationship |
-| 89 | **Depression and Diabetes** | Diabetes doubles depression risk; depression worsens diabetes management and outcomes |
-| 90 | **Depression in Adolescents** | Increasing rates, often presenting as irritability rather than sadness; screen time and social media are risk factors |
-| 91 | **Depression in Older Adults** | Often underdiagnosed; may present as physical complaints, cognitive decline, or social withdrawal rather than sadness |
-| 92 | **Gender Differences in Depression** | Women experience depression at 2x the rate of men, influenced by hormonal, social, and reporting factors |
-| 93 | **Cultural Considerations** | Depression manifests differently across cultures—somatization (physical symptoms) is more common in some cultures |
-| 94 | **Antidepressant Discontinuation Syndrome** | Withdrawal-like symptoms when stopping antidepressants too quickly—tapering under medical supervision is essential |
-| 95 | **Maintenance Medication** | Continuing antidepressants after remission to prevent relapse, especially for recurrent depression |
-| 96 | **Collaborative Care** | Integrating mental health treatment into primary care settings to improve access and outcomes |
-| 97 | **Measurement-Based Care** | Using standardized symptom measures at every session to track progress and guide treatment decisions |
-| 98 | **Therapeutic Alliance** | The relationship between therapist and patient—one of the strongest predictors of treatment outcome |
-| 99 | **Recovery in Depression** | Not just symptom reduction but returning to meaningful functioning, relationships, and activities |
-| 100 | **Relapse Prevention** | Developing skills and plans to maintain gains and manage future depressive episodes |
-| 101 | **Peer Support** | Connection with others who have lived experience of depression—reduces isolation and provides hope |
-| 102 | **Crisis Intervention** | Immediate response to suicidal ideation or self-harm—safety assessment, planning, and resource connection |
-| 103 | **Ecological Momentary Assessment (EMA)** | Real-time mood tracking using smartphone prompts to capture emotional patterns in daily life |
-| 104 | **Positive Affect** | Experiencing positive emotions like joy, interest, and enthusiasm—depression reduces positive affect |
-| 105 | **Negative Affect** | Experiencing negative emotions like sadness, fear, and anger—depression increases negative affect |
+| #   | Term                                                    | Plain-English Definition                                                                                                                              |
+| --- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Major Depressive Disorder (MDD)**                     | A mood disorder with persistent depressed mood or loss of interest for 2+ weeks, plus other symptoms affecting daily functioning                      |
+| 2   | **Persistent Depressive Disorder (Dysthymia)**          | A chronic form of depression lasting 2+ years, less severe than MDD but persistent and debilitating                                                   |
+| 3   | **Bipolar Disorder**                                    | A condition involving episodes of depression alternating with episodes of mania or hypomania                                                          |
+| 4   | **Major Depressive Episode**                            | A period of at least 2 weeks with depressed mood and/or loss of interest plus changes in sleep, appetite, energy, concentration, or suicidal thoughts |
+| 5   | **Anhedonia**                                           | The inability to feel pleasure in activities that were once enjoyable—a core symptom of depression                                                    |
+| 6   | **Psychomotor Retardation**                             | Noticeably slowed physical movements, speech, and thinking in depression                                                                              |
+| 7   | **Psychomotor Agitation**                               | Restlessness, pacing, inability to sit still—sometimes a feature of depression                                                                        |
+| 8   | **Cognitive Triad (Beck)**                              | Depression involves negative views of: yourself ("I'm worthless"), the world ("Nothing good happens"), and the future ("Things will never improve")   |
+| 9   | **Negative Automatic Thoughts**                         | Spontaneous, habitual negative interpretations of situations that arise in depression—"Nobody cares about me"                                         |
+| 10  | **Rumination**                                          | Repetitively dwelling on symptoms of depression and their causes/consequences without moving toward solutions                                         |
+| 11  | **Behavioral Activation (BA)**                          | A therapy approach for depression focusing on increasing engagement in activities that provide pleasure or mastery                                    |
+| 12  | **Activity Scheduling**                                 | Planning specific, timed activities into the day to counteract the withdrawal and inactivity of depression                                            |
+| 13  | **Pleasant Activity Log**                               | Tracking activities that bring pleasure or a sense of accomplishment to identify what helps mood                                                      |
+| 14  | **Mastery Activities**                                  | Tasks that provide a sense of competence and achievement—cleaning a room, completing a project, learning something new                                |
+| 15  | **Pleasure Activities**                                 | Activities that bring enjoyment—socializing, hobbies, nature, music                                                                                   |
+| 16  | **Sleep Hygiene**                                       | Practices promoting healthy sleep: consistent schedule, dark/cool room, no screens before bed, limiting caffeine                                      |
+| 17  | **Insomnia**                                            | Difficulty falling asleep, staying asleep, or waking too early—common in depression                                                                   |
+| 18  | **Hypersomnia**                                         | Excessive sleeping or difficulty waking up—a feature of some depressive episodes                                                                      |
+| 19  | **Appetite Changes**                                    | Depression can cause either decreased appetite and weight loss, or increased appetite and weight gain                                                 |
+| 20  | **Fatigue**                                             | Persistent tiredness and low energy, even with adequate sleep—a core depression symptom                                                               |
+| 21  | **Concentration Difficulties**                          | Trouble focusing, making decisions, or remembering things during a depressive episode                                                                 |
+| 22  | **Worthlessness**                                       | Feeling fundamentally inadequate or without value—a hallmark cognitive symptom of depression                                                          |
+| 23  | **Guilt**                                               | Excessive or inappropriate guilt, often about things beyond one's control                                                                             |
+| 24  | **Hopelessness**                                        | Belief that things will never get better—stronger predictor of suicide than depression alone                                                          |
+| 25  | **Suicidal Ideation**                                   | Thoughts about wanting to die or kill oneself, ranging from passive ("I wish I didn't exist") to active ("I'm going to...")                           |
+| 26  | **Suicide Plan**                                        | Having a specific method, time, and place for ending one's life—indicates high risk                                                                   |
+| 27  | **Self-Harm (Non-Suicidal Self-Injury)**                | Deliberately hurting oneself (cutting, burning, hitting) to cope with emotional pain, without suicidal intent                                         |
+| 28  | **Safety Planning**                                     | A collaborative written plan identifying warning signs, coping strategies, support people, and crisis resources                                       |
+| 29  | **Crisis Resources**                                    | Emergency contacts, hotlines (988 Suicide and Crisis Lifeline), and crisis text lines                                                                 |
+| 30  | **Lethal Means Restriction**                            | Removing or securing access to items that could be used for self-harm                                                                                 |
+| 31  | **Cognitive Behavioral Therapy for Depression (CBT-D)** | Evidence-based therapy targeting negative thought patterns and withdrawal behaviors maintaining depression                                            |
+| 32  | **Behavioral Activation Therapy**                       | A standalone CBT-derived treatment focusing exclusively on activity scheduling and reducing avoidance                                                 |
+| 33  | **Interpersonal Therapy (IPT) for Depression**          | Time-limited therapy focusing on interpersonal relationships and role transitions contributing to depression                                          |
+| 34  | **Mindfulness-Based Cognitive Therapy (MBCT)**          | Combines mindfulness with CBT to prevent depressive relapse, especially effective for recurrent depression                                            |
+| 35  | **Problem-Solving Therapy**                             | Structured approach to identifying problems, generating solutions, and implementing plans—effective for depression                                    |
+| 36  | **Acceptance and Commitment Therapy (ACT)**             | Accepting difficult thoughts/feelings while committing to value-aligned action—reduces experiential avoidance in depression                           |
+| 37  | **Positive Psychotherapy**                              | Strengths-based approach focusing on positive emotions, engagement, and meaning—complements traditional CBT                                           |
+| 38  | **Exercise as Treatment**                               | Regular physical activity has antidepressant effects comparable to medication for mild-moderate depression                                            |
+| 39  | **Light Therapy**                                       | Using a bright light box (10,000 lux) for 30 minutes each morning—effective for seasonal and non-seasonal depression                                  |
+| 40  | **SSRI**                                                | First-line antidepressant medication—increases serotonin availability in the brain                                                                    |
+| 41  | **SNRI**                                                | Increases both serotonin and norepinephrine—used when SSRIs are insufficient                                                                          |
+| 42  | **Bupropion (Wellbutrin)**                              | An atypical antidepressant that affects dopamine and norepinephrine—often used when SSRIs cause sexual side effects                                   |
+| 43  | **Tricyclic Antidepressants (TCAs)**                    | Older class of antidepressants—effective but more side effects; used when newer medications fail                                                      |
+| 44  | **MAOIs (Monoamine Oxidase Inhibitors)**                | The earliest class of antidepressants—effective but require dietary restrictions and careful monitoring                                               |
+| 45  | **Ketamine/Esketamine**                                 | Rapid-acting treatments for treatment-resistant depression, administered in clinical settings                                                         |
+| 46  | **TMS (Transcranial Magnetic Stimulation)**             | Non-invasive brain stimulation using magnetic fields to stimulate underactive brain regions—FDA-cleared for treatment-resistant depression            |
+| 47  | **ECT (Electroconvulsive Therapy)**                     | Inducing controlled seizures under anesthesia—highly effective for severe, treatment-resistant depression                                             |
+| 48  | **Treatment-Resistant Depression**                      | Depression that hasn't responded to two or more adequate trials of antidepressant medication                                                          |
+| 49  | **Response vs. Remission**                              | Response = significant symptom improvement; remission = near-complete symptom resolution                                                              |
+| 50  | **Relapse vs. Recurrence**                              | Relapse = return of symptoms during an episode; recurrence = a new episode after recovery                                                             |
+| 51  | **Partial Remission**                                   | Some improvement but residual symptoms remain—increases risk of relapse                                                                               |
+| 52  | **Seasonal Pattern (SAD)**                              | Depression that follows a seasonal pattern, typically worsening in fall/winter with reduced sunlight                                                  |
+| 53  | **Postpartum Depression**                               | Depression occurring after childbirth, affecting mood, bonding, and daily functioning                                                                 |
+| 54  | **Premenstrual Dysphoric Disorder (PMDD)**              | Severe mood symptoms (depression, irritability, anxiety) in the luteal phase of the menstrual cycle                                                   |
+| 55  | **Grief and Depression**                                | Grief involves waves of emotion with self-esteem intact; depression involves persistent sadness with low self-worth                                   |
+| 56  | **Adjustment Disorder with Depressed Mood**             | Depression triggered by a specific life stressor, not meeting full MDD criteria                                                                       |
+| 57  | **Substance-Induced Depression**                        | Depression caused by substance use or medication, resolving when the substance is removed                                                             |
+| 58  | **Medical Causes of Depression**                        | Thyroid disorders, vitamin deficiencies, chronic illness, and medications can cause or worsen depression                                              |
+| 59  | **Neurotransmitters**                                   | Chemical messengers in the brain (serotonin, dopamine, norepinephrine) that regulate mood, sleep, and motivation                                      |
+| 60  | **Neuroplasticity**                                     | The brain's ability to form new connections, which is reduced in depression and improved by treatment                                                 |
+| 61  | **HPA Axis**                                            | The hypothalamic-pituitary-adrenal axis—chronic stress disrupts this system, contributing to depression                                               |
+| 62  | **Cortisol**                                            | The stress hormone—chronically elevated cortisol is associated with depression and anxiety                                                            |
+| 63  | **Inflammatory Model of Depression**                    | Growing evidence that chronic inflammation contributes to depressive symptoms in some people                                                          |
+| 64  | **Social Withdrawal**                                   | Pulling away from friends, family, and activities—a maintaining factor that deepens depression                                                        |
+| 65  | **Isolation**                                           | Being alone and disconnected—both a symptom and a risk factor for worsening depression                                                                |
+| 66  | **Self-Care**                                           | Basic daily activities that maintain health and well-being—hygiene, nutrition, sleep, movement                                                        |
+| 67  | **Self-Compassion**                                     | Treating yourself with kindness rather than harsh self-criticism during difficult times                                                               |
+| 68  | **Cognitive Restructuring**                             | Identifying, challenging, and replacing distorted negative thoughts with balanced alternatives                                                        |
+| 69  | **Thought Records**                                     | Structured worksheets for capturing negative thoughts, examining evidence, and generating alternatives                                                |
+| 70  | **ABCDE Model**                                         | Activating event → Belief → Consequence → Disputation → Effective new belief—a CBT framework                                                          |
+| 71  | **Downward Spiral**                                     | Depression creates withdrawal, which reduces positive reinforcement, which worsens depression                                                         |
+| 72  | **Activation Energy**                                   | The initial effort required to start an activity—depression reduces available activation energy                                                       |
+| 73  | **"Just Do It" Doesn't Work**                           | Willpower alone is insufficient for depression; structured, gradual, supported approaches are needed                                                  |
+| 74  | **Graded Task Assignment**                              | Breaking overwhelming tasks into tiny, manageable steps to build momentum                                                                             |
+| 75  | **Behavioral Experiments**                              | Testing negative predictions—e.g., "If I go to the party, everyone will ignore me" → go, observe what actually happens                                |
+| 76  | **Values Work**                                         | Identifying what gives life meaning and direction, then aligning daily actions with those values                                                      |
+| 77  | **Goal Setting in Depression**                          | Starting with extremely small, achievable goals and gradually increasing—celebrate every success                                                      |
+| 78  | **Support Networks**                                    | Identifying and mobilizing people who can provide emotional support, practical help, and accountability                                               |
+| 79  | **Psychoeducation**                                     | Understanding that depression is a medical condition, not a weakness—reducing shame and increasing treatment engagement                               |
+| 80  | **Stigma of Depression**                                | Cultural and personal beliefs that prevent people from seeking help—"I should be able to handle this"                                                 |
+| 81  | **PHQ-9**                                               | Patient Health Questionnaire-9: the standard screening and severity measure for depression                                                            |
+| 82  | **Beck Depression Inventory (BDI-II)**                  | A 21-item self-report measure of depression severity                                                                                                  |
+| 83  | **Hamilton Depression Rating Scale (HAM-D)**            | A clinician-administered depression severity measure                                                                                                  |
+| 84  | **Columbia Suicide Severity Rating Scale (C-SSRS)**     | A structured interview assessing suicidal ideation and behavior                                                                                       |
+| 85  | **Functional Impairment**                               | How much depression interferes with work, relationships, self-care, and daily activities                                                              |
+| 86  | **Work Productivity Loss**                              | Depression is the leading cause of disability worldwide, costing employers billions annually                                                          |
+| 87  | **Depression and Chronic Pain**                         | Depression and chronic pain share brain pathways and often co-occur, worsening each other                                                             |
+| 88  | **Depression and Heart Disease**                        | Depression increases cardiovascular risk; heart disease can trigger depression—bidirectional relationship                                             |
+| 89  | **Depression and Diabetes**                             | Diabetes doubles depression risk; depression worsens diabetes management and outcomes                                                                 |
+| 90  | **Depression in Adolescents**                           | Increasing rates, often presenting as irritability rather than sadness; screen time and social media are risk factors                                 |
+| 91  | **Depression in Older Adults**                          | Often underdiagnosed; may present as physical complaints, cognitive decline, or social withdrawal rather than sadness                                 |
+| 92  | **Gender Differences in Depression**                    | Women experience depression at 2x the rate of men, influenced by hormonal, social, and reporting factors                                              |
+| 93  | **Cultural Considerations**                             | Depression manifests differently across cultures—somatization (physical symptoms) is more common in some cultures                                     |
+| 94  | **Antidepressant Discontinuation Syndrome**             | Withdrawal-like symptoms when stopping antidepressants too quickly—tapering under medical supervision is essential                                    |
+| 95  | **Maintenance Medication**                              | Continuing antidepressants after remission to prevent relapse, especially for recurrent depression                                                    |
+| 96  | **Collaborative Care**                                  | Integrating mental health treatment into primary care settings to improve access and outcomes                                                         |
+| 97  | **Measurement-Based Care**                              | Using standardized symptom measures at every session to track progress and guide treatment decisions                                                  |
+| 98  | **Therapeutic Alliance**                                | The relationship between therapist and patient—one of the strongest predictors of treatment outcome                                                   |
+| 99  | **Recovery in Depression**                              | Not just symptom reduction but returning to meaningful functioning, relationships, and activities                                                     |
+| 100 | **Relapse Prevention**                                  | Developing skills and plans to maintain gains and manage future depressive episodes                                                                   |
+| 101 | **Peer Support**                                        | Connection with others who have lived experience of depression—reduces isolation and provides hope                                                    |
+| 102 | **Crisis Intervention**                                 | Immediate response to suicidal ideation or self-harm—safety assessment, planning, and resource connection                                             |
+| 103 | **Ecological Momentary Assessment (EMA)**               | Real-time mood tracking using smartphone prompts to capture emotional patterns in daily life                                                          |
+| 104 | **Positive Affect**                                     | Experiencing positive emotions like joy, interest, and enthusiasm—depression reduces positive affect                                                  |
+| 105 | **Negative Affect**                                     | Experiencing negative emotions like sadness, fear, and anger—depression increases negative affect                                                     |
 
 ---
 
 ## 6. TRAUMA / PTSD
 
-| # | Term | Plain-English Definition |
-|---|------|--------------------------|
-| 1 | **Trauma** | An emotional response to a deeply distressing or disturbing event that overwhelms a person's ability to cope |
-| 2 | **Post-Traumatic Stress Disorder (PTSD)** | A condition that develops after experiencing or witnessing a traumatic event, with symptoms lasting >1 month |
-| 3 | **Acute Stress Disorder (ASD)** | PTSD-like symptoms occurring within 1 month of a traumatic event, lasting 3 days to 1 month |
-| 4 | **Complex PTSD (C-PTSD)** | PTSD resulting from prolonged, repeated trauma (especially in childhood), with additional symptoms of emotional regulation and self-concept difficulties |
-| 5 | **Developmental Trauma** | Chronic trauma occurring during childhood's critical developmental periods, affecting brain development and attachment |
-| 6 | **Adverse Childhood Experiences (ACEs)** | Negative childhood events: abuse, neglect, household dysfunction—measured on a 0-10 scale with health impact dose-response |
-| 7 | **ACE Score** | The number of adverse childhood experiences a person has had; higher scores correlate with greater health risks |
-| 8 | **Betrayal Trauma** | Trauma perpetrated by someone the person depends on or trusts (parent, partner, caregiver) |
-| 9 | **Interpersonal Trauma** | Trauma caused by another person—abuse, assault, domestic violence—more damaging than non-interpersonal trauma |
-| 10 | **Single-Event Trauma** | A traumatic incident that happens once—car accident, natural disaster, assault |
-| 11 | **Repetitive/Chronic Trauma** | Ongoing traumatic experiences—domestic violence, childhood abuse, war combat |
-| 12 | **Vicarious Trauma (Secondary Traumatization)** | Trauma symptoms from exposure to others' traumatic experiences—common in helpers, therapists, first responders |
-| 13 | **Compassion Fatigue** | Emotional and physical exhaustion from caring for trauma survivors—decreased empathy and compassion |
-| 14 | **Fight-Flight-Freeze-Fawn** | Four survival responses to trauma: fighting back, fleeing, shutting down, or appeasing the threat |
-| 15 | **Hyperarousal Cluster** | PTSD symptoms of being on high alert: hypervigilance, exaggerated startle, irritability, sleep problems, difficulty concentrating |
-| 16 | **Avoidance Cluster** | PTSD symptoms of avoiding reminders: avoiding people/places/thoughts/feelings associated with the trauma |
-| 17 | **Negative Cognitions and Mood Cluster** | PTSD symptoms: distorted blame, persistent negative emotions, detachment, loss of interest, inability to experience positive emotions |
-| 18 | **Intrusion Cluster** | PTSD symptoms: flashbacks, nightmares, intrusive memories, emotional distress at reminders, physiological reactions to reminders |
-| 19 | **Flashback** | Re-experiencing a traumatic event as if it's happening now—can involve any sense (visual, auditory, tactile, olfactory) |
-| 20 | **Dissociation** | A disconnection from thoughts, feelings, surroundings, or identity—ranges from mild (daydreaming) to severe (DID) |
-| 21 | **Dissociative Amnesia** | Inability to recall important aspects of a traumatic event |
-| 22 | **Dissociative Identity Disorder (DID)** | Formerly "multiple personality disorder"—presence of two or more distinct personality states, typically from severe childhood trauma |
-| 23 | **Emotional Numbing** | Reduced ability to feel emotions, often described as feeling "flat" or "dead inside"—a protective response |
-| 24 | **Derealization** | Feeling detached from your surroundings—as if the world isn't real or you're behind glass |
-| 25 | **Depersonalization** | Feeling detached from yourself—as if you're watching yourself from outside your body |
-| 26 | **Hypervigilance** | Constantly scanning the environment for threats—exhausting and difficult to turn off |
-| 27 | **Exaggerated Startle Response** | Jumping or reacting strongly to sudden sounds, movements, or surprises |
-| 28 | **Trauma-Triggered Shame** | Intense, pervasive shame that accompanies traumatic experiences—"It was my fault," "I'm damaged" |
-| 29 | **Body Memory** | The body storing traumatic experiences through chronic pain, tension, or physical sensations without conscious recall |
-| 30 | **Trauma Encoding** | How traumatic memories are stored differently from normal memories—fragmented, sensory, lacking temporal context |
-| 31 | **Somatic Experiencing** | A body-based therapy approach developed by Peter Levine for releasing stored trauma from the body |
-| 32 | **EMDR (Eye Movement Desensitization and Reprocessing)** | A structured therapy using bilateral stimulation (eye movements, tapping) to help the brain reprocess traumatic memories |
-| 33 | **Cognitive Processing Therapy (CPT)** | A 12-session CBT-based therapy for PTSD that focuses on challenging "stuck points"—distorted beliefs about the trauma |
-| 34 | **Prolonged Exposure (PE)** | A therapy for PTSD involving repeated, systematic confrontation with trauma memories and avoided situations |
-| 35 | **Trauma-Focused CBT (TF-CBT)** | An evidence-based treatment for children and adolescents who have experienced trauma |
-| 36 | **Narrative Exposure Therapy (NET)** | Creating a coherent life narrative to integrate fragmented traumatic memories, effective for multiple/complex trauma |
-| 37 | **Dialectical Behavior Therapy for PTSD (DBT-PE)** | Combining DBT stabilization with prolonged exposure for people with PTSD and severe emotional dysregulation |
-| 38 | **Stabilization Phase** | The first phase of trauma treatment: establishing safety, coping skills, and emotional regulation before processing |
-| 39 | **Trauma Processing** | The middle phase of treatment: working through traumatic memories to reduce their emotional charge |
-| 40 | **Reintegration Phase** | The final phase: integrating the processed trauma into a coherent life story and moving forward |
-| 41 | **Window of Tolerance (Dan Siegel)** | The zone of arousal where a person can function—trauma narrows this window, making it easier to become hyper- or hypo-aroused |
-| 42 | **Polyvagal Theory (Stephen Porges)** | The theory that the autonomic nervous system has three states: ventral vagal (safe/social), sympathetic (fight/flight), dorsal vagal (shutdown) |
-| 43 | **Ventral Vagal State** | Feeling safe, connected, and socially engaged—the state of optimal functioning |
-| 44 | **Sympathetic Activation** | The fight-or-flight state: increased heart rate, muscle tension, hypervigilance, anxiety |
-| 45 | **Dorsal Vagal Shutdown** | The freeze/collapse state: numbness, dissociation, disconnection, feeling "frozen" |
-| 46 | **Neuroception** | The unconscious process by which the nervous system detects safety or danger in the environment |
-| 47 | **Somatic Symptoms of Trauma** | Physical manifestations: chronic pain, headaches, GI issues, tension, fatigue, autoimmune conditions |
-| 48 | **Trauma and the Brain** | Trauma affects the amygdala (overactive threat detection), hippocampus (memory processing), and prefrontal cortex (regulation) |
-| 49 | **Amygdala Hyperactivation** | The brain's alarm system becomes overactive in PTSD, triggering threat responses to non-threatening stimuli |
-| 50 | **Hippocampal Changes** | Trauma can shrink the hippocampus, impairing the ability to distinguish past danger from present safety |
-| 51 | **Prefrontal Cortex Suppression** | Trauma reduces activity in the thinking brain, making it harder to regulate emotional responses |
-| 52 | **Neuroplasticity in Trauma Recovery** | The brain can rewire itself through therapy—new neural pathways can be created to replace trauma responses |
-| 53 | **Trauma-Informed Care** | An approach recognizing the widespread impact of trauma and integrating knowledge about trauma into policies and practices |
-| 54 | **Safety First** | The principle that physical and emotional safety must be established before trauma processing can begin |
-| 55 | **Containment** | Learning to "put away" traumatic material when it surfaces at inappropriate times, with the intention of processing it in therapy |
-| 56 | **Grounding** | Techniques to anchor yourself in the present moment when trauma memories intrude—5-4-3-2-1 senses, physical contact with environment |
-| 57 | **Self-Soothing** | Engaging the five senses in calming activities during distress—warm bath, soft blanket, calming music, pleasant scent |
-| 58 | **TIPP Skills (DBT)** | Temperature change, Intense exercise, Paced breathing, Paired muscle relaxation—crisis survival skills |
-| 59 | **Trauma Triggers** | Stimuli (sights, sounds, smells, situations, emotions) that activate trauma memories and associated distress |
-| 60 | **Trigger Warning** | A notice that content may be distressing for trauma survivors—can be helpful but sometimes overused |
-| 61 | **Trauma Narrative** | Writing or telling the story of the trauma in detail as part of processing therapy |
-| 62 | **Cognitive Stuck Points** | Distorted beliefs maintained by trauma—"I should have known," "I'm permanently damaged," "Nowhere is safe" |
-| 63 | **Faulty Cognitions** | Unhelpful beliefs that maintain PTSD symptoms—blame, trust issues, safety beliefs, esteem issues |
-| 64 | **Challenging Stuck Points** | Using evidence and logic to examine and modify distorted trauma-related beliefs |
-| 65 | **Impact Statement (CPT)** | A written statement about how the trauma has affected beliefs about self, others, and the world—written before and after treatment |
-| 66 | **Written Trauma Account (PE)** | A detailed, repeated written narrative of the traumatic event used in prolonged exposure therapy |
-| 67 | **Imaginal Exposure** | Vividly revisiting the traumatic memory in therapy, allowing emotional processing to occur |
-| 68 | **In Vivo Exposure** | Gradually confronting real-world situations avoided due to trauma |
-| 69 | **Habituation in Exposure** | The natural decrease in anxiety that occurs with repeated, prolonged exposure to a trauma reminder |
-| 70 | **Emotional Processing Theory** | The theory underlying PE: trauma memories need to be activated and modified through corrective information |
-| 71 | **Cognitive Model of PTSD** | PTSD is maintained by how people interpret the trauma and its aftermath—modifying these interpretations reduces symptoms |
-| 72 | **Trauma and Attachment** | Early trauma disrupts attachment patterns, affecting how people form and maintain relationships throughout life |
-| 73 | **Secure Attachment** | A relationship pattern where you feel safe, valued, and comfortable with closeness and independence |
-| 74 | **Insecure Attachment** | Patterns developed from early trauma/neglect: anxious (clingy), avoidant (distant), disorganized (unpredictable) |
-| 75 | **Disorganized Attachment** | A pattern where the caregiver is both the source of comfort and fear, creating confusion and difficulty regulating emotions |
-| 76 | **Reenactment** | Unconsciously repeating trauma patterns in current relationships or behaviors |
-| 77 | **Trauma Bonding** | An emotional attachment formed with an abuser through intermittent reinforcement of kindness and cruelty |
-| 78 | **Stockholm Syndrome** | Developing positive feelings toward a captor or abuser as a survival strategy |
-| 79 | **Moral Injury** | Distress from actions (or inaction) that violate one's moral or ethical code—common in military personnel |
-| 80 | **Combat-Related PTSD** | PTSD specifically related to military combat experiences—affecting ~15-30% of combat veterans |
-| 81 | **Military Sexual Trauma (MST)** | Sexual assault or harassment experienced during military service |
-| 82 | **Sexual Assault Trauma** | The specific psychological impact of sexual violence—often involves shame, self-blame, and trust violations |
-| 83 | **Domestic Violence Trauma** | The impact of intimate partner violence—often chronic, involving betrayal by someone who should provide safety |
-| 84 | **Childhood Abuse Trauma** | Physical, emotional, or sexual abuse in childhood—developmental impact can be profound and long-lasting |
-| 85 | **Childhood Neglect Trauma** | The absence of adequate care, attention, or emotional support in childhood—often overlooked but deeply harmful |
-| 86 | **Witnessing Violence** | Being exposed to domestic violence, community violence, or war as a bystander—can cause PTSD symptoms |
-| 87 | **Natural Disaster Trauma** | PTSD from hurricanes, earthquakes, floods, wildfires—the unpredictability and powerlessness are key factors |
-| 88 | **Medical Trauma** | PTSD from medical procedures, hospitalization, or chronic illness experiences |
-| 89 | **Racial Trauma** | The psychological impact of racism, discrimination, and microaggressions—can cause PTSD-like symptoms |
-| 90 | **Intergenerational Trauma** | Trauma transmitted across generations through epigenetics, parenting patterns, and family dynamics |
-| 91 | **Historical Trauma** | Collective trauma affecting entire cultural groups—slavery, genocide, colonization |
-| 92 | **Trauma and Substance Use** | Many people use substances to cope with trauma symptoms—dual diagnosis treatment is essential |
-| 93 | **Trauma and Eating Disorders** | Trauma is a common precipitant of eating disorders, which may serve as a way to control body and emotions |
-| 94 | **Trauma and Chronic Pain** | The nervous system can become sensitized by trauma, amplifying pain signals |
-| 95 | **CPTSD and Relationship** | Complex PTSD creates challenges with trust, intimacy, boundaries, and emotional regulation in relationships |
-| 96 | **PTSD Checklist (PCL-5)** | A 20-item self-report measure of PTSD symptom severity |
-| 97 | **Clinician-Administered PTSD Scale (CAPS-5)** | The gold-standard diagnostic interview for PTSD |
-| 98 | **Life Events Checklist (LEC-5)** | A measure identifying exposure to potentially traumatic events |
-| 99 | **Trauma History Questionnaire** | A self-report measure of lifetime trauma exposure |
-| 100 | **PTSD Symptom Scale (PSS)** | A brief self-report measure of PTSD symptoms |
-| 101 | **Complex Trauma Checklist** | Assessing symptoms specific to C-PTSD: affect regulation, self-concept, relationships |
-| 102 | **Dissociative Experiences Scale (DES)** | A self-report measure of dissociative symptoms |
-| 103 | **Posttraumatic Growth** | Positive psychological changes that can emerge from the struggle with highly challenging life circumstances |
-| 104 | **Resilience** | The ability to recover from adversity—not the absence of struggle but the capacity to adapt |
-| 105 | **Trauma Recovery Timeline** | Recovery is nonlinear—setbacks are normal, and healing occurs at different rates for different people |
+| #   | Term                                                     | Plain-English Definition                                                                                                                                 |
+| --- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Trauma**                                               | An emotional response to a deeply distressing or disturbing event that overwhelms a person's ability to cope                                             |
+| 2   | **Post-Traumatic Stress Disorder (PTSD)**                | A condition that develops after experiencing or witnessing a traumatic event, with symptoms lasting >1 month                                             |
+| 3   | **Acute Stress Disorder (ASD)**                          | PTSD-like symptoms occurring within 1 month of a traumatic event, lasting 3 days to 1 month                                                              |
+| 4   | **Complex PTSD (C-PTSD)**                                | PTSD resulting from prolonged, repeated trauma (especially in childhood), with additional symptoms of emotional regulation and self-concept difficulties |
+| 5   | **Developmental Trauma**                                 | Chronic trauma occurring during childhood's critical developmental periods, affecting brain development and attachment                                   |
+| 6   | **Adverse Childhood Experiences (ACEs)**                 | Negative childhood events: abuse, neglect, household dysfunction—measured on a 0-10 scale with health impact dose-response                               |
+| 7   | **ACE Score**                                            | The number of adverse childhood experiences a person has had; higher scores correlate with greater health risks                                          |
+| 8   | **Betrayal Trauma**                                      | Trauma perpetrated by someone the person depends on or trusts (parent, partner, caregiver)                                                               |
+| 9   | **Interpersonal Trauma**                                 | Trauma caused by another person—abuse, assault, domestic violence—more damaging than non-interpersonal trauma                                            |
+| 10  | **Single-Event Trauma**                                  | A traumatic incident that happens once—car accident, natural disaster, assault                                                                           |
+| 11  | **Repetitive/Chronic Trauma**                            | Ongoing traumatic experiences—domestic violence, childhood abuse, war combat                                                                             |
+| 12  | **Vicarious Trauma (Secondary Traumatization)**          | Trauma symptoms from exposure to others' traumatic experiences—common in helpers, therapists, first responders                                           |
+| 13  | **Compassion Fatigue**                                   | Emotional and physical exhaustion from caring for trauma survivors—decreased empathy and compassion                                                      |
+| 14  | **Fight-Flight-Freeze-Fawn**                             | Four survival responses to trauma: fighting back, fleeing, shutting down, or appeasing the threat                                                        |
+| 15  | **Hyperarousal Cluster**                                 | PTSD symptoms of being on high alert: hypervigilance, exaggerated startle, irritability, sleep problems, difficulty concentrating                        |
+| 16  | **Avoidance Cluster**                                    | PTSD symptoms of avoiding reminders: avoiding people/places/thoughts/feelings associated with the trauma                                                 |
+| 17  | **Negative Cognitions and Mood Cluster**                 | PTSD symptoms: distorted blame, persistent negative emotions, detachment, loss of interest, inability to experience positive emotions                    |
+| 18  | **Intrusion Cluster**                                    | PTSD symptoms: flashbacks, nightmares, intrusive memories, emotional distress at reminders, physiological reactions to reminders                         |
+| 19  | **Flashback**                                            | Re-experiencing a traumatic event as if it's happening now—can involve any sense (visual, auditory, tactile, olfactory)                                  |
+| 20  | **Dissociation**                                         | A disconnection from thoughts, feelings, surroundings, or identity—ranges from mild (daydreaming) to severe (DID)                                        |
+| 21  | **Dissociative Amnesia**                                 | Inability to recall important aspects of a traumatic event                                                                                               |
+| 22  | **Dissociative Identity Disorder (DID)**                 | Formerly "multiple personality disorder"—presence of two or more distinct personality states, typically from severe childhood trauma                     |
+| 23  | **Emotional Numbing**                                    | Reduced ability to feel emotions, often described as feeling "flat" or "dead inside"—a protective response                                               |
+| 24  | **Derealization**                                        | Feeling detached from your surroundings—as if the world isn't real or you're behind glass                                                                |
+| 25  | **Depersonalization**                                    | Feeling detached from yourself—as if you're watching yourself from outside your body                                                                     |
+| 26  | **Hypervigilance**                                       | Constantly scanning the environment for threats—exhausting and difficult to turn off                                                                     |
+| 27  | **Exaggerated Startle Response**                         | Jumping or reacting strongly to sudden sounds, movements, or surprises                                                                                   |
+| 28  | **Trauma-Triggered Shame**                               | Intense, pervasive shame that accompanies traumatic experiences—"It was my fault," "I'm damaged"                                                         |
+| 29  | **Body Memory**                                          | The body storing traumatic experiences through chronic pain, tension, or physical sensations without conscious recall                                    |
+| 30  | **Trauma Encoding**                                      | How traumatic memories are stored differently from normal memories—fragmented, sensory, lacking temporal context                                         |
+| 31  | **Somatic Experiencing**                                 | A body-based therapy approach developed by Peter Levine for releasing stored trauma from the body                                                        |
+| 32  | **EMDR (Eye Movement Desensitization and Reprocessing)** | A structured therapy using bilateral stimulation (eye movements, tapping) to help the brain reprocess traumatic memories                                 |
+| 33  | **Cognitive Processing Therapy (CPT)**                   | A 12-session CBT-based therapy for PTSD that focuses on challenging "stuck points"—distorted beliefs about the trauma                                    |
+| 34  | **Prolonged Exposure (PE)**                              | A therapy for PTSD involving repeated, systematic confrontation with trauma memories and avoided situations                                              |
+| 35  | **Trauma-Focused CBT (TF-CBT)**                          | An evidence-based treatment for children and adolescents who have experienced trauma                                                                     |
+| 36  | **Narrative Exposure Therapy (NET)**                     | Creating a coherent life narrative to integrate fragmented traumatic memories, effective for multiple/complex trauma                                     |
+| 37  | **Dialectical Behavior Therapy for PTSD (DBT-PE)**       | Combining DBT stabilization with prolonged exposure for people with PTSD and severe emotional dysregulation                                              |
+| 38  | **Stabilization Phase**                                  | The first phase of trauma treatment: establishing safety, coping skills, and emotional regulation before processing                                      |
+| 39  | **Trauma Processing**                                    | The middle phase of treatment: working through traumatic memories to reduce their emotional charge                                                       |
+| 40  | **Reintegration Phase**                                  | The final phase: integrating the processed trauma into a coherent life story and moving forward                                                          |
+| 41  | **Window of Tolerance (Dan Siegel)**                     | The zone of arousal where a person can function—trauma narrows this window, making it easier to become hyper- or hypo-aroused                            |
+| 42  | **Polyvagal Theory (Stephen Porges)**                    | The theory that the autonomic nervous system has three states: ventral vagal (safe/social), sympathetic (fight/flight), dorsal vagal (shutdown)          |
+| 43  | **Ventral Vagal State**                                  | Feeling safe, connected, and socially engaged—the state of optimal functioning                                                                           |
+| 44  | **Sympathetic Activation**                               | The fight-or-flight state: increased heart rate, muscle tension, hypervigilance, anxiety                                                                 |
+| 45  | **Dorsal Vagal Shutdown**                                | The freeze/collapse state: numbness, dissociation, disconnection, feeling "frozen"                                                                       |
+| 46  | **Neuroception**                                         | The unconscious process by which the nervous system detects safety or danger in the environment                                                          |
+| 47  | **Somatic Symptoms of Trauma**                           | Physical manifestations: chronic pain, headaches, GI issues, tension, fatigue, autoimmune conditions                                                     |
+| 48  | **Trauma and the Brain**                                 | Trauma affects the amygdala (overactive threat detection), hippocampus (memory processing), and prefrontal cortex (regulation)                           |
+| 49  | **Amygdala Hyperactivation**                             | The brain's alarm system becomes overactive in PTSD, triggering threat responses to non-threatening stimuli                                              |
+| 50  | **Hippocampal Changes**                                  | Trauma can shrink the hippocampus, impairing the ability to distinguish past danger from present safety                                                  |
+| 51  | **Prefrontal Cortex Suppression**                        | Trauma reduces activity in the thinking brain, making it harder to regulate emotional responses                                                          |
+| 52  | **Neuroplasticity in Trauma Recovery**                   | The brain can rewire itself through therapy—new neural pathways can be created to replace trauma responses                                               |
+| 53  | **Trauma-Informed Care**                                 | An approach recognizing the widespread impact of trauma and integrating knowledge about trauma into policies and practices                               |
+| 54  | **Safety First**                                         | The principle that physical and emotional safety must be established before trauma processing can begin                                                  |
+| 55  | **Containment**                                          | Learning to "put away" traumatic material when it surfaces at inappropriate times, with the intention of processing it in therapy                        |
+| 56  | **Grounding**                                            | Techniques to anchor yourself in the present moment when trauma memories intrude—5-4-3-2-1 senses, physical contact with environment                     |
+| 57  | **Self-Soothing**                                        | Engaging the five senses in calming activities during distress—warm bath, soft blanket, calming music, pleasant scent                                    |
+| 58  | **TIPP Skills (DBT)**                                    | Temperature change, Intense exercise, Paced breathing, Paired muscle relaxation—crisis survival skills                                                   |
+| 59  | **Trauma Triggers**                                      | Stimuli (sights, sounds, smells, situations, emotions) that activate trauma memories and associated distress                                             |
+| 60  | **Trigger Warning**                                      | A notice that content may be distressing for trauma survivors—can be helpful but sometimes overused                                                      |
+| 61  | **Trauma Narrative**                                     | Writing or telling the story of the trauma in detail as part of processing therapy                                                                       |
+| 62  | **Cognitive Stuck Points**                               | Distorted beliefs maintained by trauma—"I should have known," "I'm permanently damaged," "Nowhere is safe"                                               |
+| 63  | **Faulty Cognitions**                                    | Unhelpful beliefs that maintain PTSD symptoms—blame, trust issues, safety beliefs, esteem issues                                                         |
+| 64  | **Challenging Stuck Points**                             | Using evidence and logic to examine and modify distorted trauma-related beliefs                                                                          |
+| 65  | **Impact Statement (CPT)**                               | A written statement about how the trauma has affected beliefs about self, others, and the world—written before and after treatment                       |
+| 66  | **Written Trauma Account (PE)**                          | A detailed, repeated written narrative of the traumatic event used in prolonged exposure therapy                                                         |
+| 67  | **Imaginal Exposure**                                    | Vividly revisiting the traumatic memory in therapy, allowing emotional processing to occur                                                               |
+| 68  | **In Vivo Exposure**                                     | Gradually confronting real-world situations avoided due to trauma                                                                                        |
+| 69  | **Habituation in Exposure**                              | The natural decrease in anxiety that occurs with repeated, prolonged exposure to a trauma reminder                                                       |
+| 70  | **Emotional Processing Theory**                          | The theory underlying PE: trauma memories need to be activated and modified through corrective information                                               |
+| 71  | **Cognitive Model of PTSD**                              | PTSD is maintained by how people interpret the trauma and its aftermath—modifying these interpretations reduces symptoms                                 |
+| 72  | **Trauma and Attachment**                                | Early trauma disrupts attachment patterns, affecting how people form and maintain relationships throughout life                                          |
+| 73  | **Secure Attachment**                                    | A relationship pattern where you feel safe, valued, and comfortable with closeness and independence                                                      |
+| 74  | **Insecure Attachment**                                  | Patterns developed from early trauma/neglect: anxious (clingy), avoidant (distant), disorganized (unpredictable)                                         |
+| 75  | **Disorganized Attachment**                              | A pattern where the caregiver is both the source of comfort and fear, creating confusion and difficulty regulating emotions                              |
+| 76  | **Reenactment**                                          | Unconsciously repeating trauma patterns in current relationships or behaviors                                                                            |
+| 77  | **Trauma Bonding**                                       | An emotional attachment formed with an abuser through intermittent reinforcement of kindness and cruelty                                                 |
+| 78  | **Stockholm Syndrome**                                   | Developing positive feelings toward a captor or abuser as a survival strategy                                                                            |
+| 79  | **Moral Injury**                                         | Distress from actions (or inaction) that violate one's moral or ethical code—common in military personnel                                                |
+| 80  | **Combat-Related PTSD**                                  | PTSD specifically related to military combat experiences—affecting ~15-30% of combat veterans                                                            |
+| 81  | **Military Sexual Trauma (MST)**                         | Sexual assault or harassment experienced during military service                                                                                         |
+| 82  | **Sexual Assault Trauma**                                | The specific psychological impact of sexual violence—often involves shame, self-blame, and trust violations                                              |
+| 83  | **Domestic Violence Trauma**                             | The impact of intimate partner violence—often chronic, involving betrayal by someone who should provide safety                                           |
+| 84  | **Childhood Abuse Trauma**                               | Physical, emotional, or sexual abuse in childhood—developmental impact can be profound and long-lasting                                                  |
+| 85  | **Childhood Neglect Trauma**                             | The absence of adequate care, attention, or emotional support in childhood—often overlooked but deeply harmful                                           |
+| 86  | **Witnessing Violence**                                  | Being exposed to domestic violence, community violence, or war as a bystander—can cause PTSD symptoms                                                    |
+| 87  | **Natural Disaster Trauma**                              | PTSD from hurricanes, earthquakes, floods, wildfires—the unpredictability and powerlessness are key factors                                              |
+| 88  | **Medical Trauma**                                       | PTSD from medical procedures, hospitalization, or chronic illness experiences                                                                            |
+| 89  | **Racial Trauma**                                        | The psychological impact of racism, discrimination, and microaggressions—can cause PTSD-like symptoms                                                    |
+| 90  | **Intergenerational Trauma**                             | Trauma transmitted across generations through epigenetics, parenting patterns, and family dynamics                                                       |
+| 91  | **Historical Trauma**                                    | Collective trauma affecting entire cultural groups—slavery, genocide, colonization                                                                       |
+| 92  | **Trauma and Substance Use**                             | Many people use substances to cope with trauma symptoms—dual diagnosis treatment is essential                                                            |
+| 93  | **Trauma and Eating Disorders**                          | Trauma is a common precipitant of eating disorders, which may serve as a way to control body and emotions                                                |
+| 94  | **Trauma and Chronic Pain**                              | The nervous system can become sensitized by trauma, amplifying pain signals                                                                              |
+| 95  | **CPTSD and Relationship**                               | Complex PTSD creates challenges with trust, intimacy, boundaries, and emotional regulation in relationships                                              |
+| 96  | **PTSD Checklist (PCL-5)**                               | A 20-item self-report measure of PTSD symptom severity                                                                                                   |
+| 97  | **Clinician-Administered PTSD Scale (CAPS-5)**           | The gold-standard diagnostic interview for PTSD                                                                                                          |
+| 98  | **Life Events Checklist (LEC-5)**                        | A measure identifying exposure to potentially traumatic events                                                                                           |
+| 99  | **Trauma History Questionnaire**                         | A self-report measure of lifetime trauma exposure                                                                                                        |
+| 100 | **PTSD Symptom Scale (PSS)**                             | A brief self-report measure of PTSD symptoms                                                                                                             |
+| 101 | **Complex Trauma Checklist**                             | Assessing symptoms specific to C-PTSD: affect regulation, self-concept, relationships                                                                    |
+| 102 | **Dissociative Experiences Scale (DES)**                 | A self-report measure of dissociative symptoms                                                                                                           |
+| 103 | **Posttraumatic Growth**                                 | Positive psychological changes that can emerge from the struggle with highly challenging life circumstances                                              |
+| 104 | **Resilience**                                           | The ability to recover from adversity—not the absence of struggle but the capacity to adapt                                                              |
+| 105 | **Trauma Recovery Timeline**                             | Recovery is nonlinear—setbacks are normal, and healing occurs at different rates for different people                                                    |
 
 ---
 
 ## 7. AUTISM SPECTRUM
 
-| # | Term | Plain-English Definition |
-|---|------|--------------------------|
-| 1 | **Autism Spectrum Disorder (ASD)** | A neurodevelopmental condition characterized by differences in social communication, restricted/repetitive behaviors, and sensory processing |
-| 2 | **Spectrum** | Autism varies widely in how it presents—no two autistic people are alike, with differences in strengths, challenges, and support needs |
-| 3 | **Neurodiversity** | The concept that brain differences (including autism) are natural variations, not disorders to be cured |
-| 4 | **Neurodivergent** | Having a brain that functions differently from the "typical" or neurotypical majority |
-| 5 | **Neurotypical (NT)** | Having a brain that functions in the way society expects—used to describe non-autistic people |
-| 6 | **Social Communication Differences** | Variations in how autistic people understand and use verbal/nonverbal communication, including eye contact, tone, and body language |
-| 7 | **Pragmatic Language** | The social use of language—understanding context, sarcasm, implied meaning, turn-taking in conversation |
-| 8 | **Literal Thinking** | Tending to interpret language literally rather than understanding figurative expressions, sarcasm, or implied meanings |
-| 9 | **Theory of Mind (ToM)** | The ability to understand that other people have different thoughts, feelings, and perspectives—often developing differently in autism |
-| 10 | **Empathy in Autism** | Autistic people typically have empathy but may express it differently or become overwhelmed by others' emotions |
-| 11 | **Alexithymia** | Difficulty identifying and describing one's own emotions—common in autism but not unique to it |
-| 12 | **Masking (Camouflaging)** | Suppressing autistic traits and imitating neurotypical behavior to fit in—exhausting and associated with burnout and mental health problems |
-| 13 | **Unmasking** | The process of recognizing and reducing masking, embracing authentic autistic identity |
-| 14 | **Stimming (Self-Stimulatory Behavior)** | Repetitive movements, sounds, or actions (hand-flapping, rocking, humming) that provide sensory input and emotional regulation |
-| 15 | **Restricted/Repetitive Behaviors (RRB)** | Patterns of behavior that are repetitive and sometimes restrictive—includes stimming, routines, and intense interests |
-| 16 | **Special Interests** | Intense, focused interests in specific topics—sources of joy, expertise, and deep knowledge |
-| 17 | **Infodumping** | Sharing extensive information about a special interest with great enthusiasm and detail |
-| 18 | **Hyperfixation** | An intense period of focus on an activity or interest, sometimes to the exclusion of other needs |
-| 19 | **Sensory Processing Differences** | Atypical responses to sensory input—some senses are hypersensitive (over-responsive) or hyposensitive (under-responsive) |
-| 20 | **Sensory Overload** | Being overwhelmed by sensory input (noise, light, texture, crowds) leading to distress, shutdown, or meltdown |
-| 21 | **Meltdown** | An involuntary neurological event resulting from sensory overload or overwhelm—NOT a tantrum or choice |
-| 22 | **Shutdown** | An internal response to overwhelm where the person becomes non-verbal, withdrawn, or unable to function temporarily |
-| 23 | **Sensory Seeking** | Craving specific sensory input—deep pressure, spinning, specific textures, sounds |
-| 24 | **Sensory Avoidance** | Actively avoiding overwhelming sensory input—certain foods, clothing textures, loud noises, bright lights |
-| 25 | **Sensory Profile** | An assessment of an individual's unique sensory preferences and sensitivities across all senses |
-| 26 | **Executive Function in Autism** | Challenges with planning, organization, task initiation, flexible thinking, and emotional regulation |
-| 27 | **Routine Dependence** | Strong need for predictability and routine—changes can cause significant distress |
-| 28 | **Need for Sameness** | Preference for things being done in a specific way—disruptions can be deeply upsetting |
-| 29 | **Rigidity** | Difficulty adapting to changes in plans, expectations, or environment |
-| 30 | **Cognitive Flexibility** | The ability to switch between tasks, perspectives, or rules—often a challenge in autism |
-| 31 | **Monotropism** | The theory that autistic attention is focused intensely on a narrow set of interests at any given time |
-| 32 | **Double Empathy Problem** | The theory that communication difficulties between autistic and non-autistic people are mutual, not one-sided |
-| 33 | **Allistic** | Non-autistic—used as a neutral descriptor instead of "normal" |
-| 34 | **Asperger's Syndrome** | An older diagnosis (now folded into ASD Level 1) for people with average or above-average intelligence and social communication differences |
-| 35 | **Levels of Support** | DSM-5 classification: Level 1 (requiring support), Level 2 (requiring substantial support), Level 3 (requiring very substantial support) |
-| 36 | **Applied Behavior Analysis (ABA)** | A controversial therapy focusing on modifying autistic behavior—praised for skill-building but criticized for suppressing natural autistic traits |
-| 37 | **Autistic Community Perspectives on ABA** | Many autistic adults report ABA was harmful, forcing compliance and masking rather than supporting authentic development |
-| 38 | **Naturalistic Developmental Behavioral Interventions (NDBI)** | More recent, play-based approaches that support development while respecting autistic identity |
-| 39 | **Speech-Language Therapy** | Support for communication differences—not just "talking" but pragmatic language, social communication, and alternative communication |
-| 40 | **AAC (Augmentative and Alternative Communication)** | Tools and strategies for communication beyond speech—picture boards, sign language, speech-generating devices |
-| 41 | **Occupational Therapy (OT)** | Support for sensory processing, daily living skills, fine motor skills, and adaptive behavior |
-| 42 | **Sensory Integration Therapy** | OT approach providing controlled sensory experiences to improve processing and regulation |
-| 43 | **Social Skills Training** | Teaching social cues, conversation skills, and relationship building—must be culturally sensitive and not assume NT is "correct" |
-| 44 | **Social Stories (Carol Gray)** | Short, personalized stories describing social situations and expected behaviors |
-| 45 | **Video Modeling** | Using video demonstrations of social skills or daily tasks for learning through observation |
-| 46 | **Executive Function Coaching** | Supporting autistic people with planning, organization, and task management using structured, concrete strategies |
-| 47 | **Autistic Burnout** | Chronic exhaustion, loss of skills, and reduced tolerance to stimulus resulting from prolonged masking and overstimulation |
-| 48 | **Autistic Regression** | Loss of previously acquired skills—can occur in childhood or adulthood, sometimes triggered by burnout or trauma |
-| 49 | **Co-occurring Conditions in Autism** | Anxiety (40-50%), ADHD (30-50%), depression (20-30%), epilepsy (20-30%), GI issues, sleep disorders |
-| 50 | **Autism and Anxiety** | High rates of anxiety, often driven by social uncertainty, sensory overwhelm, and fear of change |
-| 51 | **Autism and ADHD** | The "AuDHD" combination—overlapping and sometimes competing traits (need for routine vs. need for novelty) |
-| 52 | **Autism and Depression** | High rates, often related to social isolation, masking, and perceived difference |
-| 53 | **Autism and Eating Disorders** | Elevated rates, particularly ARFID (sensory food aversions) and anorexia (rigidity around food rules) |
-| 54 | **Autism and Trauma** | Higher rates of adverse experiences and PTSD—communication differences may hinder disclosure and support |
-| 55 | **Autism and Sleep** | Many autistic people have difficulty with sleep onset, maintenance, and quality—melatonin and routine help |
-| 56 | **Autism and GI Issues** | Elevated rates of constipation, diarrhea, and food sensitivities |
-| 57 | **Autism and Epilepsy** | ~20-30% of autistic people also have epilepsy—the two conditions share some neurobiological pathways |
-| 58 | **Autism Identity** | The process of understanding and embracing one's autistic identity—reducing shame and building self-acceptance |
-| 59 | **Autism Pride** | Celebrating autistic identity and the contributions of autistic people to society |
-| 60 | **#ActuallyAutistic** | A social media movement where autistic people share their experiences and perspectives |
-| 61 | **Nothing About Us Without Us** | The principle that policies and treatments affecting autistic people should include autistic voices |
-| 62 | **Strengths-Based Approach** | Focusing on autistic strengths—pattern recognition, attention to detail, deep expertise, honesty, loyalty, unique perspectives |
-| 63 | **Communication Differences** | Autistic communication styles may be more direct, literal, and detail-oriented—neither better nor worse than NT styles |
-| 64 | **Echolalia** | Repeating words or phrases heard—can be immediate or delayed; serves communication, self-regulation, or processing purposes |
-| 65 | **Gestalt Language Processing** | Learning language in whole chunks (scripts, phrases) rather than individual words—common in autism |
-| 66 | **Autistic Joy** | Intense positive emotions experienced by autistic people—deep happiness, excitement, delight—often expressed through stimming |
-| 67 | **Late Autism Diagnosis** | Many people (especially women, people of color, and those with high masking) receive autism diagnosis in adulthood |
-| 68 | **Gender and Autism** | Autism is underdiagnosed in females; non-binary and transgender people have higher rates of autism diagnosis |
-| 69 | **Autism and Race** | Racial and ethnic minorities face significant delays in autism diagnosis due to systemic barriers |
-| 70 | **Intersectionality in Autism** | How autism interacts with other identities (race, gender, sexuality, disability) to shape experience |
-| 71 | **Autism in the Workplace** | Workplace accommodations, disclosure decisions, and the challenges of neurotypical workplace expectations |
-| 72 | **Workplace Accommodations for Autism** | Quiet workspace, clear instructions, reduced sensory input, flexible schedule, written communication |
-| 73 | **Autism in Relationships** | Navigating romantic and social relationships with different communication styles and needs |
-| 74 | **Autistic masking in Relationships** | Exhausting effort to appear "normal" in relationships, which can lead to burnout and loss of identity |
-| 75 | **Parenting an Autistic Child** | Supporting autistic children while respecting their neurotype—avoiding compliance-based approaches |
-| 76 | **ABA Controversy** | Ongoing debate: some families report benefits; many autistic adults report ABA caused trauma and suppressed natural behaviors |
-| 77 | **Autism Speaks Controversy** | A prominent organization widely criticized by the autistic community for focusing on "cure" rather than acceptance |
-| 78 | **Neurodiversity Paradigm** | The perspective that neurological differences are natural and valuable, not deficits to be fixed |
-| 79 | **Medical Model vs. Social Model** | Medical model views autism as a disorder to treat; social model views barriers as coming from societal design |
-| 80 | **Autism Assessment** | Comprehensive evaluation including developmental history, behavioral observation, and standardized testing |
-| 81 | **ADOS-2 (Autism Diagnostic Observation Schedule)** | A structured observational assessment for autism diagnosis |
-| 82 | **ADI-R (Autism Diagnostic Interview-Revised)** | A structured caregiver interview for autism diagnosis |
-| 83 | **AQ (Autism Spectrum Quotient)** | A self-report screening measure for autistic traits |
-| 84 | **RAADS-R** | A self-report measure designed for diagnosing autism in adults |
-| 85 | **CAT-Q (Camouflaging Autistic Traits Questionnaire)** | A measure of masking and camouflaging behaviors |
-| 86 | **Sensory Profile (Dunn)** | An assessment of sensory processing patterns across multiple sensory domains |
-| 87 | **Executive Function Assessments for Autism** | Tools like the BRIEF (Behavior Rating Inventory of Executive Function) |
-| 88 | **Transition Planning** | Supporting autistic people through major life transitions—school to work, adolescence to adulthood |
-| 89 | **Autism and Technology** | Assistive technology, apps, and tools that support communication, organization, and daily living |
-| 90 | **Virtual Reality for Autism** | VR tools for practicing social skills and navigating sensory environments in controlled settings |
-| 91 | **Autism Research Priorities** | The autistic community prioritizes quality of life, employment, mental health, and relationships over genetics/cure research |
-| 92 | **Inclusive Design** | Creating environments, products, and systems that work for autistic people by default |
-| 93 | **Sensory-Friendly Environments** | Spaces designed to minimize sensory overload—dim lighting, reduced noise, quiet areas |
-| 94 | **Autism and Legal Issues** | Guardianship, rights, accommodations in education and employment—legal protections vary by jurisdiction |
-| 95 | **Autism and Identity** | The intersection of autism with gender identity, sexuality, and cultural identity |
-| 96 | **Autism Acceptance vs. Awareness** | Moving beyond awareness ("autism exists") to acceptance ("autistic people are valued members of society") |
-| 97 | **Autistic Burnout Recovery** | Reducing demands, allowing rest, decreasing masking, and rebuilding capacity |
-| 98 | **Unsupportive Environments** | Environments that demand masking, ignore sensory needs, and punish autistic traits—major contributors to burnout |
-| 99 | **Autism and Mental Health Access** | Barriers to mental health care for autistic people—communication differences, sensory-unfriendly clinics, provider knowledge gaps |
-| 100 | **Affirming Therapy for Autism** | Therapy that respects autistic identity, avoids pathologizing natural traits, and focuses on supporting the person's goals |
-| 101 | **Autism and Friendship** | Navigating social relationships with different communication styles—quality over quantity in friendships |
-| 102 | **Autism and Education** | Individualized education plans, sensory accommodations, and strengths-based approaches in schools |
-| 103 | **Autism and Executive Function Tools** | Visual schedules, timers, checklists, and apps designed for autistic brains |
-| 104 | **Autism and Self-Advocacy** | Learning to communicate needs, set boundaries, and advocate for accommodations |
-| 105 | **Autism Across the Lifespan** | Autism is lifelong—support needs may change but the neurotype remains; supports should adapt at each life stage |
+| #   | Term                                                           | Plain-English Definition                                                                                                                          |
+| --- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Autism Spectrum Disorder (ASD)**                             | A neurodevelopmental condition characterized by differences in social communication, restricted/repetitive behaviors, and sensory processing      |
+| 2   | **Spectrum**                                                   | Autism varies widely in how it presents—no two autistic people are alike, with differences in strengths, challenges, and support needs            |
+| 3   | **Neurodiversity**                                             | The concept that brain differences (including autism) are natural variations, not disorders to be cured                                           |
+| 4   | **Neurodivergent**                                             | Having a brain that functions differently from the "typical" or neurotypical majority                                                             |
+| 5   | **Neurotypical (NT)**                                          | Having a brain that functions in the way society expects—used to describe non-autistic people                                                     |
+| 6   | **Social Communication Differences**                           | Variations in how autistic people understand and use verbal/nonverbal communication, including eye contact, tone, and body language               |
+| 7   | **Pragmatic Language**                                         | The social use of language—understanding context, sarcasm, implied meaning, turn-taking in conversation                                           |
+| 8   | **Literal Thinking**                                           | Tending to interpret language literally rather than understanding figurative expressions, sarcasm, or implied meanings                            |
+| 9   | **Theory of Mind (ToM)**                                       | The ability to understand that other people have different thoughts, feelings, and perspectives—often developing differently in autism            |
+| 10  | **Empathy in Autism**                                          | Autistic people typically have empathy but may express it differently or become overwhelmed by others' emotions                                   |
+| 11  | **Alexithymia**                                                | Difficulty identifying and describing one's own emotions—common in autism but not unique to it                                                    |
+| 12  | **Masking (Camouflaging)**                                     | Suppressing autistic traits and imitating neurotypical behavior to fit in—exhausting and associated with burnout and mental health problems       |
+| 13  | **Unmasking**                                                  | The process of recognizing and reducing masking, embracing authentic autistic identity                                                            |
+| 14  | **Stimming (Self-Stimulatory Behavior)**                       | Repetitive movements, sounds, or actions (hand-flapping, rocking, humming) that provide sensory input and emotional regulation                    |
+| 15  | **Restricted/Repetitive Behaviors (RRB)**                      | Patterns of behavior that are repetitive and sometimes restrictive—includes stimming, routines, and intense interests                             |
+| 16  | **Special Interests**                                          | Intense, focused interests in specific topics—sources of joy, expertise, and deep knowledge                                                       |
+| 17  | **Infodumping**                                                | Sharing extensive information about a special interest with great enthusiasm and detail                                                           |
+| 18  | **Hyperfixation**                                              | An intense period of focus on an activity or interest, sometimes to the exclusion of other needs                                                  |
+| 19  | **Sensory Processing Differences**                             | Atypical responses to sensory input—some senses are hypersensitive (over-responsive) or hyposensitive (under-responsive)                          |
+| 20  | **Sensory Overload**                                           | Being overwhelmed by sensory input (noise, light, texture, crowds) leading to distress, shutdown, or meltdown                                     |
+| 21  | **Meltdown**                                                   | An involuntary neurological event resulting from sensory overload or overwhelm—NOT a tantrum or choice                                            |
+| 22  | **Shutdown**                                                   | An internal response to overwhelm where the person becomes non-verbal, withdrawn, or unable to function temporarily                               |
+| 23  | **Sensory Seeking**                                            | Craving specific sensory input—deep pressure, spinning, specific textures, sounds                                                                 |
+| 24  | **Sensory Avoidance**                                          | Actively avoiding overwhelming sensory input—certain foods, clothing textures, loud noises, bright lights                                         |
+| 25  | **Sensory Profile**                                            | An assessment of an individual's unique sensory preferences and sensitivities across all senses                                                   |
+| 26  | **Executive Function in Autism**                               | Challenges with planning, organization, task initiation, flexible thinking, and emotional regulation                                              |
+| 27  | **Routine Dependence**                                         | Strong need for predictability and routine—changes can cause significant distress                                                                 |
+| 28  | **Need for Sameness**                                          | Preference for things being done in a specific way—disruptions can be deeply upsetting                                                            |
+| 29  | **Rigidity**                                                   | Difficulty adapting to changes in plans, expectations, or environment                                                                             |
+| 30  | **Cognitive Flexibility**                                      | The ability to switch between tasks, perspectives, or rules—often a challenge in autism                                                           |
+| 31  | **Monotropism**                                                | The theory that autistic attention is focused intensely on a narrow set of interests at any given time                                            |
+| 32  | **Double Empathy Problem**                                     | The theory that communication difficulties between autistic and non-autistic people are mutual, not one-sided                                     |
+| 33  | **Allistic**                                                   | Non-autistic—used as a neutral descriptor instead of "normal"                                                                                     |
+| 34  | **Asperger's Syndrome**                                        | An older diagnosis (now folded into ASD Level 1) for people with average or above-average intelligence and social communication differences       |
+| 35  | **Levels of Support**                                          | DSM-5 classification: Level 1 (requiring support), Level 2 (requiring substantial support), Level 3 (requiring very substantial support)          |
+| 36  | **Applied Behavior Analysis (ABA)**                            | A controversial therapy focusing on modifying autistic behavior—praised for skill-building but criticized for suppressing natural autistic traits |
+| 37  | **Autistic Community Perspectives on ABA**                     | Many autistic adults report ABA was harmful, forcing compliance and masking rather than supporting authentic development                          |
+| 38  | **Naturalistic Developmental Behavioral Interventions (NDBI)** | More recent, play-based approaches that support development while respecting autistic identity                                                    |
+| 39  | **Speech-Language Therapy**                                    | Support for communication differences—not just "talking" but pragmatic language, social communication, and alternative communication              |
+| 40  | **AAC (Augmentative and Alternative Communication)**           | Tools and strategies for communication beyond speech—picture boards, sign language, speech-generating devices                                     |
+| 41  | **Occupational Therapy (OT)**                                  | Support for sensory processing, daily living skills, fine motor skills, and adaptive behavior                                                     |
+| 42  | **Sensory Integration Therapy**                                | OT approach providing controlled sensory experiences to improve processing and regulation                                                         |
+| 43  | **Social Skills Training**                                     | Teaching social cues, conversation skills, and relationship building—must be culturally sensitive and not assume NT is "correct"                  |
+| 44  | **Social Stories (Carol Gray)**                                | Short, personalized stories describing social situations and expected behaviors                                                                   |
+| 45  | **Video Modeling**                                             | Using video demonstrations of social skills or daily tasks for learning through observation                                                       |
+| 46  | **Executive Function Coaching**                                | Supporting autistic people with planning, organization, and task management using structured, concrete strategies                                 |
+| 47  | **Autistic Burnout**                                           | Chronic exhaustion, loss of skills, and reduced tolerance to stimulus resulting from prolonged masking and overstimulation                        |
+| 48  | **Autistic Regression**                                        | Loss of previously acquired skills—can occur in childhood or adulthood, sometimes triggered by burnout or trauma                                  |
+| 49  | **Co-occurring Conditions in Autism**                          | Anxiety (40-50%), ADHD (30-50%), depression (20-30%), epilepsy (20-30%), GI issues, sleep disorders                                               |
+| 50  | **Autism and Anxiety**                                         | High rates of anxiety, often driven by social uncertainty, sensory overwhelm, and fear of change                                                  |
+| 51  | **Autism and ADHD**                                            | The "AuDHD" combination—overlapping and sometimes competing traits (need for routine vs. need for novelty)                                        |
+| 52  | **Autism and Depression**                                      | High rates, often related to social isolation, masking, and perceived difference                                                                  |
+| 53  | **Autism and Eating Disorders**                                | Elevated rates, particularly ARFID (sensory food aversions) and anorexia (rigidity around food rules)                                             |
+| 54  | **Autism and Trauma**                                          | Higher rates of adverse experiences and PTSD—communication differences may hinder disclosure and support                                          |
+| 55  | **Autism and Sleep**                                           | Many autistic people have difficulty with sleep onset, maintenance, and quality—melatonin and routine help                                        |
+| 56  | **Autism and GI Issues**                                       | Elevated rates of constipation, diarrhea, and food sensitivities                                                                                  |
+| 57  | **Autism and Epilepsy**                                        | ~20-30% of autistic people also have epilepsy—the two conditions share some neurobiological pathways                                              |
+| 58  | **Autism Identity**                                            | The process of understanding and embracing one's autistic identity—reducing shame and building self-acceptance                                    |
+| 59  | **Autism Pride**                                               | Celebrating autistic identity and the contributions of autistic people to society                                                                 |
+| 60  | **#ActuallyAutistic**                                          | A social media movement where autistic people share their experiences and perspectives                                                            |
+| 61  | **Nothing About Us Without Us**                                | The principle that policies and treatments affecting autistic people should include autistic voices                                               |
+| 62  | **Strengths-Based Approach**                                   | Focusing on autistic strengths—pattern recognition, attention to detail, deep expertise, honesty, loyalty, unique perspectives                    |
+| 63  | **Communication Differences**                                  | Autistic communication styles may be more direct, literal, and detail-oriented—neither better nor worse than NT styles                            |
+| 64  | **Echolalia**                                                  | Repeating words or phrases heard—can be immediate or delayed; serves communication, self-regulation, or processing purposes                       |
+| 65  | **Gestalt Language Processing**                                | Learning language in whole chunks (scripts, phrases) rather than individual words—common in autism                                                |
+| 66  | **Autistic Joy**                                               | Intense positive emotions experienced by autistic people—deep happiness, excitement, delight—often expressed through stimming                     |
+| 67  | **Late Autism Diagnosis**                                      | Many people (especially women, people of color, and those with high masking) receive autism diagnosis in adulthood                                |
+| 68  | **Gender and Autism**                                          | Autism is underdiagnosed in females; non-binary and transgender people have higher rates of autism diagnosis                                      |
+| 69  | **Autism and Race**                                            | Racial and ethnic minorities face significant delays in autism diagnosis due to systemic barriers                                                 |
+| 70  | **Intersectionality in Autism**                                | How autism interacts with other identities (race, gender, sexuality, disability) to shape experience                                              |
+| 71  | **Autism in the Workplace**                                    | Workplace accommodations, disclosure decisions, and the challenges of neurotypical workplace expectations                                         |
+| 72  | **Workplace Accommodations for Autism**                        | Quiet workspace, clear instructions, reduced sensory input, flexible schedule, written communication                                              |
+| 73  | **Autism in Relationships**                                    | Navigating romantic and social relationships with different communication styles and needs                                                        |
+| 74  | **Autistic masking in Relationships**                          | Exhausting effort to appear "normal" in relationships, which can lead to burnout and loss of identity                                             |
+| 75  | **Parenting an Autistic Child**                                | Supporting autistic children while respecting their neurotype—avoiding compliance-based approaches                                                |
+| 76  | **ABA Controversy**                                            | Ongoing debate: some families report benefits; many autistic adults report ABA caused trauma and suppressed natural behaviors                     |
+| 77  | **Autism Speaks Controversy**                                  | A prominent organization widely criticized by the autistic community for focusing on "cure" rather than acceptance                                |
+| 78  | **Neurodiversity Paradigm**                                    | The perspective that neurological differences are natural and valuable, not deficits to be fixed                                                  |
+| 79  | **Medical Model vs. Social Model**                             | Medical model views autism as a disorder to treat; social model views barriers as coming from societal design                                     |
+| 80  | **Autism Assessment**                                          | Comprehensive evaluation including developmental history, behavioral observation, and standardized testing                                        |
+| 81  | **ADOS-2 (Autism Diagnostic Observation Schedule)**            | A structured observational assessment for autism diagnosis                                                                                        |
+| 82  | **ADI-R (Autism Diagnostic Interview-Revised)**                | A structured caregiver interview for autism diagnosis                                                                                             |
+| 83  | **AQ (Autism Spectrum Quotient)**                              | A self-report screening measure for autistic traits                                                                                               |
+| 84  | **RAADS-R**                                                    | A self-report measure designed for diagnosing autism in adults                                                                                    |
+| 85  | **CAT-Q (Camouflaging Autistic Traits Questionnaire)**         | A measure of masking and camouflaging behaviors                                                                                                   |
+| 86  | **Sensory Profile (Dunn)**                                     | An assessment of sensory processing patterns across multiple sensory domains                                                                      |
+| 87  | **Executive Function Assessments for Autism**                  | Tools like the BRIEF (Behavior Rating Inventory of Executive Function)                                                                            |
+| 88  | **Transition Planning**                                        | Supporting autistic people through major life transitions—school to work, adolescence to adulthood                                                |
+| 89  | **Autism and Technology**                                      | Assistive technology, apps, and tools that support communication, organization, and daily living                                                  |
+| 90  | **Virtual Reality for Autism**                                 | VR tools for practicing social skills and navigating sensory environments in controlled settings                                                  |
+| 91  | **Autism Research Priorities**                                 | The autistic community prioritizes quality of life, employment, mental health, and relationships over genetics/cure research                      |
+| 92  | **Inclusive Design**                                           | Creating environments, products, and systems that work for autistic people by default                                                             |
+| 93  | **Sensory-Friendly Environments**                              | Spaces designed to minimize sensory overload—dim lighting, reduced noise, quiet areas                                                             |
+| 94  | **Autism and Legal Issues**                                    | Guardianship, rights, accommodations in education and employment—legal protections vary by jurisdiction                                           |
+| 95  | **Autism and Identity**                                        | The intersection of autism with gender identity, sexuality, and cultural identity                                                                 |
+| 96  | **Autism Acceptance vs. Awareness**                            | Moving beyond awareness ("autism exists") to acceptance ("autistic people are valued members of society")                                         |
+| 97  | **Autistic Burnout Recovery**                                  | Reducing demands, allowing rest, decreasing masking, and rebuilding capacity                                                                      |
+| 98  | **Unsupportive Environments**                                  | Environments that demand masking, ignore sensory needs, and punish autistic traits—major contributors to burnout                                  |
+| 99  | **Autism and Mental Health Access**                            | Barriers to mental health care for autistic people—communication differences, sensory-unfriendly clinics, provider knowledge gaps                 |
+| 100 | **Affirming Therapy for Autism**                               | Therapy that respects autistic identity, avoids pathologizing natural traits, and focuses on supporting the person's goals                        |
+| 101 | **Autism and Friendship**                                      | Navigating social relationships with different communication styles—quality over quantity in friendships                                          |
+| 102 | **Autism and Education**                                       | Individualized education plans, sensory accommodations, and strengths-based approaches in schools                                                 |
+| 103 | **Autism and Executive Function Tools**                        | Visual schedules, timers, checklists, and apps designed for autistic brains                                                                       |
+| 104 | **Autism and Self-Advocacy**                                   | Learning to communicate needs, set boundaries, and advocate for accommodations                                                                    |
+| 105 | **Autism Across the Lifespan**                                 | Autism is lifelong—support needs may change but the neurotype remains; supports should adapt at each life stage                                   |
 
 ---
 
 ## 8. RELATIONSHIP / FAMILY SYSTEMS
 
-| # | Term | Plain-English Definition |
-|---|------|--------------------------|
-| 1 | **Family Systems Theory** | The idea that families function as emotional units where each member's behavior affects everyone else |
-| 2 | **Bowenian Family Systems** | Murray Bowen's theory emphasizing multigenerational patterns, differentiation of self, and emotional triangles |
-| 3 | **Differentiation of Self** | The ability to maintain your own identity, values, and emotions while staying connected to family members |
-| 4 | **Enmeshment** | Poor boundaries where family members are overly involved in each other's lives, thoughts, and emotions |
-| 5 | **Disengagement** | Emotional distance and lack of involvement between family members—too much autonomy, too little connection |
-| 6 | **Emotional Triangle** | When two people in conflict pull in a third person to reduce tension—diffuses anxiety but creates problems |
-| 7 | **Triangulation** | Using a third person to communicate, mediate, or take sides in a two-person conflict |
-| 8 | **Family Projection Process** | Parents projecting their own emotional issues onto a child, who then develops symptoms |
-| 9 | **Multigenerational Transmission** | Patterns of emotional functioning passed down through generations—each generation slightly more or less differentiated |
-| 10 | **Emotional Cutoff** | Reducing or eliminating emotional contact with family members to manage unresolved emotional issues |
-| 11 | **Nuclear Family Emotional System** | The emotional patterns within a immediate family—marital conflict, dysfunction in one spouse, or impairment of a child |
-| 12 | **Sibling Position** | Bowen's theory that birth order influences personality and family role expectations |
-| 13 | **Emotional Fusion** | When family members' emotional systems are so fused that one person's anxiety immediately affects everyone |
-| 14 | **Homeostasis** | The family's tendency to maintain familiar patterns, even if dysfunctional, because change feels threatening |
-| 15 | **Family Roles** | The functions individuals take on within a family system—hero, scapegoat, lost child, mascot, caretaker |
-| 16 | **Identified Patient** | The family member whose symptoms are the focus of treatment—often carrying the family's collective anxiety |
-| 17 | **Structural Family Therapy (Minuchin)** | Therapy focused on reorganizing family boundaries, hierarchy, and subsystems to improve functioning |
-| 18 | **Boundaries** | The physical and emotional limits that define where one person ends and another begins |
-| 19 | **Clear Boundaries** | Appropriate limits that allow both connection and autonomy—everyone knows their role and space |
-| 20 | **Rigid Boundaries** | Boundaries that are too strict—creating emotional distance and disconnection |
-| 21 | **Porous Boundaries** | Boundaries that are too flexible—allowing intrusion and difficulty saying no |
-| 22 | **Subsystem** | A smaller unit within the family—parental subsystem, sibling subsystem |
-| 23 | **Hierarchy** | The authority structure within a family—parents as leaders, age-appropriate expectations |
-| 24 | **Strategic Family Therapy** | Directing families to make specific changes in interaction patterns to solve presenting problems |
-| 25 | **Milieu Therapy** | Creating a therapeutic environment that promotes change through structured interactions |
-| 26 | **Narrative Family Therapy** | Helping families re-author the stories they tell about themselves, separating people from problems |
-| 27 | **Externalizing the Problem** | Treating the problem as separate from the person—"The anxiety is the enemy, not you" |
-| 28 | **Genogram** | A family tree that includes emotional relationships, medical history, and patterns across generations |
-| 29 | **Ecomap** | A visual map of a family's connections to external systems—work, school, community, healthcare |
-| 30 | **Family Meeting** | A structured gathering where all family members discuss issues, make decisions, and practice communication |
-| 31 | **Gottman Method** | John Gottman's research-based approach to couples therapy focusing on friendship, conflict management, and shared meaning |
-| 32 | **The Four Horsemen** | Gottman's four communication patterns that predict relationship failure: criticism, contempt, defensiveness, stonewalling |
-| 33 | **Criticism** | Attacking your partner's character rather than addressing a specific behavior—"You always..." |
-| 34 | **Contempt** | Communicating disgust or superiority through sarcasm, eye-rolling, mockery, or name-calling |
-| 35 | **Defensiveness** | Defending yourself against perceived attack rather than taking responsibility—counter-attacking or making excuses |
-| 36 | **Stonewalling** | Withdrawing from interaction—shutting down, turning away, or refusing to engage |
-| 37 | **Gottman's Sound Relationship House** | A model of healthy relationships with components: love maps, fondness/admiration, turning toward, positive perspective, managed conflict, shared meaning |
-| 38 | **Love Maps** | Knowing your partner's inner world—their worries, hopes, dreams, and history |
-| 39 | **Turning Toward** | Responding positively to your partner's bids for attention, affection, or connection |
-| 40 | **Bids for Connection** | Any attempt to get your partner's attention, affection, or engagement—verbal or nonverbal |
-| 41 | **Emotionally Focused Therapy (EFT)** | Sue Johnson's attachment-based couples therapy focused on identifying and changing negative interaction cycles |
-| 42 | **Attachment Theory (Bowlby)** | The theory that early attachment experiences shape how we form and maintain relationships throughout life |
-| 43 | **Secure Attachment Style** | Comfortable with intimacy and independence; trusting, responsive, and resilient in relationships |
-| 44 | **Anxious Attachment Style** | Craving closeness but fearing abandonment; often needing reassurance and becoming distressed by perceived distance |
-| 45 | **Avoidant Attachment Style** | Valuing independence over closeness; often pulling away when things feel too intimate or demanding |
-| 46 | **Disorganized Attachment Style** | Simultaneously wanting and fearing closeness; unpredictable behavior in relationships |
-| 47 | **Negative Interaction Cycle** | The recurring pattern of conflict where each partner's response triggers the other's worst fears, creating a self-reinforcing loop |
-| 48 | **Pursuer-Withdrawer Dynamic** | A common relationship pattern: one partner pursues connection (often with criticism), while the other withdraws (often with defensiveness) |
-| 49 | **Secondary Emotions** | Surface emotions like anger or frustration that mask deeper, vulnerable emotions like fear, sadness, or loneliness |
-| 50 | **Primary Emotions** | The underlying, vulnerable feelings—hurt, fear, sadness, loneliness—that drive relationship behavior |
-| 51 | **Attachment Injury** | A specific betrayal or abandonment in a relationship that becomes a recurring source of conflict |
-| 52 | **Rituals of Connection** | Regular, meaningful routines that maintain bond—date nights, morning coffee together, bedtime routines |
-| 53 | **Shared Meaning** | Having common values, goals, and a sense of purpose as a couple or family |
-| 54 | **Fair Fighting Rules** | Guidelines for constructive conflict—use "I" statements, stay on topic, no name-calling, take breaks when flooded |
-| 55 | **Gottman Repair Attempts** | Efforts to de-escalate conflict during a conversation—humor, affection, apology, validation |
-| 56 | **Physiological Flooding** | When heart rate exceeds ~100 BPM during conflict, cognitive ability shuts down—taking a 20-minute break is essential |
-| 57 | **Timeout Protocol** | Agreeing in advance to take a break when conflict escalates, with a commitment to return and continue |
-| 58 | **I-Statements** | "I feel [emotion] when [behavior] because [impact]"—expressing needs without blaming |
-| 59 | **Active Listening** | Fully attending to your partner, reflecting back what you heard, and checking for understanding before responding |
-| 60 | **Validation** | Acknowledging your partner's feelings as understandable, even if you disagree with their perspective |
-| 61 | **Empathy in Relationships** | Understanding and sharing your partner's emotional experience from their perspective |
-| 62 | **Conflict Resolution** | Finding mutually acceptable solutions to disagreements through compromise, creativity, and mutual respect |
-| 63 | **Unsolvable Problems** | Gottman found ~69% of relationship conflicts are perpetual (personality differences, values)—managed, not solved |
-| 64 | **Solvable Problems** | Issues with specific solutions that can be resolved through discussion and compromise |
-| 65 | **Gridlocked Conflict** | Perpetual conflicts where both partners are rigidly stuck in their positions with no movement |
-| 66 | **Dreams Within Conflict** | Exploring the deeper meaning and personal dreams behind each partner's position on a perpetual issue |
-| 67 | **Intimacy** | Emotional, physical, intellectual, and experiential closeness with a partner |
-| 68 | **Emotional Intimacy** | Feeling safe enough to share your deepest thoughts, feelings, and vulnerabilities with your partner |
-| 69 | **Physical Intimacy** | Non-sexual and sexual physical closeness—touch, affection, sexual connection |
-| 70 | **Sexual Desire Discrepancy** | Differences in sexual desire between partners—one of the most common relationship complaints |
-| 71 | **Love Languages (Chapman)** | Five ways people prefer to give and receive love: words of affirmation, acts of service, gifts, quality time, physical touch |
-| 72 | **Bids and Turning Away** | When partner bids for connection are ignored or rejected, emotional distance grows—"sliding door moments" |
-| 73 | **Positive Sentiment Override** | In healthy relationships, positive feelings buffer against negative interpretations of partner behavior |
-| 74 | **Negative Sentiment Override** | In distressed relationships, negative feelings color all interactions—even neutral behavior is interpreted negatively |
-| 75 | **Emotional Bank Account** | Gottman's metaphor: positive interactions build up a reserve; negative interactions deplete it |
-| 76 | **Parenting as a Team** | Co-parents supporting each other, presenting a united front, and respecting each other's parenting style |
-| 77 | **Parallel Parenting** | A conflict reduction strategy for high-conflict divorced parents—minimal direct contact, clear boundaries |
-| 78 | **Co-Parenting** | Collaborative parenting between separated or divorced parents focused on children's wellbeing |
-| 79 | **Parental Alliance** | The quality of cooperation and support between parents in raising children |
-| 80 | **Couple Satisfactions** | Measures of relationship quality—Gottman Relationship Assessment, Dyadic Adjustment Scale |
-| 81 | **Family Adaptability** | The family's ability to change its power structure, role relationships, and relationship rules in response to stress |
-| 82 | **Family Cohesion** | The emotional bonding among family members and the degree of individual autonomy allowed |
-| 83 | **Circumplex Model (Olson)** | A model placing families on dimensions of cohesion, flexibility, and communication |
-| 84 | **Balanced Families** | Families with moderate levels of cohesion and flexibility—most functional |
-| 85 | **Unbalanced Families** | Families at extremes—too enmeshed or too disengaged, too rigid or too chaotic |
-| 86 | **Intergenerational Trauma in Families** | Trauma patterns transmitted across generations through parenting, attachment, and modeling |
-| 87 | **Family Resilience** | A family's ability to withstand and recover from adversity through shared beliefs, communication, and organization |
-| 88 | **Communication Patterns** | How family members express thoughts, feelings, and needs—direct vs. indirect, open vs. guarded |
-| 89 | **Family Rituals** | Regular family activities that create meaning and connection—mealtimes, holidays, bedtime routines |
-| 90 | **Life Transitions** | Major changes affecting families—new baby, adolescence, divorce, relocation, retirement, grief |
-| 91 | **Blended Families** | Families formed when partners with children from previous relationships combine households |
-| 92 | **Stepfamily Dynamics** | Unique challenges: loyalty conflicts, different parenting styles, role confusion, resource competition |
-| 93 | **Extended Family Involvement** | The role of grandparents, aunts, uncles, and in-laws in family functioning—supportive or complicating |
-| 94 | **Cultural Considerations in Family Therapy** | Cultural values shape family structure, communication, roles, and what "healthy" looks like |
-| 95 | **Domestic Violence and Family Systems** | Power and control dynamics affecting all family members—requires safety-first approach |
-| 96 | **Substance Use and Family Systems** | How addiction affects family dynamics—roles, boundaries, communication, enabling |
-| 97 | **Family Grief** | How families process loss together—differential grief styles can create conflict |
-| 98 | **Divorce Mediation** | A structured process for separating couples to negotiate agreements with a neutral mediator |
-| 99 | **Custody and Parenting Plans** | Legal and practical arrangements for children's care after separation or divorce |
-| 100 | **Reconciliation Therapy** | Working to repair and restore a damaged relationship after betrayal or conflict |
-| 101 | **Trust Repair** | The process of rebuilding trust after betrayal—requires transparency, consistency, and accountability over time |
-| 102 | **Forgiveness in Relationships** | A process, not an event—releasing resentment while maintaining appropriate boundaries |
-| 103 | **Boundary Setting** | Clearly communicating limits and expectations to protect your wellbeing while maintaining relationship |
-| 104 | **Codependency in Families** | When family members' self-worth becomes tied to controlling or caretaking another's behavior |
-| 105 | **Family Therapy Outcomes** | Research shows family therapy improves communication, reduces conflict, and increases satisfaction across relationships |
+| #   | Term                                          | Plain-English Definition                                                                                                                                 |
+| --- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Family Systems Theory**                     | The idea that families function as emotional units where each member's behavior affects everyone else                                                    |
+| 2   | **Bowenian Family Systems**                   | Murray Bowen's theory emphasizing multigenerational patterns, differentiation of self, and emotional triangles                                           |
+| 3   | **Differentiation of Self**                   | The ability to maintain your own identity, values, and emotions while staying connected to family members                                                |
+| 4   | **Enmeshment**                                | Poor boundaries where family members are overly involved in each other's lives, thoughts, and emotions                                                   |
+| 5   | **Disengagement**                             | Emotional distance and lack of involvement between family members—too much autonomy, too little connection                                               |
+| 6   | **Emotional Triangle**                        | When two people in conflict pull in a third person to reduce tension—diffuses anxiety but creates problems                                               |
+| 7   | **Triangulation**                             | Using a third person to communicate, mediate, or take sides in a two-person conflict                                                                     |
+| 8   | **Family Projection Process**                 | Parents projecting their own emotional issues onto a child, who then develops symptoms                                                                   |
+| 9   | **Multigenerational Transmission**            | Patterns of emotional functioning passed down through generations—each generation slightly more or less differentiated                                   |
+| 10  | **Emotional Cutoff**                          | Reducing or eliminating emotional contact with family members to manage unresolved emotional issues                                                      |
+| 11  | **Nuclear Family Emotional System**           | The emotional patterns within a immediate family—marital conflict, dysfunction in one spouse, or impairment of a child                                   |
+| 12  | **Sibling Position**                          | Bowen's theory that birth order influences personality and family role expectations                                                                      |
+| 13  | **Emotional Fusion**                          | When family members' emotional systems are so fused that one person's anxiety immediately affects everyone                                               |
+| 14  | **Homeostasis**                               | The family's tendency to maintain familiar patterns, even if dysfunctional, because change feels threatening                                             |
+| 15  | **Family Roles**                              | The functions individuals take on within a family system—hero, scapegoat, lost child, mascot, caretaker                                                  |
+| 16  | **Identified Patient**                        | The family member whose symptoms are the focus of treatment—often carrying the family's collective anxiety                                               |
+| 17  | **Structural Family Therapy (Minuchin)**      | Therapy focused on reorganizing family boundaries, hierarchy, and subsystems to improve functioning                                                      |
+| 18  | **Boundaries**                                | The physical and emotional limits that define where one person ends and another begins                                                                   |
+| 19  | **Clear Boundaries**                          | Appropriate limits that allow both connection and autonomy—everyone knows their role and space                                                           |
+| 20  | **Rigid Boundaries**                          | Boundaries that are too strict—creating emotional distance and disconnection                                                                             |
+| 21  | **Porous Boundaries**                         | Boundaries that are too flexible—allowing intrusion and difficulty saying no                                                                             |
+| 22  | **Subsystem**                                 | A smaller unit within the family—parental subsystem, sibling subsystem                                                                                   |
+| 23  | **Hierarchy**                                 | The authority structure within a family—parents as leaders, age-appropriate expectations                                                                 |
+| 24  | **Strategic Family Therapy**                  | Directing families to make specific changes in interaction patterns to solve presenting problems                                                         |
+| 25  | **Milieu Therapy**                            | Creating a therapeutic environment that promotes change through structured interactions                                                                  |
+| 26  | **Narrative Family Therapy**                  | Helping families re-author the stories they tell about themselves, separating people from problems                                                       |
+| 27  | **Externalizing the Problem**                 | Treating the problem as separate from the person—"The anxiety is the enemy, not you"                                                                     |
+| 28  | **Genogram**                                  | A family tree that includes emotional relationships, medical history, and patterns across generations                                                    |
+| 29  | **Ecomap**                                    | A visual map of a family's connections to external systems—work, school, community, healthcare                                                           |
+| 30  | **Family Meeting**                            | A structured gathering where all family members discuss issues, make decisions, and practice communication                                               |
+| 31  | **Gottman Method**                            | John Gottman's research-based approach to couples therapy focusing on friendship, conflict management, and shared meaning                                |
+| 32  | **The Four Horsemen**                         | Gottman's four communication patterns that predict relationship failure: criticism, contempt, defensiveness, stonewalling                                |
+| 33  | **Criticism**                                 | Attacking your partner's character rather than addressing a specific behavior—"You always..."                                                            |
+| 34  | **Contempt**                                  | Communicating disgust or superiority through sarcasm, eye-rolling, mockery, or name-calling                                                              |
+| 35  | **Defensiveness**                             | Defending yourself against perceived attack rather than taking responsibility—counter-attacking or making excuses                                        |
+| 36  | **Stonewalling**                              | Withdrawing from interaction—shutting down, turning away, or refusing to engage                                                                          |
+| 37  | **Gottman's Sound Relationship House**        | A model of healthy relationships with components: love maps, fondness/admiration, turning toward, positive perspective, managed conflict, shared meaning |
+| 38  | **Love Maps**                                 | Knowing your partner's inner world—their worries, hopes, dreams, and history                                                                             |
+| 39  | **Turning Toward**                            | Responding positively to your partner's bids for attention, affection, or connection                                                                     |
+| 40  | **Bids for Connection**                       | Any attempt to get your partner's attention, affection, or engagement—verbal or nonverbal                                                                |
+| 41  | **Emotionally Focused Therapy (EFT)**         | Sue Johnson's attachment-based couples therapy focused on identifying and changing negative interaction cycles                                           |
+| 42  | **Attachment Theory (Bowlby)**                | The theory that early attachment experiences shape how we form and maintain relationships throughout life                                                |
+| 43  | **Secure Attachment Style**                   | Comfortable with intimacy and independence; trusting, responsive, and resilient in relationships                                                         |
+| 44  | **Anxious Attachment Style**                  | Craving closeness but fearing abandonment; often needing reassurance and becoming distressed by perceived distance                                       |
+| 45  | **Avoidant Attachment Style**                 | Valuing independence over closeness; often pulling away when things feel too intimate or demanding                                                       |
+| 46  | **Disorganized Attachment Style**             | Simultaneously wanting and fearing closeness; unpredictable behavior in relationships                                                                    |
+| 47  | **Negative Interaction Cycle**                | The recurring pattern of conflict where each partner's response triggers the other's worst fears, creating a self-reinforcing loop                       |
+| 48  | **Pursuer-Withdrawer Dynamic**                | A common relationship pattern: one partner pursues connection (often with criticism), while the other withdraws (often with defensiveness)               |
+| 49  | **Secondary Emotions**                        | Surface emotions like anger or frustration that mask deeper, vulnerable emotions like fear, sadness, or loneliness                                       |
+| 50  | **Primary Emotions**                          | The underlying, vulnerable feelings—hurt, fear, sadness, loneliness—that drive relationship behavior                                                     |
+| 51  | **Attachment Injury**                         | A specific betrayal or abandonment in a relationship that becomes a recurring source of conflict                                                         |
+| 52  | **Rituals of Connection**                     | Regular, meaningful routines that maintain bond—date nights, morning coffee together, bedtime routines                                                   |
+| 53  | **Shared Meaning**                            | Having common values, goals, and a sense of purpose as a couple or family                                                                                |
+| 54  | **Fair Fighting Rules**                       | Guidelines for constructive conflict—use "I" statements, stay on topic, no name-calling, take breaks when flooded                                        |
+| 55  | **Gottman Repair Attempts**                   | Efforts to de-escalate conflict during a conversation—humor, affection, apology, validation                                                              |
+| 56  | **Physiological Flooding**                    | When heart rate exceeds ~100 BPM during conflict, cognitive ability shuts down—taking a 20-minute break is essential                                     |
+| 57  | **Timeout Protocol**                          | Agreeing in advance to take a break when conflict escalates, with a commitment to return and continue                                                    |
+| 58  | **I-Statements**                              | "I feel [emotion] when [behavior] because [impact]"—expressing needs without blaming                                                                     |
+| 59  | **Active Listening**                          | Fully attending to your partner, reflecting back what you heard, and checking for understanding before responding                                        |
+| 60  | **Validation**                                | Acknowledging your partner's feelings as understandable, even if you disagree with their perspective                                                     |
+| 61  | **Empathy in Relationships**                  | Understanding and sharing your partner's emotional experience from their perspective                                                                     |
+| 62  | **Conflict Resolution**                       | Finding mutually acceptable solutions to disagreements through compromise, creativity, and mutual respect                                                |
+| 63  | **Unsolvable Problems**                       | Gottman found ~69% of relationship conflicts are perpetual (personality differences, values)—managed, not solved                                         |
+| 64  | **Solvable Problems**                         | Issues with specific solutions that can be resolved through discussion and compromise                                                                    |
+| 65  | **Gridlocked Conflict**                       | Perpetual conflicts where both partners are rigidly stuck in their positions with no movement                                                            |
+| 66  | **Dreams Within Conflict**                    | Exploring the deeper meaning and personal dreams behind each partner's position on a perpetual issue                                                     |
+| 67  | **Intimacy**                                  | Emotional, physical, intellectual, and experiential closeness with a partner                                                                             |
+| 68  | **Emotional Intimacy**                        | Feeling safe enough to share your deepest thoughts, feelings, and vulnerabilities with your partner                                                      |
+| 69  | **Physical Intimacy**                         | Non-sexual and sexual physical closeness—touch, affection, sexual connection                                                                             |
+| 70  | **Sexual Desire Discrepancy**                 | Differences in sexual desire between partners—one of the most common relationship complaints                                                             |
+| 71  | **Love Languages (Chapman)**                  | Five ways people prefer to give and receive love: words of affirmation, acts of service, gifts, quality time, physical touch                             |
+| 72  | **Bids and Turning Away**                     | When partner bids for connection are ignored or rejected, emotional distance grows—"sliding door moments"                                                |
+| 73  | **Positive Sentiment Override**               | In healthy relationships, positive feelings buffer against negative interpretations of partner behavior                                                  |
+| 74  | **Negative Sentiment Override**               | In distressed relationships, negative feelings color all interactions—even neutral behavior is interpreted negatively                                    |
+| 75  | **Emotional Bank Account**                    | Gottman's metaphor: positive interactions build up a reserve; negative interactions deplete it                                                           |
+| 76  | **Parenting as a Team**                       | Co-parents supporting each other, presenting a united front, and respecting each other's parenting style                                                 |
+| 77  | **Parallel Parenting**                        | A conflict reduction strategy for high-conflict divorced parents—minimal direct contact, clear boundaries                                                |
+| 78  | **Co-Parenting**                              | Collaborative parenting between separated or divorced parents focused on children's wellbeing                                                            |
+| 79  | **Parental Alliance**                         | The quality of cooperation and support between parents in raising children                                                                               |
+| 80  | **Couple Satisfactions**                      | Measures of relationship quality—Gottman Relationship Assessment, Dyadic Adjustment Scale                                                                |
+| 81  | **Family Adaptability**                       | The family's ability to change its power structure, role relationships, and relationship rules in response to stress                                     |
+| 82  | **Family Cohesion**                           | The emotional bonding among family members and the degree of individual autonomy allowed                                                                 |
+| 83  | **Circumplex Model (Olson)**                  | A model placing families on dimensions of cohesion, flexibility, and communication                                                                       |
+| 84  | **Balanced Families**                         | Families with moderate levels of cohesion and flexibility—most functional                                                                                |
+| 85  | **Unbalanced Families**                       | Families at extremes—too enmeshed or too disengaged, too rigid or too chaotic                                                                            |
+| 86  | **Intergenerational Trauma in Families**      | Trauma patterns transmitted across generations through parenting, attachment, and modeling                                                               |
+| 87  | **Family Resilience**                         | A family's ability to withstand and recover from adversity through shared beliefs, communication, and organization                                       |
+| 88  | **Communication Patterns**                    | How family members express thoughts, feelings, and needs—direct vs. indirect, open vs. guarded                                                           |
+| 89  | **Family Rituals**                            | Regular family activities that create meaning and connection—mealtimes, holidays, bedtime routines                                                       |
+| 90  | **Life Transitions**                          | Major changes affecting families—new baby, adolescence, divorce, relocation, retirement, grief                                                           |
+| 91  | **Blended Families**                          | Families formed when partners with children from previous relationships combine households                                                               |
+| 92  | **Stepfamily Dynamics**                       | Unique challenges: loyalty conflicts, different parenting styles, role confusion, resource competition                                                   |
+| 93  | **Extended Family Involvement**               | The role of grandparents, aunts, uncles, and in-laws in family functioning—supportive or complicating                                                    |
+| 94  | **Cultural Considerations in Family Therapy** | Cultural values shape family structure, communication, roles, and what "healthy" looks like                                                              |
+| 95  | **Domestic Violence and Family Systems**      | Power and control dynamics affecting all family members—requires safety-first approach                                                                   |
+| 96  | **Substance Use and Family Systems**          | How addiction affects family dynamics—roles, boundaries, communication, enabling                                                                         |
+| 97  | **Family Grief**                              | How families process loss together—differential grief styles can create conflict                                                                         |
+| 98  | **Divorce Mediation**                         | A structured process for separating couples to negotiate agreements with a neutral mediator                                                              |
+| 99  | **Custody and Parenting Plans**               | Legal and practical arrangements for children's care after separation or divorce                                                                         |
+| 100 | **Reconciliation Therapy**                    | Working to repair and restore a damaged relationship after betrayal or conflict                                                                          |
+| 101 | **Trust Repair**                              | The process of rebuilding trust after betrayal—requires transparency, consistency, and accountability over time                                          |
+| 102 | **Forgiveness in Relationships**              | A process, not an event—releasing resentment while maintaining appropriate boundaries                                                                    |
+| 103 | **Boundary Setting**                          | Clearly communicating limits and expectations to protect your wellbeing while maintaining relationship                                                   |
+| 104 | **Codependency in Families**                  | When family members' self-worth becomes tied to controlling or caretaking another's behavior                                                             |
+| 105 | **Family Therapy Outcomes**                   | Research shows family therapy improves communication, reduces conflict, and increases satisfaction across relationships                                  |
 
 ---
 
-*Total: 840+ terms across 8 clinical domains.*
+_Total: 840+ terms across 8 clinical domains._
 
 > **Usage Notes:** These glossaries are designed for (1) therapists entering a new clinical area, (2) patients and families receiving psychoeducation, (3) app developers building domain-specific content, and (4) clinical supervisors training new staff. All definitions use plain language accessible to non-specialists.

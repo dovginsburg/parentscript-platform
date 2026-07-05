@@ -1,13 +1,6 @@
-import React, {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react'
-import { supabase } from '@/lib/supabase'
-import { useAuth } from '@/hooks/useAuth'
+import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import { supabase } from '@/lib/supabase';
+import { useAuth } from '@/hooks/useAuth';
 import {
   defaultParentPrefs,
   defaultTherapistFlags,
@@ -15,11 +8,8 @@ import {
   resolveParentPrefs,
   resolveTherapistFlags,
   type ParentFeatureKey,
-} from '@/lib/featureFlags'
-import type {
-  ParentPreferenceKey,
-  TherapistFeatureFlag,
-} from '@/lib/types'
+} from '@/lib/featureFlags';
+import type { ParentPreferenceKey, TherapistFeatureFlag } from '@/lib/types';
 
 // ────────────────────────────────────────────────────────────────────
 // Feature Flags Provider
@@ -44,74 +34,74 @@ import type {
 // ────────────────────────────────────────────────────────────────────
 
 interface FeatureFlagsState {
-  therapistFlags: Record<TherapistFeatureFlag, boolean>
-  parentPrefs: Record<ParentPreferenceKey, boolean>
-  loading: boolean
+  therapistFlags: Record<TherapistFeatureFlag, boolean>;
+  parentPrefs: Record<ParentPreferenceKey, boolean>;
+  loading: boolean;
 }
 
 interface FeatureFlagsContextValue extends FeatureFlagsState {
   // Setters — pass the new boolean value. They optimistically update
   // local state and write through to Supabase.
-  setTherapistFlag: (key: TherapistFeatureFlag, value: boolean) => Promise<void>
-  setParentPref: (key: ParentPreferenceKey, value: boolean) => Promise<void>
+  setTherapistFlag: (key: TherapistFeatureFlag, value: boolean) => Promise<void>;
+  setParentPref: (key: ParentPreferenceKey, value: boolean) => Promise<void>;
 
   // True if the therapist has this feature enabled.
   // For therapists: reads their own flags.
   // For parents: reads their therapist's flags.
-  isEnabled: (key: TherapistFeatureFlag) => boolean
+  isEnabled: (key: TherapistFeatureFlag) => boolean;
 
   // True if the parent has this preference on.
   // For parents: reads their own prefs. For therapists: always false.
-  getPref: (key: ParentPreferenceKey) => boolean
+  getPref: (key: ParentPreferenceKey) => boolean;
 
   // Combined check for parent-facing features. Requires BOTH the
   // therapist to have it enabled AND the parent to have it visible.
   // Returns false for therapists (they should use isEnabled).
-  canUse: (feature: ParentFeatureKey) => boolean
+  canUse: (feature: ParentFeatureKey) => boolean;
 }
 
-const FeatureFlagsContext = createContext<FeatureFlagsContextValue | null>(null)
+const FeatureFlagsContext = createContext<FeatureFlagsContextValue | null>(null);
 
 export function FeatureFlagsProvider({ children }: { children: React.ReactNode }) {
-  const { user, role, therapist, parent, loading: authLoading } = useAuth()
+  const { user, role, therapist, parent, loading: authLoading } = useAuth();
 
   const [state, setState] = useState<FeatureFlagsState>({
     therapistFlags: defaultTherapistFlags(),
     parentPrefs: defaultParentPrefs(),
     loading: true,
-  })
+  });
 
   // ── Load ──────────────────────────────────────────────────────────
   useEffect(() => {
-    if (authLoading) return
+    if (authLoading) return;
     if (!user || !role) {
       // Not signed in — fall back to defaults, mark not loading.
       setState({
         therapistFlags: defaultTherapistFlags(),
         parentPrefs: defaultParentPrefs(),
         loading: false,
-      })
-      return
+      });
+      return;
     }
 
-    let cancelled = false
+    let cancelled = false;
 
     async function load() {
-      setState(s => ({ ...s, loading: true }))
+      setState(s => ({ ...s, loading: true }));
 
       if (role === 'therapist' && therapist) {
         const { data } = await supabase
           .from('therapist_feature_flags')
           .select('flags')
           .eq('therapist_id', therapist.id)
-          .maybeSingle()
-        if (cancelled) return
+          .maybeSingle();
+        if (cancelled) return;
         setState({
           therapistFlags: resolveTherapistFlags(data?.flags),
           parentPrefs: defaultParentPrefs(),
           loading: false,
-        })
-        return
+        });
+        return;
       }
 
       if (role === 'parent' && parent) {
@@ -121,8 +111,8 @@ export function FeatureFlagsProvider({ children }: { children: React.ReactNode }
           .from('clients')
           .select('therapist_id')
           .eq('id', parent.client_id)
-          .maybeSingle()
-        const therapistId = client?.therapist_id ?? null
+          .maybeSingle();
+        const therapistId = client?.therapist_id ?? null;
 
         const [prefsRes, flagsRes] = await Promise.all([
           supabase
@@ -137,88 +127,82 @@ export function FeatureFlagsProvider({ children }: { children: React.ReactNode }
                 .eq('therapist_id', therapistId)
                 .maybeSingle()
             : Promise.resolve({ data: null } as { data: null }),
-        ])
-        if (cancelled) return
+        ]);
+        if (cancelled) return;
         setState({
           therapistFlags: resolveTherapistFlags(flagsRes.data?.flags),
           parentPrefs: resolveParentPrefs(prefsRes.data?.prefs),
           loading: false,
-        })
-        return
+        });
+        return;
       }
 
       setState({
         therapistFlags: defaultTherapistFlags(),
         parentPrefs: defaultParentPrefs(),
         loading: false,
-      })
+      });
     }
 
-    load()
+    load();
     return () => {
-      cancelled = true
-    }
-  }, [user, role, therapist, parent, authLoading])
+      cancelled = true;
+    };
+  }, [user, role, therapist, parent, authLoading]);
 
   // ── Mutators ──────────────────────────────────────────────────────
   const setTherapistFlag = useCallback(
     async (key: TherapistFeatureFlag, value: boolean) => {
-      if (!therapist) return
+      if (!therapist) return;
       // Optimistic update — feels instant.
       setState(s => ({
         ...s,
         therapistFlags: { ...s.therapistFlags, [key]: value },
-      }))
+      }));
       // Upsert (jsonb merge happens via set with full new value).
       const next: Record<TherapistFeatureFlag, boolean> = {
         ...state.therapistFlags,
         [key]: value,
-      }
+      };
       const { error } = await supabase
         .from('therapist_feature_flags')
-        .upsert(
-          { therapist_id: therapist.id, flags: next },
-          { onConflict: 'therapist_id' },
-        )
+        .upsert({ therapist_id: therapist.id, flags: next }, { onConflict: 'therapist_id' });
       if (error) {
         // Roll back on failure.
         setState(s => ({
           ...s,
           therapistFlags: { ...s.therapistFlags, [key]: !value },
-        }))
-        console.error('Failed to save therapist flag', key, error)
+        }));
+        console.error('Failed to save therapist flag', key, error);
       }
     },
-    [therapist, state.therapistFlags],
-  )
+    [therapist, state.therapistFlags]
+  );
 
   const setParentPref = useCallback(
     async (key: ParentPreferenceKey, value: boolean) => {
-      if (!parent) return
+      if (!parent) return;
       setState(s => ({
         ...s,
         parentPrefs: { ...s.parentPrefs, [key]: value },
-      }))
+      }));
       const next: Record<ParentPreferenceKey, boolean> = {
         ...state.parentPrefs,
         [key]: value,
-      }
+      };
       const { error } = await supabase
         .from('parent_preferences')
-        .upsert(
-          { parent_id: parent.id, prefs: next },
-          { onConflict: 'parent_id' },
-        )
+        .upsert({ parent_id: parent.id, prefs: next }, { onConflict: 'parent_id' });
       if (error) {
         setState(s => ({
           ...s,
           parentPrefs: { ...s.parentPrefs, [key]: !value },
-        }))
-        console.error('Failed to save parent preference', key, error)
+        }));
+        console.error('Failed to save parent preference', key, error);
       }
     },
-    [parent, state.parentPrefs],
-  )
+    [parent, state.parentPrefs]
+  );
 
   // ── Derived helpers ───────────────────────────────────────────────
   const value = useMemo<FeatureFlagsContextValue>(() => {
@@ -226,21 +210,17 @@ export function FeatureFlagsProvider({ children }: { children: React.ReactNode }
       ...state,
       setTherapistFlag,
       setParentPref,
-      isEnabled: (key) => Boolean(state.therapistFlags[key]),
-      getPref: (key) => Boolean(state.parentPrefs[key]),
-      canUse: (feature) => parentCanUse(feature, state.therapistFlags, state.parentPrefs),
-    }
-  }, [state, setTherapistFlag, setParentPref])
+      isEnabled: key => Boolean(state.therapistFlags[key]),
+      getPref: key => Boolean(state.parentPrefs[key]),
+      canUse: feature => parentCanUse(feature, state.therapistFlags, state.parentPrefs),
+    };
+  }, [state, setTherapistFlag, setParentPref]);
 
-  return (
-    <FeatureFlagsContext.Provider value={value}>
-      {children}
-    </FeatureFlagsContext.Provider>
-  )
+  return <FeatureFlagsContext.Provider value={value}>{children}</FeatureFlagsContext.Provider>;
 }
 
 export function useFeatureFlags() {
-  const ctx = useContext(FeatureFlagsContext)
-  if (!ctx) throw new Error('useFeatureFlags must be used inside FeatureFlagsProvider')
-  return ctx
+  const ctx = useContext(FeatureFlagsContext);
+  if (!ctx) throw new Error('useFeatureFlags must be used inside FeatureFlagsProvider');
+  return ctx;
 }

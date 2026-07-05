@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import { supabase } from '@/lib/supabase'
-import { friendlyAuthError } from '@/lib/authErrors'
+import { useState } from 'react';
+import { supabase } from '@/lib/supabase';
+import { friendlyAuthError } from '@/lib/authErrors';
 
 // ────────────────────────────────────────────────────────────────────
 // MagicLinkButton — "Email me a sign-in link"
@@ -30,15 +30,15 @@ import { friendlyAuthError } from '@/lib/authErrors'
 // ────────────────────────────────────────────────────────────────────
 
 export interface MagicLinkButtonProps {
-  email: string
+  email: string;
   /** Label override (defaults to "Email me a sign-in link"). */
-  label?: string
+  label?: string;
   /** Where to redirect after the OTP round-trip. */
-  redirectTo?: string
+  redirectTo?: string;
   /** Extra classes to merge onto the button. */
-  className?: string
+  className?: string;
   /** Called after the user is told to check email. */
-  onSent?: () => void
+  onSent?: () => void;
 }
 
 export default function MagicLinkButton({
@@ -48,34 +48,34 @@ export default function MagicLinkButton({
   className = '',
   onSent,
 }: MagicLinkButtonProps) {
-  const [pending, setPending] = useState(false)
-  const [sent, setSent] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [pending, setPending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const callbackUrl = redirectTo ?? `${window.location.origin}/auth/callback`
+  const callbackUrl = redirectTo ?? `${window.location.origin}/auth/callback`;
 
   async function handleClick() {
     if (!email) {
-      setError('Enter your email address above first.')
-      return
+      setError('Enter your email address above first.');
+      return;
     }
-    setError(null)
-    setSent(false)
-    setPending(true)
+    setError(null);
+    setSent(false);
+    setPending(true);
     try {
       const { error: otpError } = await supabase.auth.signInWithOtp({
         email,
         options: { emailRedirectTo: callbackUrl },
-      })
-      if (otpError) throw otpError
-      setSent(true)
-      onSent?.()
+      });
+      if (otpError) throw otpError;
+      setSent(true);
+      onSent?.();
     } catch (err: unknown) {
       // Sanitize — never render the raw PostgREST / auth error to the UI.
-      const friendly = friendlyAuthError(err, 'MagicLinkButton.otp')
-      setError(friendly.message)
+      const friendly = friendlyAuthError(err, 'MagicLinkButton.otp');
+      setError(friendly.message);
     } finally {
-      setPending(false)
+      setPending(false);
     }
   }
 
@@ -126,5 +126,5 @@ export default function MagicLinkButton({
         </div>
       )}
     </div>
-  )
+  );
 }

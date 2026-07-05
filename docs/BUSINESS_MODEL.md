@@ -16,7 +16,7 @@ That single decision unlocks the whole model, and it's the only decision you can
 - **Pricing:** **$19/mo solo / $39/mo per-seat in a clinic** (annual discount). Free for the first 3 active clients; standard tier caps at ~25 active clients; a "Pro" tier adds L4–L5 content, analytics, and free-text notes (when compliance allows).
 - **Parents: free, always, no exceptions.** Do not gate, do not "trial," do not soft-charge.
 - **Clinic / group practice:** per-seat pricing plus a clinic admin seat (free). No volume discount in Phase 2; revisit when you have 20+ paying clinics.
-- **GTM:** therapist-led distribution. The therapist *is* the channel. Land with solo PCIT-certified therapists at conferences and in PCIT International's directory, expand into group practices, then clinic-wide deals.
+- **GTM:** therapist-led distribution. The therapist _is_ the channel. Land with solo PCIT-certified therapists at conferences and in PCIT International's directory, expand into group practices, then clinic-wide deals.
 
 The build plan's existing price ($29/mo, ~10 active clients) is in the right neighborhood. **I'd shift it down to $19/mo and drop the client cap**, then raise the floor to $39 once you have L4–L5 + analytics behind the paywall.
 
@@ -26,26 +26,26 @@ The build plan's existing price ($29/mo, ~10 active clients) is in the right nei
 
 There are three honest options for a two-sided app like MAZE. I've evaluated each.
 
-| Model | Who pays | Verdict |
-|---|---|---|
-| **B2B only (therapist subscription)** | Therapist | ✅ Recommended |
-| **Hybrid (therapist subscription + parent freemium tier)** | Both | ⚠️ Possible but adds friction without much upside |
-| **B2C freemium (parent subscription)** | Parent | ❌ Avoid |
-| **Per-client / per-family micro-fee** | Passed through | ❌ Adds billing complexity, pisses off therapists |
+| Model                                                      | Who pays       | Verdict                                           |
+| ---------------------------------------------------------- | -------------- | ------------------------------------------------- |
+| **B2B only (therapist subscription)**                      | Therapist      | ✅ Recommended                                    |
+| **Hybrid (therapist subscription + parent freemium tier)** | Both           | ⚠️ Possible but adds friction without much upside |
+| **B2C freemium (parent subscription)**                     | Parent         | ❌ Avoid                                          |
+| **Per-client / per-family micro-fee**                      | Passed through | ❌ Adds billing complexity, pisses off therapists |
 
 ### Why B2B wins for MAZE
 
-1. **The therapist is the demand-creator.** Parents don't download MAZE because they saw an Instagram ad — they download it because their therapist sent them an invite link. The therapist is your CAC channel *and* your paying customer *and* the one with budget authority. Charging parents means taxing the side you don't have a relationship with and that has weaker payment intent.
+1. **The therapist is the demand-creator.** Parents don't download MAZE because they saw an Instagram ad — they download it because their therapist sent them an invite link. The therapist is your CAC channel _and_ your paying customer _and_ the one with budget authority. Charging parents means taxing the side you don't have a relationship with and that has weaker payment intent.
 2. **The therapist has the budget.** Therapy practice software (SimplePractice, Jane, TherapyNotes) runs **$39–$99+/mo per practitioner**. A solo therapist can expense $19/mo on a credit card with no approval. A parent downloading a parenting app to manage their kid's tantrums will churn at $9.99/mo when the tantrums stop.
 3. **Parents churn when the crisis ends.** PCIT runs 12–20 weeks. The parent's utility curve looks like an inverted V — high at week 3, near zero at week 14. Billing them is a guaranteed refund request at the exact moment they tell friends "it worked."
-4. **The therapist sees the value every session.** Each session, they check the parent's practice log, unlock the next skill, and leave a structured note. That's weekly active engagement — a paid user who *touches the product every week*. Parents might open MAZE twice a week; therapists open it every session.
-5. **Regulatory.** MAZE handles data *about a child* under therapist direction. Billing the parent for a tool their clinician prescribed raises questions about induced demand and patient steering. Billing the therapist for a clinical tool is unremarkable.
+4. **The therapist sees the value every session.** Each session, they check the parent's practice log, unlock the next skill, and leave a structured note. That's weekly active engagement — a paid user who _touches the product every week_. Parents might open MAZE twice a week; therapists open it every session.
+5. **Regulatory.** MAZE handles data _about a child_ under therapist direction. Billing the parent for a tool their clinician prescribed raises questions about induced demand and patient steering. Billing the therapist for a clinical tool is unremarkable.
 
 ### Why not hybrid (charge therapists AND parents)
 
 You'd be tempted by the optics: "therapist pays $19, parent pays $4.99/mo for premium coaching content." Don't.
 
-- The therapist has already paid for the curriculum. Charging parents for premium content undercuts the model: the therapist *is* the coach. You'd be selling the therapist's expertise back to their own client.
+- The therapist has already paid for the curriculum. Charging parents for premium content undercuts the model: the therapist _is_ the coach. You'd be selling the therapist's expertise back to their own client.
 - The moment you charge the parent, customer support costs double (one paying customer = one angry email; two paying customers per family = two angry emails about a tantrum app).
 - You can't A/B test it cleanly. The parent's app is a constrained surface — locked skills, no free-text — so there's almost nothing premium to gate without breaking the model.
 
@@ -53,7 +53,7 @@ The one legitimate hybrid is: **parents are always free, but therapists can sell
 
 ### Why not B2C freemium
 
-Headspace ($12.99/mo) and Calm ($14.99/mo) prove you *can* charge parents for content. But they sell self-help content; you sell **a controlled curriculum prescribed by their therapist**. Three problems:
+Headspace ($12.99/mo) and Calm ($14.99/mo) prove you _can_ charge parents for content. But they sell self-help content; you sell **a controlled curriculum prescribed by their therapist**. Three problems:
 
 - **Acquisition is unsolvable on the B2C side.** Parents searching "behavioral parent training app" find generic content. They won't find MAZE because MAZE requires a therapist relationship. Your SEO/SEM has nothing to hook.
 - **Conversion requires clinical trust.** A parent won't pay $9.99/mo for "the app my therapist uses" when their therapist would give them the cheat sheets for free.
@@ -73,17 +73,17 @@ Some clinic tools charge per-active-client (TherapyNotes, for example, has a per
 
 ### Recommended Phase 2 launch pricing (post-MVP validation)
 
-| Tier | Price | Who it's for | Limits |
-|---|---|---|---|
-| **Free** | $0 | Any therapist signing up | 3 active clients, L1–L3 content, structured notes only |
-| **Solo** | **$19/mo** or $190/yr ($15.83/mo) | Solo practitioner | Unlimited active clients, L1–L3 content, structured notes, basic practice-log summary |
-| **Pro** | **$39/mo** or $390/yr ($32.50/mo) | Solo or clinic seat | Everything in Solo + L4–L5 content (when shipped), free-text notes (when compliance-ready), parent analytics dashboard, custom structured-note templates, priority support |
-| **Clinic** | **$29/seat/mo** (min 3 seats) + 1 admin seat free | Group practices | Pro features per seat; clinic admin dashboard; bulk invite/deactivate |
+| Tier       | Price                                             | Who it's for             | Limits                                                                                                                                                                     |
+| ---------- | ------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Free**   | $0                                                | Any therapist signing up | 3 active clients, L1–L3 content, structured notes only                                                                                                                     |
+| **Solo**   | **$19/mo** or $190/yr ($15.83/mo)                 | Solo practitioner        | Unlimited active clients, L1–L3 content, structured notes, basic practice-log summary                                                                                      |
+| **Pro**    | **$39/mo** or $390/yr ($32.50/mo)                 | Solo or clinic seat      | Everything in Solo + L4–L5 content (when shipped), free-text notes (when compliance-ready), parent analytics dashboard, custom structured-note templates, priority support |
+| **Clinic** | **$29/seat/mo** (min 3 seats) + 1 admin seat free | Group practices          | Pro features per seat; clinic admin dashboard; bulk invite/deactivate                                                                                                      |
 
 **Why these numbers:**
 
 - **$19/mo is below every therapy-practice software price point** (SimplePractice $39, Jane $39–$99, TherapyNotes ~$80). It's a "yes" price — a therapist can expense it on a credit card without clinic approval. Below $20 you hit the impulse-purchase zone.
-- **$39/mo is at the *low* end of clinical software**, which signals "real tool, not a toy." Pairs well with L4–L5 (the content that takes 6+ months of clinician time to author and review).
+- **$39/mo is at the _low_ end of clinical software**, which signals "real tool, not a toy." Pairs well with L4–L5 (the content that takes 6+ months of clinician time to author and review).
 - **Annual at ~17% discount** is the SaaS norm (RevenueCat data: health & fitness is the most annual-friendly vertical at 68% annual mix). Annual locks you in for the duration of a typical PCIT course (12–20 weeks) × multiple cases.
 - **Free tier exists for two reasons**: (1) you need therapists to try it before they'll switch from their current workflow, and (2) PCIT trainees and graduate-clinic supervisors are a natural design-partner segment — give them free forever and they'll evangelize at their next job.
 - **3-client free cap** is meaningful but not punitive. A trainee with 2–3 supervised cases is exactly who you want as a power user. A solo with 30+ clients will outgrow free in a week.
@@ -94,7 +94,7 @@ Some clinic tools charge per-active-client (TherapyNotes, for example, has a per
 The existing plan says **$29/mo per therapist, ~10 active clients**. Three corrections:
 
 1. **$19 beats $29 for solo therapists.** The $10/mo delta is the difference between "I'll expense this on a card" and "I need to talk to my practice owner." Solo therapists — your Phase 2 GTM target — are price-sensitive because they're paying out of post-tax income.
-2. **Drop the active-client cap on Solo.** A 25-client cap feels punitive ("you're a power user, pay us more"). The marginal cost of a 26th client is essentially zero for MAZE (Supabase row counts, mostly). Don't engineer a soft paywall you don't need; raise price via *features* (the Pro tier), not client count.
+2. **Drop the active-client cap on Solo.** A 25-client cap feels punitive ("you're a power user, pay us more"). The marginal cost of a 26th client is essentially zero for MAZE (Supabase row counts, mostly). Don't engineer a soft paywall you don't need; raise price via _features_ (the Pro tier), not client count.
 3. **Reserve client caps for the Free tier.** This is the right place — it converts engaged trainees into paying users without taxing productive solo therapists.
 
 ---
@@ -104,6 +104,7 @@ The existing plan says **$29/mo per therapist, ~10 active clients**. Three corre
 The general rule: **gate features that compound with usage; don't gate features that gate onboarding.**
 
 ### Free tier
+
 - Up to 3 active clients
 - L1–L3 skills curriculum (the full PCIT/BPT foundation, which is enough to deliver real value)
 - Structured therapist notes (the templates in the build plan)
@@ -111,14 +112,16 @@ The general rule: **gate features that compound with usage; don't gate features 
 - Magic-link parent invites
 
 ### Solo ($19/mo) — the must-have paid jump
+
 - Unlimited active clients
 - Everything in Free
 - Practice-log summary view (the §11.8 therapist dashboard)
 - Email support
 
 ### Pro ($39/mo) — the upsell
+
 - **L4–L5 content** (regulation, co-regulation, maintenance). These are authored last because they require the deepest clinical review.
-- **Free-text clinical notes** (gated behind Pro *and* behind a compliance milestone — HIPAA review, BAA with Supabase if applicable).
+- **Free-text clinical notes** (gated behind Pro _and_ behind a compliance milestone — HIPAA review, BAA with Supabase if applicable).
 - **Parent analytics dashboard** (trends in practice frequency, skill-completion rates, escalation frequency over time).
 - **Custom structured-note templates** (so a CBT therapist can build their own templates, not just PCIT).
 - **Practice reminders / push notifications** for parents.
@@ -126,6 +129,7 @@ The general rule: **gate features that compound with usage; don't gate features 
 - **Priority support.**
 
 ### Clinic ($29/seat/mo)
+
 - Everything in Pro, per seat
 - Clinic admin dashboard (aggregate metrics, no individual client PHI)
 - Bulk invite/deactivate therapists
@@ -133,9 +137,10 @@ The general rule: **gate features that compound with usage; don't gate features 
 - Single billing relationship
 
 ### What to **never** gate
-- The In-the-Moment parent button. *Ever.* It exists to defuse a crisis. A paywall on a parent's crisis button is a clinical liability and a PR disaster. (This is also why parents are always free — they shouldn't be billed for a tool they're using mid-meltdown.)
+
+- The In-the-Moment parent button. _Ever._ It exists to defuse a crisis. A paywall on a parent's crisis button is a clinical liability and a PR disaster. (This is also why parents are always free — they shouldn't be billed for a tool they're using mid-meltdown.)
 - The 988 / 911 / therapist-call escalation. Always visible, always free.
-- L1–L3 content. The curriculum is the *foundation* of the model. Locking it would be like SimplePractice locking the calendar feature. You don't do that.
+- L1–L3 content. The curriculum is the _foundation_ of the model. Locking it would be like SimplePractice locking the calendar feature. You don't do that.
 
 ---
 
@@ -145,28 +150,28 @@ This is the single most important strategic insight in this analysis and the bui
 
 **The therapist is not just your customer. The therapist is your CAC, your onboarding, your retention, your support, your QA, and your brand.**
 
-| Function | In a typical B2B SaaS | In MAZE |
-|---|---|---|
-| Customer acquisition | Sales / marketing | Therapist invites a parent |
-| Onboarding | Self-serve docs / CSM | Therapist does it in-session, hands parent the phone |
-| Activation | User discovers value | Parent opens the cheat sheet in front of therapist |
-| Retention | Product stickiness | Therapist's clinical workflow depends on it |
-| Support | Tier 1 / 2 | Therapist is the de facto support (and they're trained to handle distressed humans) |
-| Quality assurance | Reviews, monitoring | Clinician reviews content before parents see it |
+| Function             | In a typical B2B SaaS | In MAZE                                                                             |
+| -------------------- | --------------------- | ----------------------------------------------------------------------------------- |
+| Customer acquisition | Sales / marketing     | Therapist invites a parent                                                          |
+| Onboarding           | Self-serve docs / CSM | Therapist does it in-session, hands parent the phone                                |
+| Activation           | User discovers value  | Parent opens the cheat sheet in front of therapist                                  |
+| Retention            | Product stickiness    | Therapist's clinical workflow depends on it                                         |
+| Support              | Tier 1 / 2            | Therapist is the de facto support (and they're trained to handle distressed humans) |
+| Quality assurance    | Reviews, monitoring   | Clinician reviews content before parents see it                                     |
 
-Every other B2B SaaS has to *build* these functions. You get them for free because the therapist already does them as part of their job.
+Every other B2B SaaS has to _build_ these functions. You get them for free because the therapist already does them as part of their job.
 
 **Implications:**
 
 1. **Your marketing budget is therapist conferences, not Meta ads.** PCIT International has an annual convention. The Association for Behavioral and Cognitive Therapies (ABCT) has one. State-level behavioral-health chapters. Ariella's professional network. Target the **PCIT-certified therapist** specifically — they're a small, identifiable population (~5,000–8,000 globally) with deep curriculum affinity.
 2. **Your NPS question is not "would you recommend MAZE?" — it's "would you prescribe MAZE to your next client?"** This is a different metric because the therapist is both the user and the prescriber.
-3. **Your churn curve follows clinical caseloads, not product usage.** A therapist churns when they change jobs, retire, or stop using PCIT — not when a new competitor launches. This is *good news*: churn is structurally low.
+3. **Your churn curve follows clinical caseloads, not product usage.** A therapist churns when they change jobs, retire, or stop using PCIT — not when a new competitor launches. This is _good news_: churn is structurally low.
 4. **Network effects are real but slow.** Every therapist who uses MAZE makes it easier to refer clients between therapists (continuity of care), and every parent who's had MAZE tells their friends "ask your therapist about MAZE." But the cycle is months, not weeks. Don't expect viral growth; expect durable, compounding growth.
 5. **You have one rule for the parent-side UX: zero friction.** The therapist is your customer. The parent is your therapist's patient. Every extra step on the parent side is friction the therapist pays for in session time. PWA install on first visit (not "go to the App Store"), one-tap magic-link sign-in, no tutorial — the parent should be looking at their first cheat sheet in under 30 seconds from invite.
 
 ### The therapist-as-channel risk
 
-There's one risk to flag: **if a therapist has a bad experience, they don't churn quietly — they tell every parent they see for the next five years.** Therapist word-of-mouth in clinical communities is *brutal*. This is why the free tier is generous (let therapists try before they buy) and why the parent-side UX has to be impeccable (the therapist's reputation is on the line).
+There's one risk to flag: **if a therapist has a bad experience, they don't churn quietly — they tell every parent they see for the next five years.** Therapist word-of-mouth in clinical communities is _brutal_. This is why the free tier is generous (let therapists try before they buy) and why the parent-side UX has to be impeccable (the therapist's reputation is on the line).
 
 ---
 
@@ -175,6 +180,7 @@ There's one risk to flag: **if a therapist has a bad experience, they don't chur
 These are directional, not a financial model. Assumptions are listed; override them.
 
 **Assumptions:**
+
 - PCIT-trained therapist population: ~7,000 in the US (PCIT International directory + certified-trainee lists).
 - Behavioral parent training (BPT) therapists with overlapping practice: ~30,000.
 - Total addressable solo + small-clinic therapists who might prescribe a digital companion: ~25,000.
@@ -185,18 +191,18 @@ These are directional, not a financial model. Assumptions are listed; override t
 
 **Revenue at recommended pricing:**
 
-| Year | Solo @ $19/mo | Pro @ $39/mo | Clinic @ $29/seat | Blended ARPU/therapist | MRR | ARR |
-|---|---|---|---|---|---|---|
-| **Year 1** (post-launch) | 87 × $19 = $1,653 | 31 × $39 = $1,209 | 6 × $29 × 4 seats = $696 | ~$28.5 | ~$3,560 | ~$42,700 |
-| **Year 2** | 350 × $19 = $6,650 | 125 × $39 = $4,875 | 25 × $29 × 4 seats = $2,900 | ~$28.9 | ~$14,425 | ~$173,100 |
-| **Year 3** | 875 × $19 = $16,625 | 313 × $39 = $12,207 | 63 × $29 × 4 seats = $7,308 | ~$29.0 | ~$36,140 | ~$433,700 |
+| Year                     | Solo @ $19/mo       | Pro @ $39/mo        | Clinic @ $29/seat           | Blended ARPU/therapist | MRR      | ARR       |
+| ------------------------ | ------------------- | ------------------- | --------------------------- | ---------------------- | -------- | --------- |
+| **Year 1** (post-launch) | 87 × $19 = $1,653   | 31 × $39 = $1,209   | 6 × $29 × 4 seats = $696    | ~$28.5                 | ~$3,560  | ~$42,700  |
+| **Year 2**               | 350 × $19 = $6,650  | 125 × $39 = $4,875  | 25 × $29 × 4 seats = $2,900 | ~$28.9                 | ~$14,425 | ~$173,100 |
+| **Year 3**               | 875 × $19 = $16,625 | 313 × $39 = $12,207 | 63 × $29 × 4 seats = $7,308 | ~$29.0                 | ~$36,140 | ~$433,700 |
 
 **Sensitivity at the original build plan's $29/mo:**
 
-| Year | Therapists | ARPU | ARR |
-|---|---|---|---|
-| Year 1 | 125 | $29 | ~$43,500 |
-| Year 3 | 1,250 | $29 | ~$435,000 |
+| Year   | Therapists | ARPU | ARR       |
+| ------ | ---------- | ---- | --------- |
+| Year 1 | 125        | $29  | ~$43,500  |
+| Year 3 | 1,250      | $29  | ~$435,000 |
 
 The two pricing strategies are close in Year 1–2. **Year 3 is where the difference compounds**: at $19 base + Pro upsells, your ARPU grows as more users adopt Pro and clinics. At flat $29, you're capped.
 
@@ -210,24 +216,24 @@ You'll be asked (by yourselves, by investors) about MAUs / parents on the platfo
 
 - **Track it, but don't monetize it.** Parents on the platform is your leading indicator of therapist retention. If parents stop opening the app, therapists will churn in 90 days.
 - **Target metric:** Parents-per-paying-therapist. Healthy is 8–15 (a typical PCIT caseload). Above 20 means the therapist is stretched and at risk of burnout-driven churn.
-- **Parent MAU as a vanity metric.** Don't put "100K parents using MAZE!" on your landing page. It's not the value prop — *therapist-prescribed* is the value prop. A parent using MAZE without their therapist in the loop is a liability, not an asset.
+- **Parent MAU as a vanity metric.** Don't put "100K parents using MAZE!" on your landing page. It's not the value prop — _therapist-prescribed_ is the value prop. A parent using MAZE without their therapist in the loop is a liability, not an asset.
 
 ---
 
 ## 6. Adjustments to the build plan
 
-The current plan §8 (Phasing) says: *"monetization ($29/mo per therapist, ~10 active clients — parents always free)"*.
+The current plan §8 (Phasing) says: _"monetization ($29/mo per therapist, ~10 active clients — parents always free)"_.
 
 Recommended changes:
 
-| Item | Build plan | Recommendation | Why |
-|---|---|---|---|
-| Price | $29/mo | **$19/mo Solo / $39/mo Pro** | $19 is below the impulse threshold for solo therapists; Pro at $39 is the real floor once L4–L5 ships |
-| Client cap | ~10 active clients | **Drop on Solo**; cap at 3 on **Free** | Cap on Free forces conversion; cap on Solo is punitive and unnecessary |
-| Annual discount | Not specified | **~17% off** (2 months free) | SaaS default; locks multi-case usage |
-| Free tier | Not specified | **3 clients, L1–L3, structured notes only** | Drives trainees, supervisors, and trial conversion |
-| Clinic tier | "multi-clinician orgs" deferred to Phase 3 | **Launch clinic tier in Phase 2** (per-seat + admin) | Group practices are your highest-LTV segment; don't wait |
-| Parent gating | "always free" | **Keep** | Non-negotiable |
+| Item            | Build plan                                 | Recommendation                                       | Why                                                                                                   |
+| --------------- | ------------------------------------------ | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Price           | $29/mo                                     | **$19/mo Solo / $39/mo Pro**                         | $19 is below the impulse threshold for solo therapists; Pro at $39 is the real floor once L4–L5 ships |
+| Client cap      | ~10 active clients                         | **Drop on Solo**; cap at 3 on **Free**               | Cap on Free forces conversion; cap on Solo is punitive and unnecessary                                |
+| Annual discount | Not specified                              | **~17% off** (2 months free)                         | SaaS default; locks multi-case usage                                                                  |
+| Free tier       | Not specified                              | **3 clients, L1–L3, structured notes only**          | Drives trainees, supervisors, and trial conversion                                                    |
+| Clinic tier     | "multi-clinician orgs" deferred to Phase 3 | **Launch clinic tier in Phase 2** (per-seat + admin) | Group practices are your highest-LTV segment; don't wait                                              |
+| Parent gating   | "always free"                              | **Keep**                                             | Non-negotiable                                                                                        |
 
 ---
 
@@ -244,7 +250,7 @@ Sequence matters. Don't run all of these at once.
 
 ### Phase 2b — Month 3–9: Solo therapist acquisition
 
-- **Conference circuit.** PCIT International Convention, ABCT, state-level behavioral-health chapters. Booth presence, talk submissions, poster sessions. Target audience is small but *high intent* — they came to learn about exactly what you built.
+- **Conference circuit.** PCIT International Convention, ABCT, state-level behavioral-health chapters. Booth presence, talk submissions, poster sessions. Target audience is small but _high intent_ — they came to learn about exactly what you built.
 - **Content marketing for clinicians.** One blog post per week on a real clinical question (e.g., "How do you explain the PRIDE skills to a parent who's too anxious to play?"). SEO these against the queries therapists actually search. Don't write for parents — they aren't your buyer.
 - **Direct outreach to PCIT-certified therapists.** The PCIT International directory is public. Personalized email referencing their clinic, their recent training. Slow, manual, works.
 - **Referral program.** Give therapists who refer another therapist one month free. Trivial to implement, high trust because the referrer is a peer.
@@ -257,14 +263,14 @@ Sequence matters. Don't run all of these at once.
 
 ### Phase 2d — Month 12–24: Optional B2B2C
 
-This is the long-term optional play. If a clinic or health system wants to **bundle MAZE into their patient-facing app** (white-label or co-branded), take the deal — but only if it doesn't compromise the data-minimization model. Revenue model: per-licensed-therapist pricing, same as Clinic tier, with a markup to the parent org. This is *not* a near-term priority.
+This is the long-term optional play. If a clinic or health system wants to **bundle MAZE into their patient-facing app** (white-label or co-branded), take the deal — but only if it doesn't compromise the data-minimization model. Revenue model: per-licensed-therapist pricing, same as Clinic tier, with a markup to the parent org. This is _not_ a near-term priority.
 
 ### What NOT to do in GTM
 
 - **Don't run Meta ads to parents.** It's the wrong audience. Even at $5 CAC you'd be paying to acquire users who can't use the product (no therapist invite).
 - **Don't publish "for parents" content marketing.** It's a brand play, not an acquisition play. Parents don't search for MAZE; therapists search for tools like MAZE.
 - **Don't race to a freemium parent app.** Every minute spent on parent-side growth is a minute not spent on therapist sales.
-- **Don't undercut Jane or SimplePractice.** MAZE is *adjacent* to practice management software, not a competitor. Don't try to replace the calendar; complement the session.
+- **Don't undercut Jane or SimplePractice.** MAZE is _adjacent_ to practice management software, not a competitor. Don't try to replace the calendar; complement the session.
 
 ---
 
@@ -294,7 +300,7 @@ These are the calls that need to be made before Phase 2 pricing is finalized. Li
 
 ---
 
-## 10. What this analysis is *not*
+## 10. What this analysis is _not_
 
 - **Not a financial model.** Revenue projections use round numbers and assumed conversion curves. Run a proper model with cohort analysis before any fundraising or hiring commitments.
 - **Not a legal review.** Pricing strategy interacts with HIPAA, state telehealth laws, FTC Health Breach Notification Rule, and consumer health data laws (especially WA's My Health My Data Act). Get counsel before Phase 2 launches paid tiers.
@@ -307,20 +313,21 @@ These are the calls that need to be made before Phase 2 pricing is finalized. Li
 
 Pulled from public sources, Q1 2026.
 
-| Product | Model | Price | Notes |
-|---|---|---|---|
-| **SimplePractice** | B2B SaaS, therapist | $39–$99/mo per practitioner | EHR, billing, telehealth. The dominant solo-therapist platform. |
-| **Jane App** | B2B SaaS, therapist | $39–$99/mo per practitioner | EHR + scheduling; Canadian, growing in US. |
-| **TherapyNotes** | B2B SaaS, therapist | ~$50–$80/mo per practitioner | Older, billing-heavy. |
-| **NOCD** | B2C therapy service + free app | Free app; therapy via insurance | App drives leads into insurance-billed therapy. Closest structural analog to MAZE — free app, monetized on the care delivery side. |
-| **Headspace** | B2C subscription | $12.99/mo or $5.83/mo annual | Self-help content. Proven willingness to pay for mental health content. |
-| **Calm** | B2C subscription | $14.99/mo | Same as Headspace. |
-| **EndeavorRx** | Prescription digital therapeutic | Insurance-billed / ~$100/mo cash | FDA-authorized; clinician-prescribed; payer-reimbursed. The "if MAZE becomes a PDT" template. |
-| **Triple P Online** | B2B2C via provider organizations | Provider-licensed, varies | Curriculum is licensed to orgs; not consumer-priced. |
-| **Incredible Years** | B2B curriculum licensing | Varies; subscription to streaming | Clinician-facing video library. Subscription model for clinicians. |
-| **Parenting Hero** | B2C mobile app | $4.99 one-time | Low-end consumer parenting content. Not therapist-controlled. |
+| Product              | Model                            | Price                             | Notes                                                                                                                              |
+| -------------------- | -------------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **SimplePractice**   | B2B SaaS, therapist              | $39–$99/mo per practitioner       | EHR, billing, telehealth. The dominant solo-therapist platform.                                                                    |
+| **Jane App**         | B2B SaaS, therapist              | $39–$99/mo per practitioner       | EHR + scheduling; Canadian, growing in US.                                                                                         |
+| **TherapyNotes**     | B2B SaaS, therapist              | ~$50–$80/mo per practitioner      | Older, billing-heavy.                                                                                                              |
+| **NOCD**             | B2C therapy service + free app   | Free app; therapy via insurance   | App drives leads into insurance-billed therapy. Closest structural analog to MAZE — free app, monetized on the care delivery side. |
+| **Headspace**        | B2C subscription                 | $12.99/mo or $5.83/mo annual      | Self-help content. Proven willingness to pay for mental health content.                                                            |
+| **Calm**             | B2C subscription                 | $14.99/mo                         | Same as Headspace.                                                                                                                 |
+| **EndeavorRx**       | Prescription digital therapeutic | Insurance-billed / ~$100/mo cash  | FDA-authorized; clinician-prescribed; payer-reimbursed. The "if MAZE becomes a PDT" template.                                      |
+| **Triple P Online**  | B2B2C via provider organizations | Provider-licensed, varies         | Curriculum is licensed to orgs; not consumer-priced.                                                                               |
+| **Incredible Years** | B2B curriculum licensing         | Varies; subscription to streaming | Clinician-facing video library. Subscription model for clinicians.                                                                 |
+| **Parenting Hero**   | B2C mobile app                   | $4.99 one-time                    | Low-end consumer parenting content. Not therapist-controlled.                                                                      |
 
 **Key references:**
+
 - ADHD apps market: $1.9B (2025) → $6.7B (2033), Grand View Research.
 - Parent coaching apps market: $2.8B (2025) → $8.6B (2034), ~13% CAGR, Market Intelo.
 - Average full-time therapist caseload: 20–30 clients/week, Headway / Mentalyc / Blueprint.
@@ -331,4 +338,4 @@ Pulled from public sources, Q1 2026.
 
 **Bottom line for Dov/Ariella:** Charge therapists $19/mo (Solo) or $39/mo (Pro). Keep parents free forever. Don't gate the In-the-Moment button, ever. Land with solo PCIT-trained therapists first, expand to clinics, defer insurance/PDT work until you have product-market fit. The build plan's direction is right; the price needs to come down and the tiers need to come up.
 
-*— Gary, 2026-06-25*
+_— Gary, 2026-06-25_

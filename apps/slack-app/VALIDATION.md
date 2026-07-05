@@ -15,14 +15,14 @@ scattered-form schema).
 
 Required scopes from `README.md` and the auth model:
 
-| Scope | Requested in manifest | Use case | OK? |
-|-------|----------------------|----------|-----|
-| `chat:write` | yes | DM therapists (skill unlocks, crisis pings) | yes |
-| `chat:write.public` | yes | Post announcements to channels the bot is not in | yes |
-| `commands` | yes | Slash-command routing (`/parentscript-clients`, `/parentscript-unlock`) | yes |
-| `users:read` | yes | Resolve therapist Slack user IDs from emails | yes |
-| `users:read.email` | yes | Same lookup via email address | yes |
-| `im:write` | yes | Open DM channels with therapists on demand | yes |
+| Scope               | Requested in manifest | Use case                                                                | OK? |
+| ------------------- | --------------------- | ----------------------------------------------------------------------- | --- |
+| `chat:write`        | yes                   | DM therapists (skill unlocks, crisis pings)                             | yes |
+| `chat:write.public` | yes                   | Post announcements to channels the bot is not in                        | yes |
+| `commands`          | yes                   | Slash-command routing (`/parentscript-clients`, `/parentscript-unlock`) | yes |
+| `users:read`        | yes                   | Resolve therapist Slack user IDs from emails                            | yes |
+| `users:read.email`  | yes                   | Same lookup via email address                                           | yes |
+| `im:write`          | yes                   | Open DM channels with therapists on demand                              | yes |
 
 All requested scopes are necessary and sufficient for the README's three
 notification surfaces (skill unlock, weekly digest, crisis alerts). No
@@ -49,11 +49,11 @@ need quick diagnostic info from Slack.
 
 ## 4. URLs
 
-| URL | Manifest value | Expected per README |
-|-----|----------------|---------------------|
-| Event subscriptions | `https://api.parentscript.app/slack/events` | matches | yes |
-| Interactivity | `https://api.parentscript.app/slack/interactivity` | matches | yes |
-| OAuth redirect (per README §Install step 3) | `https://api.parentscript.app/slack/oauth` | not in manifest (correct — redirect URL is a Slack-app config field, not a manifest field) | n/a |
+| URL                                         | Manifest value                                     | Expected per README                                                                        |
+| ------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Event subscriptions                         | `https://api.parentscript.app/slack/events`        | matches                                                                                    | yes |
+| Interactivity                               | `https://api.parentscript.app/slack/interactivity` | matches                                                                                    | yes |
+| OAuth redirect (per README §Install step 3) | `https://api.parentscript.app/slack/oauth`         | not in manifest (correct — redirect URL is a Slack-app config field, not a manifest field) | n/a |
 
 All manifest URL fields are present and HTTPS. `socket_mode_enabled: false`
 is correct for a public HTTPS-hosted backend (avoids needing a websocket
@@ -83,12 +83,12 @@ echo — see Backend gap §6.
 It has **no** Slack routes. The following handlers must be added before
 the manifest can be considered end-to-end functional:
 
-| Path | Method | Required for | Notes |
-|------|--------|--------------|-------|
-| `/slack/events` | POST | Event subscriptions (manifest §settings.event_subscriptions.request_url) | Must echo `challenge` on `url_verification`. Verify Slack signing secret (`X-Slack-Signature` + `X-Slack-Request-Timestamp`) using `SLACK_SIGNING_SECRET`. Body must be `application/x-www-form-urlencoded` for slash commands but JSON for events — handle accordingly. |
-| `/slack/interactivity` | POST | Button/modal submit payloads | Same signing-secret check. Three-second ack requirement — defer heavy work to a background job. |
-| `/slack/oauth` | GET | OAuth install callback (per README §Install step 3) | Exchange `code` for token using `SLACK_CLIENT_ID` + `SLACK_CLIENT_SECRET`. Persist `bot_token`, `team_id`, `installer_user_id` in `workspaces` (or similar) table. |
-| `/slack/commands` (optional) | POST | Slash commands | Manifest wires slash commands via the **interactivity** request URL by default, so a dedicated `/slack/commands` route is only needed if commands should be handled separately from other interactivity. Slack also supports routing commands via `/slack/events` (type=`slash_command`); pick one and document it. |
+| Path                         | Method | Required for                                                             | Notes                                                                                                                                                                                                                                                                                                               |
+| ---------------------------- | ------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/slack/events`              | POST   | Event subscriptions (manifest §settings.event_subscriptions.request_url) | Must echo `challenge` on `url_verification`. Verify Slack signing secret (`X-Slack-Signature` + `X-Slack-Request-Timestamp`) using `SLACK_SIGNING_SECRET`. Body must be `application/x-www-form-urlencoded` for slash commands but JSON for events — handle accordingly.                                            |
+| `/slack/interactivity`       | POST   | Button/modal submit payloads                                             | Same signing-secret check. Three-second ack requirement — defer heavy work to a background job.                                                                                                                                                                                                                     |
+| `/slack/oauth`               | GET    | OAuth install callback (per README §Install step 3)                      | Exchange `code` for token using `SLACK_CLIENT_ID` + `SLACK_CLIENT_SECRET`. Persist `bot_token`, `team_id`, `installer_user_id` in `workspaces` (or similar) table.                                                                                                                                                  |
+| `/slack/commands` (optional) | POST   | Slash commands                                                           | Manifest wires slash commands via the **interactivity** request URL by default, so a dedicated `/slack/commands` route is only needed if commands should be handled separately from other interactivity. Slack also supports routing commands via `/slack/events` (type=`slash_command`); pick one and document it. |
 
 Other backend-side prerequisites (not in `server.mjs` yet):
 

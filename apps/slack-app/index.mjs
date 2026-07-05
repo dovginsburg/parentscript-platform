@@ -14,10 +14,7 @@ import 'dotenv/config';
 import { App, LogLevel } from '@slack/bolt';
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
@@ -214,7 +211,8 @@ export async function sendWeeklyPracticeSummary({ therapistSlackId, therapistEma
 
     const { data: clients } = await supabase
       .from('clients')
-      .select(`
+      .select(
+        `
         id,
         label,
         practice_logs (
@@ -223,9 +221,13 @@ export async function sendWeeklyPracticeSummary({ therapistSlackId, therapistEma
           rating,
           created_at
         )
-      `)
+      `
+      )
       .eq('therapist_id', therapist.id)
-      .gte('practice_logs.created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString());
+      .gte(
+        'practice_logs.created_at',
+        new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()
+      );
 
     if (!clients || clients.length === 0) return;
 
@@ -234,7 +236,7 @@ export async function sendWeeklyPracticeSummary({ therapistSlackId, therapistEma
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: '*📊 Weekly Practice Summary*\n\nYour clients\' practice activity over the past 7 days:',
+          text: "*📊 Weekly Practice Summary*\n\nYour clients' practice activity over the past 7 days:",
         },
       },
       { type: 'divider' },
@@ -242,9 +244,10 @@ export async function sendWeeklyPracticeSummary({ therapistSlackId, therapistEma
 
     for (const client of clients) {
       const logs = client.practice_logs || [];
-      const avgRating = logs.length > 0
-        ? (logs.reduce((sum, log) => sum + log.rating, 0) / logs.length).toFixed(1)
-        : 'N/A';
+      const avgRating =
+        logs.length > 0
+          ? (logs.reduce((sum, log) => sum + log.rating, 0) / logs.length).toFixed(1)
+          : 'N/A';
 
       blocks.push({
         type: 'section',

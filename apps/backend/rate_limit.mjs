@@ -19,7 +19,7 @@
 // 429 responses use the same shape the rest of the API uses for rate-limit
 // errors so the iOS client doesn't need a new error type.
 
-const _ipBuckets = new Map();   // key: `${scope}:${ip}` → deque of timestamps
+const _ipBuckets = new Map(); // key: `${scope}:${ip}` → deque of timestamps
 const _keyedBuckets = new Map(); // key: `${scope}:${key}` → deque of timestamps
 const _ipLock = { busy: false };
 const _keyedLock = { busy: false };
@@ -87,7 +87,7 @@ export function resetAll() {
  */
 export function envLimit(name, def) {
   const v = process.env[name];
-  if (v == null || v === "") return def;
+  if (v == null || v === '') return def;
   const n = parseInt(v, 10);
   return Number.isFinite(n) && n > 0 ? n : def;
 }
@@ -103,7 +103,7 @@ export function envLimit(name, def) {
  */
 export function ipRateMiddleware(scope, limit, windowSec = 60, getKey) {
   return function (req, res, next) {
-    const key = getKey ? getKey(req) : (req.ip || req.headers?.['x-forwarded-for'] || 'unknown');
+    const key = getKey ? getKey(req) : req.ip || req.headers?.['x-forwarded-for'] || 'unknown';
     if (!checkIpRate(scope, key, limit, windowSec)) {
       res.status(429).json({
         error: `too many requests from this IP — try again in ${windowSec}s`,

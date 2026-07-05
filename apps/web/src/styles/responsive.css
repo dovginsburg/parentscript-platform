@@ -42,7 +42,9 @@
 
 /* ── Long-press visual affordance ─────────────────────────────────────────── */
 .long-press-target {
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
 }
 
 .long-press-target:active {

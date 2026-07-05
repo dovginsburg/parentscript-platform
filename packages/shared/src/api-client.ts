@@ -5,7 +5,7 @@
  * Auth uses the Supabase access token from the host app.
  */
 
-import type { CoachingResponse } from "./types.js";
+import type { CoachingResponse } from './types.js';
 
 export interface ParentscriptApiClientOptions {
   baseUrl?: string;
@@ -18,7 +18,7 @@ export class ParentscriptApiError extends Error {
   body?: any;
   constructor(status: number, message: string, body?: any) {
     super(message);
-    this.name = "ParentscriptApiError";
+    this.name = 'ParentscriptApiError';
     this.status = status;
     this.body = body;
   }
@@ -30,7 +30,7 @@ export class ParentscriptApiClient {
   private fetchImpl: typeof fetch;
 
   constructor(options: ParentscriptApiClientOptions = {}) {
-    this.baseUrl = options.baseUrl ?? "https://api.parentscript.app";
+    this.baseUrl = options.baseUrl ?? 'https://api.parentscript.app';
     this.getToken = options.getToken;
     this.fetchImpl = options.fetch ?? fetch.bind(globalThis);
   }
@@ -51,8 +51,8 @@ export class ParentscriptApiClient {
   }): Promise<CoachingResponse> {
     const auth = await this.authHeader();
     const res = await this.fetchImpl(`${this.baseUrl}/v1/coach`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", ...auth },
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...auth },
       body: JSON.stringify(req),
     });
     if (!res.ok) {
@@ -60,7 +60,7 @@ export class ParentscriptApiClient {
       throw new ParentscriptApiError(
         res.status,
         body?.error ?? `Coach request failed: ${res.status}`,
-        body,
+        body
       );
     }
     return res.json();

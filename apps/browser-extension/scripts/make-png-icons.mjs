@@ -2,13 +2,13 @@
  * Generate minimal PNG icons for Chrome extension.
  * Uses hand-crafted PNG for each size.
  */
-import { writeFile } from "node:fs/promises";
-import { join, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import { writeFile } from 'node:fs/promises';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const ICONS_DIR = join(__dirname, "..", "icons");
+const ICONS_DIR = join(__dirname, '..', 'icons');
 
 // Create a simple PNG with proper headers
 // This creates a solid indigo square with a white "P"
@@ -20,13 +20,16 @@ function createMinimalPNG(size) {
   const signature = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]);
 
   // IHDR chunk
-  const ihdr = createChunk('IHDR', Buffer.concat([
-    Buffer.from([0, 0, 0, size]), // width
-    Buffer.from([0, 0, 0, size]), // height
-    Buffer.from([8]), // bit depth
-    Buffer.from([6]), // color type (RGBA)
-    Buffer.from([0, 0, 0]) // compression, filter, interlace
-  ]));
+  const ihdr = createChunk(
+    'IHDR',
+    Buffer.concat([
+      Buffer.from([0, 0, 0, size]), // width
+      Buffer.from([0, 0, 0, size]), // height
+      Buffer.from([8]), // bit depth
+      Buffer.from([6]), // color type (RGBA)
+      Buffer.from([0, 0, 0]), // compression, filter, interlace
+    ])
+  );
 
   // Create pixel data (simplified solid color with transparency)
   const pixelData = [];
@@ -78,13 +81,13 @@ function compress(data) {
   // Split into 65535-byte chunks
   for (let i = 0; i < data.length; i += 65535) {
     const chunk = data.subarray(i, Math.min(i + 65535, data.length));
-    const isLast = (i + 65535 >= data.length) ? 1 : 0;
+    const isLast = i + 65535 >= data.length ? 1 : 0;
     const len = chunk.length;
-    const nlen = ~len & 0xFFFF;
+    const nlen = ~len & 0xffff;
 
     blocks.push(Buffer.from([isLast]));
-    blocks.push(Buffer.from([len & 0xFF, (len >> 8) & 0xFF]));
-    blocks.push(Buffer.from([nlen & 0xFF, (nlen >> 8) & 0xFF]));
+    blocks.push(Buffer.from([len & 0xff, (len >> 8) & 0xff]));
+    blocks.push(Buffer.from([nlen & 0xff, (nlen >> 8) & 0xff]));
     blocks.push(chunk);
   }
 
@@ -99,7 +102,7 @@ function crc32(buf) {
   for (let i = 0; i < buf.length; i++) {
     crc = crc ^ buf[i];
     for (let j = 0; j < 8; j++) {
-      crc = (crc >>> 1) ^ (0xEDB88320 & -(crc & 1));
+      crc = (crc >>> 1) ^ (0xedb88320 & -(crc & 1));
     }
   }
   return (crc ^ -1) >>> 0;
@@ -107,12 +110,14 @@ function crc32(buf) {
 
 // Simpler approach: just copy the SVG as fallback
 async function copyIconsAsPlaceholder() {
-  console.log("Creating placeholder PNG references...");
-  console.log("Note: Chrome Manifest V3 supports SVG icons natively.");
-  console.log("If PNGs are required, install librsvg:\n");
-  console.log("  brew install librsvg");
-  console.log("  cd apps/browser-extension");
-  console.log("  for i in 16 48 128; do rsvg-convert -w $i -h $i icons/icon-$i.svg -o icons/icon-$i.png; done\n");
+  console.log('Creating placeholder PNG references...');
+  console.log('Note: Chrome Manifest V3 supports SVG icons natively.');
+  console.log('If PNGs are required, install librsvg:\n');
+  console.log('  brew install librsvg');
+  console.log('  cd apps/browser-extension');
+  console.log(
+    '  for i in 16 48 128; do rsvg-convert -w $i -h $i icons/icon-$i.svg -o icons/icon-$i.png; done\n'
+  );
 
   // For now, create symlinks or notes
   const sizes = [16, 48, 128];
@@ -123,8 +128,8 @@ async function copyIconsAsPlaceholder() {
     );
   }
 
-  console.log("✓ Created PNG generation instructions");
-  console.log("\nAlternative: Update manifest.json to use .svg extension instead of .png");
+  console.log('✓ Created PNG generation instructions');
+  console.log('\nAlternative: Update manifest.json to use .svg extension instead of .png');
 }
 
 copyIconsAsPlaceholder();

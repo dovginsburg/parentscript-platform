@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
-import { supabase } from '@/lib/supabase'
-import { useAuth } from '@/hooks/useAuth'
-import { friendlyAuthError } from '@/lib/authErrors'
-import ScopeOfPracticeGate from '@/components/ScopeOfPracticeGate'
-import OAuthButtons from '@/components/OAuthButtons'
+import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import { supabase } from '@/lib/supabase';
+import { useAuth } from '@/hooks/useAuth';
+import { friendlyAuthError } from '@/lib/authErrors';
+import ScopeOfPracticeGate from '@/components/ScopeOfPracticeGate';
+import OAuthButtons from '@/components/OAuthButtons';
 
 // ────────────────────────────────────────────────────────────────────
 // ParentLogin — Free-tier self-serve parent login
@@ -26,56 +26,56 @@ import OAuthButtons from '@/components/OAuthButtons'
 // console and returns a short user-facing string.
 // ────────────────────────────────────────────────────────────────────
 
-type ForgotState = null | 'sending' | 'sent'
+type ForgotState = null | 'sending' | 'sent';
 
 export default function ParentLogin() {
-  const navigate = useNavigate()
-  const { refreshRole } = useAuth()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState<string | null>(null)
-  const [loading, setLoading] = useState(false)
-  const [forgotState, setForgotState] = useState<ForgotState>(null)
+  const navigate = useNavigate();
+  const { refreshRole } = useAuth();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [forgotState, setForgotState] = useState<ForgotState>(null);
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setError(null)
-    setLoading(true)
+    e.preventDefault();
+    setError(null);
+    setLoading(true);
 
     try {
       const { error: signInError } = await supabase.auth.signInWithPassword({
         email,
         password,
-      })
-      if (signInError) throw signInError
-      await refreshRole()
-      navigate('/parent')
+      });
+      if (signInError) throw signInError;
+      await refreshRole();
+      navigate('/parent');
     } catch (err: unknown) {
       // Sanitize — never render the raw PostgREST / auth error to the UI.
-      const friendly = friendlyAuthError(err, 'ParentLogin.submit')
-      setError(friendly.message)
+      const friendly = friendlyAuthError(err, 'ParentLogin.submit');
+      setError(friendly.message);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   }
 
   async function handleForgotPassword() {
     if (!email) {
-      setError('Enter your email address above first.')
-      return
+      setError('Enter your email address above first.');
+      return;
     }
-    setError(null)
-    setForgotState('sending')
+    setError(null);
+    setForgotState('sending');
     const { error: resetError } = await supabase.auth.resetPasswordForEmail(email, {
       redirectTo: `${window.location.origin}/app/reset-password`,
-    })
+    });
     if (resetError) {
-      const friendly = friendlyAuthError(resetError, 'ParentLogin.forgotPassword')
-      setError(friendly.message)
-      setForgotState(null)
-      return
+      const friendly = friendlyAuthError(resetError, 'ParentLogin.forgotPassword');
+      setError(friendly.message);
+      setForgotState(null);
+      return;
     }
-    setForgotState('sent')
+    setForgotState('sent');
   }
 
   return (
@@ -87,9 +87,7 @@ export default function ParentLogin() {
             ParentScript
           </h1>
           <p className="mt-1 text-sm text-gray-500">AMAZED Labs</p>
-          <h2 className="mt-6 text-2xl font-bold text-gray-900">
-            Parent sign in
-          </h2>
+          <h2 className="mt-6 text-2xl font-bold text-gray-900">Parent sign in</h2>
           <p className="mt-2 text-sm text-gray-600">
             Free-tier parent account. 1 coaching interaction per day.
           </p>
@@ -124,9 +122,7 @@ export default function ParentLogin() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Password
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
                 <input
                   type="password"
                   required
@@ -179,10 +175,7 @@ export default function ParentLogin() {
 
             <p className="mt-6 text-center text-sm text-gray-600">
               No account?{' '}
-              <Link
-                to="/parent-signup"
-                className="text-brand-700 font-medium hover:underline"
-              >
+              <Link to="/parent-signup" className="text-brand-700 font-medium hover:underline">
                 Sign up free
               </Link>
             </p>
@@ -223,5 +216,5 @@ export default function ParentLogin() {
         </div>
       </div>
     </ScopeOfPracticeGate>
-  )
+  );
 }

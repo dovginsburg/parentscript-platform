@@ -21,7 +21,7 @@
  * extension options") rather than guessing.
  */
 
-import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 
 // `vite/client` augments `import.meta.env`, but this extension is built
 // with raw esbuild — not Vite — so we type the few keys we read inline.
@@ -33,10 +33,10 @@ interface BuildEnv {
 // `import.meta` is not a global in an MV3 service worker / popup context
 // without DOM lib magic, so we narrow via Optional Chaining rather than
 // reaching for `any`. esbuild preserves this as-is in the bundle.
-const buildEnv = ((import.meta as unknown as { env?: BuildEnv }).env) ?? {};
+const buildEnv = (import.meta as unknown as { env?: BuildEnv }).env ?? {};
 
-const STORAGE_URL_KEY = "supabaseUrl";
-const STORAGE_KEY_KEY = "supabaseAnonKey";
+const STORAGE_URL_KEY = 'supabaseUrl';
+const STORAGE_KEY_KEY = 'supabaseAnonKey';
 
 export interface SupabaseConfig {
   url: string;
@@ -52,7 +52,12 @@ async function readStorageConfig(): Promise<SupabaseConfig | undefined> {
     const result = await chrome.storage.local.get([STORAGE_URL_KEY, STORAGE_KEY_KEY]);
     const url = result[STORAGE_URL_KEY];
     const anonKey = result[STORAGE_KEY_KEY];
-    if (typeof url === "string" && url.length > 0 && typeof anonKey === "string" && anonKey.length > 0) {
+    if (
+      typeof url === 'string' &&
+      url.length > 0 &&
+      typeof anonKey === 'string' &&
+      anonKey.length > 0
+    ) {
       return { url, anonKey };
     }
   } catch {
@@ -64,7 +69,12 @@ async function readStorageConfig(): Promise<SupabaseConfig | undefined> {
 function readBuildConfig(): SupabaseConfig | undefined {
   const url = buildEnv.VITE_SUPABASE_URL;
   const anonKey = buildEnv.VITE_SUPABASE_ANON_KEY;
-  if (typeof url === "string" && url.length > 0 && typeof anonKey === "string" && anonKey.length > 0) {
+  if (
+    typeof url === 'string' &&
+    url.length > 0 &&
+    typeof anonKey === 'string' &&
+    anonKey.length > 0
+  ) {
     return { url, anonKey };
   }
   return undefined;
@@ -106,8 +116,8 @@ export async function getSupabase(): Promise<SupabaseClient | undefined> {
 export class SupabaseConfigMissingError extends Error {
   constructor() {
     super(
-      "Supabase URL and anon key are not configured. Open the extension options to add them, then reload the popup.",
+      'Supabase URL and anon key are not configured. Open the extension options to add them, then reload the popup.'
     );
-    this.name = "SupabaseConfigMissingError";
+    this.name = 'SupabaseConfigMissingError';
   }
 }

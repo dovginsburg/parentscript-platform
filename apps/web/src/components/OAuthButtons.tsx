@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { supabase } from '@/lib/supabase'
+import { useState } from 'react';
+import { supabase } from '@/lib/supabase';
 
 /* ============================================================
    OAuthButtons — Apple / Google / Email
@@ -28,19 +28,19 @@ import { supabase } from '@/lib/supabase'
    callback URL contract.
    ============================================================ */
 
-type Provider = 'google' | 'apple' | 'email'
+type Provider = 'google' | 'apple' | 'email';
 
 interface OAuthButtonsProps {
   /** Where to send users after the OAuth round-trip. */
-  redirectTo?: string
+  redirectTo?: string;
   /** Layout — stack (default) or side-by-side. */
-  layout?: 'stack' | 'row'
+  layout?: 'stack' | 'row';
   /** Custom labels for the OAuth buttons. */
-  googleLabel?: string
-  appleLabel?: string
-  emailLabel?: string
+  googleLabel?: string;
+  appleLabel?: string;
+  emailLabel?: string;
   /** Called when the user picks the email (ghost) option. */
-  onEmailClick?: () => void
+  onEmailClick?: () => void;
 }
 
 const GOOGLE_SVG = (
@@ -62,7 +62,7 @@ const GOOGLE_SVG = (
       d="M12 4.75c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 1.45 14.97.5 12 .5 7.7.5 3.99 3.11 2.18 7.07l3.66 2.83C6.71 6.66 9.14 4.75 12 4.75z"
     />
   </svg>
-)
+);
 
 const APPLE_SVG = (
   <svg viewBox="0 0 24 24" className="oauth-icon" aria-hidden="true">
@@ -71,14 +71,21 @@ const APPLE_SVG = (
       d="M16.365 1.43c0 1.14-.434 2.21-1.224 3.005-.857.862-1.965 1.43-3.072 1.36-.143-1.116.43-2.27 1.193-2.998.847-.81 2.012-1.36 3.103-1.367zM20.5 17.18c-.42.97-.62 1.4-1.16 2.26-.75 1.2-1.81 2.7-3.12 2.71-1.17.01-1.47-.76-3.06-.75-1.59.01-1.92.77-3.09.76-1.31-.01-2.32-1.37-3.07-2.57-2.1-3.35-2.32-7.29-1.02-9.39.92-1.49 2.37-2.36 3.74-2.36 1.39 0 2.27.77 3.42.77 1.12 0 1.8-.77 3.41-.77 1.22 0 2.51.67 3.43 1.82-3.02 1.65-2.53 5.97.46 7.52z"
     />
   </svg>
-)
+);
 
 const MAIL_SVG = (
-  <svg viewBox="0 0 24 24" className="oauth-icon" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2">
+  <svg
+    viewBox="0 0 24 24"
+    className="oauth-icon"
+    aria-hidden="true"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
     <rect x="3" y="5" width="18" height="14" rx="2" />
     <path d="M3 7l9 7 9-7" />
   </svg>
-)
+);
 
 export default function OAuthButtons({
   redirectTo,
@@ -88,51 +95,50 @@ export default function OAuthButtons({
   emailLabel = 'Continue with email',
   onEmailClick,
 }: OAuthButtonsProps) {
-  const [pending, setPending] = useState<Provider | null>(null)
-  const [error, setError] = useState<string | null>(null)
+  const [pending, setPending] = useState<Provider | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   // Build callback URL. window.location.origin returns the bare origin
   // (no basename), so we append /auth/callback explicitly. The Vercel
   // rewrite rule in vercel.json routes /app/auth/callback → /index.html
   // and the React Router matches /auth/callback (basename-stripped).
-  const callbackUrl = redirectTo ?? `${window.location.origin}/auth/callback`
+  const callbackUrl = redirectTo ?? `${window.location.origin}/auth/callback`;
 
   async function handleOAuth(provider: 'google' | 'apple') {
-    setError(null)
-    setPending(provider)
+    setError(null);
+    setPending(provider);
     try {
       const { error: oauthError } = await supabase.auth.signInWithOAuth({
         provider,
         options: { redirectTo: callbackUrl },
-      })
-      if (oauthError) throw oauthError
+      });
+      if (oauthError) throw oauthError;
       // Supabase will redirect the browser — no further work here.
     } catch (err: unknown) {
       const msg =
         (err as { message?: string })?.message ||
         (err instanceof Error ? err.message : null) ||
         String(err) ||
-        'Could not start sign-in'
-      console.error(`[OAuthButtons] ${provider} signInWithOAuth failed:`, err)
-      setError(msg)
-      setPending(null)
+        'Could not start sign-in';
+      console.error(`[OAuthButtons] ${provider} signInWithOAuth failed:`, err);
+      setError(msg);
+      setPending(null);
     }
   }
 
   function handleEmail() {
-    setError(null)
-    setPending('email')
+    setError(null);
+    setPending('email');
     try {
-      onEmailClick?.()
+      onEmailClick?.();
     } finally {
       // The parent typically reveals the email form synchronously.
       // We clear "pending" so the buttons don't stay disabled.
-      setPending(null)
+      setPending(null);
     }
   }
 
-  const containerCls =
-    layout === 'row' ? 'oauth-grid oauth-grid-row' : 'oauth-stack'
+  const containerCls = layout === 'row' ? 'oauth-grid oauth-grid-row' : 'oauth-stack';
 
   return (
     <div className="oauth-buttons">
@@ -180,7 +186,7 @@ export default function OAuthButtons({
         </div>
       )}
     </div>
-  )
+  );
 }
 
 /* ============================================================
@@ -286,4 +292,4 @@ export const OAUTH_BUTTONS_CSS = `
   .oauth-btn { transition: none; }
   .oauth-btn:active:not(:disabled) { transform: none; }
 }
-`.trim()
+`.trim();

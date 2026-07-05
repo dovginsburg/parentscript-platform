@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useSubscription } from '@/hooks/useSubscription'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useSubscription } from '@/hooks/useSubscription';
 
 // ──────────────────────────────────────────────────────────────────────
 // Billing — Subscription management card for therapists
@@ -15,13 +15,13 @@ import { useSubscription } from '@/hooks/useSubscription'
 // "Manage Billing" button opens Stripe Billing Portal.
 
 export default function Billing() {
-  const { subscription, loading } = useSubscription()
-  const [portalLoading, setPortalLoading] = useState(false)
+  const { subscription, loading } = useSubscription();
+  const [portalLoading, setPortalLoading] = useState(false);
 
   async function openPortal() {
-    if (!subscription?.stripe_customer_id) return
+    if (!subscription?.stripe_customer_id) return;
 
-    setPortalLoading(true)
+    setPortalLoading(true);
     try {
       const res = await fetch('/api/stripe/portal', {
         method: 'POST',
@@ -29,18 +29,18 @@ export default function Billing() {
         body: JSON.stringify({
           stripe_customer_id: subscription.stripe_customer_id,
         }),
-      })
+      });
 
-      const data = await res.json()
+      const data = await res.json();
       if (data.url) {
-        window.location.href = data.url
+        window.location.href = data.url;
       } else {
-        alert(data.error || 'Failed to open billing portal.')
+        alert(data.error || 'Failed to open billing portal.');
       }
     } catch (err) {
-      alert('Network error. Please try again.')
+      alert('Network error. Please try again.');
     } finally {
-      setPortalLoading(false)
+      setPortalLoading(false);
     }
   }
 
@@ -50,7 +50,7 @@ export default function Billing() {
         <div className="h-4 bg-ps-bg-soft rounded w-1/4" />
         <div className="h-4 bg-ps-bg-soft rounded w-1/2" />
       </div>
-    )
+    );
   }
 
   if (!subscription) {
@@ -65,7 +65,7 @@ export default function Billing() {
           View plans
         </Link>
       </div>
-    )
+    );
   }
 
   // Mark's pill taxonomy for status.
@@ -75,23 +75,23 @@ export default function Billing() {
     past_due: 'warm',
     canceled: 'danger',
     unpaid: 'danger',
-  }
+  };
 
   const planNames: Record<string, string> = {
     solo: 'Solo',
     pro: 'Pro',
     clinic: 'Clinic',
     free: 'Free',
-  }
+  };
 
   const planDescription: Record<string, string> = {
     solo: '1 therapist, up to 25 parents',
     pro: '1 therapist, unlimited parents',
     clinic: 'Multiple therapists, unlimited parents',
     free: 'Self-guided, 1 interaction/day',
-  }
+  };
 
-  const statusTone = statusPillTone[subscription.status] ?? 'neutral'
+  const statusTone = statusPillTone[subscription.status] ?? 'neutral';
 
   return (
     <div className="ps-card">
@@ -130,9 +130,7 @@ export default function Billing() {
         {subscription.plan === 'clinic' && (
           <div className="flex items-center justify-between">
             <span className="text-sm text-ps-text-soft">Seats</span>
-            <span className="text-sm font-semibold text-ps-text">
-              {subscription.seats}
-            </span>
+            <span className="text-sm font-semibold text-ps-text">{subscription.seats}</span>
           </div>
         )}
       </div>
@@ -150,5 +148,5 @@ export default function Billing() {
         </p>
       </div>
     </div>
-  )
+  );
 }

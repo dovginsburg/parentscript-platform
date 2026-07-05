@@ -23,9 +23,9 @@
 //   SURFACE_SCOPE for the server-side mirror. The footer of this
 //   disclosure is always the same (crisis-line row is universal).
 
-import { SCOPE_DISCLOSURE_TEXT } from '@/lib/safety'
+import { SCOPE_DISCLOSURE_TEXT } from '@/lib/safety';
 
-type Surface = 'parent' | 'sibling'
+type Surface = 'parent' | 'sibling';
 
 const SURFACE_HEADER: Record<Surface, { title: string; body: string }> = {
   parent: {
@@ -36,35 +36,34 @@ const SURFACE_HEADER: Record<Surface, { title: string; body: string }> = {
     title: 'SiblingSupport is peer support — not counseling.',
     body: 'SiblingSupport is built for teens 13–18 who are supporting a sibling in distress. It teaches active listening, validation, and de-escalation — but it is not counseling, therapy, or a substitute for a trusted adult. If your sibling is in danger, you tell a safe adult. The app is here to help you slow down, not to be the only helper.',
   },
-}
+};
 
 const SURFACE_TAIL: Record<Surface, string> = {
-  parent: 'If you are working with a licensed mental health professional, ParentScript is designed to support that work between sessions — not replace it.',
-  sibling: 'You are not the only helper. SiblingSupport is one tool in a wider circle that includes your parents, school counselor, the 988 Lifeline, and the Childhelp National Child Abuse Hotline.',
-}
+  parent:
+    'If you are working with a licensed mental health professional, ParentScript is designed to support that work between sessions — not replace it.',
+  sibling:
+    'You are not the only helper. SiblingSupport is one tool in a wider circle that includes your parents, school counselor, the 988 Lifeline, and the Childhelp National Child Abuse Hotline.',
+};
 
 export default function ScopeOfPracticeDisclosure({
   compact = false,
   surface = 'parent',
 }: {
-  compact?: boolean
-  surface?: Surface
+  compact?: boolean;
+  surface?: Surface;
 }) {
-  const header = SURFACE_HEADER[surface]
-  const tail = SURFACE_TAIL[surface]
+  const header = SURFACE_HEADER[surface];
+  const tail = SURFACE_TAIL[surface];
   return (
     <aside
       aria-label="Scope of practice and crisis resources"
       className="bg-brand-50 border border-brand-200 rounded-xl p-4 md:p-5"
     >
       <p className="text-xs md:text-sm text-gray-800 leading-relaxed">
-        <strong className="font-bold">{header.title}</strong>{' '}
-        {header.body}
+        <strong className="font-bold">{header.title}</strong> {header.body}
       </p>
 
-      <p className="text-xs md:text-sm text-gray-700 leading-relaxed mt-3">
-        {tail}
-      </p>
+      <p className="text-xs md:text-sm text-gray-700 leading-relaxed mt-3">{tail}</p>
 
       {!compact && (
         <p className="text-xs md:text-sm text-gray-700 leading-relaxed mt-3">
@@ -73,16 +72,23 @@ export default function ScopeOfPracticeDisclosure({
       )}
 
       <p className="text-xs text-gray-700 mt-3 font-semibold">
-        In or near a crisis?{' '}
-        <span className="font-normal">Call or text</span>{' '}
-        <a className="underline font-semibold" href="tel:988">988</a>{' '}
+        In or near a crisis? <span className="font-normal">Call or text</span>{' '}
+        <a className="underline font-semibold" href="tel:988">
+          988
+        </a>{' '}
         <span className="font-normal">(Suicide &amp; Crisis Lifeline) · </span>
         <span className="font-normal">Childhelp </span>
-        <a className="underline font-semibold" href="tel:18004224453">1-800-422-4453</a>{' '}
+        <a className="underline font-semibold" href="tel:18004224453">
+          1-800-422-4453
+        </a>{' '}
         <span className="font-normal">· Domestic Violence </span>
-        <a className="underline font-semibold" href="tel:18007997233">1-800-799-7233</a>{' '}
+        <a className="underline font-semibold" href="tel:18007997233">
+          1-800-799-7233
+        </a>{' '}
         <span className="font-normal">· Emergency </span>
-        <a className="underline font-semibold" href="tel:911">911</a>
+        <a className="underline font-semibold" href="tel:911">
+          911
+        </a>
         <span className="font-normal"> · International: </span>
         <a
           className="underline font-semibold"
@@ -94,5 +100,5 @@ export default function ScopeOfPracticeDisclosure({
         </a>
       </p>
     </aside>
-  )
+  );
 }

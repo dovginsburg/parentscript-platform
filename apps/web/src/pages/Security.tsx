@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
-import MarkHeader from '@/components/MarkHeader'
-import MarkFooter from '@/components/MarkFooter'
+import { Link } from 'react-router-dom';
+import MarkHeader from '@/components/MarkHeader';
+import MarkFooter from '@/components/MarkFooter';
 
 // ──────────────────────────────────────────────────────────────────────
 // Security — Trust, HIPAA, encryption, data residency, breach policy
@@ -36,13 +36,13 @@ const THIRD_PARTY_SERVICES = [
     data: 'Encrypted at rest, encrypted in transit',
     location: 'United States',
   },
-]
+];
 
 type SectionProps = {
-  eyebrow: string
-  title: string
-  children: React.ReactNode
-}
+  eyebrow: string;
+  title: string;
+  children: React.ReactNode;
+};
 
 function Section({ eyebrow, title, children }: SectionProps) {
   return (
@@ -53,7 +53,7 @@ function Section({ eyebrow, title, children }: SectionProps) {
       </h3>
       <div className="text-sm md:text-base">{children}</div>
     </section>
-  )
+  );
 }
 
 export default function Security() {
@@ -69,9 +69,8 @@ export default function Security() {
             Security & Compliance
           </h2>
           <p className="text-base md:text-lg text-ps-text-soft leading-relaxed">
-            ParentScript handles Protected Health Information (PHI) under HIPAA.
-            Here's exactly how we protect it, where it lives, and what we do if
-            something goes wrong.
+            ParentScript handles Protected Health Information (PHI) under HIPAA. Here's exactly how
+            we protect it, where it lives, and what we do if something goes wrong.
           </p>
           <p className="text-sm text-ps-text-softer mt-3">Last updated: June 2026</p>
         </div>
@@ -79,15 +78,18 @@ export default function Security() {
         <div className="space-y-5">
           <Section eyebrow="HIPAA compliance" title="HIPAA-aligned, BAA-ready.">
             <p className="text-ps-text-soft leading-relaxed">
-              ParentScript is designed as a HIPAA-aligned platform. We sign a
-              Business Associate Agreement (BAA) with every covered-entity
-              customer (typically the supervising clinician or clinic) before any
-              PHI is uploaded.
+              ParentScript is designed as a HIPAA-aligned platform. We sign a Business Associate
+              Agreement (BAA) with every covered-entity customer (typically the supervising
+              clinician or clinic) before any PHI is uploaded.
             </p>
             <ul className="mt-4 space-y-2 text-ps-text-soft list-disc list-inside">
-              <li>All therapists and parents are bound by our Terms of Service and Privacy Policy</li>
+              <li>
+                All therapists and parents are bound by our Terms of Service and Privacy Policy
+              </li>
               <li>We use HIPAA-eligible infrastructure only (Supabase + AWS + Stripe)</li>
-              <li>Row-Level Security (RLS) ensures therapists can only access their own caseload</li>
+              <li>
+                Row-Level Security (RLS) ensures therapists can only access their own caseload
+              </li>
               <li>Parents can only see their own assignments — never other clients</li>
               <li>Every PHI access is logged in an audit trail</li>
             </ul>
@@ -98,26 +100,25 @@ export default function Security() {
               <div>
                 <h4 className="font-semibold text-ps-text mb-1">In transit</h4>
                 <p>
-                  All data transmitted between your browser, our servers, and our
-                  database providers is encrypted using TLS 1.2 or higher. There
-                  is no plaintext HTTP fallback anywhere in the stack.
+                  All data transmitted between your browser, our servers, and our database providers
+                  is encrypted using TLS 1.2 or higher. There is no plaintext HTTP fallback anywhere
+                  in the stack.
                 </p>
               </div>
               <div>
                 <h4 className="font-semibold text-ps-text mb-1">At rest</h4>
                 <p>
-                  All PHI is encrypted at rest using AES-256 via our database
-                  provider's managed encryption. Database backups are also
-                  encrypted. Application secrets (API keys, signing secrets) live
-                  in environment variables and are rotated on a regular schedule.
+                  All PHI is encrypted at rest using AES-256 via our database provider's managed
+                  encryption. Database backups are also encrypted. Application secrets (API keys,
+                  signing secrets) live in environment variables and are rotated on a regular
+                  schedule.
                 </p>
               </div>
               <div>
                 <h4 className="font-semibold text-ps-text mb-1">In application</h4>
                 <p>
-                  Passwords are hashed using bcrypt via Supabase Auth — we never
-                  see or store them in plaintext. Session tokens are short-lived
-                  and refresh automatically.
+                  Passwords are hashed using bcrypt via Supabase Auth — we never see or store them
+                  in plaintext. Session tokens are short-lived and refresh automatically.
                 </p>
               </div>
             </div>
@@ -128,40 +129,51 @@ export default function Security() {
               All PHI is stored and processed in the United States. Specifically:
             </p>
             <ul className="mt-4 space-y-2 text-ps-text-soft list-disc list-inside">
-              <li><strong className="text-ps-text">Database:</strong> Supabase, hosted on AWS in US-East and US-West</li>
-              <li><strong className="text-ps-text">Backups:</strong> US-based, encrypted, retained per the schedule below</li>
-              <li><strong className="text-ps-text">Frontend hosting:</strong> Vercel — public marketing and API code only; no PHI on the edge</li>
+              <li>
+                <strong className="text-ps-text">Database:</strong> Supabase, hosted on AWS in
+                US-East and US-West
+              </li>
+              <li>
+                <strong className="text-ps-text">Backups:</strong> US-based, encrypted, retained per
+                the schedule below
+              </li>
+              <li>
+                <strong className="text-ps-text">Frontend hosting:</strong> Vercel — public
+                marketing and API code only; no PHI on the edge
+              </li>
             </ul>
             <p className="mt-4 text-sm text-ps-text-softer">
-              We do not transfer PHI outside the United States. International users
-              are served from US regions, with longer latency as the trade-off.
+              We do not transfer PHI outside the United States. International users are served from
+              US regions, with longer latency as the trade-off.
             </p>
           </Section>
 
-          <Section eyebrow="Breach notification" title="24-hour containment, written incident report.">
+          <Section
+            eyebrow="Breach notification"
+            title="24-hour containment, written incident report."
+          >
             <p className="text-ps-text-soft leading-relaxed">
-              In the event of a security incident that compromises PHI, we
-              commit to:
+              In the event of a security incident that compromises PHI, we commit to:
             </p>
             <ol className="mt-4 space-y-2 text-ps-text-soft list-decimal list-inside">
               <li>
-                <strong className="text-ps-text">Within 24 hours:</strong> begin investigation, contain
-                the incident, and notify affected customers via email to the
-                address on file.
+                <strong className="text-ps-text">Within 24 hours:</strong> begin investigation,
+                contain the incident, and notify affected customers via email to the address on
+                file.
               </li>
               <li>
                 <strong className="text-ps-text">Per HIPAA Breach Notification Rule</strong> (45 CFR
-                §164.400-414), notify HHS and affected individuals when the
-                incident meets the definition of a breach.
+                §164.400-414), notify HHS and affected individuals when the incident meets the
+                definition of a breach.
               </li>
               <li>
                 <strong className="text-ps-text">Written incident report</strong> describing what
-                happened, what data was affected, what we did to contain it,
-                and what we're changing to prevent recurrence.
+                happened, what data was affected, what we did to contain it, and what we're changing
+                to prevent recurrence.
               </li>
               <li>
-                <strong className="text-ps-text">Cooperate with regulatory inquiries</strong> and any
-                subsequent forensic investigation.
+                <strong className="text-ps-text">Cooperate with regulatory inquiries</strong> and
+                any subsequent forensic investigation.
               </li>
             </ol>
             <p className="mt-4 text-sm text-ps-text-softer">
@@ -169,48 +181,72 @@ export default function Security() {
               <a href="mailto:security@parentscript.app" className="ps-link font-medium">
                 security@parentscript.app
               </a>{' '}
-              — responsible disclosure is welcome and will be acknowledged within
-              one business day.
+              — responsible disclosure is welcome and will be acknowledged within one business day.
             </p>
           </Section>
 
           <Section eyebrow="Data retention" title="30-day grace, 6-year audit, 35-day backups.">
             <p className="text-ps-text-soft leading-relaxed">
-              We keep data only as long as needed for clinical continuity and
-              legal compliance.
+              We keep data only as long as needed for clinical continuity and legal compliance.
             </p>
             <ul className="mt-4 space-y-2 text-ps-text-soft list-disc list-inside">
-              <li><strong className="text-ps-text">Active records:</strong> therapist and parent account data retained while the relationship is active and for 30 days after it ends.</li>
-              <li><strong className="text-ps-text">Inactive records:</strong> after the 30-day grace period, account data is purged from production systems.</li>
-              <li><strong className="text-ps-text">Deletion requests:</strong> therapists can export or delete all their data at any time via the dashboard, or by emailing{' '}
+              <li>
+                <strong className="text-ps-text">Active records:</strong> therapist and parent
+                account data retained while the relationship is active and for 30 days after it
+                ends.
+              </li>
+              <li>
+                <strong className="text-ps-text">Inactive records:</strong> after the 30-day grace
+                period, account data is purged from production systems.
+              </li>
+              <li>
+                <strong className="text-ps-text">Deletion requests:</strong> therapists can export
+                or delete all their data at any time via the dashboard, or by emailing{' '}
                 <a href="mailto:support@parentscript.app" className="ps-link font-medium">
                   support@parentscript.app
-                </a>. Deletion is completed within 30 days.
+                </a>
+                . Deletion is completed within 30 days.
               </li>
-              <li><strong className="text-ps-text">Audit logs:</strong> retained for 6 years per HIPAA documentation requirements.</li>
-              <li><strong className="text-ps-text">Backups:</strong> encrypted backups retained for 35 days, then permanently destroyed.</li>
-              <li><strong className="text-ps-text">Backups deleted:</strong> all backup copies are confirmed-destroyed within 60 days of the retention cutoff.</li>
+              <li>
+                <strong className="text-ps-text">Audit logs:</strong> retained for 6 years per HIPAA
+                documentation requirements.
+              </li>
+              <li>
+                <strong className="text-ps-text">Backups:</strong> encrypted backups retained for 35
+                days, then permanently destroyed.
+              </li>
+              <li>
+                <strong className="text-ps-text">Backups deleted:</strong> all backup copies are
+                confirmed-destroyed within 60 days of the retention cutoff.
+              </li>
             </ul>
           </Section>
 
           <Section eyebrow="Third-party services" title="A small, vetted sub-processor list.">
             <p className="text-ps-text-soft leading-relaxed mb-4">
-              We use a small, vetted set of sub-processors. None of them have
-              rights to your data beyond what's strictly needed to provide their
-              service.
+              We use a small, vetted set of sub-processors. None of them have rights to your data
+              beyond what's strictly needed to provide their service.
             </p>
             <div className="overflow-x-auto -mx-6 px-6">
               <table className="w-full text-sm border-collapse min-w-[600px]">
                 <thead>
                   <tr className="bg-ps-bg-soft text-left">
-                    <th className="px-3 py-2 font-semibold text-ps-text-soft border-b border-ps-border">Provider</th>
-                    <th className="px-3 py-2 font-semibold text-ps-text-soft border-b border-ps-border">Role</th>
-                    <th className="px-3 py-2 font-semibold text-ps-text-soft border-b border-ps-border">Data handled</th>
-                    <th className="px-3 py-2 font-semibold text-ps-text-soft border-b border-ps-border">Location</th>
+                    <th className="px-3 py-2 font-semibold text-ps-text-soft border-b border-ps-border">
+                      Provider
+                    </th>
+                    <th className="px-3 py-2 font-semibold text-ps-text-soft border-b border-ps-border">
+                      Role
+                    </th>
+                    <th className="px-3 py-2 font-semibold text-ps-text-soft border-b border-ps-border">
+                      Data handled
+                    </th>
+                    <th className="px-3 py-2 font-semibold text-ps-text-soft border-b border-ps-border">
+                      Location
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {THIRD_PARTY_SERVICES.map((svc) => (
+                  {THIRD_PARTY_SERVICES.map(svc => (
                     <tr key={svc.name} className="border-b border-ps-border">
                       <td className="px-3 py-3 font-semibold text-ps-text align-top">{svc.name}</td>
                       <td className="px-3 py-3 text-ps-text-soft align-top">{svc.role}</td>
@@ -222,15 +258,15 @@ export default function Security() {
               </table>
             </div>
             <p className="mt-4 text-sm text-ps-text-softer">
-              We will provide at least 30 days' notice before adding any new
-              sub-processor that handles PHI.
+              We will provide at least 30 days' notice before adding any new sub-processor that
+              handles PHI.
             </p>
           </Section>
 
           <Section eyebrow="Security contact" title="security@parentscript.app.">
             <p className="text-ps-text-soft leading-relaxed">
-              For security questions, vulnerability reports, BAA requests, or
-              compliance documentation:
+              For security questions, vulnerability reports, BAA requests, or compliance
+              documentation:
             </p>
             <div className="mt-4 ps-card bg-ps-accent-softer border-ps-accent-soft">
               <p className="text-sm text-ps-text-soft mb-1">
@@ -270,5 +306,5 @@ export default function Security() {
 
       <MarkFooter product="parentscript" />
     </div>
-  )
+  );
 }

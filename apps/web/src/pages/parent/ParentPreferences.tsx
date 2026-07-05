@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
-import { useAuth } from '@/hooks/useAuth'
-import { useFeatureFlags } from '@/hooks/useFeatureFlags'
-import ToggleRow from '@/components/ToggleRow'
-import { groupParentPrefsByCategory } from '@/lib/featureFlags'
+import { Link } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { useFeatureFlags } from '@/hooks/useFeatureFlags';
+import ToggleRow from '@/components/ToggleRow';
+import { groupParentPrefsByCategory } from '@/lib/featureFlags';
 
 // ────────────────────────────────────────────────────────────────────
 // ParentPreferences — display + notification settings
@@ -15,11 +15,11 @@ import { groupParentPrefsByCategory } from '@/lib/featureFlags'
 // Saves automatically — no Save button.
 
 export default function ParentPreferences() {
-  const { signOut } = useAuth()
-  const { parentPrefs, setParentPref, loading } = useFeatureFlags()
+  const { signOut } = useAuth();
+  const { parentPrefs, setParentPref, loading } = useFeatureFlags();
 
-  const grouped = groupParentPrefsByCategory()
-  const categories = Object.keys(grouped)
+  const grouped = groupParentPrefsByCategory();
+  const categories = Object.keys(grouped);
 
   return (
     <div className="min-h-dvh bg-gray-50 pb-safe-bottom flex flex-col">
@@ -36,8 +36,8 @@ export default function ParentPreferences() {
 
       <main className="flex-1 px-4 md:px-8 py-6 md:max-w-2xl md:mx-auto w-full">
         <p className="text-sm text-gray-600 mb-6 leading-snug">
-          Adjust how ParentScript looks and how it contacts you. The skills your
-          therapist unlocks are not affected by these settings.
+          Adjust how ParentScript looks and how it contacts you. The skills your therapist unlocks
+          are not affected by these settings.
         </p>
 
         {loading ? (
@@ -81,5 +81,5 @@ export default function ParentPreferences() {
         )}
       </main>
     </div>
-  )
+  );
 }

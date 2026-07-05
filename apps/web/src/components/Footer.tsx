@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import ScopeOfPracticeDisclosure from '@/components/ScopeOfPracticeDisclosure'
+import { Link } from 'react-router-dom';
+import ScopeOfPracticeDisclosure from '@/components/ScopeOfPracticeDisclosure';
 
 // ──────────────────────────────────────────────────────────────────────
 // Footer — shared site-wide footer for public pages
@@ -15,7 +15,7 @@ import ScopeOfPracticeDisclosure from '@/components/ScopeOfPracticeDisclosure'
 // include this footer because they're inside the authenticated app.
 
 export default function Footer() {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
 
   return (
     <footer className="bg-white border-t border-gray-200 mt-12">
@@ -123,12 +123,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-gray-100 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+          <p className="text-xs text-gray-500">© {year} AMAZED Labs. All rights reserved.</p>
           <p className="text-xs text-gray-500">
-            © {year} AMAZED Labs. All rights reserved.
-          </p>
-          <p className="text-xs text-gray-500">
-            ParentScript is not a substitute for professional clinical judgment.
-            In an emergency, call 911 or the Suicide & Crisis Lifeline at 988.
+            ParentScript is not a substitute for professional clinical judgment. In an emergency,
+            call 911 or the Suicide & Crisis Lifeline at 988.
           </p>
         </div>
 
@@ -138,5 +136,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

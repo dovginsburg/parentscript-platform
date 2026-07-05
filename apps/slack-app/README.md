@@ -72,10 +72,10 @@ Returns top 5 matching skills with links to parentscript.app.
 The Slack app exports functions that the backend can call:
 
 ```javascript
-import { 
-  sendSkillUnlockNotification, 
-  sendCrisisAlert, 
-  sendWeeklyPracticeSummary 
+import {
+  sendSkillUnlockNotification,
+  sendCrisisAlert,
+  sendWeeklyPracticeSummary,
 } from '@parentscript/slack-app';
 
 // When therapist unlocks a skill
@@ -181,15 +181,18 @@ npm run dev
 ## Troubleshooting
 
 ### "Invalid signing secret"
+
 - Verify `SLACK_SIGNING_SECRET` matches your app settings
 - Check that you're not using the old verification token
 
 ### "Skill search returns no results"
+
 - Verify `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`
 - Check that skills exist with `is_published = true`
 - Test query: `SELECT * FROM skills WHERE is_published = true LIMIT 5;`
 
 ### "Socket mode not connecting"
+
 - Ensure `SLACK_APP_TOKEN` starts with `xapp-`
 - Verify Socket Mode is enabled in app settings
 - Check app token has `connections:write` scope

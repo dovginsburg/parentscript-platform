@@ -23,12 +23,12 @@ apps/desktop/
 
 The window picks up ParentScript's clinical-warm, light/indigo aesthetic:
 
-| Property | Value | Source |
-|----------|-------|--------|
-| Title | `ParentScript` (sentence case) | Brand voice guide |
-| Background | `#fafafa` (neutral.50) | `packages/design/tokens.json` |
-| Width × Height | 1280 × 800 | Tauri default with clinical-warm scale |
-| Min Width × Min Height | 960 × 600 | Smallest usable therapist-side layout |
+| Property               | Value                          | Source                                 |
+| ---------------------- | ------------------------------ | -------------------------------------- |
+| Title                  | `ParentScript` (sentence case) | Brand voice guide                      |
+| Background             | `#fafafa` (neutral.50)         | `packages/design/tokens.json`          |
+| Width × Height         | 1280 × 800                     | Tauri default with clinical-warm scale |
+| Min Width × Min Height | 960 × 600                      | Smallest usable therapist-side layout  |
 
 If you change a token in `packages/design/tokens.json`, mirror the change in
 `tauri.conf.json` → `app.windows[0].backgroundColor`. The native window

@@ -10,16 +10,16 @@
 
 ## TL;DR — Two realistic paths
 
-| Path | Dov action required | One-time or recurring? | Programmatic later? | Reliability |
-|---|---|---|---|---|
-| **A. Namecheap built-in Email Forwarding (recommended)** | ~60 sec in the already-open tab | One-time setup | Yes, via API *if* enabled (see Path B) | High — runs on Namecheap's MX |
-| **B. Namecheap API** | 2 min (toggle ON + whitelist IP, one-time) | One-time, then fully scriptable | Yes, forever | High |
-| ~~C. ForwardEmail.net TXT-only~~ | n/a | n/a | n/a | **Not viable** — requires MX records; TXT record on its own does NOT deliver mail |
-| ~~D. Cloudflare Email Routing~~ | ~5 min (add zone, change nameservers) | One-time | Yes, via Cloudflare API | High, but more moving parts |
+| Path                                                     | Dov action required                        | One-time or recurring?          | Programmatic later?                    | Reliability                                                                       |
+| -------------------------------------------------------- | ------------------------------------------ | ------------------------------- | -------------------------------------- | --------------------------------------------------------------------------------- |
+| **A. Namecheap built-in Email Forwarding (recommended)** | ~60 sec in the already-open tab            | One-time setup                  | Yes, via API _if_ enabled (see Path B) | High — runs on Namecheap's MX                                                     |
+| **B. Namecheap API**                                     | 2 min (toggle ON + whitelist IP, one-time) | One-time, then fully scriptable | Yes, forever                           | High                                                                              |
+| ~~C. ForwardEmail.net TXT-only~~                         | n/a                                        | n/a                             | n/a                                    | **Not viable** — requires MX records; TXT record on its own does NOT deliver mail |
+| ~~D. Cloudflare Email Routing~~                          | ~5 min (add zone, change nameservers)      | One-time                        | Yes, via Cloudflare API                | High, but more moving parts                                                       |
 
 **The catch that motivates this doc:** Namecheap's Advanced DNS dropdown is mutually exclusive between "Email Forwarding" (auto-creates Namecheap's MX, hides manual MX records) and "Custom MX" (lets you add your own MX, hides the forwarding UI). The user's prompt reflects that exact confusion: the dropdown is on Email Forwarding, but the MX records shown by ForwardEmail.net are nowhere to be added.
 
-**The honest answer:** No email forwarding service can deliver mail to a domain without an MX record pointing to a real mail server. The TXT-only records (`_forwardemail`, SPF, DKIM) only *verify* or *authorize* — they do not *receive*. Something has to give. The cheapest give is letting Namecheap set up its own MX records (1 click); the cleanest give is enabling the API (1 toggle + 1 IP whitelist).
+**The honest answer:** No email forwarding service can deliver mail to a domain without an MX record pointing to a real mail server. The TXT-only records (`_forwardemail`, SPF, DKIM) only _verify_ or _authorize_ — they do not _receive_. Something has to give. The cheapest give is letting Namecheap set up its own MX records (1 click); the cleanest give is enabling the API (1 toggle + 1 IP whitelist).
 
 ---
 
@@ -27,7 +27,7 @@
 
 **Cost:** Free (included with all Namecheap domains).
 **Dov action:** ~60 seconds. The DNS page is already open in Safari.
-**Why this is simplest:** Per Namecheap KB article 308/2214, selecting "Email Forwarding" in the MAIL SETTINGS dropdown and clicking Save All Changes *automatically* inserts the required MX records. No separate MX configuration needed — Namecheap owns that side of it.
+**Why this is simplest:** Per Namecheap KB article 308/2214, selecting "Email Forwarding" in the MAIL SETTINGS dropdown and clicking Save All Changes _automatically_ inserts the required MX records. No separate MX configuration needed — Namecheap owns that side of it.
 
 ### Steps (Dov, in the open Safari tab)
 
@@ -66,21 +66,21 @@ echo "Test from parentscript.app $(date)" | mail -s "Hello" test@parentscript.ap
 
 ### Catch-all vs explicit mailboxes
 
-A catch-all (`*` → gmail) catches *any* address: `anything@parentscript.app` forwards. Useful while the project is small.
+A catch-all (`*` → gmail) catches _any_ address: `anything@parentscript.app` forwards. Useful while the project is small.
 
 If you want only specific addresses to forward (less spam risk):
 
-| Mailbox | Forward to |
-|---|---|
-| `hello` | `ginsburgezra@gmail.com` |
+| Mailbox   | Forward to               |
+| --------- | ------------------------ |
+| `hello`   | `ginsburgezra@gmail.com` |
 | `support` | `ginsburgezra@gmail.com` |
-| `press` | `ginsburgezra@gmail.com` |
+| `press`   | `ginsburgezra@gmail.com` |
 
 Add one row per mailbox, all pointing to the same Gmail, then Save All Changes.
 
 ### Limitations
 
-- **No sending from @parentscript.app.** Built-in forwarding is receive-only. If you need to send mail *as* `dov@parentscript.app`, you'd need Gmail's "Send mail as" configured with an SMTP relay (e.g., SendGrid, Mailgun, or Namecheap Private Email). Out of scope here — the task is forwarding only.
+- **No sending from @parentscript.app.** Built-in forwarding is receive-only. If you need to send mail _as_ `dov@parentscript.app`, you'd need Gmail's "Send mail as" configured with an SMTP relay (e.g., SendGrid, Mailgun, or Namecheap Private Email). Out of scope here — the task is forwarding only.
 - **Catch-all forwards spam too.** Anything sent to `random@parentscript.app` (including dictionary attacks) lands in the Gmail inbox. Add an explicit-mailbox rule list instead, or set up a Gmail filter to trash forwarded mail where `To:` doesn't match a known address.
 - **Custom MX records and built-in forwarding are mutually exclusive.** If you later want a custom SMTP relay or third-party mail provider (Zoho, Proton, Fastmail), you'll have to switch the dropdown to "Custom MX" and lose the forwarding UI (but you can always recreate the forwarding via Path B's API).
 
@@ -123,6 +123,7 @@ chmod 600 ~/.namecheap-api
 ```
 
 Or set env vars instead (preferred if shared across multiple profiles):
+
 ```bash
 export NAMECHEAP_API_USER="dovginsburg"
 export NAMECHEAP_API_KEY="<paste-key-here>"
@@ -178,16 +179,16 @@ echo "Sherlock path-B test $(date)" | mail -s "Path B test" hello@parentscript.a
 
 What ForwardEmail.net actually needs:
 
-| Type | Host | Value | Priority |
-|---|---|---|---|
-| MX | `@` | `mx1.forwardemail.net` | 10 |
-| MX | `@` | `mx2.forwardemail.net` | 10 |
-| TXT | `@` | `v=spf1 include:spf.forwardemail.net ~all` | n/a |
-| TXT | `forwardemail` or `_forwardemail` | `forward-email=ginsburgezra@gmail.com` | n/a (already exists) |
+| Type | Host                              | Value                                      | Priority             |
+| ---- | --------------------------------- | ------------------------------------------ | -------------------- |
+| MX   | `@`                               | `mx1.forwardemail.net`                     | 10                   |
+| MX   | `@`                               | `mx2.forwardemail.net`                     | 10                   |
+| TXT  | `@`                               | `v=spf1 include:spf.forwardemail.net ~all` | n/a                  |
+| TXT  | `forwardemail` or `_forwardemail` | `forward-email=ginsburgezra@gmail.com`     | n/a (already exists) |
 
 The missing piece is the two MX records. ForwardEmail.net's DNS check refuses to enable forwarding for a domain without their MX records (verified by their issue #194, `550: missing required DNS MX records`).
 
-**Why this won't work without MX records:** DNS protocol requires an MX record pointing to a mail server before any other DNS record (TXT, CNAME, etc.) can route inbound mail. The TXT record at `_forwardemail` is a *verification* record — it tells ForwardEmail.net's server "this domain owner authorized forwarding to this address" — but no mail server will even *consult* it unless an MX record first directs the inbound mail to ForwardEmail.net's MX hosts. (Stack Overflow canonical answer: https://stackoverflow.com/questions/17382003)
+**Why this won't work without MX records:** DNS protocol requires an MX record pointing to a mail server before any other DNS record (TXT, CNAME, etc.) can route inbound mail. The TXT record at `_forwardemail` is a _verification_ record — it tells ForwardEmail.net's server "this domain owner authorized forwarding to this address" — but no mail server will even _consult_ it unless an MX record first directs the inbound mail to ForwardEmail.net's MX hosts. (Stack Overflow canonical answer: https://stackoverflow.com/questions/17382003)
 
 **Options if you specifically want ForwardEmail.net:**
 
@@ -215,17 +216,20 @@ Not documented step-by-step here. The setup is: add parentscript.app as a zone o
 **Use Path A (Namecheap built-in Email Forwarding).**
 
 Reasons:
-1. The DNS page is *already open* in Safari with the correct dropdown selection.
+
+1. The DNS page is _already open_ in Safari with the correct dropdown selection.
 2. One catch-all row + one Save click → done. No API enable, no IP whitelist, no zone transfer.
 3. Future programmatic control is still possible later by enabling Path B's API (one toggle, takes 2 min when needed — not blocking).
 4. The `_forwardemail` TXT record can stay; it's harmless unless MX records point to ForwardEmail.net's hosts.
 
 **Re-evaluate to Path B when:**
+
 - You find yourself opening the Advanced DNS page more than 2-3 times per month.
 - A second domain gets added that also needs forwarding (the API makes batch ops trivial).
 - We need to script DNS changes as part of a deploy pipeline (e.g., Vercel verification, Supabase custom auth domain, etc.).
 
 **Re-evaluate to Path D when:**
+
 - We need to send mail as @parentscript.app (Cloudflare Email Workers can chain into Mailgun/SES).
 - We need spam filtering before forwarding (Cloudflare's filter runs at the edge, Gmail filter is downstream).
 - We add a second domain and want one place to manage both.
@@ -262,10 +266,10 @@ dig TXT _forwardemail.parentscript.app +short @1.1.1.1
 
 Two relevant tabs are open in Safari as of this writing:
 
-| URL | Purpose |
-|---|---|
-| `https://ap.www.namecheap.com/Domains/DomainControlPanel/parentscript.app/advancedns` | Namecheap Advanced DNS — drop the catch-all row + Save here for Path A |
-| `https://forwardemail.net/en/my-account/profile` | ForwardEmail.net profile — irrelevant once Path A or B is chosen (TXT-only path is not viable) |
+| URL                                                                                   | Purpose                                                                                        |
+| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `https://ap.www.namecheap.com/Domains/DomainControlPanel/parentscript.app/advancedns` | Namecheap Advanced DNS — drop the catch-all row + Save here for Path A                         |
+| `https://forwardemail.net/en/my-account/profile`                                      | ForwardEmail.net profile — irrelevant once Path A or B is chosen (TXT-only path is not viable) |
 
 **State of those tabs at task start (per the prompt):** "Email Forwarding" already selected in MAIL SETTINGS dropdown, `_forwardemail` TXT record present (irrelevant). No DNS records added or modified by this analysis — the file is the deliverable, not the configuration change.
 
