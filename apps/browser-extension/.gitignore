@@ -1,0 +1,10 @@
+# Generated bundles — produced by `npm run build` (esbuild via scripts/build.mjs).
+# They live at the extension root only so manifest.json can reference them with
+# flat relative paths ("background.js", "content.js", etc.). Contributors MUST
+# run `npm run build` before "Load unpacked"; the committed tree no longer ships
+# pre-built bundles to keep this directory's behavior in sync with src/*.ts.
+# Note: dist/ is already covered by the monorepo root .gitignore.
+popup.js
+background.js
+content.js
+content.css

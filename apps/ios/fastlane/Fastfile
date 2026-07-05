@@ -1,0 +1,41 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Build and upload to App Store Connect (TestFlight)"
+  lane :deploy_testflight do
+    api_key = app_store_connect_api_key(
+      key_id: ENV["APP_STORE_CONNECT_API_KEY_KEY_ID"] || "PSS5YP9VS4",
+      issuer_id: ENV["APP_STORE_CONNECT_API_KEY_ISSUER_ID"] || "93f12e0b-cd6e-4095-95a8-172311d722cd",
+      key_filepath: ENV["APP_STORE_CONNECT_API_KEY_KEY_FILEPATH"] || File.expand_path("./AuthKey_PSS5YP9VS4.p8", __dir__)
+    )
+    build_app(
+      project: "./App/App.xcodeproj",
+      scheme: "App",
+      configuration: "Release",
+      export_method: "app-store",
+      output_directory: "./build",
+      output_name: "App.ipa",
+      clean: true,
+      xcargs: "DEVELOPMENT_TEAM=4938S9TTBM CODE_SIGN_STYLE=Manual PROVISIONING_PROFILE_SPECIFIER=\"ASC AppStore com.parentscript.app\"",
+      export_options: File.expand_path("./ExportOptions.plist", __dir__)
+    )
+    upload_to_testflight(
+      api_key: api_key,
+      skip_waiting_for_build_processing: true
+    )
+  end
+
+  desc "Build for local development (no upload)"
+  lane :build_local do
+    build_app(
+      project: "./App/App.xcodeproj",
+      scheme: "App",
+      configuration: "Debug",
+      export_method: "development",
+      output_directory: "./build",
+      output_name: "App.ipa",
+      clean: false,
+      skip_codesigning: true
+    )
+  end
+end

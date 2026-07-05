@@ -1,0 +1,39 @@
+FEATURE GRAPHIC — PARENTSCRIPT (1024x500 PNG)
+
+CONCEPT: A calm, high-contrast composition centered on a single oversized phone screen displaying the ParentScript home view. The phone shows the big "In the Moment" button (the most recognizable, signature UI element of the app) prominently at the top — colored in the ParentScript brand teal/blue. Below the button, two skill cards peek up from the bottom of the screen.
+
+To the LEFT of the phone: large bold headline — "WHEN YOU'RE LOST IN THE MIDDLE."
+To the RIGHT of the phone: a softer sub-headline — "MAZE brings you back to the top." (ParentScript's tagline)
+
+Wait — important: confirm whether ParentScript should ship under the "ParentScript" name (per CLAUDE.md and the web brand) or "MAZE" (per the internal codename in BUILD_PLAN.md). The tagline below uses MAZE because that's the studio's anchor. If the Play Store title is "ParentScript," consider a unified brand wordmark in the bottom-right: "ParentScript by AMAZED Labs" or just "AMAZED Labs."
+
+BACKGROUND: Very light warm gray gradient (#FAFAF7 → #F0EFEA). Not pure white. Calming, not clinical.
+
+TYPOGRAPHY:
+  - Headline ("WHEN YOU'RE LOST..."): ~64pt bold, dark gray (#1F2937), set in a friendly modern sans (Inter, SF Pro, or Nunito)
+  - Sub-headline ("MAZE brings you back..."): ~28pt regular, mid-gray (#6B7280)
+  - "In the Moment" button label on phone: ~40pt bold white
+
+COLOR PALETTE (suggested — match the existing brand):
+  - Background: #FAFAF7 → #F0EFEA
+  - Primary text: #1F2937
+  - Secondary text: #6B7280
+  - Brand teal: #2D7D8F (or whatever the ParentScript primary is — check brand.html)
+  - Phone screen: #FFFFFF
+  - Skill card peek: soft brand-tinted gray
+
+DO NOT INCLUDE:
+  - Photos of real children (Play Store policy + ethical issues for a clinical app for minors)
+  - Cartoon/illustrated children (same reason — better to keep it abstract)
+  - Crisis hotline numbers (those live in the app, not the marketing graphic)
+  - Pricing text
+  - Too many elements — the eye should land on the phone and the headline, period
+  - Generic stock photos of "happy families"
+
+REASONING: For a clinical app for parents in hard moments, the marketing graphic needs to feel calm, competent, and not condescending. The phone showing the actual signature UI element does the heavy lifting; the headline delivers the emotional promise. Avoid imagery that makes the parent's struggle feel performative.
+
+PRODUCTION NOTES:
+  - Generate at 1024x500 px exactly
+  - Keep all critical content within the safe zone (24px margin on all sides)
+  - PNG, sRGB, no alpha
+  - File size under 1 MB (recommend ~150-300 KB)

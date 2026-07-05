@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="en" data-theme="parentscript-therapist">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ParentScript for therapists — your skills, in their pocket</title>
+  <meta name="description" content="ParentScript extends your sessions. You control what skills each family sees, when, and how. Evidence-based: PCIT, BPT, CPS, Triple P, Circle of Security." />
+  <meta name="theme-color" content="#6366F1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       ParentScript — Therapist landing
+       Audience: licensed therapists. Tone: peer, clinical, calm.
+       Sentence case. Trust signals first. No "transform your practice."
+       ============================================================ */
+    :root {
+      --bg: #FFFFFF;
+      --bg-soft: #FAFBFC;
+      --bg-card: #FFFFFF;
+      --border: #E5E7EB;
+      --border-strong: #D1D5DB;
+      --text: #111827;
+      --text-soft: #4B5563;
+      --text-softer: #6B7280;
+      --muted: #9CA3AF;
+
+      --accent: #6366F1;
+      --accent-hover: #4F46E5;
+      --accent-soft: #EEF2FF;
+      --accent-softer: #F5F5FF;
+      --accent-light: #A5B4FC;
+      --accent-ink: #3730A3;
+
+      --warm: #F59E0B;
+      --warm-soft: #FEF3C7;
+      --success: #10B981;
+      --success-soft: #D1FAE5;
+      --info: #0EA5E9;
+      --info-soft: #E0F2FE;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+      --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+      --duration: 240ms;
+      --shell-w: 1200px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: var(--font);
+      background: var(--bg-soft);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+    }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    a { color: inherit; text-decoration: none; }
+
+    .shell { display: grid; grid-template-rows: auto 1fr auto; min-height: 100vh; }
+
+    /* ── nav ──────────────────────────────────────────────── */
+    .nav {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: saturate(180%) blur(14px);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 50;
+    }
+    .nav-inner {
+      max-width: var(--shell-w);
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 17px;
+      letter-spacing: -0.01em;
+    }
+    .brand-mark {
+      width: 32px; height: 32px;
+      display: grid; place-items: center;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      font-weight: 700; font-size: 15px;
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a {
+      color: var(--text-soft);
+      font-size: 14px;
+      transition: color var(--duration) var(--ease);
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 16px;
+      border-radius: var(--radius-md);
+      font-size: 14px; font-weight: 600;
+      color: var(--text-soft);
+      border: 1px solid var(--border-strong);
+      background: var(--bg);
+      transition: all var(--duration) var(--ease);
+    }
+    .nav-cta:hover { color: var(--text); border-color: var(--text-softer); }
+    .nav-cta.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      box-shadow: 0 1px 3px rgba(99,102,241,0.3);
+    }
+    .nav-cta.primary:hover {
+      background: var(--accent-hover);
+      box-shadow: 0 4px 12px rgba(99,102,241,0.35);
+    }
+
+    /* ── hero ─────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-inner {
+      max-width: var(--shell-w);
+      margin: 0 auto;
+      padding: 80px 24px 64px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    @media (min-width: 1024px) {
+      .hero-inner { grid-template-columns: 1.1fr 1fr; align-items: center; gap: 64px; padding: 96px 24px 80px; }
+    }
+    .hero-trust {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 6px 14px;
+      background: var(--success-soft);
+      color: #047857;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+    }
+    .hero-trust .check {
+      width: 14px; height: 14px; border-radius: 50%;
+      background: #047857;
+      color: #fff;
+      display: grid; place-items: center;
+      font-size: 9px;
+    }
+    .hero h1 {
+      font-size: clamp(34px, 4.4vw, 50px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+    .hero h1 .accent { color: var(--accent); }
+    .hero p.lede {
+      font-size: clamp(15px, 1.4vw, 18px);
+      line-height: 1.65;
+      color: var(--text-soft);
+      max-width: 560px;
+      margin-bottom: 32px;
+    }
+    .hero-cta {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      margin-bottom: 24px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 22px;
+      border-radius: var(--radius-md);
+      font-size: 15px; font-weight: 600;
+      min-height: 52px;
+      transition: all var(--duration) var(--ease);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 1px 3px rgba(99,102,241,0.3);
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(99,102,241,0.35);
+    }
+    .btn-secondary {
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border-strong);
+    }
+    .btn-secondary:hover { border-color: var(--text-softer); background: var(--bg-soft); }
+    .hero-disclaimer {
+      font-size: 13px;
+      color: var(--text-softer);
+      max-width: 540px;
+      line-height: 1.5;
+    }
+
+    /* ── clinician dashboard preview (right side of hero) ──── */
+    .clinician-preview {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: 0 24px 64px rgba(17, 24, 39, 0.08);
+      overflow: hidden;
+    }
+    .preview-head {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--bg-soft);
+    }
+    .preview-title {
+      font-size: 13px; font-weight: 600;
+      color: var(--text-soft);
+    }
+    .preview-title .live {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--success);
+    }
+    .preview-title .live::before {
+      content: ""; width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 0 4px rgba(16,185,129,0.18);
+    }
+    .preview-window { display: flex; gap: 6px; }
+    .preview-window span {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--border-strong);
+    }
+    .preview-body { padding: 20px; }
+    .client-row {
+      display: grid;
+      grid-template-columns: 36px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 14px 12px;
+      border-radius: var(--radius-md);
+      transition: background var(--duration) var(--ease);
+      cursor: pointer;
+    }
+    .client-row:hover { background: var(--bg-soft); }
+    .client-row + .client-row { border-top: 1px solid var(--border); }
+    .avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      font-size: 13px; font-weight: 600;
+      color: var(--accent-ink);
+      background: var(--accent-soft);
+    }
+    .client-meta .name {
+      font-size: 14px; font-weight: 600;
+      color: var(--text);
+    }
+    .client-meta .sub {
+      font-size: 12px;
+      color: var(--text-softer);
+      margin-top: 2px;
+    }
+    .client-progress {
+      display: flex; flex-direction: column;
+      gap: 4px;
+      min-width: 120px;
+    }
+    .client-progress .label {
+      font-size: 11px;
+      color: var(--text-softer);
+      display: flex; justify-content: space-between;
+    }
+    .progress-bar {
+      height: 6px;
+      background: var(--bg-soft);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .progress-bar > span {
+      display: block;
+      height: 100%;
+      background: var(--accent);
+      border-radius: 999px;
+    }
+
+    /* ── trust badges ─────────────────────────────────────── */
+    .trust-row {
+      max-width: var(--shell-w);
+      margin: 0 auto;
+      padding: 32px 24px;
+      display: flex; flex-wrap: wrap;
+      gap: 12px 24px;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .trust-row .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-soft);
+    }
+    .badge .ico {
+      width: 18px; height: 18px;
+      color: var(--accent);
+    }
+
+    /* ── features ─────────────────────────────────────────── */
+    section.features {
+      max-width: var(--shell-w);
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    .section-head { max-width: 720px; margin-bottom: 48px; }
+    .section-head .eyebrow {
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .section-head h2 {
+      font-size: clamp(28px, 3.4vw, 38px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .section-head p {
+      font-size: 16px;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 720px) { .feature-grid { grid-template-columns: 1fr 1fr; } }
+    .feature {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+    .feature .glyph {
+      width: 44px; height: 44px;
+      display: grid; place-items: center;
+      background: var(--accent-soft);
+      border-radius: var(--radius-md);
+      margin-bottom: 18px;
+      color: var(--accent);
+    }
+    .feature h3 {
+      font-size: 18px; font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    .feature p {
+      font-size: 14px; line-height: 1.6;
+      color: var(--text-soft);
+    }
+
+    /* ── clinical authority ───────────────────────────────── */
+    section.clinical {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .clinical-inner {
+      max-width: var(--shell-w);
+      margin: 0 auto;
+      padding: 80px 24px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .clinical-inner { grid-template-columns: 1fr 1fr; gap: 64px; }
+    }
+    .quote-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+    .quote-card .quote {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+    .quote-card .attr {
+      display: flex; gap: 14px; align-items: center;
+    }
+    .quote-card .attr .avatar {
+      width: 48px; height: 48px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 16px;
+    }
+    .quote-card .attr .who strong {
+      display: block;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .quote-card .attr .who span {
+      font-size: 13px;
+      color: var(--text-softer);
+    }
+
+    /* ── pricing ──────────────────────────────────────────── */
+    section.pricing {
+      max-width: var(--shell-w);
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    .price-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 720px) { .price-grid { grid-template-columns: 1fr 1fr; } }
+    .price-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      display: flex; flex-direction: column;
+    }
+    .price-card.featured {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft);
+    }
+    .price-card .name {
+      font-size: 14px; font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .price-card .price {
+      font-size: 40px; font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .price-card .price small {
+      font-size: 15px; font-weight: 500;
+      color: var(--text-softer);
+    }
+    .price-card .pitch {
+      font-size: 14px;
+      color: var(--text-soft);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .price-card ul {
+      list-style: none;
+      display: flex; flex-direction: column;
+      gap: 12px;
+      margin: 0 0 28px;
+      flex: 1;
+    }
+    .price-card li {
+      display: flex; gap: 12px;
+      font-size: 14px;
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+    .price-card li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .price-card .cta { width: 100%; justify-content: center; }
+
+    /* ── footer ───────────────────────────────────────────── */
+    .footer {
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .footer-inner {
+      max-width: var(--shell-w);
+      margin: 0 auto;
+      padding: 32px 24px;
+      display: flex; flex-wrap: wrap; gap: 24px;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-softer);
+      font-size: 13px;
+    }
+    .footer-links { display: flex; gap: 24px; }
+
+    /* ── a11y ─────────────────────────────────────────────── */
+    a:focus-visible, button:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.35);
+      border-radius: var(--radius-md);
+    }
+
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <!-- ── nav ──────────────────────────────────────────── -->
+    <nav class="nav" aria-label="primary">
+      <div class="nav-inner">
+        <a href="#" class="brand" aria-label="ParentScript home">
+          <span class="brand-mark">P</span>
+          <span>ParentScript</span>
+        </a>
+        <div class="nav-links">
+          <a href="#features">how it works</a>
+          <a href="#clinical">clinical basis</a>
+          <a href="#pricing">pricing</a>
+          <a href="#">research</a>
+          <a href="#">contact</a>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <a href="#" class="nav-cta">sign in</a>
+          <a href="#" class="nav-cta primary">start free trial</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ── hero ──────────────────────────────────────── -->
+      <section class="hero">
+        <div class="hero-inner">
+          <div>
+            <span class="hero-trust">
+              <span class="check" aria-hidden="true">✓</span>
+              HIPAA-aware architecture · BAA available
+            </span>
+            <h1>
+              your skills,<br />
+              <span class="accent">in their pocket.</span>
+            </h1>
+            <p class="lede">
+              ParentScript extends the work you do in session. You choose which skills each family sees, when they unlock them, and what notes you keep. They get the script at the exact moment they need it — without waiting for the next appointment.
+            </p>
+            <div class="hero-cta">
+              <a href="#" class="btn btn-primary">start free 30-day trial</a>
+              <a href="#" class="btn btn-secondary">book a 15-min demo</a>
+            </div>
+            <p class="hero-disclaimer">
+              ParentScript supports caregiver skills — it isn't a substitute for clinical care. PCIT, BPT, CPS, Triple P, Circle of Security frameworks cited on every cheat sheet.
+            </p>
+          </div>
+
+          <!-- ── clinician preview ──────────────────────── -->
+          <div class="clinician-preview" role="figure" aria-label="ParentScript therapist dashboard preview">
+            <div class="preview-head">
+              <div class="preview-title"><span class="live">live</span>&nbsp; your caseload · 8 active</div>
+              <div class="preview-window" aria-hidden="true"><span></span><span></span><span></span></div>
+            </div>
+            <div class="preview-body">
+              <div class="client-row">
+                <div class="avatar">M</div>
+                <div class="client-meta">
+                  <div class="name">the moreno family</div>
+                  <div class="sub">2 children · last session 3 days ago</div>
+                </div>
+                <div class="client-progress">
+                  <div class="label"><span>level 2</span><span>5 of 8</span></div>
+                  <div class="progress-bar"><span style="width:62%"></span></div>
+                </div>
+              </div>
+              <div class="client-row">
+                <div class="avatar" style="background:#FEF3C7; color:#92400E;">S</div>
+                <div class="client-meta">
+                  <div class="name">sarah & david p.</div>
+                  <div class="sub">1 child (age 4) · session thursday</div>
+                </div>
+                <div class="client-progress">
+                  <div class="label"><span>level 1</span><span>3 of 8</span></div>
+                  <div class="progress-bar"><span style="width:38%"></span></div>
+                </div>
+              </div>
+              <div class="client-row">
+                <div class="avatar" style="background:#D1FAE5; color:#065F46;">J</div>
+                <div class="client-meta">
+                  <div class="name">jamal & kiana w.</div>
+                  <div class="sub">1 child (age 7) · co-parenting</div>
+                </div>
+                <div class="client-progress">
+                  <div class="label"><span>level 3</span><span>7 of 8</span></div>
+                  <div class="progress-bar"><span style="width:88%"></span></div>
+                </div>
+              </div>
+              <div class="client-row">
+                <div class="avatar" style="background:#FEE2E2; color:#7F1D1D;">A</div>
+                <div class="client-meta">
+                  <div class="name">the ahmed family</div>
+                  <div class="sub">3 children · check-in friday</div>
+                </div>
+                <div class="client-progress">
+                  <div class="label"><span>level 1</span><span>1 of 8</span></div>
+                  <div class="progress-bar"><span style="width:14%"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── trust badges ──────────────────────────────── -->
+      <div class="trust-row">
+        <span class="label">built on</span>
+        <span class="badge">PCIT</span>
+        <span class="badge">BPT</span>
+        <span class="badge">Collaborative & Proactive Solutions</span>
+        <span class="badge">Triple P</span>
+        <span class="badge">Circle of Security</span>
+        <span class="badge">Hanen</span>
+        <span class="badge">Incredible Years</span>
+      </div>
+
+      <!-- ── features ──────────────────────────────────── -->
+      <section class="features" id="features" aria-labelledby="feat-title">
+        <div class="section-head">
+          <p class="eyebrow">how it works</p>
+          <h2 id="feat-title">a clinical tool, not a content app.</h2>
+          <p>every feature in ParentScript was built to extend your work in session — not replace it. you stay in control. families stay supported between sessions.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature">
+            <div class="glyph" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>you control what each family sees</h3>
+            <p>unlock skills session by session. lock skills when a family needs to revisit. parents only see what you've approved.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
+            </div>
+            <h3>structured session notes</h3>
+            <p>capture what you tried, what worked, and what to revisit next time. notes attach to the family, not the device.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <h3>"in-the-moment" coaching</h3>
+            <p>parents open the app during the meltdown — not after. one tap to a script, a breathing prompt, or a hot-line. you set which.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l3-3 3 3 5-5 4 4 3-3"/><path d="M21 12v8H3V6"/></svg>
+            </div>
+            <h3>practice logging between sessions</h3>
+            <p>parents log what they tried. you see a real picture of adherence — not just what they remember in the next session.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>evidence-based cheat sheets</h3>
+            <p>every script cites its framework. PCIT, BPT, CPS, Triple P — Mira's clinical team signs off on every word that ships.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5 4 9 9 9s9-4 9-9V7l-9-5z"/></svg>
+            </div>
+            <h3>safety rail comes first</h3>
+            <p>if a parent enters content flagged as a crisis class, 988 and 911 surface immediately. no LLM is allowed to "respond."</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── clinical ───────────────────────────────────── -->
+      <section class="clinical" id="clinical" aria-labelledby="clinical-title">
+        <div class="clinical-inner">
+          <div>
+            <p class="eyebrow" style="font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent); margin-bottom:12px;">clinical authority</p>
+            <h2 id="clinical-title" style="font-size: clamp(28px, 3.4vw, 38px); font-weight:700; letter-spacing:-0.02em; line-height:1.15; margin-bottom:16px;">
+              every word, signed off by a clinician.
+            </h2>
+            <p style="font-size:16px; color:var(--text-soft); line-height:1.6;">
+              dr. ariella eisenberg, psyd — clinical advisor to ParentScript — reviews every skill cheat sheet before it ships. frameworks are cited on every script, never paraphrased away.
+            </p>
+            <ul style="list-style:none; margin-top:28px; display:flex; flex-direction:column; gap:14px;">
+              <li style="display:flex; gap:12px; align-items:flex-start; font-size:14px; color:var(--text-soft);">
+                <span style="color:var(--accent); font-weight:700; flex-shrink:0;">✓</span>
+                no fabricated authority. frameworks cited by name on every cheat sheet.
+              </li>
+              <li style="display:flex; gap:12px; align-items:flex-start; font-size:14px; color:var(--text-soft);">
+                <span style="color:var(--accent); font-weight:700; flex-shrink:0;">✓</span>
+                no outcome guarantees. "designed to support" — never "guaranteed to help."
+              </li>
+              <li style="display:flex; gap:12px; align-items:flex-start; font-size:14px; color:var(--text-soft);">
+                <span style="color:var(--accent); font-weight:700; flex-shrink:0;">✓</span>
+                de-escalation language first. especially on the marketing pages.
+              </li>
+            </ul>
+          </div>
+
+          <div class="quote-card">
+            <p class="quote">
+              "the app surfaces the script at the exact moment the parent is in it. that's the part the therapy hour can't do. we built the safety rail first because the worst-case moment isn't optional."
+            </p>
+            <div class="attr">
+              <div class="avatar">AE</div>
+              <div class="who">
+                <strong>dr. ariella eisenberg, psyd</strong>
+                <span>clinical advisor · NYU langone</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── pricing ────────────────────────────────────── -->
+      <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+        <div class="section-head" style="text-align:center; margin: 0 auto 48px;">
+          <p class="eyebrow">pricing</p>
+          <h2 id="pricing-title">simple for individual practitioners and small clinics.</h2>
+        </div>
+        <div class="price-grid">
+          <div class="price-card">
+            <p class="name">solo</p>
+            <p class="price">$29<small>/mo</small></p>
+            <p class="pitch">for individual therapists with up to 15 active families.</p>
+            <ul>
+              <li>up to 15 active families</li>
+              <li>all evidence-based cheat sheets</li>
+              <li>structured session notes</li>
+              <li>parent app + in-the-moment coaching</li>
+              <li>email support</li>
+            </ul>
+            <a href="#" class="btn btn-secondary cta">start free trial</a>
+          </div>
+          <div class="price-card featured">
+            <p class="name">clinic</p>
+            <p class="price">$99<small>/mo</small></p>
+            <p class="pitch">for groups of 3+ therapists with shared caseloads.</p>
+            <ul>
+              <li>unlimited families across the team</li>
+              <li>shared caseload views</li>
+              <li>team-level reporting</li>
+              <li>SSO + role-based access (RLS)</li>
+              <li>priority clinical-advisor support</li>
+              <li>BAA on request</li>
+            </ul>
+            <a href="#" class="btn btn-primary cta">book a clinic demo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ── footer ────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>© 2026 amazed labs. clinical advisor: dr. ariella eisenberg, psyd.</span>
+        <div class="footer-links">
+          <a href="#">privacy</a>
+          <a href="#">terms</a>
+          <a href="#">safety</a>
+          <a href="#">contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

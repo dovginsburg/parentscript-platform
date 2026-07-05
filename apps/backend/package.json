@@ -1,0 +1,19 @@
+{
+  "name": "@parentscript/backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ParentScript FastAPI backend (AI coaching + analytics)",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "test": "node test-runner.mjs"
+  },
+  "dependencies": {
+    "@parentscript/shared": "*",
+    "@supabase/supabase-js": "^2.46.1",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "stripe": "^22.3.0"
+  }
+}

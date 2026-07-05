@@ -1,0 +1,10 @@
+{
+  "name": "@parentscript/design",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ParentScript design tokens (light/indigo, sentence case, clinical-warmth)",
+  "main": "./tokens.json",
+  "exports": {
+    "./tokens.json": "./tokens.json"
+  }
+}

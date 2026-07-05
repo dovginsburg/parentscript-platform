@@ -1,0 +1,25 @@
+{
+  "name": "@parentscript/browser-extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ParentScript browser extension — in-the-moment skill lookup on any page (Manifest V3, Chromium)",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:firefox": "node scripts/build.mjs --firefox",
+    "dev": "node scripts/build.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "package:chrome": "cd dist && zip -r ../parentscript-chrome.zip .",
+    "package:firefox": "cd dist-firefox && zip -r ../parentscript-firefox.zip .",
+    "validate": "npx web-ext lint --source-dir=dist"
+  },
+  "dependencies": {
+    "@parentscript/shared": "*",
+    "@supabase/supabase-js": "^2.45.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.270",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.3"
+  }
+}

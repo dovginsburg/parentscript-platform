@@ -1,0 +1,29 @@
+{
+  "app": {
+    "name": "ParentScript",
+    "tagline": "When you're lost in the middle, MAZE brings you back to the top."
+  },
+  "nav": {
+    "home": "Home",
+    "skills": "Skills",
+    "history": "History",
+    "settings": "Settings"
+  },
+  "auth": {
+    "therapist_signin": "Therapist sign in",
+    "parent_signin": "Parent sign in",
+    "signup": "Sign up",
+    "signout": "Sign out"
+  },
+  "coach": {
+    "placeholder": "What's happening right now?",
+    "button": "Coach me",
+    "analyzing": "Thinking…",
+    "safety": "If you or your child are in immediate danger, please call 988 or 911."
+  },
+  "skills": {
+    "locked": "Locked — talk to your therapist",
+    "in_progress": "Try this",
+    "completed": "You did it"
+  }
+}

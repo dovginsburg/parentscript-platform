@@ -1,0 +1,55 @@
+# robots.txt — ParentScript (parentscript.app)
+# Updated 2026-06-30
+
+# Marketing and public pages — indexable
+User-agent: *
+Allow: /
+Allow: /app/
+Allow: /app/pricing
+Allow: /app/security
+Allow: /app/privacy
+Allow: /app/terms
+Allow: /app/about
+Allow: /app/login
+Allow: /app/signup
+Allow: /app/parent-signup
+
+# Authenticated user data — never index
+Disallow: /app/therapist/
+Disallow: /app/parent/
+Disallow: /app/billing
+Disallow: /app/invite/
+Disallow: /app/reset-password
+Disallow: /app/api/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://parentscript.app/sitemap.xml
+
+# AI crawlers — explicit allow for AI search/answer engines
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /

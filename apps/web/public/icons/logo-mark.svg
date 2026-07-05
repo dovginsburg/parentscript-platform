@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ParentScript — mark only (square, no text). 1024×1024.
+  Used at small sizes (16, 32) where full lockup is unreadable.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="ParentScript mark">
+  <defs>
+    <linearGradient id="psMarkBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#psMarkBg)"/>
+  <circle cx="512" cy="512" r="368" fill="#FFFFFF" fill-opacity="0.06"/>
+  <g fill="#FFFFFF">
+    <rect x="356" y="244" width="118" height="540" rx="22"/>
+    <path d="M474 244
+             h132
+             a196 196 0 0 1 0 392
+             h-132
+             v-108
+             h128
+             a82 82 0 0 0 0 -164
+             h-128
+             z"
+          fill-rule="evenOdd"/>
+  </g>
+</svg>

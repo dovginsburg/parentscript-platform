@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+**/dist/
+
+# Environment variables — never commit real keys
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript
+*.tsbuildinfo
+.vercel
+.env*
+
+# Store / service-account credentials — never commit
+apps/android/fastlane/play-store-credentials.json
+apps/android/fastlane/*.json
+!apps/android/fastlane/metadata
+apps/ios/fastlane/AuthKey_*.p8
+apps/ios/fastlane/*.json
+!apps/ios/fastlane/metadata
+
+# Local debug helpers — never commit
+apps/backend/*.debug.mjs
+
+# iOS / Android local build artifacts
+apps/ios/build/
+apps/ios/App/App.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+apps/android/.gradle/
+apps/android/app/build/
+apps/android/build/
+apps/android/local.properties
+
+# Tauri build artifacts
+apps/desktop/src-tauri/target/
+
+# Embedded git repos from dependencies
+**/.git

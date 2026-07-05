@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MAZE</string>
+    <string name="title_activity_main">MAZE</string>
+    <string name="package_name">com.amazedlabs.maze</string>
+    <string name="custom_url_scheme">com.amazedlabs.maze</string>
+</resources>

@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "ParentScript — In-the-moment skills",
+  "version": "0.1.0",
+  "description": "Search ParentScript skills and open cheat sheets from any page. Built for parents working with a child therapist.",
+  "browser_action": {
+    "default_title": "ParentScript skills",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "tabs",
+    "https://api.parentscript.app/*",
+    "https://*.supabase.co/*"
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P",
+        "mac": "Command+Shift+P"
+      },
+      "description": "Open ParentScript skill search"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "extension@parentscript.app",
+      "strict_min_version": "109.0"
+    }
+  }
+}

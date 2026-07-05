@@ -1,0 +1,99 @@
+# ParentScript
+
+> ParentScript is parenting support — not therapy. Built by AMAZED Labs (Dov Ginsburg + Ariella Eisenberg, PsyD). Last updated: 2026-06-30.
+
+## What we are
+
+- A two-sided companion app: therapists assign evidence-based parenting skills session-by-session; parents access the script cheat-sheets and a single-tap "In the Moment" coaching flow.
+- A delivery layer a licensed mental health professional wraps around a family's presenting issue — not a replacement for clinical care.
+- Grounded in well-established parenting frameworks. Every script cites its source modality inline.
+
+## What we are NOT
+
+- Not therapy. Not counseling. Not diagnosis. Not prescription guidance. Not a crisis service.
+- Not a substitute for a licensed mental health professional.
+- Not for acute child psychiatric crises, active abuse disclosure processing, active intimate-partner violence exposure, severe child trauma, or active suicidality — we exit to crisis resources for those situations.
+
+## Clinical frameworks (the modality spine)
+
+| Age band | Primary modality | Originator |
+|---|---|---|
+| 2–7 (disruptive behavior, ODD, conduct, attachment strain) | **PCIT** (Parent-Child Interaction Therapy) — CDI + PDI | Eyberg & Funderburk 2011; multiple RCTs |
+| 2–12 (defiance, non-compliance, ADHD co-morbid conduct) | **BPT** (Behavioral Parent Training) + **PMT** (Parent Management Training) | Kazdin 2005; Forehand & McMahon 1981 |
+| 2–12 (non-compliance, tantrums, public misbehavior) | **1-2-3 Magic** (counting protocol within BPT) | Phelan 2010 |
+| 6–12 (child anxiety, OCD, school refusal, somatic) | **CBT-for-parents** (parent as exposure co-pilot) | Abelsohn & Epstude 2018; Cartwright-Hatton et al. |
+| 0–16 (universal → targeted parenting support) | **Triple P** (Positive Parenting Program) | Sanders 2012; multiple large RCTs |
+| 4–18 (high-conflict, inflexible child, lagging skills) | **CPS** (Collaborative & Proactive Solutions) — Plan B | Greene 2014, 2021 |
+| 0–5 (attachment, co-regulation, reflective functioning) | **COS** (Circle of Security) | Hoffman, Marvin, Cooper; Marvin et al. 2002 RCT |
+| 5–12 (school-home continuity) | **PBIS-aligned school language** | Implementation-science consensus |
+| Parent (parent's own dysregulation) | **DBT-informed distress tolerance** (TIPP, PLEASE, opposite action, radical acceptance) | Linehan derivatives |
+| Parent (values clarification, parenting stress) | **ACT-inflected parenting** (ParentACT) | Krishna et al. |
+
+## Crisis resources (always available)
+
+- **988** — Suicide & Crisis Lifeline (call or text, US)
+- **911** — Emergency
+- **1-800-422-4453** — Childhelp National Child Abuse Hotline
+- **Text HOME to 741741** — Crisis Text Line
+- **1-800-799-7233** — National Domestic Violence Hotline
+- International directory: https://findahelpline.com
+
+## Target population
+
+- Parents and caregivers of children aged 2–12 (caregivers welcome).
+- Everyday behavior concerns: tantrums, defiance, transitions, sibling conflict, screen time, bedtime, homework battles.
+- Mild-to-moderate parent-child conflict; parenting stress; mild-moderate child anxiety managed at home.
+- Severity ceiling: routine to mild-moderate. Anything beyond → refer to a human therapist.
+
+## Safety framework (the durable moat)
+
+Every interaction is gated by:
+1. **Scope-of-practice disclosure** rendered on every AI response card, in onboarding, and in the marketing footer.
+2. **Red-flag phrase detection** with verbatim crisis-resource response (no LLM output, no templating, no animation beyond initial fade-in).
+3. **Mandated-reporting-aware disclosure** for any child-disclosure path — never promise confidentiality, never coach confrontation or hiding.
+4. **HIPAA-aligned infrastructure** — Supabase + AWS + Stripe; row-level security; TLS 1.2+ in transit; AES-256 at rest; US-only data residency. Details: https://parentscript.app/app/security
+
+## What we will NOT claim
+
+- "Treats depression / anxiety / PTSD / ADHD in your child."
+- "Cures," "fixes," "guarantees results."
+- "As effective as therapy" / "replaces your therapist."
+- "HIPAA-certified" (we are HIPAA-aligned in posture; certification is third-party).
+- Specific success percentages without a real cohort study we own.
+- "Recommended by [named hospital / school / clinic]" without a signed letter on file.
+
+## Pricing (as of 2026-06-30)
+
+- **Free** for parents (1 coaching interaction/day, L1–L2 skills).
+- **Solo** for therapists: $19/mo, 1 therapist account, up to 25 parents.
+- **Pro** for therapists: $39/mo, 1 therapist account, unlimited parents.
+- **Clinic** for group practices: $29/seat/mo, multiple therapist accounts, shared roster.
+- 14-day free trial on all paid plans. No credit card required.
+
+## Pages
+
+- Home — https://parentscript.app/
+- Pricing — https://parentscript.app/app/pricing
+- Security & HIPAA — https://parentscript.app/app/security
+- Privacy policy — https://parentscript.app/app/privacy
+- Terms of service — https://parentscript.app/app/terms
+- About — https://parentscript.app/app/about
+- Sign in — https://parentscript.app/app/login
+- Therapist sign up — https://parentscript.app/app/signup
+- Parent sign up — https://parentscript.app/app/parent-signup
+
+## Contact
+
+- General: hello@parentscript.app
+- Support: support@parentscript.app
+- Privacy: privacy@parentscript.app
+- Security (vulnerability reports): security@parentscript.app
+- Press: press@parentscript.app
+- Careers: careers@parentscript.app
+- Sales (Clinic plan): sales@parentscript.app
+
+## Studio
+
+ParentScript is built by **AMAZED Labs** — Dov Ginsburg + Ariella Eisenberg, PsyD.
+Clinical content reviewed by Dr. Eisenberg and a network of licensed child and family therapists.
+Engineering, design, and product are handled in-house.

@@ -1,0 +1,19 @@
+{
+  "name": "@parentscript/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ParentScript desktop app — Tauri (macOS + Windows)",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "command -v cargo >/dev/null 2>&1 && tauri build || echo '⚠️  Tauri build skipped (Rust not installed)'",
+    "build:mac": "tauri build --target universal-apple-darwin",
+    "build:win": "tauri build --target x86_64-pc-windows-msvc"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@parentscript/shared": "*"
+  }
+}

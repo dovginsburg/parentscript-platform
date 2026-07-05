@@ -1,0 +1,21 @@
+-- =============================================
+-- ParentScript — Practice logs nullable client_id
+-- Migration 007: Allow self-serve parents to log practice
+-- =============================================
+--
+-- When parents sign up free-tier via /parent-signup, parents.client_id is
+-- NULL (migration 006). They currently have no way to log practice because
+-- practice_logs.client_id is NOT NULL and references clients(id).
+--
+-- This migration relaxes practice_logs.client_id to NULL. Self-serve parents
+-- can then log practice; their logs have no therapist-side read path (no
+-- client row to traverse) but the parent can see them in their own history.
+--
+-- For therapist-connected parents, client_id is still set as before.
+--
+-- RLS already gates writes to the parent's own rows (parent_id = auth.uid())
+-- and reads to either the parent themselves or the therapist who owns the
+-- client. No policy changes needed.
+-- =============================================
+
+ALTER TABLE practice_logs ALTER COLUMN client_id DROP NOT NULL;

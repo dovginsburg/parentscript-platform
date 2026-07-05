@@ -1,0 +1,114 @@
+PRIVACY POLICY — ParentScript
+
+Last updated: June 28, 2026
+
+ParentScript is built around a single principle: the database should never contain Protected Health Information (PHI) about your child. That is not a temporary hack — it is a permanent design choice. It is what lets us offer this app safely and affordably, and what keeps your family protected if anything ever goes wrong.
+
+This policy explains, in plain language, what we collect, what we don't, and the choices you have.
+
+WHO WE ARE
+
+ParentScript is built by AMAZED Labs. Contact: privacy@parentscript.app.
+
+WHAT WE COLLECT
+
+Account data
+  - Email address
+  - Password hash (managed by our authentication provider; we never see your password)
+  - Account type (therapist or parent)
+  - For therapists: optional display name, professional license number, state, and license type (used solely to verify credentials)
+
+Client cases
+  - Non-identifying labels that you (the therapist) choose yourself — for example, "Client 042"
+  - We do NOT collect real child names, dates of birth, addresses, schools, diagnoses, insurance information, Social Security numbers, or any other identifier
+  - We display a warning at the point of client creation reminding you not to enter real identifying information
+
+Skill unlocks and structured notes
+  - Which skills are unlocked per case
+  - A structured "note tag" per skill (a single label from a fixed set, not a sentence — for example, "focus_this_week" or "going_well")
+  - We do NOT support free-text clinical notes in the current version. This is deliberate.
+
+Practice logs
+  - Which skill you practiced
+  - How it went: good / mixed / hard (one tap)
+  - Optional reflection tags from a fixed non-clinical set (for example: "morning," "after school," "with sibling")
+  - Timestamp
+  - We do NOT collect free-text reflections in the current version. This is deliberate.
+
+Subscription and billing
+  - Payment processing is handled by Stripe. We never see your card number.
+  - We store your plan, subscription status, renewal date, and Stripe customer/subscription identifiers.
+
+Usage telemetry
+  - We do not use Google Analytics, Mixpanel, Amplitude, Segment, or any third-party analytics service
+  - We log server events (for example, "skill unlocked" or "practice log saved") for the operation of the service and for diagnosing problems. These logs do not contain message content, names, or other identifiers.
+
+WHAT WE NEVER COLLECT
+
+  - Your child's real name, age, date of birth, school, or address
+  - Photos, audio, or video of your child or family
+  - Your contacts, location, camera, or microphone
+  - Free-text clinical notes (by design — this version does not have a free-text field)
+  - Free-text parent reflections (by design — same reason)
+  - Advertising identifiers
+  - Browsing history or activity outside the app
+
+HOW WE USE WHAT WE COLLECT
+
+  - To provide the ParentScript service: skill unlocks, cheat sheets, In-the-Moment coaching, practice logging
+  - To verify therapist credentials and prevent unauthorized access to clinical features
+  - To process payments and manage subscriptions
+  - To send essential service emails: password reset, invite links, security alerts. We do not send marketing email without your explicit opt-in.
+  - To comply with the law: court orders, valid legal process, breach notification statutes
+
+WHO WE SHARE WITH
+
+  - Supabase — our database and authentication provider. Data is encrypted in transit (TLS) and at rest. Row-level security policies ensure therapists see only their own cases, and parents see only their own family's data.
+  - Stripe — payment processing. Stripe receives only the data needed to bill you.
+  - Cloud hosting provider — for the servers that run the application. Bound by contract to keep data confidential.
+  - No one else. We do not sell your data. We do not share it with advertisers, data brokers, or social platforms.
+
+DATA MINIMIZATION (the core design principle)
+
+ParentScript is engineered so that even a data breach would expose very little. The structured-data approach — no free-text clinical notes, no real names, no child identifiers — is not a feature we will compromise. If a future version adds free-text notes, it will require a separate compliance path (Business Associate Agreement, HIPAA review) and your explicit consent before any change to your account.
+
+YOUR RIGHTS
+
+  - Request a copy of your data: email privacy@parentscript.app. We will respond within 30 days.
+  - Delete your data: uninstalling the app removes your local data immediately. To delete server-side data, email privacy@parentscript.app. We will delete within 30 days. Note: therapists have an independent right to their own account data; deletion of a parent account does not retroactively unlock data the therapist is legally required to retain.
+  - Correct your data: most fields are editable in the app. For anything you cannot edit, email us.
+  - Withdraw consent: you can stop using ParentScript at any time. Deleting the app is the strongest form of withdrawal.
+
+CHILDREN
+
+ParentScript is designed for use by parents about their children. We do not collect data directly from children. The parent is always the account holder. The app is not directed to children under 13.
+
+If you are a parent and you believe your child has used the app independently in a way that collected information about them, contact privacy@parentscript.app and we will address it.
+
+EMERGENCIES
+
+ParentScript is a clinical companion, not a crisis service. The In-the-Moment flow always displays 988 (Suicide & Crisis Lifeline) and 911. If you or your child is in immediate danger, call 911. If you or your child is in emotional crisis, call or text 988.
+
+SECURITY
+
+  - All data in transit is encrypted with TLS 1.2 or higher
+  - Data at rest is encrypted by our database provider
+  - Row-level security policies in the database enforce tenancy (therapists see only their cases; parents see only their family's data)
+  - Access to production systems requires hardware-key multi-factor authentication
+  - We do not install third-party SDKs that exfiltrate user content
+  - In the event of a data breach affecting your information, we will notify you as required by applicable law (including state consumer health data breach notification statutes)
+
+CHANGES TO THIS POLICY
+
+If we change anything material, we will show an in-app notice and update the "Last updated" date above. Continued use after a material change means you accept the updated policy.
+
+CONTACT
+
+  - Privacy questions, data requests, complaints: privacy@parentscript.app
+  - Mailing address: AMAZED Labs [street address on file]
+
+JURISDICTION
+
+This policy is governed by the laws of the State of [Dov's state of incorporation], without regard to conflict-of-laws principles.
+
+This policy is provided in English. Translations may be available in-app; in case of conflict, the English version governs.

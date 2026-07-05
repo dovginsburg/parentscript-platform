@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ParentScript — square app icon  1024×1024
+  Source of truth. Rasterized at every required size in apps/web/public/icons/.
+  Color tokens (design-tokens.json → parentscript):
+    accent        #6366F1
+    accent-hover  #4F46E5
+    accent-light  #A5B4FC
+    accent-soft   #EEF2FF
+    accent-ink    #3730A3
+    text          #111827
+  Sentence case. Clinical warmth. "P" doubles as a bookmark/tab.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="ParentScript">
+  <defs>
+    <linearGradient id="psBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="psMark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EEF2FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- iOS applies its own rounded-mask. Source must NOT bake corners.
+       For Android / web preview we ship icon-512-maskable.png with a 12% safe inset. -->
+  <rect width="1024" height="1024" fill="url(#psBg)"/>
+
+  <!-- soft halo — clinical-warmth cue, like a margin around a check-in page -->
+  <circle cx="512" cy="512" r="368" fill="#FFFFFF" fill-opacity="0.06"/>
+
+  <!-- "P" mark — geometric humanist sans, generous counters, lowercase-friendly feel -->
+  <g fill="url(#psMark)">
+    <!-- vertical stem -->
+    <rect x="356" y="244" width="118" height="540" rx="22"/>
+    <!-- bowl outline: outer + inner counter -->
+    <path d="M474 244
+             h132
+             a196 196 0 0 1 0 392
+             h-132
+             v-108
+             h128
+             a82 82 0 0 0 0 -164
+             h-128
+             z"
+          fill-rule="evenOdd"/>
+  </g>
+</svg>

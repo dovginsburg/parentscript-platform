@@ -1,0 +1,190 @@
+[
+  {
+    "name": "tono-login",
+    "url": "https://tonoit.com/login",
+    "oauth_buttons": [
+      {
+        "tag": "BUTTON",
+        "text": "continue with google",
+        "html": "<button style=\"width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;background:var(--accent);color:#fff;border:1px solid var(--accent);border-radius:var(--radius-md);font-size:14px;font-weight:600;transition:all var(--duration) var(--ease);min-height:44"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "continue with apple",
+        "html": "<button style=\"width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;background:var(--bg-elev);color:var(--text);border:1px solid var(--border);border-radius:var(--radius-md);font-size:14px;font-weight:600;transition:all var(--duration) var(--ease);min-h"
+      }
+    ],
+    "forms": [
+      {
+        "action": "https://tonoit.com/login",
+        "method": "get",
+        "inputs": [
+          {
+            "name": "",
+            "type": "email",
+            "placeholder": "you@work.com",
+            "required": true,
+            "autocomplete": "email"
+          }
+        ]
+      }
+    ],
+    "broken_images": [],
+    "errors": [],
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/deep-tono-login.png"
+  },
+  {
+    "name": "tono-home",
+    "url": "https://tonoit.com/",
+    "oauth_buttons": [],
+    "forms": [],
+    "broken_images": [],
+    "errors": [],
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/deep-tono-home.png"
+  },
+  {
+    "name": "ps-login",
+    "url": "https://parentscript.app/app/login",
+    "oauth_buttons": [],
+    "forms": [
+      {
+        "action": "https://parentscript.app/app/login",
+        "method": "get",
+        "inputs": [
+          {
+            "name": "",
+            "type": "email",
+            "placeholder": "",
+            "required": true,
+            "autocomplete": "email"
+          },
+          {
+            "name": "",
+            "type": "password",
+            "placeholder": "",
+            "required": true,
+            "autocomplete": "current-password"
+          }
+        ]
+      }
+    ],
+    "broken_images": [],
+    "errors": [],
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/deep-ps-login.png"
+  },
+  {
+    "name": "ps-signup",
+    "url": "https://parentscript.app/app/signup",
+    "oauth_buttons": [],
+    "forms": [
+      {
+        "action": "https://parentscript.app/app/signup",
+        "method": "get",
+        "inputs": [
+          {
+            "name": "",
+            "type": "text",
+            "placeholder": "Dr. Smith",
+            "required": false,
+            "autocomplete": ""
+          },
+          {
+            "name": "",
+            "type": "email",
+            "placeholder": "",
+            "required": true,
+            "autocomplete": "email"
+          },
+          {
+            "name": "",
+            "type": "password",
+            "placeholder": "",
+            "required": true,
+            "autocomplete": "new-password"
+          }
+        ]
+      }
+    ],
+    "broken_images": [],
+    "errors": [],
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/deep-ps-signup.png"
+  },
+  {
+    "name": "ps-parent",
+    "url": "https://parentscript.app/app/parent-login",
+    "oauth_buttons": [],
+    "forms": [
+      {
+        "action": "https://parentscript.app/app/login",
+        "method": "get",
+        "inputs": [
+          {
+            "name": "",
+            "type": "email",
+            "placeholder": "",
+            "required": true,
+            "autocomplete": "email"
+          },
+          {
+            "name": "",
+            "type": "password",
+            "placeholder": "",
+            "required": true,
+            "autocomplete": "current-password"
+          }
+        ]
+      }
+    ],
+    "broken_images": [],
+    "errors": [],
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/deep-ps-parent.png"
+  },
+  {
+    "name": "ps-reset",
+    "url": "https://parentscript.app/app/reset-password",
+    "oauth_buttons": [],
+    "forms": [],
+    "broken_images": [],
+    "errors": [],
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/deep-ps-reset.png"
+  },
+  {
+    "name": "ps-pricing",
+    "url": "https://parentscript.app/app/pricing",
+    "oauth_buttons": [],
+    "forms": [],
+    "broken_images": [],
+    "errors": [],
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/deep-ps-pricing.png"
+  },
+  {
+    "name": "ps-home",
+    "url": "https://parentscript.app/app/",
+    "oauth_buttons": [],
+    "forms": [
+      {
+        "action": "https://parentscript.app/app/login",
+        "method": "get",
+        "inputs": [
+          {
+            "name": "",
+            "type": "email",
+            "placeholder": "",
+            "required": true,
+            "autocomplete": "email"
+          },
+          {
+            "name": "",
+            "type": "password",
+            "placeholder": "",
+            "required": true,
+            "autocomplete": "current-password"
+          }
+        ]
+      }
+    ],
+    "broken_images": [],
+    "errors": [],
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/deep-ps-home.png"
+  }
+]

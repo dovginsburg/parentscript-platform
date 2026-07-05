@@ -1,0 +1,59 @@
+{
+  "_metadata": {
+    "major_version": 2,
+    "minor_version": 1
+  },
+  "display_information": {
+    "name": "ParentScript",
+    "description": "Therapist notifications for ParentScript client activity and crisis alerts.",
+    "background_color": "#4f46e5",
+    "long_description": "ParentScript is a therapist-controlled parenting skills app. This Slack app surfaces skill unlocks, practice logs, and crisis-response pings to the therapist's existing Slack workspace.",
+    "terms_of_service_url": "https://parentscript.app/terms"
+  },
+  "features": {
+    "app_home": {
+      "home_tab_enabled": true,
+      "messages_tab_enabled": true
+    },
+    "bot_user": {
+      "display_name": "ParentScript",
+      "always_online": true
+    },
+    "slash_commands": [
+      {
+        "command": "/parentscript",
+        "description": "Search ParentScript skills",
+        "usage_hint": "search <query>",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "chat:write",
+        "chat:write.public",
+        "commands",
+        "users:read",
+        "users:read.email",
+        "im:write"
+      ]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "request_url": "https://api.parentscript.app/slack/events",
+      "bot_events": [
+        "app_home_opened",
+        "app_mention",
+        "message.im"
+      ]
+    },
+    "interactivity": {
+      "request_url": "https://api.parentscript.app/slack/interactivity",
+      "is_always_on": true
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false
+  }
+}

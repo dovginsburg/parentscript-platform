@@ -1,0 +1,19 @@
+{
+  "name": "@parentscript/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared TS types, API client, and i18n for the ParentScript platform",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "i18next": "^23.11.5",
+    "react-i18next": "^14.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "timestamp": "2026-07-05T14:04:12-0400",
+  "tests": {
+    "tono-health-apex": {
+      "ok": true,
+      "status": 200,
+      "content_type": "application/json",
+      "json_ok": true,
+      "body_preview": "{\"status\":\"ok\",\"ts\":1783274652,\"id\":\"2f657fad\",\"version\":\"0.3.0\",\"stripe_configured\":true,\"slack_configured\":false,\"free_daily_limit\":10}",
+      "parsed": {
+        "status": "ok",
+        "ts": 1783274652,
+        "id": "2f657fad",
+        "version": "0.3.0",
+        "stripe_configured": true,
+        "slack_configured": false,
+        "free_daily_limit": 10
+      }
+    },
+    "tono-health-railway": {
+      "ok": false,
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    "ps-health-apex": {
+      "ok": false,
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "json_ok": false,
+      "body_preview": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n\n    <!-- \u2500\u2500 Viewport \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 -->\n    <!-- viewport-fit=cover fills the notch / ",
+      "parsed": null
+    },
+    "tono-apex": {
+      "ok": true,
+      "status": 200,
+      "final_url": "https://tonoit.com/",
+      "console_errs": 0,
+      "page_errs": 0,
+      "failed_reqs": 0,
+      "title": "tono \u2014 say what you mean",
+      "console_msgs": [],
+      "page_err_msgs": [],
+      "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots-jul5/tono-apex.png"
+    },
+    "ps-apex": {
+      "ok": true,
+      "status": 200,
+      "final_url": "https://parentscript.app/app/login",
+      "console_errs": 0,
+      "page_errs": 0,
+      "failed_reqs": 0,
+      "title": "ParentScript",
+      "console_msgs": [],
+      "page_err_msgs": [],
+      "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots-jul5/ps-apex.png"
+    },
+    "tono-login": {
+      "ok": true,
+      "status": 200,
+      "text_len": 191,
+      "phrase_hits": {
+        "continue with apple": true,
+        "continue with google": true,
+        "sign in with email": true
+      },
+      "has_passkey": false,
+      "has_webauthn": false,
+      "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots-jul5/tono-login.png"
+    },
+    "ps-login": {
+      "ok": true,
+      "status": 200,
+      "text_len": 213,
+      "phrase_hits": {
+        "sign in": true,
+        "google": false,
+        "apple": false,
+        "email": true
+      },
+      "has_passkey": false,
+      "has_webauthn": false,
+      "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots-jul5/ps-login.png"
+    },
+    "ps-signup": {
+      "ok": true,
+      "status": 200,
+      "text_len": 204,
+      "phrase_hits": {
+        "create account": true,
+        "therapist": true
+      },
+      "has_passkey": false,
+      "has_webauthn": false,
+      "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots-jul5/ps-signup.png"
+    },
+    "ps-login-buttons": {
+      "ok": true,
+      "button_count": 2,
+      "buttons": [
+        {
+          "tag": "button",
+          "text": "Sign in",
+          "ariaLabel": null
+        },
+        {
+          "tag": "button",
+          "text": "Forgot password?",
+          "ariaLabel": null
+        }
+      ],
+      "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots-jul5/ps-login-buttons.png"
+    },
+    "tono-login-buttons": {
+      "ok": true,
+      "button_count": 3,
+      "buttons": [
+        {
+          "tag": "button",
+          "text": "continue with google",
+          "ariaLabel": "Continue with Google"
+        },
+        {
+          "tag": "button",
+          "text": "continue with apple",
+          "ariaLabel": "Continue with Apple"
+        },
+        {
+          "tag": "button",
+          "text": "send link",
+          "ariaLabel": null
+        }
+      ],
+      "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots-jul5/tono-login-buttons.png"
+    },
+    "ps-passkey-ui": {
+      "ok": true,
+      "status": 200,
+      "passkey_mentioned": false,
+      "button_labels": [
+        "Sign in",
+        "Forgot password?"
+      ],
+      "has_navigator_credentials": true,
+      "is_public_key_capable": true,
+      "page_errors": [],
+      "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots-jul5/ps-passkey-login.png"
+    }
+  }
+}

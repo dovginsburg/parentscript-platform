@@ -1,0 +1,54 @@
+ParentScript is the parenting-skills companion for families working with a child therapist. Your therapist unlocks evidence-based skills session by session. You get them as scannable cheat sheets — and a single big "In the Moment" button for the hard moments in between sessions.
+
+Built around Parent-Child Interaction Therapy (PCIT) and Behavioral Parent Training (BPT), the same curricula used in clinical practice for ADHD, anxiety, defiance, and big emotions in children ages 3–10.
+
+HOW IT WORKS
+
+Your therapist adds you as a parent to their case.
+1. Your therapist unlocks a skill after your session.
+2. The skill appears on your phone as a cheat sheet: the goal, when to use it, exactly what to say, what not to say, age adaptations, and any safety notes.
+3. In a hard moment, you tap the big "In the Moment" button. Pick the situation (meltdown, defiance, whining, sibling conflict). You get three short bullets — not a paywall, not a locked skill, not an upsell. Universal basics, always free.
+4. After you try a skill, two taps and you're done: how it went (good / mixed / hard), and one optional tag. Your therapist sees the trend, not the diary.
+
+WHAT MAKES PARENTSCRIPT DIFFERENT
+
+Therapist-controlled progressive unlock. You don't see what hasn't been introduced yet. Your therapist guides the curriculum at the pace your family needs.
+
+Evidence-based, not generic parenting content. Every skill card maps to a recognized clinical modality (PCIT, BPT, Triple P, CBT-adjacent). No influencer advice, no recycled listicles.
+
+Built for the brain in panic mode. Massive tap targets, huge text, no horizontal scroll, ≤3 short bullets per action screen. Designed by parents who've been there.
+
+"In the Moment" coaching is universal — not behind the unlock. A parent in a hard moment must never hit a paywall or a lock. The de-escalation basics are always there.
+
+Safety is structural. Every screen in the "In the Moment" flow shows 988, 911, and "call my therapist" at the bottom. This app does not handle emergencies and never claims to.
+
+WHAT'S IN THE CHEAT SHEETS
+
+Each unlocked skill includes:
+  - Goal — one sentence describing what the skill does
+  - Use When — the trigger scenario
+  - Say This — the exact script
+  - Don't Say — common pitfalls
+  - Age Adaptations — what changes at ages 3–5, 6–8, 9–10
+  - Safety Warning — when to escalate instead
+  - Your Therapist's Focus — the structured note tag your therapist set this week
+
+WHO IT'S FOR
+
+  - Parents of children ages 3–10 working with a therapist on behavior, ADHD, anxiety, or defiance
+  - Therapists who want their families to actually follow through between sessions
+  - Foster and adoptive parents navigating the first year with a child whose history complicates standard parenting advice
+
+PRIVACY BY DESIGN
+
+  - No real names. Your therapist identifies your family with a label they choose ("Client 042"). The app never sees your child's name.
+  - No free-text clinical notes. Therapist notes are structured tags, not sentences that could become PHI.
+  - No third-party trackers. No Google Analytics, no Mixpanel, no ad SDKs.
+  - Row-level security in the database. Therapists see only their own cases. You see only your family's data.
+  - Read our full privacy policy at [your-privacy-policy-url].
+
+IMPORTANT
+
+ParentScript is a clinical companion, not a substitute for therapy. If you or your child is in immediate danger, call 911. If you or your child is in emotional crisis, call or text 988 (US Suicide & Crisis Lifeline). ParentScript always shows these numbers in the app.
+
+Made by AMAZED Labs.

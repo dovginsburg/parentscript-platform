@@ -1,0 +1,8 @@
+Initial release of MAZE – therapist-controlled parenting skills toolkit.
+
+Features:
+• Therapist dashboard with client management
+• Parent mobile experience with skill access
+• In-the-Moment coaching flow
+• Practice logging and progress tracking
+• Evidence-based PCIT/BPT curriculum

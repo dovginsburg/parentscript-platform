@@ -1,0 +1,337 @@
+[
+  {
+    "name": "tono-home-desktop",
+    "url": "https://tonoit.com/",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "app": "tono",
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 200,
+    "final_url": "https://tonoit.com/",
+    "title": "tono \u2014 say what you mean",
+    "meta": {
+      "title": "tono \u2014 say what you mean",
+      "description": "four ways to say it. pick one, copy, send.",
+      "themeColor": "#000000",
+      "og": {},
+      "canonical": null,
+      "manifest": null
+    },
+    "snippet": "tono\nEnglish\nSpanish\nFrench\nGerman\nJapanese\nBrazilian Portuguese\nArabic\nfour ways to say it.\n\npick one, copy, send.\n\ncoach a draftinterpret a message\nEnglish\nSpanish\nFrench\nGerman\nJapanese\nBrazilian Portuguese\nArabic\ncoach\n\nwrite a message above and tap coach to see how it lands.\n\nby signing in, you agree tono holds your drafts. nothing else.",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/tono-home-desktop.png"
+  },
+  {
+    "name": "tono-home-mobile",
+    "url": "https://tonoit.com/",
+    "viewport": {
+      "width": 375,
+      "height": 667
+    },
+    "app": "tono",
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 200,
+    "final_url": "https://tonoit.com/",
+    "title": "tono \u2014 say what you mean",
+    "meta": {
+      "title": "tono \u2014 say what you mean",
+      "description": "four ways to say it. pick one, copy, send.",
+      "themeColor": "#000000",
+      "og": {},
+      "canonical": null,
+      "manifest": null
+    },
+    "snippet": "tono\nEnglish\nSpanish\nFrench\nGerman\nJapanese\nBrazilian Portuguese\nArabic\nfour ways to say it.\n\npick one, copy, send.\n\ncoach a draftinterpret a message\nEnglish\nSpanish\nFrench\nGerman\nJapanese\nBrazilian Portuguese\nArabic\ncoach\n\nwrite a message above and tap coach to see how it lands.\n\nby signing in, you agree tono holds your drafts. nothing else.",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/tono-home-mobile.png"
+  },
+  {
+    "name": "tono-login-desktop",
+    "url": "https://tonoit.com/login",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "app": "tono",
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 200,
+    "final_url": "https://tonoit.com/login",
+    "title": "tono \u2014 say what you mean",
+    "meta": {
+      "title": "tono \u2014 say what you mean",
+      "description": "four ways to say it. pick one, copy, send.",
+      "themeColor": "#000000",
+      "og": {},
+      "canonical": null,
+      "manifest": null
+    },
+    "snippet": "tono\nfour ways to say it.\n\npick one, copy, send.\n\ncontinue with google\ncontinue with apple\nOR\nOR \u2014 SIGN IN WITH EMAIL\nsend link\n\nby signing in, you agree tono holds your drafts. nothing else.",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/tono-login-desktop.png"
+  },
+  {
+    "name": "tono-pricing-desktop",
+    "url": "https://tonoit.com/pricing",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "app": "tono",
+    "console_errors": [
+      "[error] Failed to load resource: the server responded with a status of 404 ()"
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 404,
+    "final_url": "https://tonoit.com/pricing",
+    "title": "404: This page could not be found.",
+    "meta": {
+      "title": "404: This page could not be found.",
+      "description": "four ways to say it. pick one, copy, send.",
+      "themeColor": "#000000",
+      "og": {},
+      "canonical": null,
+      "manifest": null
+    },
+    "snippet": "404\nThis page could not be found.",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/tono-pricing-desktop.png",
+    "http_errors": [
+      "404 https://tonoit.com/pricing"
+    ]
+  },
+  {
+    "name": "tono-account-desktop",
+    "url": "https://tonoit.com/account",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "app": "tono",
+    "console_errors": [
+      "[error] Failed to load resource: the server responded with a status of 404 ()"
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 404,
+    "final_url": "https://tonoit.com/account",
+    "title": "404: This page could not be found.",
+    "meta": {
+      "title": "404: This page could not be found.",
+      "description": "four ways to say it. pick one, copy, send.",
+      "themeColor": "#000000",
+      "og": {},
+      "canonical": null,
+      "manifest": null
+    },
+    "snippet": "404\nThis page could not be found.",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/tono-account-desktop.png",
+    "http_errors": [
+      "404 https://tonoit.com/account"
+    ]
+  },
+  {
+    "name": "ps-root-desktop",
+    "url": "https://parentscript.app/",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "app": "ps",
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 200,
+    "final_url": "https://parentscript.app/app/login",
+    "title": "ParentScript",
+    "meta": {
+      "title": "ParentScript",
+      "description": "ParentScript \u2014 Therapist-guided parenting skills. Say the right thing at the right time.",
+      "themeColor": "#6366f1",
+      "og": {},
+      "canonical": null,
+      "manifest": "https://parentscript.app/app/manifest.webmanifest"
+    },
+    "snippet": "ParentScript\n\nAMAZED Labs\n\nTherapist sign in\nEmail address\nPassword\nSign inForgot password?\n\nNo account? Sign up\n\nParent without a therapist? Sign up free \u2192\n\nPricing\u00b7Security & HIPAA\u00b7Privacy policy\u00b7Contact support",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/ps-root-desktop.png"
+  },
+  {
+    "name": "ps-login-desktop",
+    "url": "https://parentscript.app/app/login",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "app": "ps",
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 200,
+    "final_url": "https://parentscript.app/app/login",
+    "title": "ParentScript",
+    "meta": {
+      "title": "ParentScript",
+      "description": "ParentScript \u2014 Therapist-guided parenting skills. Say the right thing at the right time.",
+      "themeColor": "#6366f1",
+      "og": {},
+      "canonical": null,
+      "manifest": "https://parentscript.app/app/manifest.webmanifest"
+    },
+    "snippet": "ParentScript\n\nAMAZED Labs\n\nTherapist sign in\nEmail address\nPassword\nSign inForgot password?\n\nNo account? Sign up\n\nParent without a therapist? Sign up free \u2192\n\nPricing\u00b7Security & HIPAA\u00b7Privacy policy\u00b7Contact support",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/ps-login-desktop.png"
+  },
+  {
+    "name": "ps-signup-desktop",
+    "url": "https://parentscript.app/app/signup",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "app": "ps",
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 200,
+    "final_url": "https://parentscript.app/app/signup",
+    "title": "ParentScript",
+    "meta": {
+      "title": "ParentScript",
+      "description": "ParentScript \u2014 Therapist-guided parenting skills. Say the right thing at the right time.",
+      "themeColor": "#6366f1",
+      "og": {},
+      "canonical": null,
+      "manifest": "https://parentscript.app/app/manifest.webmanifest"
+    },
+    "snippet": "ParentScript\n\nAMAZED Labs\n\nCreate therapist account\nDisplay name (optional)\nEmail address\nPassword\nCreate account\n\nAlready have an account? Sign in\n\nPricing\u00b7Security & HIPAA\u00b7Privacy policy\u00b7Contact support",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/ps-signup-desktop.png"
+  },
+  {
+    "name": "ps-reset-desktop",
+    "url": "https://parentscript.app/app/reset-password",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "app": "ps",
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 200,
+    "final_url": "https://parentscript.app/app/reset-password",
+    "title": "ParentScript",
+    "meta": {
+      "title": "ParentScript",
+      "description": "ParentScript \u2014 Therapist-guided parenting skills. Say the right thing at the right time.",
+      "themeColor": "#6366f1",
+      "og": {},
+      "canonical": null,
+      "manifest": "https://parentscript.app/app/manifest.webmanifest"
+    },
+    "snippet": "Checking reset link\u2026",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/ps-reset-desktop.png"
+  },
+  {
+    "name": "ps-parent-login",
+    "url": "https://parentscript.app/app/parent-login",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "app": "ps",
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 200,
+    "final_url": "https://parentscript.app/app/login",
+    "title": "ParentScript",
+    "meta": {
+      "title": "ParentScript",
+      "description": "ParentScript \u2014 Therapist-guided parenting skills. Say the right thing at the right time.",
+      "themeColor": "#6366f1",
+      "og": {},
+      "canonical": null,
+      "manifest": "https://parentscript.app/app/manifest.webmanifest"
+    },
+    "snippet": "ParentScript\n\nAMAZED Labs\n\nTherapist sign in\nEmail address\nPassword\nSign inForgot password?\n\nNo account? Sign up\n\nParent without a therapist? Sign up free \u2192\n\nPricing\u00b7Security & HIPAA\u00b7Privacy policy\u00b7Contact support",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/ps-parent-login.png"
+  },
+  {
+    "name": "ps-pricing-desktop",
+    "url": "https://parentscript.app/app/pricing",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "app": "ps",
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 200,
+    "final_url": "https://parentscript.app/app/pricing",
+    "title": "ParentScript",
+    "meta": {
+      "title": "ParentScript",
+      "description": "ParentScript \u2014 Therapist-guided parenting skills. Say the right thing at the right time.",
+      "themeColor": "#6366f1",
+      "og": {},
+      "canonical": null,
+      "manifest": "https://parentscript.app/app/manifest.webmanifest"
+    },
+    "snippet": "ParentScript\nAMAZED Labs\nSecurity\nSign in\nPricing built for clinicians\n\nParents get started free. Therapists pay a flat $9/month \u2014 whether you see 25 parents or 250.\n\nFree\nFOR PARENTS\n\nFor parents who want a taste without a therapist.\n\n\u2713\nNo account required\n\u2713\n1 coaching interaction per day\n\u2713\nL1-L2 skills (Connection & Shaping Behavior)\n\u2713\nIn-the-Moment coaching\n\u2713\nSelf-guided practice logging\n\u2713\nConnect with a therapist to unlock L3-L5\n$0/forever\nTry it free\nFor therapists\n\u2014 cancel anytime, 14-day free trial on all paid plans\nSelf-guided\n\nFor parents who want unlimited self-guided practice withou\u2026",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/ps-pricing-desktop.png"
+  },
+  {
+    "name": "ps-home-desktop",
+    "url": "https://parentscript.app/app/",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "app": "ps",
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 200,
+    "final_url": "https://parentscript.app/app/login",
+    "title": "ParentScript",
+    "meta": {
+      "title": "ParentScript",
+      "description": "ParentScript \u2014 Therapist-guided parenting skills. Say the right thing at the right time.",
+      "themeColor": "#6366f1",
+      "og": {},
+      "canonical": null,
+      "manifest": "https://parentscript.app/app/manifest.webmanifest"
+    },
+    "snippet": "ParentScript\n\nAMAZED Labs\n\nTherapist sign in\nEmail address\nPassword\nSign inForgot password?\n\nNo account? Sign up\n\nParent without a therapist? Sign up free \u2192\n\nPricing\u00b7Security & HIPAA\u00b7Privacy policy\u00b7Contact support",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/ps-home-desktop.png"
+  },
+  {
+    "name": "ps-login-mobile",
+    "url": "https://parentscript.app/app/login",
+    "viewport": {
+      "width": 375,
+      "height": 667
+    },
+    "app": "ps",
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": [],
+    "status": 200,
+    "final_url": "https://parentscript.app/app/login",
+    "title": "ParentScript",
+    "meta": {
+      "title": "ParentScript",
+      "description": "ParentScript \u2014 Therapist-guided parenting skills. Say the right thing at the right time.",
+      "themeColor": "#6366f1",
+      "og": {},
+      "canonical": null,
+      "manifest": "https://parentscript.app/app/manifest.webmanifest"
+    },
+    "snippet": "ParentScript\n\nAMAZED Labs\n\nTherapist sign in\nEmail address\nPassword\nSign inForgot password?\n\nNo account? Sign up\n\nParent without a therapist? Sign up free \u2192\n\nPricing\u00b7Security & HIPAA\u00b7Privacy policy\u00b7Contact support",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/ps-login-mobile.png"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "parentscript",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ParentScript \u2014 therapist-controlled parenting skills app (unified monorepo)",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspaces --if-present",
+    "build:web": "VITE_BASE=/app/ npm run build --workspace=apps/web",
+    "vercel-build": "VITE_BASE=/app/ npm run build --workspace=apps/web",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
+  }
+}

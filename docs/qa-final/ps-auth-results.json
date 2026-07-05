@@ -1,0 +1,39 @@
+{
+  "ps_login_wrong": {
+    "url": "https://parentscript.app/app/login",
+    "title": "ParentScript",
+    "snippet": "ParentScript\n\nAMAZED Labs\n\nTherapist sign in\nEmail address\nPassword\nInvalid login credentials\nSign inForgot password?\n\nNo account? Sign up\n\nParent without a therapist? Sign up free \u2192\n\nPricing\u00b7Security & HIPAA\u00b7Privacy policy\u00b7Contact support"
+  },
+  "ps_reset_with_token": {
+    "url": "https://parentscript.app/app/reset-password#access_token=fake&type=recovery",
+    "title": "ParentScript",
+    "snippet": "Checking reset link\u2026"
+  },
+  "ps_signup_weak": {
+    "url": "https://parentscript.app/app/signup",
+    "snippet": "ParentScript\n\nAMAZED Labs\n\nCreate therapist account\nDisplay name (optional)\nEmail address\nPassword\nCreate account\n\nAlready have an account? Sign in\n\nPricing\u00b7Security & HIPAA\u00b7Privacy policy\u00b7Contact support"
+  },
+  "ps_signup_form": {
+    "radios": [],
+    "labels": [
+      "Display name (optional)",
+      "Email address",
+      "Password"
+    ],
+    "headings": [
+      "ParentScript",
+      "Create therapist account"
+    ]
+  },
+  "ps_parent_login": {
+    "url": "https://parentscript.app/app/login",
+    "title": "ParentScript",
+    "snippet": "ParentScript\n\nAMAZED Labs\n\nTherapist sign in\nEmail address\nPassword\nSign inForgot password?\n\nNo account? Sign up\n\nParent without a therapist? Sign up free \u2192\n\nPricing\u00b7Security & HIPAA\u00b7Privacy policy\u00b7Contact support",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/ps-parent-login.png"
+  },
+  "ps_pricing": {
+    "url": "https://parentscript.app/app/pricing",
+    "snippet": "ParentScript\nAMAZED Labs\nSecurity\nSign in\nPricing built for clinicians\n\nParents get started free. Therapists pay a flat $9/month \u2014 whether you see 25 parents or 250.\n\nFree\nFOR PARENTS\n\nFor parents who want a taste without a therapist.\n\n\u2713\nNo account required\n\u2713\n1 coaching interaction per day\n\u2713\nL1-L2 skills (Connection & Shaping Behavior)\n\u2713\nIn-the-Moment coaching\n\u2713\nSelf-guided practice logging\n\u2713\nConnect with a therapist to unlock L3-L5\n$0/forever\nTry it free\nFor therapists\n\u2014 cancel anytime, 14-day free trial on all paid plans\nSelf-guided\n\nFor parents who want unlimited self-guided practice without a therapist.\n\n$9/mo\n\u2713\n1 parent account\n\u2713\nUnlimited In-the-Moment coaching\n\u2713\nUnlimited practice logging\n\u2713\nL1\u2013L2 skills (Connection & Shaping Behavior)\n\u2713\nEmail support\nStart Self-guided\nSolo\n\nFor an individual therapist just getting started.\n\n$9/mo\n\u2713\n1 therapist account\n\u2713\nUp to 25 parents enrolled\n\u2713\n30 evidence-based skills\n\u2713\nIn-the-Moment coaching\n\u2713\nPractice logging\n\u2713\nSession prep reports\n\u2713\nEmail support\nStart Solo\nMOST POPULAR\nPro\n\nFor the established therapist with a full caseload.\n\n$9/mo\n\u2713\n1 therapist account\n\u2713\nUnlimited parents enrolled\n\u2713\n30 evidence-based skills\n\u2713\nIn-the-Moment coaching\n\u2713\nPractice logging\n\u2713\nSession prep reports\n\u2713\nPriority support\nGo Pro\nClinic\n\nFor group practices with multiple therapists.\n\n$9/seat/mo\n\u2713\nMultiple therapist accounts\n\u2713\nUnlimited parents enrolled\n\u2713\nShared client roster\n\u2713\nAdmin & team management\n\u2713\n30 evidence-based skills\n\u2713\nIn-the-Moment coaching\n\u2713\nPractice logging\n\u2713\nSession prep reports\n\u2713\nDedicated support\nContact Sales\nCompare features\n\nEvery paid plan includes a 14-day free trial. No credit card required.\n\nFeature\tFree\tSolo\tPro \u2605\tClinic\nPrice\tFree\t$19/mo\t$39/mo\t$29/seat/mo\nParents enrolled\tSelf-serve\tUp to 25\tUnlimited\tUnlimited\nTherapist accounts\t\u2014\t1\t1\tMultiple\nEvidence-based skills library\tL1-L2 only\tL1-L5\tL1-L5\tL1-L5\nIn-the-Moment coaching\t1/day\tUnlimited\tUnlimited\tUnlimited\nPractice logging\t\u2713\t\u2713\t\u2713\t\u2713\nSession prep reports\t\u2014\t\u2713\t\u2713\t\u2713\nShared client roster\t\u2014\t\u2014\t\u2014\t\u2713\nAdmin & team management\t\u2014\t\u2014\t\u2014\t\u2713\nEmail support\t\u2014\t\u2713\t\u2713\t\u2713\nPriority support\t\u2014\t\u2014\t\u2713\t\u2014\nDedicated support\t\u2014\t\u2014\t\u2014\t\u2713\nGet started\tStart free \u2192\tStart trial \u2192\tStart trial \u2192\tContact sales \u2192\nStart your 14-day free trial\n\nFull access to Pro features. No credit card required.\n\nCreate therapist account\nRead security & HIPAA details \u2192\n\nAll plans include a 14-day free trial. Cancel anytime.\n\nQuestions? Email support@parentscript.app\n\nParentScript\n\nAMAZED Labs\n\nEvidence-based parenting support, prescribed by your therapist.\n\nPRODUCT\nPricing\nFor therapists\nFor parents\nContact sales\nCOMPANY\nAbout\nCareers\nPress\nLEGAL\nSecurity & HIPAA\nPrivacy policy\nTerms of service\n\n\u00a9 2026 AMAZED Labs. All rights reserved.\n\nParentScript is not a substitute for professional clinical judgment. In an emergency, call 911 or the Suicide & Crisis Lifeline at 988.",
+    "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots/ps-pricing-full.png"
+  }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ParentScript — monogram  256×256
+  "PS" in a rounded indigo plate. Use for nav, browser tab favicons, small chips.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ParentScript monogram">
+  <rect width="256" height="256" rx="56" fill="#6366F1"/>
+  <text x="128" y="158"
+        font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        font-size="104" font-weight="700"
+        fill="#FFFFFF"
+        text-anchor="middle"
+        letter-spacing="-2">PS</text>
+</svg>

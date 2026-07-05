@@ -1,0 +1,8 @@
+{
+  "tono_apple_popup": {
+    "error": "no popup opened (timeout)"
+  },
+  "tono_google_popup": {
+    "error": "no popup opened (timeout)"
+  }
+}

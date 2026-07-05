@@ -1,0 +1,26 @@
+MAZE is a therapist-controlled parenting skills toolkit that helps parents practice evidence-based techniques with their children.
+
+FOR THERAPISTS
+• Manage your client list
+• Unlock skills session-by-session based on progress
+• Track practice logs and engagement
+• Structured notes with privacy-first design
+
+FOR PARENTS  
+• Access unlocked skill cheat sheets
+• "In the Moment" coaching for real-time guidance
+• Practice logging with emoji ratings
+• Progressive skill unlocking based on therapist recommendations
+
+HOW IT WORKS
+1. Therapist creates an account and adds clients
+2. Parents receive an invite code and connect
+3. Therapist unlocks skills as parents demonstrate mastery
+4. Parents practice techniques and log progress
+5. Therapist reviews logs and adjusts the skill tree
+
+EVIDENCE-BASED
+MAZE is built on PCIT (Parent-Child Interaction Therapy) and BPT (Behavioral Parent Training) curricula – proven approaches used by clinicians worldwide.
+
+PRIVACY
+MAZE is designed with clinical privacy in mind. No personal health information (PHI) is stored in v1. All data is encrypted and protected by row-level security.

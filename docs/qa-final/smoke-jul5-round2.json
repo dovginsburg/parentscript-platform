@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-07-05T14:06:20-0400",
+  "tests": {
+    "ps-passkey-feature-flag": {
+      "ok": true,
+      "status": 200,
+      "virtual_authenticator_attached": true,
+      "feature_flag": {
+        "flags": {},
+        "featureFlagsKey": "parentscript.featureFlags.v1",
+        "hasFeatureFlagHook": true
+      },
+      "ui": {
+        "allTextSnippet": "parentscript\n\namazed labs\n\ntherapist sign in\nemail address\npassword\nsign inforgot password?\n\nno account? sign up\n\nparent without a therapist? sign up free \u2192\n\npricing\u00b7security & hipaa\u00b7privacy policy\u00b7contact support",
+        "buttons": [
+          "Sign in",
+          "Forgot password?"
+        ],
+        "links": [
+          "Sign up",
+          "Sign up free \u2192",
+          "Pricing",
+          "Security & HIPAA",
+          "Privacy policy",
+          "Contact support"
+        ],
+        "passkeyMentioned": false,
+        "faceIdMentioned": false,
+        "fingerprintMentioned": false
+      },
+      "screenshot": "/Users/Ezra/Projects/parentscript/docs/qa-final/screenshots-jul5/ps-passkey-state.png",
+      "page_errors": []
+    },
+    "tono-apple-click": {
+      "ok": true,
+      "navigated_to_apple": true,
+      "current_url": "https://appleid.apple.com/auth/authorize?client_id=com.parentscript.app.parentscript-service&redirect_uri=https%3A%2F%2Fbndbgpqbpzukrbhquztj.supabase.co%2Fauth%2Fv1%2Fcallback&response_mode=form_post&response_type=code&scope=email+name&state=6504cb53-c5f4-496b-8d7b-686f37f77b48",
+      "nav_log": [
+        {
+          "url": "https://tonoit.com/login",
+          "type": "navigated"
+        },
+        {
+          "url": "https://tonoit.com/login",
+          "type": "navigated"
+        },
+        {
+          "url": "https://appleid.apple.com/auth/authorize?client_id=com.parentscript.app.parentscript-service&redirect_uri=https%3A%2F%2Fbndbgpqbpzukrbhquztj.supabase.co%2Fauth%2Fv1%2Fcallback&response_mode=form_post&response_type=code&scope=email+name&state=6504cb53-c5f4-496b-8d7b-686f37f77b48",
+          "type": "navigated"
+        }
+      ]
+    },
+    "ps-apex-bundle": {
+      "ok": true,
+      "redirect_status": 200,
+      "bundle_hash": "BFbg3LiX",
+      "note": "if bundle_hash != local dist hash, deploy is stale"
+    }
+  }
+}

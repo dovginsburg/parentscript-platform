@@ -1,0 +1,100 @@
+PHONE SCREENSHOTS — PARENTSCRIPT (1080x1920 or device-native portrait, 5 images)
+
+SCREENSHOT 1 — "The home screen" (the hero shot)
+WHAT TO SHOW:
+  The ParentScript parent home view, exactly as it appears in the app:
+    - Top of screen: a calm greeting ("Hi, Jordan.") with a one-line status ("2 new skills unlocked this week")
+    - LARGE rounded "In the Moment" button in brand color, near the top of the scroll. Subtitle: "Tap when things are hard right now."
+    - Below the button: two unlocked skill cards as large tiles:
+        * "Labeled Praise" — small subtitle "L1 Connection"
+        * "Special Time" — small subtitle "L1 Connection"
+  - No locked skills visible. The home is intentionally uncluttered.
+
+OVERLAY TEXT (top of screen, marketing-style): "Skills your therapist unlocks. Ready when you need them."
+
+WHY FIRST: Communicates the entire value prop in one image. Calm, clear, not overwhelming.
+
+────────────────────────────────────────
+
+SCREENSHOT 2 — "A skill cheat sheet"
+WHAT TO SHOW:
+  A single skill detail screen in full, showing the locked-down format the app actually uses:
+    - Skill title: "Effective Commands"
+    - Level tag: "L3 Limits & Boundaries"
+    - Section: "GOAL" → "Get your child to follow through with one calm instruction."
+    - Section: "USE WHEN" → "You need your child to do something — brushing teeth, coming to dinner, putting on shoes."
+    - Section: "SAY THIS" → "Please put your shoes by the door." (highlighted with a soft background)
+    - Section: "DON'T SAY" → "How many times do I have to tell you? Put. Your. Shoes. On."
+    - Section: "AGE ADAPTATIONS" → "Ages 3–5: One step at a time. Ages 6–8: Two steps okay. Ages 9–10: Negotiate ahead."
+    - At the bottom: a big "I Practiced This" button
+  All text must be huge, high-contrast, scannable. This is the screen the parent opens in the moment.
+
+OVERLAY TEXT: "Say this. Not that. Every skill, every time."
+
+WHY: Shows the actual intervention. This is the screen that does the work.
+
+────────────────────────────────────────
+
+SCREENSHOT 3 — "In the Moment"
+WHAT TO SHOW:
+  The "In the Moment" coaching flow:
+    - First screen: big text "What's happening?" with 4 huge buttons in a 2×2 grid:
+        * Meltdown
+        * Defiance
+        * Whining
+        * Sibling conflict
+    - Second screen (overlay or split): "Meltdown — try this" with three big bullets:
+        * Get low. Eye level.
+        * Name the feeling: "You wanted to keep playing. That was fun."
+        * Wait. Don't fix. Stay close.
+    - PERSISTENT bottom bar (must be visible): "This isn't working — I need help" → expanded to show three buttons:
+        * Call my therapist
+        * Call/text 988
+        * Call 911
+
+OVERLAY TEXT: "Hard moment? Three bullets. Always free. Always reachable."
+
+WHY: This is the killer feature. Universal basics — never gated, never paywalled, never behind an unlock. The escalation bar must be visible because that's the safety promise of the app.
+
+────────────────────────────────────────
+
+SCREENSHOT 4 — "Practice logging"
+WHAT TO SHOW:
+  The "How did it go?" logging screen:
+    - Top: "You practiced: Labeled Praise"
+    - Three huge emoji-style buttons in a row:
+        * 😀 (Good)
+        * 😐 (Mixed)
+        * 😞 (Hard)
+    - Below: a small row of optional non-clinical tags as pill chips:
+        * Morning · After school · At dinner · At bedtime · Public · With sibling
+    - A single "Save" button at the bottom
+
+OVERLAY TEXT: "Two taps. Your therapist sees the trend."
+
+WHY: Shows the structured-data approach (no free-text diary that becomes a PHI liability). Communicates accountability without surveillance.
+
+────────────────────────────────────────
+
+SCREENSHOT 5 — "Therapist-controlled unlock"
+WHAT TO SHOW:
+  A two-up or split composition:
+    - LEFT half: a therapist's desktop view (a clean web dashboard, not a phone mockup) showing a client list and a few skill unlock toggles. Caption: "Your therapist unlocks skills session by session."
+    - RIGHT half: the same parent's phone, showing a skill card that just appeared: "First/Then Charts" with a small banner at the top: "Just unlocked by Dr. M."
+  Optional small caption between them: "Same family. Different surfaces."
+
+OVERLAY TEXT: "Your therapist decides what you see — and when."
+
+WHY: Explains the progressive-unlock differentiator in a way the other screenshots don't. Without this, parents might assume the app is generic parenting content.
+
+────────────────────────────────────────
+
+PRODUCTION NOTES FOR ALL FIVE:
+  - Realistic-looking but never identifying — use names like "Jordan" (parent), "Sam" (child reference), "Dr. M." (therapist placeholder). Never a real name.
+  - The "In the Moment" screen MUST show the 988/911/therapist escalation bar — this is both a product feature and a defensible safety claim
+  - Do NOT include any image of a real or cartoon child — Play Store policy + clinical ethics
+  - Status bar: 9:41 AM, full battery, full signal — universally recognized as a "polished app" cue
+  - PNG, sRGB, device-native portrait orientation
+  - Recommended: 1080 x 1920 px minimum
+  - Match the ParentScript brand exactly (check brand.html for the color tokens — do not invent colors)
+  - Typography: large, high-contrast, scannable. The parent opening this app in panic mode should be able to read every word.

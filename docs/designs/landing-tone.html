@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en" data-theme="tono">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tono — say what you mean</title>
+  <meta name="description" content="paste any text. four rewrites in two seconds. warmer. clearer. funnier. safer." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       Tono — Marketing Landing (dark/violet/lowercase)
+       Surface: MARKETING — but honest. Not "AI co-pilot" gloss.
+       Hero = the actual 4-tone editor as the demo.
+       ============================================================ */
+    :root {
+      --bg: #000000;
+      --bg-soft: #0A0A0A;
+      --bg-card: #111113;
+      --bg-elev: #16161A;
+      --border: #1F1F23;
+      --border-strong: #2A2A30;
+      --text: #FFFFFF;
+      --text-soft: #C9C9D1;
+      --text-softer: #9CA3AF;
+      --muted: #6B7280;
+      --accent: #A855F7;
+      --accent-hover: #9333EA;
+      --accent-soft: rgba(168,85,247,0.12);
+      --accent-softer: rgba(168,85,247,0.06);
+      --accent-light: #D8B4FE;
+      --accent-glow: rgba(168,85,247,0.35);
+
+      --tone-warmer:  #F472B6;
+      --tone-clearer: #38BDF8;
+      --tone-funnier: #FBBF24;
+      --tone-safer:   #34D399;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+      --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+      --duration: 240ms;
+      --shell-w: 1240px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Ambient backdrop */
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(800px 400px at 80% -10%, rgba(168,85,247,0.10), transparent 60%),
+        radial-gradient(600px 300px at 10% 110%, rgba(56,189,248,0.04), transparent 60%);
+      z-index: 0;
+    }
+
+    .shell { position: relative; z-index: 1; min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
+
+    /* ── top nav ──────────────────────────────────────────────── */
+    .nav {
+      border-bottom: 1px solid var(--border);
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: saturate(180%) blur(14px);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
+    }
+    .nav-inner {
+      max-width: var(--shell-w);
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 18px; letter-spacing: -0.02em;
+    }
+    .brand-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 16px var(--accent-glow);
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a {
+      color: var(--text-soft);
+      font-size: 14px;
+      transition: color var(--duration) var(--ease);
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      font-size: 14px; font-weight: 600;
+      color: var(--text);
+      transition: all var(--duration) var(--ease);
+    }
+    .nav-cta:hover { border-color: var(--accent); background: var(--accent-soft); }
+    .nav-cta.primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(168,85,247,0.30);
+    }
+    .nav-cta.primary:hover { background: var(--accent-hover); }
+
+    /* ── hero ──────────────────────────────────────────────────── */
+    .hero {
+      max-width: var(--shell-w);
+      margin: 0 auto;
+      padding: 80px 24px 32px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 56px;
+    }
+    @media (min-width: 1024px) {
+      .hero { grid-template-columns: 1.1fr 1fr; align-items: center; padding: 96px 24px 56px; }
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 12px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(168,85,247,0.25);
+      border-radius: 999px;
+      color: var(--accent-light);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: lowercase;
+      margin-bottom: 24px;
+    }
+    .eyebrow .pulse {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 0 var(--accent-glow);
+      animation: pulse 2.4s var(--ease) infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(168,85,247,0.5); }
+      70% { box-shadow: 0 0 0 8px rgba(168,85,247,0); }
+      100% { box-shadow: 0 0 0 0 rgba(168,85,247,0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .eyebrow .pulse { animation: none; }
+    }
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+    .hero h1 .accent {
+      background: linear-gradient(135deg, var(--accent), var(--tone-clearer));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero p.lede {
+      font-size: clamp(16px, 1.6vw, 19px);
+      line-height: 1.6;
+      color: var(--text-soft);
+      max-width: 540px;
+      margin-bottom: 36px;
+    }
+    .hero-cta {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      margin-bottom: 32px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 22px;
+      border-radius: var(--radius-md);
+      font-size: 15px; font-weight: 600;
+      min-height: 52px;
+      transition: all var(--duration) var(--ease);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 18px rgba(168,85,247,0.35);
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 28px rgba(168,85,247,0.50);
+    }
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text);
+      border: 1px solid var(--border-strong);
+    }
+    .btn-secondary:hover { border-color: var(--accent); background: var(--bg-elev); }
+    .hero-meta {
+      display: flex; gap: 28px;
+      color: var(--text-softer);
+      font-size: 13px;
+    }
+    .hero-meta strong { color: var(--text); font-weight: 600; }
+    .hero-meta span { display: block; }
+
+    /* ── the 4-tone editor (the hero demo) ─────────────────────── */
+    .editor {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    .editor::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(400px 200px at 0% 0%, rgba(168,85,247,0.10), transparent 60%);
+      pointer-events: none;
+    }
+    .editor-head {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 18px;
+      position: relative;
+    }
+    .editor-label {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 12px; font-weight: 600;
+      color: var(--text-softer);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .editor-label .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent-glow);
+    }
+    .editor-window {
+      display: flex; gap: 6px;
+    }
+    .editor-window span {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--border-strong);
+    }
+    .editor-source {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-soft);
+      margin-bottom: 18px;
+      position: relative;
+    }
+    .editor-source .meta {
+      display: flex; justify-content: space-between;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      font-family: var(--mono);
+    }
+    .editor-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 480px) { .editor-grid { grid-template-columns: 1fr 1fr; } }
+    .tone-card {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      transition: all var(--duration) var(--ease);
+      cursor: pointer;
+      position: relative;
+    }
+    .tone-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--tone-color, var(--accent));
+      box-shadow: 0 8px 24px rgba(0,0,0,0.30);
+    }
+    .tone-card .tone-head {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .tone-card .tone-name {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 600;
+      color: var(--tone-color, var(--accent));
+    }
+    .tone-card .tone-name .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--tone-color, var(--accent));
+      box-shadow: 0 0 12px var(--tone-color, var(--accent));
+    }
+    .tone-card .copy {
+      font-size: 11px; font-weight: 500;
+      color: var(--text-softer);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      transition: all var(--duration) var(--ease);
+    }
+    .tone-card:hover .copy {
+      color: var(--tone-color, var(--accent));
+      border-color: var(--tone-color, var(--accent));
+    }
+    .tone-card .tone-body {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: var(--text);
+    }
+    .tone-card[data-tone="warmer"]  { --tone-color: var(--tone-warmer); }
+    .tone-card[data-tone="clearer"] { --tone-color: var(--tone-clearer); }
+    .tone-card[data-tone="funnier"] { --tone-color: var(--tone-funnier); }
+    .tone-card[data-tone="safer"]   { --tone-color: var(--tone-safer); }
+
+    /* ── section: features (minimal, dense) ────────────────────── */
+    section.features {
+      max-width: var(--shell-w);
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    .section-head { margin-bottom: 48px; max-width: 720px; }
+    .section-head h2 {
+      font-size: clamp(28px, 3.4vw, 40px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .section-head p {
+      font-size: 16px;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 720px) { .feature-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1080px) { .feature-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .feature {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: border-color var(--duration) var(--ease);
+    }
+    .feature:hover { border-color: var(--border-strong); }
+    .feature .glyph {
+      width: 40px; height: 40px;
+      display: grid; place-items: center;
+      background: var(--accent-soft);
+      border: 1px solid rgba(168,85,247,0.20);
+      border-radius: var(--radius-md);
+      margin-bottom: 18px;
+      color: var(--accent);
+    }
+    .feature h3 {
+      font-size: 17px; font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    .feature p {
+      font-size: 14px; line-height: 1.6;
+      color: var(--text-softer);
+    }
+
+    /* ── section: pricing ─────────────────────────────────────── */
+    section.pricing {
+      max-width: var(--shell-w);
+      margin: 0 auto;
+      padding: 32px 24px 96px;
+    }
+    .pricing-card {
+      max-width: 460px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .pricing-card::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(500px 240px at 100% 0%, rgba(168,85,247,0.12), transparent 60%);
+      pointer-events: none;
+    }
+    .pricing-card .price {
+      font-size: 56px; font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 6px;
+      position: relative;
+    }
+    .pricing-card .price small {
+      font-size: 16px; font-weight: 500;
+      color: var(--text-softer);
+    }
+    .pricing-card .pitch {
+      font-size: 15px; color: var(--text-soft);
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .pricing-card ul {
+      list-style: none;
+      display: flex; flex-direction: column;
+      gap: 12px;
+      margin: 0 0 28px;
+      position: relative;
+    }
+    .pricing-card li {
+      display: flex; gap: 12px;
+      font-size: 14px; line-height: 1.5;
+      color: var(--text-soft);
+    }
+    .pricing-card li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ── footer ────────────────────────────────────────────────── */
+    .footer {
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .footer-inner {
+      max-width: var(--shell-w);
+      margin: 0 auto;
+      padding: 32px 24px;
+      display: flex; flex-wrap: wrap; gap: 24px;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-softer);
+      font-size: 13px;
+    }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a:hover { color: var(--text); }
+
+    /* ── a11y: visible focus rings ─────────────────────────────── */
+    a:focus-visible, button:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px var(--accent-glow);
+      border-radius: var(--radius-md);
+    }
+
+    /* ── dark mode — same skin (Tono is always dark) ────────────
+       The page is dark by design (Tono = operate surface). If a
+       future consumer wants a light "tono-lite" skin, set
+       data-theme="tono-light" and override the color tokens here. */
+    @media (prefers-color-scheme: light) {
+      /* Intentional: tono always dark. Light users still see dark. */
+    }
+
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <!-- ── nav ──────────────────────────────────────────────── -->
+    <nav class="nav" aria-label="primary">
+      <div class="nav-inner">
+        <a href="#" class="brand" aria-label="tono home">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>tono</span>
+        </a>
+        <div class="nav-links">
+          <a href="#features">how it works</a>
+          <a href="#pricing">pricing</a>
+          <a href="#">download</a>
+          <a href="#">blog</a>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <a href="#" class="nav-cta">sign in</a>
+          <a href="#" class="nav-cta primary">try free</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ── hero + demo ──────────────────────────────────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <span class="eyebrow"><span class="pulse" aria-hidden="true"></span>v2 — the four-tone editor</span>
+          <h1 id="hero-title">
+            four ways to say it.<br />
+            <span class="accent">pick one, copy, send.</span>
+          </h1>
+          <p class="lede">
+            paste any text. tono rewrites it four ways — warmer, clearer, funnier, safer — in about two seconds. no prompts. no settings to learn. just the right version of what you meant.
+          </p>
+          <div class="hero-cta">
+            <a href="#" class="btn btn-primary">try tono free</a>
+            <a href="#features" class="btn btn-secondary">see it work</a>
+          </div>
+          <div class="hero-meta" role="list">
+            <span role="listitem"><strong>2 of 3</strong> rewrites free today</span>
+            <span role="listitem"><strong>$5.99/mo</strong> for unlimited</span>
+            <span role="listitem"><strong>ios</strong> · mac · web</span>
+          </div>
+        </div>
+
+        <!-- ── the editor (hero demo) ──────────────────── -->
+        <div class="editor" role="figure" aria-label="tono editor demo">
+          <div class="editor-head">
+            <div class="editor-label"><span class="dot" aria-hidden="true"></span>tono editor</div>
+            <div class="editor-window" aria-hidden="true"><span></span><span></span><span></span></div>
+          </div>
+
+          <div class="editor-source" aria-label="original text">
+            hey team, just wanted to check in and see if there's any update on the q3 timeline because it feels like it's been slipping for a while and i'm starting to get nervous about whether we can hit the launch date. would appreciate any clarity when you get a chance.
+            <div class="meta"><span>184 chars · 36 words</span><span>paste any text</span></div>
+          </div>
+
+          <div class="editor-grid" role="list" aria-label="four rewrites">
+            <div class="tone-card" data-tone="warmer" role="listitem" tabindex="0" aria-label="warmer rewrite">
+              <div class="tone-head">
+                <span class="tone-name"><span class="dot" aria-hidden="true"></span>warmer</span>
+                <span class="copy">copy</span>
+              </div>
+              <p class="tone-body">quick check-in on q3 — want to make sure we're set up for launch. any update when you have a sec?</p>
+            </div>
+
+            <div class="tone-card" data-tone="clearer" role="listitem" tabindex="0" aria-label="clearer rewrite">
+              <div class="tone-head">
+                <span class="tone-name"><span class="dot" aria-hidden="true"></span>clearer</span>
+                <span class="copy">copy</span>
+              </div>
+              <p class="tone-body">where are we on the q3 timeline? i'm worried about the launch date. can you give me an update by end of day?</p>
+            </div>
+
+            <div class="tone-card" data-tone="funnier" role="listitem" tabindex="0" aria-label="funnier rewrite">
+              <div class="tone-head">
+                <span class="tone-name"><span class="dot" aria-hidden="true"></span>funnier</span>
+                <span class="copy">copy</span>
+              </div>
+              <p class="tone-body">hey — checking on q3 because i don't want to refresh the timeline doc one more time. update when you can. sending snacks.</p>
+            </div>
+
+            <div class="tone-card" data-tone="safer" role="listitem" tabindex="0" aria-label="safer rewrite">
+              <div class="tone-head">
+                <span class="tone-name"><span class="dot" aria-hidden="true"></span>safer</span>
+                <span class="copy">copy</span>
+              </div>
+              <p class="tone-body">hi team — could you share the latest q3 timeline? i'd like to flag any risk to the launch date so we can plan together.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── features ────────────────────────────────────── -->
+      <section class="features" id="features" aria-labelledby="feat-title">
+        <div class="section-head">
+          <h2 id="feat-title">not an ai assistant. a rewriter.</h2>
+          <p>tono doesn't ask you what you want. it gives you four specific versions and lets you pick. no chat. no plugins. no integrations to set up.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature">
+            <div class="glyph" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>two seconds, four versions</h3>
+            <p>paste. wait. copy. the average rewrite is 1.8 seconds on a recent iphone. you won't see a spinner long enough to blink.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
+            </div>
+            <h3>four tones, named not configured</h3>
+            <p>warmer. clearer. funnier. safer. the four tones are the four tones — no slider, no tone dropdown with 30 options.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            </div>
+            <h3>your text never trains anything</h3>
+            <p>prompts and rewrites are processed and discarded. nothing is logged, nothing improves a model you didn't opt into.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 010 18M12 3a13 13 0 000 18"/></svg>
+            </div>
+            <h3>share extension, native ios</h3>
+            <p>rewrite from mail, messages, slack, notes — anywhere you can highlight text. no app-switching, no copying back.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <h3>paste-and-go</h3>
+            <p>open the app and you're already composing. no project, no document, no account-required splash screen. type and rewrite.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M5 9l7-7 7 7"/></svg>
+            </div>
+            <h3>unlimited on $5.99/mo</h3>
+            <p>free tier is 2 of 3 daily rewrites, real and usable. pro is unlimited — and you can cancel from inside the app.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── pricing ─────────────────────────────────────── -->
+      <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+        <h2 id="pricing-title" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">pricing</h2>
+        <div class="pricing-card">
+          <p class="price">$5.99<small>/mo</small></p>
+          <p class="pitch">unlimited rewrites. cancel anytime.</p>
+          <ul>
+            <li>unlimited four-tone rewrites</li>
+            <li>share extension on ios</li>
+            <li>mac and web companion apps</li>
+            <li>history of past rewrites (90 days)</li>
+            <li>no ads, ever</li>
+          </ul>
+          <a href="#" class="btn btn-primary" style="width:100%; justify-content:center; position:relative;">start free, then $5.99/mo</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ── footer ────────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>© 2026 amazed labs. made in nyc.</span>
+        <div class="footer-links">
+          <a href="#">privacy</a>
+          <a href="#">terms</a>
+          <a href="#">support</a>
+          <a href="#">@tono</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // tiny copy-to-clipboard for tone cards
+    document.querySelectorAll('.tone-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const body = card.querySelector('.tone-body')?.textContent?.trim();
+        if (!body) return;
+        const copy = card.querySelector('.copy');
+        const label = copy?.textContent;
+        navigator.clipboard?.writeText(body).then(() => {
+          if (copy) {
+            copy.textContent = 'copied';
+            setTimeout(() => { if (copy) copy.textContent = label; }, 1400);
+          }
+        }).catch(() => {});
+      });
+    });
+  </script>
+</body>
+</html>
