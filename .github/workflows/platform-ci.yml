@@ -1,0 +1,219 @@
+name: Platform CI Matrix
+
+# Top-level orchestrator. Runs every platform's CI in parallel on every push to main,
+# every PR, and on a nightly cron. Use `workflow_run` to surface failures from
+# per-platform workflows.
+
+on:
+  push:
+    branches: [main, claude/**]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * *'   # 06:00 UTC daily — catch nocturnal drift
+  workflow_dispatch:
+
+# Cancel any in-progress run for the same ref on a new push.
+concurrency:
+  group: platform-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    name: Backend (Node)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install
+        run: npm ci --workspace=apps/backend --include-workspace-root=false
+      - name: Test
+        run: npm test --workspace=apps/backend
+
+  web:
+    name: Web (Next.js + build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install
+        run: npm ci --workspace=apps/web --include-workspace-root=false
+      - name: Type-check
+        run: npm run typecheck --workspace=apps/web --if-present
+      - name: Lint
+        run: npm run lint --workspace=apps/web --if-present
+      - name: Build
+        run: npm run build --workspace=apps/web
+        env:
+          VITE_BASE: ./
+
+  ios-build:
+    name: iOS (Capacitor + xcodebuild)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install
+        run: npm ci --workspace=apps/web --include-workspace-root=false
+      - name: Build web app
+        run: npm run build --workspace=apps/web
+        env:
+          VITE_BASE: ./
+      - name: Sync Capacitor
+        run: cd apps/web && npx cap sync ios
+      - name: xcodebuild
+        run: |
+          cd apps/ios/App
+          xcodebuild -workspace App.xcworkspace -scheme App \
+            -sdk iphonesimulator -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO build | tail -50
+
+  android-build:
+    name: Android (Capacitor + Gradle)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+      - name: Install
+        run: npm ci --workspace=apps/web --include-workspace-root=false
+      - name: Build web app
+        run: npm run build --workspace=apps/web
+        env:
+          VITE_BASE: ./
+      - name: Sync Capacitor
+        run: cd apps/web && npx cap sync android
+      - name: Gradle assembleDebug
+        run: |
+          cd apps/android
+          chmod +x ./gradlew
+          ./gradlew assembleDebug --no-daemon
+
+  desktop-tauri:
+    name: Desktop (Tauri 2)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - uses: actions/setup-rust@v1
+        with:
+          toolchain: stable
+      - name: Install
+        run: npm ci --workspace=apps/desktop --include-workspace-root=false
+      - name: Cargo check
+        run: |
+          cd apps/desktop
+          cargo check --manifest-path=src-tauri/Cargo.toml
+
+  browser-extension:
+    name: Browser Extension (Manifest V3)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install
+        run: npm ci --workspace=apps/browser-extension --include-workspace-root=false
+      - name: Build
+        run: npm run build --workspace=apps/browser-extension --if-present
+
+  slack-app:
+    name: Slack App (Bolt)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install
+        run: npm ci --workspace=apps/slack-app --include-workspace-root=false
+      - name: Test
+        run: npm test --workspace=apps/slack-app --if-present
+      - name: Type-check
+        run: npm run typecheck --workspace=apps/slack-app --if-present
+      - name: Lint
+        run: npm run lint --workspace=apps/slack-app --if-present
+
+  security-audit:
+    name: Security Audit (npm audit)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install
+        run: npm ci --workspaces --include-workspace-root=false
+      - name: npm audit
+        run: npm audit --workspaces --if-present --audit-level=moderate
+        continue-on-error: false
+
+  format-check:
+    name: Format (Prettier)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install
+        run: npm ci
+      - name: Prettier check
+        run: npx prettier --check .
+
+  matrix-status:
+    name: Matrix Status
+    runs-on: ubuntu-latest
+    needs: [backend, web, ios-build, android-build, desktop-tauri, browser-extension, slack-app, security-audit, format-check]
+    if: always()
+    steps:
+      - name: Report
+        run: |
+          echo "Backend:        ${{ needs.backend.result }}"
+          echo "Web:            ${{ needs.web.result }}"
+          echo "iOS:            ${{ needs.ios-build.result }}"
+          echo "Android:        ${{ needs.android-build.result }}"
+          echo "Desktop:        ${{ needs.desktop-tauri.result }}"
+          echo "Extension:      ${{ needs.browser-extension.result }}"
+          echo "Slack:          ${{ needs.slack-app.result }}"
+          echo "Security:       ${{ needs.security-audit.result }}"
+          echo "Format:         ${{ needs.format-check.result }}"
+          # Fail the aggregator if any job failed
+          if [[ "${{ needs.backend.result }}"        == "failure" || \
+                "${{ needs.web.result }}"            == "failure" || \
+                "${{ needs.ios-build.result }}"      == "failure" || \
+                "${{ needs.android-build.result }}"  == "failure" || \
+                "${{ needs.desktop-tauri.result }}"  == "failure" || \
+                "${{ needs.browser-extension.result }}" == "failure" || \
+                "${{ needs.slack-app.result }}"      == "failure" || \
+                "${{ needs.security-audit.result }}" == "failure" || \
+                "${{ needs.format-check.result }}"   == "failure" ]]; then
+            echo "::error::One or more matrix jobs failed"
+            exit 1
+          fi
+          echo "✓ All matrix jobs green"
