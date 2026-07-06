@@ -6,7 +6,7 @@ The canonical repo for every ParentScript surface. Where two platforms live, thi
 
 | Surface                               | Canonical location                    | Notes                                                                                                                                                   |
 | ------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Web app (parentscript.app)            | `apps/web/`                           | Next.js 14. Deployed to Vercel.                                                                                                                         |
+| Web app (parentscript.app)            | `apps/web/`                           | Vite + React 18 + Capacitor. Deployed to Vercel.                                                                                                        |
 | Backend API                           | `apps/backend/`                       | Node.js, ESM. Safety-guard middleware (`safety-guard.mjs`), rate-limit (`middleware/rate-limit.mjs`), error-tracking (`middleware/error-tracking.mjs`). |
 | Vercel serverless functions           | `api/`                                | Top-level for Vercel's automatic function discovery.                                                                                                    |
 | Browser extension                     | `apps/browser-extension/`             | Manifest V3.                                                                                                                                            |

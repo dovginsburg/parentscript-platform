@@ -23,7 +23,7 @@ parentscript-platform/
 │   ├── fastlane/           # Fastlane config shared by iOS/Android
 │   ├── ios/                # Capacitor-wrapped iOS + SwiftPM bridge
 │   ├── slack-app/          # Slack Bolt app (parenting coach in Slack)
-│   └── web/                # Next.js 14 web app (parentscript.app)
+│   └── web/                # Vite + React 18 + Capacitor web app (parentscript.app)
 ├── api/                    # Vercel serverless functions
 ├── docs/                   # Brand, business, design, marketing, expansion
 │   └── legacy/maze/        # Historical docs preserved from maze
