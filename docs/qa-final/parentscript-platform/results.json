@@ -1,0 +1,35 @@
+[
+  {
+    "name": "home",
+    "url": "https://parentscript.app/",
+    "console_errors": [],
+    "net_failures": [],
+    "status": 200,
+    "final_url": "https://parentscript.app/app/",
+    "title": "ParentScript",
+    "screenshot": "/Users/Ezra/.hermes/kanban/workspaces/t_7e86c7c5/docs/qa-final/parentscript-platform/home.png",
+    "screenshot_bytes": 90940
+  },
+  {
+    "name": "app-login",
+    "url": "https://parentscript.app/app/login",
+    "console_errors": [],
+    "net_failures": [],
+    "status": 200,
+    "final_url": "https://parentscript.app/app/login",
+    "title": "ParentScript",
+    "screenshot": "/Users/Ezra/.hermes/kanban/workspaces/t_7e86c7c5/docs/qa-final/parentscript-platform/app-login.png",
+    "screenshot_bytes": 90940
+  },
+  {
+    "name": "app-parent",
+    "url": "https://parentscript.app/app/parent",
+    "console_errors": [],
+    "net_failures": [],
+    "status": 200,
+    "final_url": "https://parentscript.app/app/parent",
+    "title": "ParentScript",
+    "screenshot": "/Users/Ezra/.hermes/kanban/workspaces/t_7e86c7c5/docs/qa-final/parentscript-platform/app-parent.png",
+    "screenshot_bytes": 90940
+  }
+]
