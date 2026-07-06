@@ -50,10 +50,11 @@ Verified via `gh repo view ... --json diskUsage`:
 
 Dov's hard rule on no-deletion is respected.
 
-### 5. Workflow files (KNOWN GAP) — **DOCUMENTED, NO REGRESSION**
-- `.github/workflows/` does not exist (cleaner absence than the spec expected)
-- Parent task `t_cab89c3d` already noted: OAuth workflow scope blocked push of CI workflow files. Worker spawn follow-up card exists per the parent-handoff metadata (`missing_workflows: true`).
-- No action from Quinn on this — outside scope of this QA pass.
+### 5. Workflow files — **GAP NOW CLOSED**
+- At QA start, `.github/workflows/` did not exist (KNOWN GAP per parent task).
+- By the time commit `8b960b5` (this report) was being pushed, a sibling worker (`abd64fa ci: workflow files for consolidated parentscript-platform`) landed 5 workflow files in the same window:
+  - `android-build.yml`, `ci.yml`, `deploy-web.yml`, `ios-build.yml`, `platform-ci.yml`
+- **Status: closed.** No follow-up needed for Quinn.
 
 ---
 
