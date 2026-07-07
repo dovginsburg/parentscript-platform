@@ -21,7 +21,6 @@ interface AnalyticsEvent {
 
 class Analytics {
   private enabled: boolean;
-  private userId: string | null = null;
 
   constructor() {
     // Check if user has opted out
@@ -41,12 +40,12 @@ class Analytics {
     }
   }
 
-  identify(userId: string, traits?: Record<string, any>) {
+  identify(userId: string, _traits?: Record<string, any>) {
     if (!this.enabled) return;
 
-    this.userId = userId;
-
     // Don't send any PII - only anonymized IDs
+    // (userId intentionally unused — analytics is fully anonymous, see sendToBackend.)
+    void userId;
     if (window.plausible) {
       // Plausible doesn't have identify, but you could use custom props
     }
